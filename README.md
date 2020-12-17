@@ -1,1 +1,4 @@
-If you're a tester, see the information in Issues in the pinned post. To get the latest download link, see Releases. Thank you.
+Welcome to ChatControl Red™, the most advanced chat management Minecraft plugin ever written.
+
+We now host ChatControl's official page at our MineAcademy portal, see this link for all up-to-date information:
+https://mineacademy.org/chatcontrol-red
