@@ -2,7 +2,7 @@
 name: Question
 about: Ask a question about the plugin.
 title: 'Minecraft Version: Your Question Title'
-labels: question
+labels: 
 assignees: ''
 
 ---
