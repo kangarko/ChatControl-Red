@@ -2,7 +2,7 @@
 name: Improvement
 about: Suggest a new idea or a feature.
 title: 'Your Suggestion Title'
-labels: improvement
+labels: 
 assignees: ''
 
 ---
