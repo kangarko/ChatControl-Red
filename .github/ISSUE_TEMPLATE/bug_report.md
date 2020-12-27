@@ -2,7 +2,7 @@
 name: Bug report
 about: Report a problem, issue or a bug.
 title: 'Minecraft Version: Issue Title'
-labels: issue
+labels: 
 assignees: ''
 
 ---
