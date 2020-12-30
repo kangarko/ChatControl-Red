@@ -8,6 +8,8 @@ assignees: ''
 ---
 
 <!--- 
+** WE ONLY SUPPORT THE LATEST VERSION ** ALSO ENSURE TO UPDATE DEPENDENCIES (PROTOCOLLIB, PLOTSQUARED, etc.) **
+
 1. Edit text below the "—->" when creating a new issue. Edit the issue title.
 
 2. If you have ANY problem, type /chc debug and upload your ZIP to this window directly when creating a new issue. Post errors on pastebin.com
