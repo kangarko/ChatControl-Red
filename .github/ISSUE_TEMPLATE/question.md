@@ -7,13 +7,18 @@ assignees: ''
 
 ---
 
-<!---
-To ask us anything, please follow these directions:
+<!--- 
+** WE ONLY SUPPORT THE LATEST VERSION ** ALSO ENSURE TO UPDATE DEPENDENCIES (PROTOCOLLIB, PLOTSQUARED, etc.) **
 
-1) Please include your Minecraft version in your title:
-Example: 1.16.1: How to use /chc log?
+1. Edit text below the "—->" when creating a new question. Edit the question title.
 
-2) Try to keep it simple and clear, providing us all information necessary to answer your question. You can use imgur.com to upload images or pastebin.com to upload large text or error traces.
+2. If you have ANY problem, type /chc debug and upload your ZIP to this window directly when creating a new issue. Post errors on pastebin.com
 
-Thank you. Please remove this text and write your actual question below.
+3. If having a permissions problem, post ALL permissions that the affected player is having on pastebin.com.
 -->
+
+Minecraft Version: 1.X.Z
+MySQL: true/false
+BungeeCord: true/false
+
+Remove this and type your question here with steps to reproduce if having problems: 1-2-3.
