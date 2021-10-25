@@ -1,0 +1,1088 @@
+# !-----------------------------------------------------------------------------------------------!
+#                              Welcome to ChatControl localization file.
+# !-----------------------------------------------------------------------------------------------!
+#
+#   Here you can customize 99% of all plugin messages and tooltips.
+#
+#   1) COLOR CODES are supported with the '&' character.
+#      - For usage, see http://minecraftwiki.net/wiki/Formatting_codes
+#      - When you use them, place quotes around the message like this: "Hello &cworld."
+#       - To use HEX colors, use #123456 syntax: "Hello #123456world."
+#
+#   2) TO HIDE any message, set it to 'none'.
+#
+#   3) For UNICODE CHARACTERS (smileys, symbols, ..), save the file in UTF-8 encoding. See
+#      - https://github.com/kangarko/ChatControl-Red/wiki/Use-Right-Encoding
+#
+#   4) JSON is supported. Prepend the message with [JSON].
+#
+#   5) JAVASCRIPT NOTICE: Some of our messages are just-in-time compiled with JavaScript.
+#      Those typically have variables such as "self" inside of them. IF YOU CANNOT CODE
+#      in JavaScript, be extra careful and do not remove () brackets or the variables!
+#
+# !-----------------------------------------------------------------------------------------------!
+ 
+# -------------------------------------------------------------------------------------------------
+# Messages related to channels
+# -------------------------------------------------------------------------------------------------
+Channels:
+  Disabled: '&cLes salons sont désactivés. Définissez Channels.Enabled sur "true" dans le fichier settings.yml afin de les activer.'
+  Disabled_World: '&cLes salons ne sont pas activés dans le monde ''{0}''.'
+  No_Channels: '&cIl n''y a aucuns salons. Ajoutez-en dans la partie Channels.List dans le fichier settings.yml.'
+  No_Channel: 'Il n''y a aucun salon nommé: ''{0}''. Salons disponnibles: {1}'
+  Available: ' &fDisponnibles: &7'
+  Header: Salons
+  Header_Alternative:
+  - '&cSalons: &7Vous êtes dans les salons: {0}'
+  Header_Alternative_Channel: '{channel} ({mode})'
+  Use_Alternative_Header: false
+  Tooltip_Joined: '&fVous avez rejoint ce salon.'
+  Tooltip_Join_Write: '&2Cliquez pour rejoindre ce salon en mode écriture.'
+  Tooltip_Join_Read: '&2Cliquez pour rejoindre ce salon en mode lecture.'
+  Tooltip_Leave_Write:
+  - ''
+  - '&6&nRemarque:&r &fVous quitterez automatiquement votre'
+  - '&fancien salon d''écriture: ''{0}''.'
+  Tooltip_Channels: ' &fVos Salons:'
+  Tooltip_Leave: '&cCliquez pour quitter'
+  
+  Join:
+    Usage: <salon> [mode] [joueur]
+    Description: Rejoindre un salon textuel.
+    Usages_Self:
+    - '/{label} {sublabel} <salon> &7- Rejoindre un salon en mode écriture.'
+    - '/{label} {sublabel} <salon> <mode> &7- Rejoindre un salon avec le mode spécifié.'
+    Usages_Others: 
+    - '/{label} {sublabel} <salon> <mode> [joueur] &7- Rejoindre le salon du joueur spécifié en mode spécifié.'
+    Usages_2: 
+    - ''
+    - '&c&nNote:&r &cRejoindre un joueur dans son salon vous fera quitter votre/vos ancien(s) salon(s) si vous dépassez la limite de salons.'
+    - ''
+    - '&cAttention: Donnez aux joueurs la permission chat.channel.join.{salon}.{mode}'
+    - '&cpour le salon concerné et le mode choisit (read ou write) ou ils seront'
+    - '&céjectés du salon lorsqu''ils le rejoindront.'
+    Already_Connected: '(self ? ''Vous avez'' : ''Ce joueur a'') + '' déjà rejoint ce salon en mode {0}.'''
+    Read_Disabled: La fonctionnalité de lecture seule des salons a été désactivée.
+    Leave_Reading_You: 'Vous avez quitté le mode lecture pour le(s) salon(s) &o{0}&7 car vous avez dépassé la limite de salons.'
+    Leave_Reading_Other: '{target} a quitté le mode lecture pour le(s) salon(s) &o{0}&7 car il a dépassé la limite de salons.'
+    Switch_Success: Passage du mode &8{1} &7au mode &8{2} &7pour le salon &8{0}&7.
+    Success: Vous avez rejoint le salon &o{0} &7en mode {1}.
+    Notification: '&8[&2+&8] {player} &7a rejoint le salon ''{channel}''.'
+    
+  Leave:
+    Usage: <salon> [joueur]
+    Description: Quitter un salon.
+    Usages_Self:
+    - '/{label} {sublabel} <salon> &7- Quitter le salon spécifié.'
+    Usages_Others: 
+    - '/{label} {sublabel} <salon> <joueur> &7- Éjecter le joueur du salon spécifié.'
+    Not_Joined: '(self ? "Vous n''avez" : "{0} n''''a") + " pas rejoint ce salon. " + (channelsPlayerCanLeave.isEmpty() ? "" + (self ? "Vous ne pouvez" : "Le joueur ne peut") + " quitter aucun salon." : (self ? "Vous pouvez" : "Le joueur peut") + " quitter le(s) salon(s): {1}")'
+    No_Channels: '(self ? "Vous n''avez" : "Le joueur n''''a") + " aucun salon à quitter."'
+    Switch_To_Reading_V2: '(self ? ''Vous avez'' : ''{target} a'') + '' passé le salon &o{0} &7en mode lecture. Entrez à nouveau la commande pour quitter le salon.'''
+    Success_V2: '(self ? ''Vous avez'' : ''{target} a'') + '' quitté le salon &o{0}&7.'''
+    Notification: '&8[&4-&8] {player} &7a quitté le salon ''{channel}''.'
+    
+  List:
+    Description: Lister les joueurs dans un salon.
+    Usages:
+    - '/{label} {sublabel} &7- Lister tous les salons avec des joueurs.'
+    - '/{label} {sublabel} <salon> &7- Lister tous les joueurs dans le salon spécifié.'
+    Mute: ''' &8[&7'' + (muted ? ''&cDémuter'' : ''Muter'') + ''&8]'''
+    Mute_Tooltip: '''&6Cliquez pour '' + (muted ? ''dé'' : '''') + ''muter ce salon'' + (muted ? '''' : '' pendant 15 minutes'') + ''.'''
+    Join: ''' &8[&7'' + (joined ? ''&aQuitter'' : ''Rejoindre'') + ''&8]'''
+    Join_Tooltip: '''&6Cliquez pour '' + (joined ? ''leave'' : ''join'') + '' ce salon.'''
+    No_Players: ' &7- &oAucun joueurs.'
+    Remove: '&8[&4&lX&8] '
+    Remove_Tooltip: '&6Cliquez pour éjecter {0} du salon.'
+    Header: '''Joueur(s) '' + (bungee ? ''Bungee'' : '''') + ''Connecté(s) au(x) Salon(s)'''
+    Line: '&8[{mode_color}{mode}&8] &f{player}'
+    
+  Send:
+    Usage: <salon> <message>
+    Description: Envoyer un message dans un salon.
+  
+  Send_As:
+    Usage: <joueur> <salon> <message>
+    Description: Envoyer un dans un salon en se faisant passer pour le joueur spécifié.
+    Error: 'Echec de l''envoi du message en temps que ''{0}'' : {1}'
+    
+# -------------------------------------------------------------------------------------------------
+# Messages related to commands
+# -------------------------------------------------------------------------------------------------
+Commands:
+  No_Console: '&cSeuls un joueur peut utiliser cette commande.'
+  No_BungeeCord: Vous devez activer BungeeCord afin d'utiliser cette fonctionnalité.
+  No_MySQL: Cette commande nécéssite l'activation de MySQL dans le fichier settings.yml.
+  No_MySQL_BungeeCord: Vous devez activer MySQL afin d'utiliser cette fonctionnalité sur BungeeCord.
+  No_Group_Name: Veuillez spécifier le nom d'un groupe. Groupes disponnibles {0}
+  No_Rule_Name: 'Veuillez spécifier le nom d''une règle. Règles disponnibles: {0}'
+  No_Message_Name: 'Veuillez spécifier le nom du message. Messages disponnibles: {0}'
+  No_Cached_Player: Veuillez spécifier le nom d'un joueur (le joueur peut être hors-ligne).
+  No_Reason_While_Silent: Vous ne pouvez pas donner de raison lorsque vous utilisez le mode silencieux.
+  No_Silent_And_Anonymous: Vous ne pouvez pas utiliser le mode silencieux et le mode anonyme en même temps.
+  Console_Missing_Player_Name: Lors de l'éxécution à partir de la console, veuillez spécifier le nom d'un joueur.
+  Compiling_Data: Compilation des informations de la base de données..
+  Cooldown_Wait: '&cPatientez {duration} seconde(s) afin de pouvoir réutiliser cette commande.'
+  Invalid_Server: 'Ce serveur n''existe pas: ''{0}'' Serveur(s) disponnible(s): {1}.'
+  Invalid_Argument: '&cArgument invalide. Entrez &6/{label} ? &cpour obtenir de l''aide.'
+  Invalid_Sub_Argument: '&cArgument invalide. Entrez ''/{label} {0}'' pour obtenir de l''aide.'
+  Invalid_Argument_Multiline: '&cArgument invalide. Utilisation:'
+  Invalid_Time: 'Durée telle que ''3 hours'' or ''15 minutes'' attendue, hors vous utilisez: ''{input}'''
+  Invalid_Number: 'Le nombre doit être un entier ou une décimale. Vous utilisez: ''{input}'''
+  Invalid_Material: 'Ce matériau n''existe pas: ''{0}''. Pour une liste des matériaux valides, rendez-vous sur: https://mineacademy.org/materials'
+  Invalid_Type: 'Ce type n''existe pas: ''{0}''. Types disponnibles: {1}'
+  Invalid_Mode: 'Ce mode n''existe pas: ''{0}''. Modes disponnibles: {1}'
+  Invalid_Tag: 'Ce tag n''existe pas: ''{0}''. Tag disponnibles: {1}'
+  Invalid_Channel: 'Ce salon n''existe pas: ''{0}''. Salons disponnibles: {1}'
+  Invalid_Group: 'Ce groupe n''existe pas: ''{0}''. Groupes disponnibles: {1}'
+  Invalid_Warning_Set: 'Ce groupe d''avertissements n''existe pas: ''{0}''. Groupes d''Avertissements disponnibles: {1}'
+  Invalid_Param: 'Paramètre invalide: ''{0}'' Paramètres disponnibles: {1}'
+  Invalid_Param_Short: 'Paramètre invalide: {0}'
+  Invalid_Rule: 'Cette règle n''existe pas: ''{0}''. Règles disponnibles: {1}'
+  Invalid_Message: 'Ce message n''existe pas: ''{0}''. Messages disponnibles: {1}'
+  Invalid_Region: La région '{0}' n'existe pas.
+  Label_Authors: Réalisé par
+  Label_Description: '&c&lDescription:'
+  Label_Optional_Args: arguments facultatifs
+  Label_Required_Args: arguments nécéssaires
+  Label_Usages: '&c&lUtilisations:'
+  Label_Usage: '&c&lUtilisation:'
+  Label_Help_For: Assistance pour la commande /{label}
+  Label_Subcommand_Description: ' &f/{label} {sublabel} {usage+}{dash+}{description}'
+  Help_Tooltip_Description: '&7Description: &f{description}'
+  Help_Tooltip_Permission: '&7Permission: &f{permission}'
+  Help_Tooltip_Usage: '&7Utilisation: &f'
+  Reload_Description: Recharger la configuration.
+  Reload_Started: Rechargement des données du plugin, veuillez patienter...
+  Reload_Success: '&6ChatControl {plugin_version} a été rechargé.'
+  Reload_Fail: '&4Oups, &cechec du rechargement ! Vérifiez la console pour obtenir plus d''informations. Erreur: {error}'
+  Reload_File_Load_Error: '&4Oups, &cune erreur est survenue lors du chargement des fichiers depuis le stockage ! Vérifiez la console pour obtenir plus d''informations. ChatControl n''a pas été rechargé.'
+  Debug_Description: ZIPPEZ vos configurations afin de signaler des bugs.
+  Debug_Preparing: '&6Préparation du journal de débogage...'
+  Debug_Success: '&2{amount} fichier(s) a/ont été copié(s) dans le fichier debug.zip. Les informations MySQL sensibles ont été retirés des fichiers. Veuillez mettre en ligne le fichier debug.zip via ufile.io et nous l''envoyer pour examen.'
+  Debug_Copy_Fail: '&cÉchec de copie du fichier messages_en. La copie des fichiers a donc été annulée. Vérifiez la console pour obtenir plus d''informations.'
+  Debug_Zip_Fail: '&cÉchec de création d''un .ZIP de vos fichiers, vérifiez la console pour obtenir plus d''informations. Veuillez ZIPPER le dossier debug/ et nous l''envoyer via ufile.io manuellement.'
+  Perms_Description: Lister toutes les permissions du plugin.
+  Perms_Header: Liste de toutes les permissions de ChatControl
+  Perms_Main: Principal
+  Perms_Permissions: 'Permissions:'
+  Perms_True_By_Default: '&7[activé par défaut]'
+  Perms_Info: '&7Info: &f'
+  Perms_Default: '&7Defaut ? '
+  Perms_Applied: '&7Y avez-vous accès ? '
+  Perms_Yes: '&2oui'
+  Perms_No: '&cnon'
+  Error: '&4&lOups ! &cLa commande a échouée :( Veuillez vérifier la console et signaler l''erreur.'
+  Header_No_Subcommands: '&cIl n''y a aucuns arguments pour cette commande.'
+  Header_No_Subcommands_Permission: '&cVous n''avez pas la permission de voir n''importe quelles sous-commandes.'
+  Header_Color: DARK_GRAY
+  Header_Secondary_Color: RED
+  Reloading: rechargement
+  Disabled: désactivé(e)
+  Use_While_Null: '&cVous ne pouvez pas utiliser cette commande lorsque le plugin est {state}.'
+  Incompatible: Cette commande n'est fonctionnelle que sous une version égale ou supérieure à Minecraft {0}.
+  Toggled_Plugin_Part: '"&7Vous " + (ignoring ? "&2n''ignorez plus:" : "&cignorez désormais:") + " &7{0}."'
+  Use_Alternative_Header: false
+  Alternative_Header: '&cChat: &7Entrez ''/{0} ?'' afin de voir toutes les commandes.'
+  
+  Announce:
+    Usage: <type> <message>
+    Description: Faire diverses annonces.
+    Usage_Chat: /{label} {sublabel} chat <message> [server:<serveur>] [type:raw] &7- Faire une annonce dans le chat.
+    Usage_Title: /{label} {sublabel} title <title|subtitle> fadein:<ticks> stay:<ticks> fadeout:<ticks> &7- Envoyer une annonce en titre. Si vous souhaitez uniquement envoyer un sous-titre, entrez '/{label} {sublabel} title |votre message ici'.
+    Usage_Actionbar: /{label} {sublabel} actionbar <message> server:creatif &7- Envoyer une annonce dans l'actionbar du serveur 'creatif'.
+    Usage_Bossbar: /{label} {sublabel} bossbar <message> time:<secondes> color:<couleur> style:<style> &7- Envoyer une annonce dans la bossbar du serveur.
+    Usage_Toast: /{label} {sublabel} toast <message> icon:<matériau> &7- Envoyer une annonce Toast.
+    Usage_Image: /{label} {sublabel} image <chemin> <hauteurEnLignes> [message|secondMessage]
+    Usage_No_Perms: "Vous n'avez aucune sous-permission vous permettant de faire une annonce d'un quelconque type, tel que chatcontrol.command.announce.chat."
+    Usage_Footer:
+    - ''
+    - '&c&lASTUCE: &cUtilisez le paramètre server:<nom> &cpour diffuser le message sur un,'
+    - 'autre serveur, ou utilisez server:bungee pour diffuser le message à tous les serveurs.'
+    - 'Utilisez type:raw pour les annonces du chat afin d''envoyer un message non-formaté.'
+    - '(BungeeCord n''est pas supporté)'
+    - ''
+    - 'Si vous envoyez une annonce dans le chat, ajoutez &7[JSON] &cafin de l''envoyer en JSON brut.'
+    No_Type: Veuillez spécifier un type d'annonce.
+    Empty: Votre message ne peut être vide !
+    Image_Lines: Veuillez spécifier un nombre valide de lignes sur lesquelles vous souhaitez afficher l'image.
+    Invalid_Image: Impossible de trouver l'image dans le dossier '{0}'
+    Invalid_Type: 'Je ne sais pas comment envoyer: ''{0}''.'
+    Invalid_Raw_Type: Type invalide ! Seul le type 'raw' est supporté pour le moment.
+    Invalid_Time_Ticks: Veuillez spécifier un entier valide représenter une durée en ticks.
+    Invalid_Time_Seconds: Veuillez spécifier un entier valide représentant une durée en secondes.
+    Invalid_Key: 'Clé invalide ''{0}'' valeur: {1}. Clés disponnibles: {2}'
+    Invalid_File: 'Ce fichier n''existe pas: {0}'
+    Image_Error: 'Echec d''envoi de l''image depuis ''{0}'': {1}. Vérifiez la console pour obtenir plus d''informations.'
+    Invalid_Image_Height: La taille de l'image doit être comprise entre {0} et {1}.
+    Chat_Body:
+    - '&8{chat_line}'
+    - '<center>&c&l! &6&l{type} &c&l!'
+    - '&8{chat_line}'
+    - '{lines}'
+    - '{remaining_space}'
+    - '&8{chat_line}'
+    Chat_Body_Line_Color: GRAY
+    Type: '(bungee ? ''NETWORK '' : '''') + ''ANNONCE'''
+    Success: Votre annonce a été envoyée.
+    Success_Network: Vous annonce a été envoyée au serveur {0}.
+  
+  Book:
+    Usage: <new/save/delete/open/list> [nom] [joueur]
+    Description: Manipulez les livres du jeu.
+    Usages:
+    - '/{label} {sublabel} new &7- Écrire un nouveau livre avec la commande ''/mail new''.'
+    - '/{label} {sublabel} save <nom> &7- Sauvegarder le livre signé.'
+    - '/{label} {sublabel} delete <nom> &7- Supprimé un livre sauvegardé.'
+    - '/{label} {sublabel} open <nom> [joueur] &7- Ouvrir le livre spécifié pour un joueur.'
+    - '/{label} {sublabel} give <nom> [joueur] &7- Donner le livre spécifié à un joueur.'
+    - '/{label} {sublabel} list &7- Lister tous les livres écris.'
+    Invalid: 'Livre invalide: ''{0}''. Livres disponnibles: {1}'
+    No_Book: 'Spécifiez d''abord le nom d''un livre. Livres disponnibles: {0}.'
+    Mail_Disabled: Vous ne pouvez pas créer de livre lorsque les mails sont désactivés. Définisser Mail.Enabled sur true dans le fichier settings.yml pour activer cette fonctionnalité.
+    New: 'Utilisez la fonctionnalité d''mails afin de créer un livre. Lorsque vous êtes prêt(e), entrez ''/{label} {sublabel} save'' pour sauvegarder le livre. '
+    Save_No_Book: Créer d'abord un livre avec la commande '/{label} {sublabel} new'.
+    Save_Not_Signed: Signez votre livre avant de le sauvegarder.
+    Save_No_Name: Spécifiez le nom du livre. Il sera placé dans le dossier books/ du plugin.
+    Save: '''Enregistrement de l''email en tant que books/{0}.yml.'' + (override ? '' Votre ancien fichier a été remplacé.'' : '''')'
+    Save_Error: 'Echec de la sauvegarde du livre {0}: {1}'
+    Delete: Le livre '{0}' a été supprimé.
+    Delete_Fail: Impossible de supprimer le livre '{0}'.
+    List_Open: '&8[&6O&8]'
+    List_Open_Tooltip: '&6Ouvrir ce livre.'
+    List_Delete: '&8[&cX&8]'
+    List_Delete_Tooltip: '&6Cliquez pour supprimer le livre.'
+    List_None: Il n'y a aucun livre dans le dossier books/.
+    List_Header: Livres
+    List: ' &7''&f{title}&7'' &7par {author} le {date}'
+    List_Tooltip: '&7Nom du fichier: &f{0}'
+    Page: '&6Page {0}:'
+    Page_Header: Livre '{0}' par {1}
+    Unnamed: Sans nom
+    Unsigned: Non signé
+    Open: Le livre a été ouvert pour {0}.
+    Give: '{0} à reçu un livre.'
+
+  Clear:
+    Usage: '[-a/-c/-s] [raison]'
+    Description: Effacer le chat du jeu.
+    Usages:
+    - '/{label} {sublabel} [raison] &7- Effacer le chat.'
+    - '/{label} {sublabel} -a(nonymous) &7- Effacer le chat du jeu anonymement.'
+    - '/{label} {sublabel} -c(console) &7- Effacer la console du serveur.'
+    - '/{label} {sublabel} -s(ilent) &7- Effacer le chat du jeu sans envoyer de message.'
+    Success: '''Le chat du '' + (bungee ? ''Network'' : ''Serveur'') + '' a été effacé'' + (anonymous ? '''' : '' par {0}'') + ''.'' + (!reason.isEmpty() ? '' Raison: {1}'' : '''')'
+    Success_Console: La console a été nettoyée par {0}.
+    Success_Staff: '{prefix_info}Le chat a été effacé par {0}.'
+
+  Color:
+    Usage: <color/status/menu> [décoration] [joueur]
+    Description: Définir la couleur et la décoration du chat.
+    Usages_1:
+    - '/{label} {sublabel} status [joueur] &7- Afficher votre couleur et votre décoration de chat.'
+    - '/{label} {sublabel} menu &7- Ouvrir le menu des couleurs et des décorations du chat.'
+    - '/{label} {sublabel} yellow &7- Définir votre couleur de chat sur jaune.'
+    Usages_Hex_1:
+    - '/{label} {sublabel} #<hexcode> &7- Définir votre couleur de chat avec un code couleur HEX.'
+    Usages_2:
+    - '/{label} {sublabel} red bold [joueur] &7- Pour le joueur spécifié, définir sa couleur de chat sur rouge, et sa décoration en gras.'
+    - '/{label} {sublabel} reset &7- Réinitialiser votre couleur et votre décoration de chat.'
+    - '/{label} {sublabel} reset reset [joueur] &7- Réinitialiser la couleur et la décoration de chat du joueur spécifié.'
+    Usages_Hex_2:
+    - ''
+    - '&c&lASTUCE:&c Visitez https://htmlcolorcodes.com pour générer une couleur HEX.'
+    Not_Saved: '{0} n''a aucune couleur et aucune décoration.'
+    Chat_Color: '&7Couleur de chat'
+    Decoration: 'décoration'
+    Invalid_Color: '''Couleur de chat invalide. Syntaxes valides: Couleur &, nom de couleur, '' + (hasHex ? ''ou couleur #<hex>'' : '''') + ''. Couleurs Disponnibles: {0}'''
+    Invalid_Decoration: 'Décoration de chat invalide. Utilisez le caractère & ou un nom. Décorations disponnibles: {0}'
+    Decoration_Not_Allowed: Veuillez spécifier uniquement des couleurs, non des décorations.
+    Color_Not_Allowed: Veuillez spécifier uniquement des décorations, non des couleurs.
+    Success_Color: Couleur de chat définie sur {1}
+    Success_Decoration: Décoration de chat de {0} définie sur {1}&r&7
+    Reset: La couleur de chat a été réinitialisée pour {0}
+    Reset_Decoration: Couleur de chat réinitialisée
+
+  Forward:
+    Usage: <serveur> <commande...>
+    Description: Éxécuter une commande via le proxy.
+    Usages:
+    - '/{label} {sublabel} <serveur> <commande...> &7- Éxécuter une commande sur le proxy ou sur d''autres serveurs de votre network.'
+    - '/{label} {sublabel} bungee send all creatif &7- Éxécuter la commande ''send all creatif'' sur le proxy.'
+    - '/{label} {sublabel} creatif say Salut tout le monde ! &7- Éxécuter la commande ''say Salut tout le monde !'' sur le serveur ''creatif''.'
+    - ''
+    - '&c&lNOTE: &cVous ne pouvez pas éxécuter de commande sur les serveurs vides.'
+    Unknown_Server: 'Serveur innexistant. Serveurs disponnibles: bungee, {0}'
+    Success: Votre commande a été envoyée avec succès.
+
+  Info:
+    Usage: <param> <joueur> [args...]
+    Description: Afficher les informations de débogage.
+    Usages:
+    - '/{label} {sublabel} nick <joueur/surnom> &7- Afficher le surnom et le pseudonyme du joueur spécifié.'
+    - '/{label} {sublabel} newcomer <joueur> &7- Afficher si le joueur est un nouveau venu.'
+    - '/{label} {sublabel} cache <joueur> &7- Afficher les informations sauvegardées du joueur.'
+    - '/{label} {sublabel} variables <joueur> <message> &7- Afficher les variables de message.'
+    - ''
+    - '&c&lExemple:'
+    - '&c/{label} {sublabel} variables Notch &c{player} est dans le salon {channel}'
+    - ''
+    - '&c&lASTUCE:&c Vous pouvez utiliser cette fonction pour mesurer les performances d''une variable et trouver les variables causant des lags.'
+    Cache_Player: '&cInformations en cache pour {0}'
+    Cache_Location: '&cEmplacement: '
+    Cache_Nick: 'Le surnom de {0} est: {1}.'
+    Newcomer: '"{0} " + (newcomer ? "&aest" : "&cn''est pas") + " &7un nouveau venu."'
+    Variables_No_Message: Veuillez saisir un message dans lequel les variables seront remplacées.
+    Variables: '''&7Resultat (a pris {0}ms): &r'' + (replaced.isEmpty() ? ''&7&osortie vide.'' : replaced)'
+    
+  Ignore:
+    Usage: <joueur/list> [joueur]
+    Description: "Activer/Désactiver l'affichage des messages et messages privés provenant du joueur spécifié."
+    Usages:
+    - "/{label} <joueur> &7- Bloquer ou débloquer un joueur."
+    Usages_Others: 
+    - "/{label} <joueur1> <joueur2> &7- Forcer joueur2 à bloquer ou débloquer joueur1."
+    Usages_List: 
+    - "/{label} list &7- Afficher la liste des joueurs bloqués."
+    Usages_List_Others: 
+    - "/{label} list <player> &7- Afficher la liste des bloqués d'un autre joueur."
+    Not_Ignoring: '(!otherPlayer ? "Vous n''ignorez" : "{0} n''ignore") + " personne."'
+    List_Header: Joueurs ignorés par {0}
+    List_Tooltip_Stop: '&6Cliquez pour arrêter d''ignorer {0}.'
+    Cannot_Ignore_Admin: Vous ne pouvez pas ignorer ce joueur.
+    Cannot_Ignore_Self: Vous ne pouvez pas ignorer deux fois le même joueur
+    Success: '(!otherPlayer ? "Vous avez" : "{0} a") + (ignored ? " &adébloqué" : " &cbloqué") + " &7{1}."'
+    Cannot_PM: '{0} vous ignore. Votre message n''a pas été envoyé(e).'
+    Cannot_PM_Ignored: "Vous ignorez {0}. Votre message n'a donc pas été envoyé."
+    Cannot_Sound_Notify_Sender: Impossible de mentionner {0} car vous l'ignorez.
+    Cannot_Sound_Notify_Receiver: Impossible de mentionner {0} car il/elle vous ignore.
+
+  Inspect:
+    Usage: <fichier/plugin/class> <valeur>
+    Description: Inspecter les classes, champs et methodes en Java.
+    Usages:
+    - '/{label} {sublabel} file <chemin> &7- Afficher le fichier ou les dossiers.'
+    - '/{label} {sublabel} plugin <plugin> &7- Afficher les classes du plugin.'
+    - '/{label} {sublabel} class <class> &7- Inspecter les méthodes/champs de la class.'
+    Invalid_File: Le fichier '{0}' n'existe pas dans le dossier du plugin.
+    Illegal_File: Le fichier '{0}' contient un format non-supporté.
+    Listing_Content: Liste du contenu de {0}
+    Listing_File: Liste du fichier {0}
+    Plugin_Not_Loaded: Le plugin '{0}' n'est pas chargé !
+    Listing_Classes: Liste des {0} classes
+    Plugin_Tooltip:
+    - 'Cliquez pour inspecter cette class.'
+    No_Class: 'Cette classe n''existe pas: {0}'
+    Inspecting_Class: Inspection de la Class {0}
+    Inspect_Tooltip:
+    - '&6Inspecter {0}'
+    Parent: '&3[parent]'
+    Open:
+    - '&6Ouvrir {0}'
+    Cut: '&c> &7{0} lignes ont été coupées car elles dépassaient la limite.'
+
+  Log:
+    Usage: <type> [key:valeur...]
+    Description: Voir les dernières communications du joueur spécifié.
+    Usages_1:
+    - '/{label} {sublabel} <type> player:kangarko &7- Afficher les logs du joueur spécifié.'
+    - '/{label} {sublabel} <type> before:10m &7- Afficher les logs avant l''horodatage.'
+    - '/{label} {sublabel} <type> in:1h &7- Afficher les logs récents jusqu''à l''horodatage.'
+    Usages_Channel:
+    - '/{label} {sublabel} <type> channel:admin &7- Afficher les logs du salon.'
+    Usages_To:
+    - '/{label} {sublabel} <type> to:destinataire &7- Afficher les logs des Messages Privés/Emails du destinataire.'
+    Usages_2:
+    - '/{label} {sublabel} <type> label:me &7- Afficher les logs des commandes.'
+    Usages_Rule:
+    - '/{label} {sublabel} <type> rule:ip &7- Afficher les logs correspondant à la règle ''ip''.'
+    - '/{label} {sublabel} <type> group:ads &7- Afficher les logs correspondant au groupe ''ads''.'
+    Usages_3:
+    - ''
+    - '&c&lASTUCE: &cVous pouvez utilisez de multiples paramètres clé:valeur. Pour lister toutes les logs, entrez ''all''.'
+    - '&c&lASTUCE'': &cLes paramètres ''player'' et ''to'' ne supportent pas les surnoms.'
+    No_Logs: '"Aucunes logs" + (hasType ? " ''{0}''" : "") + " n''ont été trouvées."'
+    Type_Chat: chat
+    Type_Command: commandes
+    Type_Private_Message: messages privé
+    Type_Mail: emails
+    Type_Sign: pancartes
+    Type_Book: livres
+    Type_Anvil: enclumes
+    Tooltip_Channel: '&7Salon: &f{0}'
+    Tooltip_Rule: '''&7Règle: &f'' + (isUnnamed ? ''&oSans Nom.'' : ''{0}'')'
+    Tooltip_Group: '&7Groupe: &f{0}'
+    Tooltip_Recipients: '&7Destinataires:'
+    Tooltip_Click_To_Read:
+    - ''
+    - '&6Cliquez pour lire.'
+    Sent_Mail: ' &7envoyé un mail &f''{0}'''
+    Placed_Sign: ' &7a placé une pancarte:'
+    Wrote_Book: ''' &7a écrit un livre &f'' + (isSigned ? ''{title}'' : ''&oNon Signé&r'')'
+    Wrote_Book_Tooltip: '&6Cliquez pour ouvrir'
+    Renamed_Item: ' &7a renommé l''objet: &f'
+    No_Logs_Matched: Aucunes logs ne correspondent au(x) paramètre(s) donné(s).
+    Listing_Header: '''Liste de '' + (noType ? ''Toutes les'' : ''{0}'') + '' Logs'''
+    Invalid_Syntax: 'Syntaxe invalide ! Utilisez: <value>:<key>. Vous avez utilisé: {0}'
+    Invalid_Value: Veuillez spécifier une valeur valide pour '{0}'.
+    Invalid_Key: 'Clé invalide ''{0}'' valeur: {1}.'
+    Cannot_Use_Channel: Vous ne pouvez utiliser que le paramètre 'channel' dans le chat.
+    Cannot_Use_Label: VVous ne pouvez utiliser que le paramètre 'label' sur les commandes.
+    Cannot_Use_To: Vous ne pouvez utiliser que le paramètre 'to' pour les messages privés.
+    
+  List:
+    Usage_Server: '[serveur]'
+    Description: Lister les joueurs connectés.
+    Usage_1: '''/{label} &7- Lister les joueurs connectés'' + (bungee ? '' sur tous les serveurs'' : '''') + ''.'''
+    Usage_2: /{label} survie &7- Lister les joueurs présents sur le serveur 'survie'.
+    Header: '"&eListe des joueurs connectés&8" + (bungee ? "&eau Network&8" : "")'
+    
+  Mail:
+    Usage: <new/send/inbox/sent>
+    Description: Gérer vos emails en jeu.
+    Usages:
+    - '/{label} new &7- Rédiger un nouveau email.'
+    - '/{label} send <joueur/secondJoueur> &7- Envoyer un email.'
+    - '/{label} autor <durée/view/off> &7- Définir le répondeur automatique pour les emails.'
+    - '/{label} inbox &7- Lire les emails entrants.'
+    - '/{label} archive &7- Lire les emails que vous avez envoyé.'
+    - ''
+    - '&c&lASTUCE: &cEcrivez le temps en durée réelle telle que ''1 hour'' etc...'
+    No_Pending: Rédigez d'abord un nouveau email avec '/{label} new'.
+    No_Subject: Votre email n'a pas de sujet. Signez d'abord votre email.
+    No_Recipients: Veuillez spécifier les destinataires du email, séparés par '|', ou 'online' pour envoyer le email à tous les joueurs connectés, ou encore 'all' pour envoyer le email à tous les joueurs présents dans la base de données.
+    Autoresponder_Usage: Entrez 'view' pour voir votre répondeur automatique, 'off' pour le désactiver, '3 days' pour renouveller le répondeur automatique actuel ou utilisez votre brouillon comme nouveau répondeur automatique.
+    Autoresponder_Disabled: Vous n'avez aucun répondeur automatique.
+    Autoresponder_Removed: Le répondeur automatique de votre email a été retiré.
+    Autoresponder: Votre répondeur automatique '{title}' expire le {date}. Entrez '/{label} {0} <durée>' pour le renouveler.
+    Autoresponder_Missing: Vous avez tenté de spécifier une durée mais vous ne créez pas de brouillon ou n'avez pas d'ancien répondeur automatique. Rédigez d'abord un nouveau email.
+    Autoresponder_Updated: Mise à jour de votre ancien répondeur pour expirer dans {0}.
+    Autoresponder_Set: Définission d'un nouveau répondeur automatique qui expireras dans {0}.
+    Autoresponder_Invalid_Time: Syntaxe erronée, un format lisible humainement est attendu, comme '1 minute' ou '3 days', or vous avez utilisé '{0}' à la place.
+    Delete_Invalid: Il n'y a aucun email de ce type, il a peut-être déjà été supprimé.
+    Delete_Sender: L'email séléctionné a été supprimé. Cependant, le destinataire sera toujours en mesure de lire le email.
+    Delete_No_Recipient: ID unique du destinataire non fourni.
+    Delete_Invalid_Recipient: 'Aucun destinataire n''a cet ID: {0}'
+    Delete_Recipient: L'email séléctionné a été supprimé.
+    Hand_Full: Faîtes de la place dans votre main droite avant d'écrire un email.
+    Already_Drafting: Vous possédez déjà le brouillon de cet email dans votre inventaire.
+    Item_Title: Cliquez droit pour rédiger votre email
+    Item_Tooltip:
+    - '&r&7Cliquez avec la souris pour supprimer.'
+    New_Usage: '(noPendingMail ? "Cliquez droit pour rédiger un nouvel email." : "Cliquez droit pour continuer l''écriture de l''email.") + " Jetez l''objet pour supprimer le brouillon."'
+    Reply_Usage: Cliquez Droit pour écrire une réponse à {0}. Cliquez sur 'Done' pour envoyer la réponse. Déposer l'objet à supprimer.
+    Open_Tooltip: '&6Cliquez pour ouvrir.'
+    Open_Tooltip_Script: 'read ? "&7Vous avez lu cet email {0}." : "&6Vous n''''avez pas lu cet email."'
+    Reply_Tooltip: '&6Cliquez pour répondre.'
+    Forward_Tooltip: '&6Cliquez pour transférer.'
+    Delete_Tooltip: '&6Cliquez pour supprimer.'
+    Inbox_Line: ' &r{subject} &7par {sender} &7le {date}'
+    No_Incoming_Mail: Vous n'avez pas reçu d'emails.
+    Inbox_Header: Emails Reçus
+    Archive_Recipients_Tooltip: '&7Destinataire:'
+    Archive_Read_Tooltip: '''{0}&7: '' + (hasOpened ? ''&2lû'' : ''&7non-lû'')'
+    Archive_Line: ' &r{subject} &7à {recipients} &7le {date}'
+    Archive_Recipient: destinataire(s)
+    Archive_No_Mail: Vous n'avez pas d'archives des emails envoyés.
+    Archive_Header: Email Envoyés
+    Send_Fail_Ignore: Impossible d'envoyer l'email à {0} car ce joueur vous ignore.
+    Send_Fail_Toggle: Impossible d'envoyer l'email à {0} car ce joueur a désactivé ses emails.
+    Send_Success: Email envoyé !
+    Draft_Discarded: Votre email en attente a été supprimé.
+    Forward_Recipients: '{prefix_question}Entrez les noms des joueurs qui reçevront l''email en les séparant avec ''|'' ou entrez ''exit'' pour annuler.'
+    Forward_Recipients_Invalid: '{prefix_error}Syntaxe invalide ! Spécifiez les noms des destinataires comme dans l''exemple suivant: kangarko|secondJoueur|troisièmeJoueur. Vous avez utilisé: {0}'
+    Forward_Success: '{prefix_success}Votre email a été transféré.'
+    Ready: Votre email peut être envoyé. Utilisez '/mail send' pour l'envoyer.
+    Draft_Saved: Sauvegardez le brouillon de votre email. Signez le livre en spécifiant un titre et un sujet lorsque vous êtes prêt(e) à l'envoyer. Utilisez /mail new pour rouvrir l'email.
+    Join_Notification: Vous avez reçu un email ({0}). Utilisez '/mail inbox' pour le lire.
+    New_Notification: '{prefix_warn}{0} vous a envoyé un email. Utilisez ''/mail inbox'' pour le lire.'
+
+  Message:
+    Usage: <list/toggle/info/reload> <type> [groupe]
+    Description: Gérer les messages des joueurs.
+    Usages:
+    - '/{label} {sublabel} list <type> &7- Afficher tous les messages.'
+    - '/{label} {sublabel} toggle <type> <groupe> &7- Activer/Désactiver les messages.'
+    - '/{label} {sublabel} info <type> <groupe> &7- Afficher les informations du message.'
+    - '/{label} {sublabel} reload &7- Recharger les messages.'
+    Reloaded: Rechargement des messages depuis le dossier messages/.
+    No_Type: 'Veuillez spécifier un type de message. Types disponnibles: {0}'
+    No_Messages: Aucun messages {0} n'ont été créés.
+    Group: ' &8- &7Groupe: &f{0}'
+    List_Header: Affichage de {0} {1} Message(s)
+    No_Group: Veuillez spécifier le groupe du message.
+    Info:
+    - '&8{chat_line}'
+    - '<center>&6&l{0} message ''{1}'''
+    Info_Footer:
+    - '&8{chat_line}'
+    Toggled: '''{0} message {1} a été '' + (toggle ? ''&cdésactivé'' : ''&aactivé'') + ''&7.'''
+
+  Me:
+    Usage: <message>
+    Description: Envoyer un message formatté.
+    Usages:
+    - '/{label} Salut tout le monde ! &7- Envoyer un message formatté.'
+
+  Migrate:
+    Usage: <chc8/import/export/essentials>
+    Description: Copier les données de ChatControl 8, MySQL ou du fichier data.db.
+    Usages:
+    - '/{label} {sublabel} chc8 &7- Migrer les données depuis ChatControl 8.'
+    - '/{label} {sublabel} import &7- Importer les données MySQL dans les données locales du fichier data.db.'
+    - '/{label} {sublabel} export &7- Exporter les données du fichier data.db dans MySQL.'
+    - '/{label} {sublabel} essentials &7- Importer les données du fichier usermap.csv d''Essentials.'
+    - ''
+    - '&4&lATTENTION: &cDe lourds fichiers data.db ou MySQL peuvent bloquer'
+    - 'le serveur pendant ~3-10 minutes. Ignorez les rapports de crash,'
+    - 'la migration ne sera pas interrompue.'
+    Import_Start: Début de l'importation des entrées de la base de donnée dans les fichiers data.db et usermap.scv. Cela peut prendre un certain temps, veuillez donc garder un oeil sur la console. De ce fait, nous continueront de les ignorer jusqu'à ce que vous désactiviez MySQL.
+    Import_Finish: Succès de l'importation des entrées des fichiers data.db et usermap.csv.
+    Export_Start: Début de l'exportation des entrées du fichier data.db dans la base de données. Cela peut prendre un certain temps, veuillez donc garder un oeil sur la console.
+    Export_Finish: Succès de l'exportation de {0} entrées.
+    Essentials: Succès de l'importation du fichier usermap.csv depuis Essentials (si le fichier existe).
+  
+  Motd:
+    Usage: '[joueur]'
+    Description: Lire le message du jour.
+    Usages_Self: 
+    - '/{label} &7- Lire le message du jour.'
+    Usages_Others: 
+    - "/{label} <player> &7- Envoyer le message du jour à un autre joueur."
+    Success: Le message du jour a été envoyé.
+  
+  Mute:
+    Usage: <serveur/salon/joueur> <paramètres...>
+    Description: Muter le serveur, un salon ou un joueur.
+    Usages:
+    - '/{label} <type> &7- Afficher si le type spécifié est muté.'
+    - '/{label} <type> off &7- Démuter le type spécifié s''il est muté.'
+    - '/{label} <type> <durée e.g. 1h2m15s> &7- Muter le type spécifié.'
+    - '/{label} <type> <durée> [raison] &7- Muter le type spécifié avec la raison donnée.'
+    - '&cASTUCE: Le type peut être ''server'', ''channel'' ou ''player''. Pour les salons et les joueurs, veillez à spécifier également le nom du salon ou le pseudonyme du joueur concerné.'
+    Server: '&7Ce serveur " + (muted ? "&cest muté" : "&2n''est pas muté") + "&7."'
+    Player_Or_Channel: '"&7- &f{0} " + (muted ? "&cest muté(e)" : "&2n''est pas muté(e)") + "&7."'
+    Change_Status_Tooltip: '''&6Cliquez pour '' + (muted ? ''dé'' : '''') + ''muter'' + (muted ? '''' : '' pendant 3 minutes'')'
+    Channel_Status: État Muet du Salon
+    Server_Status: État Muet du Serveur
+    Player_Status: État Muet du Joueur
+    No_Duration: Veuillez spécifier une durée et, facultativement, une raison.
+    Invalid_Duration: 'Format de durée invalide: ''{0}'' ! Format valide : 6y5mo4w3d2h1m0s, 30m ou 1m30s'
+    Mute_Success: '''Le {type} a été muté par {player} pendant {duration}.'' + (!reason.isEmpty() ? '' Raison: '' + reason : '''')'
+    Unmute_Success: Le {type} a été démuté par {player}.
+    Already_Muted: Le {type} '{0}' est déjà muté ! Utilisez 'off' comme argument pour le démuter.
+    Not_Muted: Le {type} '{0}' n'est pas muté !
+    Already_Muted_Server: Le {type} est déjà muté ! Utilisez 'off' comme argument pour le démuter.
+    Not_Muted_Server: Le {type} n'est pas muté !
+    Cannot_Mute_Yourself: Vous ne pouvez pas vous muter !
+    Cannot_Create_Books: Vous ne pouvez pas écrire dans un livre lorsque le chat, ou vous, êtes muté(e) !
+    Cannot_Command: Vous ne pouvez pas éxécuter cette commande lorsque vous êtes muté(e).
+    Cannot_Chat: Vous ne pouvez pas écrire dans le chat lorsque vous êtes muté(e).
+    Cannot_Place_Signs: Vous ne pouvez pas placer de pancarte lorsque le chat est muté !
+    Cannot_Chat_Player_Muted: Vous ne pouvez pas écrire dans le salon lorsque vous, le salon ou le serveur, êtes muté(e).
+    Cannot_Chat_Channel_Muted: Vous ne pouvez pas écrire dans le salon {0} car il est muté.
+
+  Points:
+    Usage: <get/set/list> <joueur> [ensemble] [quantité]
+    Description: Gérer les points d'avertissement du joueur spécifié.
+    Usages:
+    - '/{label} {sublabel} get <joueur> [ensemble] &7- Lister les points d''avertissements du joueur spécifié.'
+    - '/{label} {sublabel} set <joueur> <ensemble> <quantité> &7- Définir les points d''avertissements du joueur spécifié.'
+    - '/{label} {sublabel} list [ensemble] &7- Lister tous les points d''avertissements des joueurs.'
+    Disabled: Les points d'avertissements sont désactivés dans le fichier settings.yml
+    List_Item_1: ' &6Ensemble {0}:'
+    Remove_Tooltip: '&6Cliquez pour supprimer.'
+    List_Item_2: ' &f{0}&8: &7{1} points'
+    No_Points: Il n'y a pas de points d'avertissements dans la base de données.
+    List_Header: Points d'Avertissements Enregistrés
+    Player_List_Item: ' &f{0} &7= &f{1} points'
+    No_Player_Points: '{0} n''a pas de points d''avertissements.'
+    Player_List_Header: Points d'Avertissements de {0}
+    No_Set: 'Veuillez spécifier un ensemble. Ensembles disponnibles: {0}'
+    No_Amount: Veuillez spécifier un nombre valide de points à définir.
+    No_Stored: '{0} n''a pas de points d''avertissements pour l''ensemble ''{1}''.'
+    Set: '(removed ? "Retrait de points d''avertissements de" : "Ajout de {0} points d''''avertissements a") + " {1} pour l''ensemble {2}."'
+
+  Purge:
+    Usage: <joueur>
+    Description: Supprimer les messages envoyés par le joueur spécifié, même s'il est déconnecté.
+    Success: Tous les messages envoyés par {0} ont été supprimés.
+
+  Reply:
+    Dosage: <message>
+    Prescription: Répondre au dernier joueur vous ayant envoyé un message.
+    Alone: Vous ne pouvez répondre à personne
+  
+  Spy:
+    Usage: <status/menu/off/toggle/list> [joueur] [type] [salon]
+    Description: Activer/Désactiver le mode espion pour les commandes et les messages des joueurs.
+    Usages_1:
+    - '/{label} status [joueur] &7- Afficher le statut du mode espion pour le joueur spécifié.'
+    - '/{label} menu [joueur] &7- Ouvrir le menu de séléction principal du mode espion.'
+    - '/{label} on/off [joueur] &7- Activer/Désactiver le mode espion pour le joueur spécifié.'
+    - '/{label} toggle <type> [joueur] &7- Activer/Désactiver le type de mode espion spécifié pour le joueur séléctionné.'
+    Usages_2:
+    - '/{label} toggle chat <salon> [joueur] &7- Activer/Désactiver le mode espion pour le salon spécifié.'
+    Usages_3:
+    - '/{label} list &7- Lister tous les joueurs ayant le mode espion activé.'
+    No_Stored: Aucun joueur n'a activé le mode espion.
+    List_Tooltip:
+    - '&6Désactiver complètement le mode espion pour {0}.'
+    List_Header: Joueurs en Mode Espion
+    Toggle_No_Type: 'Spécifiez un type de mode espion valide. Types disponnibles: {0}'
+    Toggle_No_Channel: 'Specifiez un salon dans lequel activer le mode espion. Salons disponnibles: {0}'
+    Toggle: '"{0} " + (isSpying ? "&cn''espionne plus &7les" : "&aespionne désormais &7les") + " &7{1}."'
+    Type_Channel: salons
+    Type_Chat: chat
+    Type_Command: commandes
+    Type_Private_Message: messages privés
+    Type_Mail: emails
+    Type_Sign: pancartes
+    Type_Book: livres
+    Type_Anvil: enclumes
+    Type_Announcement: annonces
+    Type_Me: messages /me
+    Book_Untitled: Sans Titre
+    No_Spying: '{0} n''espionne rien.'
+    Status_1:
+    - '&8{chat_line_smooth}'
+    - '<center>&6{0} espionne actuellement :'
+    - '&8{chat_line_smooth}'
+    Status_2:
+    - ''
+    - '&7Utilisez ''/{label} off {0}'' pour le désactiver.'
+    Toggle_Off: Désactiver complètement le mode espion pour {0}.
+    Toggle_On: Activer complètement le mode espion pour {0}.
+    Status_Sectors: '&6Secteurs espionnés:'
+    Status_Channels: '&6Salons espionnés:'
+    Auto_Enable_1: '{prefix_warn}Le mode espion a été activé automatiquement. Entrez ''/spy off'' pour le désactiver. '
+    Auto_Enable_2: '&8[&6?&8]'
+    Auto_Enable_Tooltip:
+    - '&6ASTUCE: &7Pour désactiver l''activation automatique'
+    - '&7du mode espion, demandez aux administrateurs de'
+    - '&7vous retirer la permission &o{0}&7.'
+  
+  Region:
+    Usage: <add/remove/view/tp/list> [nom]
+    Description: Gérer les régions cartographiques utilisées dans les règles.
+    Usages:
+    - '/{label} {sublabel} add <nom> &7- Créer une nouvelle région.'
+    - '/{label} {sublabel} remove <nom> &7- Supprimer une région.'
+    - '/{label} {sublabel} view <nom> &7- Visualiser une région.'
+    - '/{label} {sublabel} tp <nom> &7- Se téléporter sur une région.'
+    - '/{label} {sublabel} tool &7- Obtenir l''outils de gestion d''une région.'
+    - '/{label} {sublabel} list &7- Parcourir les régions disponnibles.'
+    List:
+    - '&8{chat_line_smooth}'
+    - ' '
+    - '<center>&6&lRégions de ChatControl'
+    - '<center>&7{0} régions chargée(s)'
+    - '&8{chat_line_smooth}'
+    Region_Info: '&fInformations de Région'
+    Primary: '&7Principal: &2{0}'
+    Secondary: '&7Secondaire: &2{0}'
+    Size: '&7Taille: &2{0} blocs'
+    Tooltip_Remove: '&7Cliquez pour la supprimer définitivement.'
+    Tooltip_Visualize: '&7Cliquez pour visualiser.'
+    Tooltip_Teleport: '&7Cliquez pour vous téléporter au centre.'
+    Tool: Thor vous a donné 1 Outils de Gestion de Région ChatControl. Cliquez Droit/Gauche pour séléctionner deux points, et utilisez ensuite '/{label} {sublabel} add' pour créer une région.
+    Tool_Name: Outils de Gestion de Région
+    Tool_Lore:
+    - ''
+    - 'Utilisez cet outils afin de créer et'
+    - 'd''éditer les régions ChatControl.'
+    - ''
+    - '&b<< &7Clique Gauche &7– &7Principal'
+    - '&7Clique Droit &7– &7Secondaire &b>>'
+    Point_Name: '[&aPoint de Région&f]'
+    Point_Set: '''Définissez le point de région '' + (primary ? ''principal'' : ''secondaire'') + ''.'''
+    No_Name: Veuillez spécifier le nom d'une région.
+    No_Selection: Vous devez d'abord séléctionner un point principal et un point secondaire avec '/{label} {sublabel} tool'.
+    Already_Exists: Une région possède déjà ce nom.
+    Saved: Sauvegarde d'une nouvelle région '{0}'.
+    Removed: Suppression de la région '{0}'.
+    Visualized: La région '{0}' est en train d'être visualisée pendant 5 secondes.
+    Teleported: Téléportation au centre de la région '{0}'.
+
+  Real_Name:
+    Usage: '[Pseudo/Surnom]'
+    Description: Afficher le vrai pseudonyme d'un joueur ou le surnom d'un joueur.
+    Success: '"{0} " + (hasNick ? "a pour surnom {1}" : "n''a pas de surnom") + "."'
+  
+  Rule:
+    Usage: <info/toggle/create/import/list/reload> [règle]
+    Description: Gérer le système de règles.
+    Usages:
+    - '/{label} {sublabel} info <règle> &7- Afficher les informations d''une règle.'
+    - '/{label} {sublabel} toggle <règle> &7- Activer/Désactiver une règle.'
+    - '/{label} {sublabel} create &7- Créer une règle.'
+    - '/{label} {sublabel} import &7- Importer des règles.'
+    - '/{label} {sublabel} list <type> &7- Lister toutes les règles chargées.'
+    - '/{label} {sublabel} reload &7- Recharger toutes les règles.'
+    Info_1:
+    - '&8{chat_line_smooth}'
+    - '<center>&6&lRègle ''{0}'''
+    Info_2:
+    - '&8{chat_line_smooth}'
+    Toggle: '''La règle {0} a été '' + (toggle ? ''&cdésactivée'' : ''&aactivée'') + ''&7.'''
+    List_No_Type: Veuillez spécifier le type de règles à afficher.
+    List_No_Rules: Aucunes règles {0} n'a été créée. Créez-en en utilisant '/{label} {sublabel}' !
+    Type_Global: global
+    Type_Chat: chat
+    Type_Command: commandes
+    Type_Packet: packets
+    Type_Sign: pancartes
+    Type_Book: livres
+    Type_Anvil: enclumes
+    Type_Tag: tags
+    Tooltip_Name: '&7Nom: &f{0} '
+    Tooltip_Match: '&7Correspondance: &f'
+    List_Header: Affichage de {0} {1} Règle(s)
+    Reloaded: Toutes les règles ont été rechargées depuis leurs fichiers respectifs.
+    Rule_Creator: '&8[&6Créateur de Règles&8] &7'
+    Rule_Creator_Welcome:
+    - 'Bienvenue dans l''Assistant de Création des Règles. Veuillez répondre aux questions suivantes afin de créer votre règle.'
+    - 'Entrez vos réponses directement dans le chat, ou entrez ''exit'' n''importe quand pour annuler la manipulation. Pour continuer, veuillez saisir le nom de votre nouvelle règle.'
+    Rule_Creator_Already_Exists: '{prefix_error}La règle {0} existe déjà !'
+    Rule_Creator_Type:
+    - 'Super ! Nous préparons la règle ''{0}'' pour vous. Veuillez spécifier le type de règle. Cela détermine le fichier dans lequel la règle sera placée.'
+    - 'Types disponnibles: {1}'
+    Invalid_Type: '{prefix_error}Le type de règle ''{0}'' est erroné !'
+    Encode: Devons-nous encoder automatiquement le mot que vous entrerez après cela afin de rendre compliqué le bypass ? Entrez yes/no.
+    Invalid_Encode: '{error_prefix}Mauvaise réponse ! Entrez ''yes'' ou ''no'', ou ''exit'' pour abandonner.'
+    Rule_Creator_Match: Entrez le mot qui doit être vérifié.
+    Group_Name: 'C''est presque fini ! Maintenant, spécifiez le groupe auquel appartient cette règle, ou ''none'' si elle n''appartient à aucun groupe. Groupes installés: {0}'
+    Invalid_Group: '{prefix_error}Le groupe {0} n''existe pas !'
+    Rule_Creator_Success: '{prefix_success}Félicitations, vous avez créer une nouvelle règle ! La règle a été chargée et est désormais fonctionnelle. Voici ce à quoi elle ressemble:'
+    Conversation_Cancelled: '&cVous n''avez rien entré à temps, la conversation à donc été annulée.'
+    Conversation_Abandoned: '&cVotre conversation a été abandonnée. Vos données ont été perdues.'
+    Rule_Import: '&8[&6Importation de Règle&8] &7'
+    Rule_Import_Welcome:
+    - 'Bienvenue dans l''Assistant d''Importation Règles. Veuillez répondre à ces questions afin d''importer chaque ligne de votre fichier pour créer de nouvelles règles.'
+    - 'Entrez vos réponses directement dans le chat, ou entrez ''exit'' n''importe quand pour annuler la manipulation. Pour continuer, veuillez entrer le nom de votre fichier (fichier se trouvant dans le dossier du plugin).'
+    Rule_Import_Invalid_File: '{prefix_error}Le fichier {0} n''existe pas !'
+    Rule_Import_Type:
+    - 'Bravo ! Importation des règles depuis {0}. Veuillez spécifier à quels types ces règles appartiennent-elles.'
+    - 'Types disponnibles: {1}'
+    Rule_Import_Success: '{prefix_success}Félicitations, vous venez d''importer {0} règle(s) ! Vos règles sont toutes fonctionnelles.'
+  
+  Script:
+    Usage: <expression>
+    Description: Évaluer JavaScript.
+    Usages:
+    - '/{label} {sublabel} 5 * (2/3) &7- Calcul simple.'
+    - '/{label} {sublabel} player.getHandle().ping &7- NMS, si le joueur est Player.'
+    - '/{label} {sublabel} {variable} / 2 &7- PAPI, natif ou variables/.'
+    - '/{label} {sublabel} Java.type("org.bukkit.Bukkit").getOnlinePlayers()'
+    Error: 'Erreur dans votre expression: {0}'
+    Result: 'Resultat: &f{0}'
+  
+  Tag:
+    Disabled: "Veuillez d'abord remplir la partie Tag.Apply_On de votre fichier settings.yml afin d'utiliser cette commande."
+    Usage: <type> [tag/off]
+    Description: Définissez votre tag.
+    Usages:
+    - '/{label} list &7- Afficher tous les tags.'
+    - '/{label} off &7- Désactiver les tags.'
+    - '/{label} <type> &7- Afficher votre tag actif.'
+    - '/{label} <type> <tag> &7- Attribuez-vous un tag.'
+    - '/{label} <type> off &7- Retirez le tag spécifié.'
+    - ''
+    - '&c&lASTUCE: &cUtilisez les placeholders {prefix_tag}, {suffix_tag} et {nick} pour afficher les tags.'
+    Admin_Usage: <type> <joueur/list> [surnom/off]
+    Admin_Description: Contrôler les tags des joueurs.
+    Admin_Usages:
+    - '/{label} {sublabel} <type> <joueur> &7- Afficher les tags du joueur.'
+    - '/{label} {sublabel} <type> <joueur> <surnom> &7- Définir le tag du joueur spécifié.'
+    - '/{label} {sublabel} <type> <joueur> off &7- Retirer le tag du joueur spécifié.'
+    - '/{label} {sublabel} list [type] &7- Lister tous les joueurs ayant des tags.'
+    No_Tags: Il n'y a aucun tag stocké.
+    Admin_Tooltip_Remove: '&6Retirer le tag {0} de {1}.'
+    Admin_List: Liste de tous les Tags
+    Admin_Invalid_Params: Veuillez spécifier un type de tag et un joueur.
+    Admin_Status: '{possessive_form} {type}: {tag}.'
+    Your_Tags: 'Vos tags:'
+    Off_No_Tags: Vous n'avez aucun tag actif.
+    Off_All: Tous les tags actifs ont été désactivés.
+    Status_Self: 'Votre {0} est: {1}'
+    No_Spaces: Les surnoms ne peuvent pas contenir d'espaces.
+    No_Colors_Only: Votre tag ne peut être constitué que de couleurs.
+    Exceeded_Length: La longueur de votre tag ({0}) est supérieure à la limite de {1} lettres.
+    Not_Allowed: Imposible de définir votre tag, essayez-en un autre !
+    No_Tag: '"{0} " + (self ? "n''avez" : "n''a") + " pas de {1}."'
+    No_Impersonation: Vous ne pouvez pas utiliser le pseudonyme d'un joueur comme surnom.
+    Already_Used: Ce surnom est déjà utilisé.
+    Success_V2: ' (self ? ''Votre tag'' : ''Le tag {0} de {target}'') + '' a été '' + (remove ? ''retiré'' : ''défini sur {1}&7'') + ''.'''
+
+  Toggle:
+    Usage: <type> [groupe]
+    Description: Activer/Désactiver l'affichage de certaines fonctionnalités du plugin.
+    Usages_1:
+    - '/{label} <type> &7- Activer/Désactiver l''affichage de certaines fonctionnalités. Fonctionnalités: {0}'
+    - '/{label} <type> <groupe> &7- Activer/Désactiver certains types de messages. Types: {1}'
+    Usages_Chat:
+    - '/{label} chat &7- Activer/Désactiver l''affichage des messages du chat. Si le mode espion est activé, vous continurez à les voir.'
+    Usages_Join:
+    - '/{label} join default &7- Activer/Désactiver les messages de connexion appartenants au groupe ''default''.'
+    Usages_Timed:
+    - '/{label} timed special &7- Activer/Désactiver les annonces automatiques appartenant au groupe ''special''.'
+    Usages_Private_Message:
+    - '/{label} pm &7- Activer/Désactiver les messages privés.'
+    Usages_2:
+    - '/{label} list &7- Lister toutes les fonctionnalités activées/désactivées.'
+    Toggled_Group: '"&7Vous " + (ignoring ? "&2n''ignorez plus" : "&cignorez désormais") + " &7{0} message {1}."'
+    Toggled_Group_All: '''&7Vous '' + (ignoring ? ''&2n''ignorez plus'' : ''&cignorez désormais'') + '' &7tous les messages de {0}.'''
+    Type_Join: connexion
+    Type_Quit: déconnexion
+    Type_Kick: éjection
+    Type_Death: mort
+    Type_Timed: annonces
+    List_Line: '&6{0} Messages Masqués&7:'
+    List_Tooltip:
+    - '&6Cliquez pour arrêter d''ignorer.'
+    List_Plugin_Parts_Title: '&6Parties du Plugin&7:'
+    List_Plugin_Parts: '''&6Parties du plugin&7: '' + (isIgnoring ? ''&cignorée'' : ''&2reçues'')'
+    List_Plugin_Parts_Toggle:
+    - '&6Cliquez pour basculer.'
+    List_Plugin_Parts_Header: Fonctionnalités du Plugin Activées/Désactivées pour {0}
+    No_Group: 'Veuillez spécifier un groupe de fonctionnalités à activer/désactiver pour {0}. Groupes disponnibles: {1}'
+    Invalid_Type: 'Type invalide. Fonctionnalités activables: {0} et types: {1}.'
+    Cannot_PM: '{0} a désactivé les messages privés.'
+
+  Tell:
+    Usage: <joueur> [message]
+    Description: Envoyer un message privé aux joueurs.
+    Usages:
+    - '/{label} <joueur> <message> &7- Envoyer un message privé au joueur spécifié.'
+    - '/{label} <joueur> &7- Activer/Désactiver le mode conversation, dans lequel vos messages sont automatiquement envoyés en tant que messages privés.'
+    - '/{label} off &7- Désactiver le mode conversation s''il est actif.'
+    Conversation_Mode_Not_Conversing: Vous ne discutez avec personne.
+    Conversation_Mode_Off: La discussion avec {0} a été &cdésactivée&7.
+    Conversation_Mode_Toggle: '(isConversing ? ''&cVous ne discutez plus avec'' : ''&aVous discutez désormais avec'') + '' &7{0}.'''
+    Conversation_Offline: '{0} n''est plus connecté(e). La discussion a été fermée.'
+    Afk_Warning: '{prefix_warn}{0} est actuellement AFK, et pourrait donc ne pas voir votre message.'
+    
+
+  # We do not allow changing messages for the /chc tour command because it would be impossible
+  # to make changes to these messages when we update our systems without constantly resetting your localization
+  Tour:
+    Not_Completed: Avant d'utiliser ChatControl, veuillez compléter notre guide d'installation en utilisant la commande &7/{0} tour &c.
+    Requires_Op: Seuls les opérateurs peuvent compléter le guide d''installation du plugin.
+    
+  Update:
+    Usage: '[joueur]'
+    Description: Recharger votre pseudonyme ou celui d'un joueur, dans la tabliste
+    Disabled: La fonctionnalité de Tab liste est désactivée. Activez-la dans la partie Tab_List dans le fichier settings.yml.
+    Success: Rechargement des informations de tabliste de {0}.
+
+
+# -------------------------------------------------------------------------------------------------
+# Messages related to paginator splitting command help into multiple pages
+# -------------------------------------------------------------------------------------------------
+Pages:
+  No_Page_Number: '&cVeuillez ne pas spécifier de numéro de page pour cette commande.'
+  No_Pages: '&cVous n''avez aucunes pages sauvegardées à afficher.'
+  No_Page: Le numéro de page spécifié n'est pas valide.
+  Invalid_Page: '&cVotre entrée ''{input}'' n''est pas un chiffre valide.'
+  Go_To_Page: '&7Se rendre à la page {page}'
+  Go_To_First_Page: '&7Aller à la première page'
+  Tooltip:
+  - '&7Vous pouvez également naviguer à travers le plugin en'
+  - '&7utilisant la commande cachée ''/#flp <page>.'''
+  
+# -------------------------------------------------------------------------------------------------
+# Messages related to players
+# -------------------------------------------------------------------------------------------------
+Player:
+  Not_Online: '{player} &cn''est pas connecté(e) au serveur.'
+  Not_Connected: '''{0}&c'' n''est pas connecté(e) au BungeeCord.'
+  Not_Stored: '''{0}&c'' n''est pas dans la base de données.'
+  Possessive_Form: de {player}
+  Has: possède
+  Newcomer_Cannot_Command: Vous êtes un nouveau venu et ne pouvez donc pas encore utiliser cette commande !
+  Newcomer_Cannot_Write: Vous êtes un nouveau venu et ne pouvez donc pas encore discuter dans le chat.
+  No_Write_Chat_Permission: Il vous manque la permission {0} afin d''écrire dans le chat.
+  No_Channel: Vous n'avez pas de salon dans lequel écrire. Utilisez '/{label_channel} join' pour en rejoindre un.
+  No_Possible_Channel: Vous n'avez pas les permissions nécéssaires afin de rejoindre un quelconque salon.
+  Cannot_Chat_Vanished: Vous ne pouvez pas écrire dans le chat directement lorsque vous êtes en vanish. Utilisez '/{label_channel} send' à la place.
+  Kick_Disallowed_Nickname: '&cVotre pseudonyme contient des caracètres interdits !'
+  Kick_Relogin: '&cVeuillez patienter {0} seconde(s) avant de vous reconnecter !'
+  Channel_Range_Notification: '''{prefix_warn}Il n''y a personne avec qui discuter dans '' + (hasRange ? ''votre rayon'' : ''votre salon'').'
+  Already_Conversing: '{0} est déjà en conversation !'
+  
+# -------------------------------------------------------------------------------------------------
+# Messages related to menus
+# -------------------------------------------------------------------------------------------------
+Menu:
+  Cannot_Open_During_Conversation: '&cEntrez ''exit'' afin de quitter votre conversation avant d''ouvrir le menu.'
+  Item_Deleted: '&2{item} a été supprimé.'
+  Error: '&cOups ! Il y a un problème avec ce menu ! Veuillez en informer un administrateur.'
+  Page_Previous: '&8<< &fPage {page}'
+  Page_Next: Page {page} &8>>
+  Page_First: '&7Première page'
+  Page_Last: '&7Dernière page'
+  Title_Tools: Menu Utilitaire
+  Tooltip_Info: '&fInformations du Menu'
+  Button_Return_Title: '&4&lRetour'
+  Button_Return_Lore:
+  - ''
+  - 'Revenir en arrière.'
+  
+  Color:
+    Button_Empty_Title: Aucune couleur disponnible
+    Button_Empty_Lore:
+    - ''
+    - 'Vous n''avez accès à aucune'
+    - 'couleur pour le moment.'
+    Button_Reset_Color_Title: Réinitialiser la couleur de votre chat
+    Color_Reset: '&1Couleur du chat réinitialisée !'
+    Button_Reset_Decoration: Réinitialiser la décoration de votre chat
+    Decoration_Reset: '&1Décoration du chat réinitialisée !'
+    Button_Decoration_Title: ''
+    Button_Decoration_Lore:
+    - ''
+    - 'Cliquez pour activer/désactiver l''utilisation'
+    - 'de cette décoration dans votre chat.'
+    - ''
+    - 'Exemple: {0}Un texte random.'
+    Decoration_Set: Définir la décoration sur {0}
+    Button_Color_Title: ''
+    Button_Color_Lore:
+    - ''
+    - 'Cliquez pour activer/désactiver l''utilisation'
+    - 'de cette couleur pour vos messages.'
+    - ''
+    - 'Extrait: {0}ChatControlRed je l''adore !'
+    - '{0}Et je m''aime aussi.'
+    Color_Set: Définir la couleur sur {0}
+    Help:
+    - 'Le menu de séléction des couleurs vous permet de'
+    - 'séléctionner une décoration de chat qui sera'
+    - 'automatiquement appliquée à vos messages.'
+    - ''
+    - 'Cliquez simplement sur l''icone correspondant'
+    - 'à la couleur ou à la décoration souhaitée.'
+    - ''
+    - 'Couleur actuelle: {color}'
+    - 'Décoration actuelle: {decoration}'
+  
+  Spy:
+    Toggle_Title: '''Tout '' + (spying ? ''&4Désactiver'' : ''&2Activer'')'
+    Toggle_Lore:
+    - ''
+    - 'Cliquez pour activer le mode espion'
+    - 'pour toutes les options disponnibles'
+    - 'dans ce menu.'
+    Button_Lore_1:
+    - ''
+    - 'Cliquez pour séléctionner les salons'
+    - 'que vous souhaitez espionner.'
+    Button_Lore_Channels:
+    - ''
+    - 'Salons espionnés:'
+    Button_Title: Salons
+    Type_Chat: tous les messages du chat
+    Type_Commands: commandes configurés dans le fichier settings.yml
+    Type_Private_Messages: tous les messages privés
+    Type_Mail: mails lorsqu'ils sont envoyés
+    Type_Sign: pancartes lorsqu'elles sont placées
+    Type_Book: livres lorsqu'ils sont signés
+    Type_Anvil: items lorsqu'ils sont renommés
+    Button_Toggle_Lore:
+    - ''
+    - 'Cliquez pour activer/désactiver'
+    - 'le mode espion sur'
+    - '{label}.'
+    - ''
+    - 'Statut: {status}'
+    Status: '(spying ? ''&bEspionnage : '' : ''&cdésactivé'')'
+    Status_Toggle: '(isSpying ? ''&4'' : ''&2'') + ''Espionnage : {type} '' + (isSpying ? ''désactivé'' : ''activé'') + '' !'''
+    Channels_Toggle_Lore:
+    - ''
+    - 'Cliquez pour activer/désactiver'
+    - 'le mode espion pour ce salon.'
+    - ''
+    - 'Statut: {status}'
+    Channels_Toggle: '(isSpying ? "&4Vous n''espionnez plus ce salon" : "&2Vous espionnez désormais ce salon") + "."'
+    Help:
+    - 'Séléctionnez les aspects du serveur que vous souhaitez'
+    - 'espionner. Vous pouvez également utiliser la'
+    - 'commande ''/{label} log'' afin de voir les'
+    - 'données obtenues pendant votre absence.'
+    
+  
+# -------------------------------------------------------------------------------------------------
+# Messages related to tools
+# -------------------------------------------------------------------------------------------------
+Tool:
+  Error: '&cOups ! Il y a un problème avec cet outils ! Veuillez en informer un administrateur.'
+
+# -------------------------------------------------------------------------------------------------
+# Messages related to checking messages/chat/signs etc. against spam, rules and so on
+# -------------------------------------------------------------------------------------------------
+Checker:
+  Sign_Duplication: Veuillez ne pas placer plusieurs panneaux avec le même texte.
+  Move: '"Veuillez vous déplacer avant " + (chat ? "d''écrire dans le chat" : "d''utiliser des commandes") + "."'
+  Delay_After_Join: '"Veuillez patienter {seconds} avant " + (chat ? "d''écrire dans le chat" : "d''utiliser des commandes") + "."'
+  Delay: '''Veuillez patienter {seconds} avant votre '' + (chat ? ''prochain message'' : ''prochaine commande'') + ''.'''
+  Similarity: '''Veuillez ne pas '' + (chat ? ''envoyer de messages'' : ''éxécuter de commandes'') + '' étant similaires à {similarity}%.'''
+  Period: Vous pouvez uniquement envoyer {type_amount} {type} en {period_amount} {period}.
+  Caps: Merci d'éviter l'abus de majuscules dans votre {type}.
+  Sound_Notify: '&cVous ne pouvez pas utiliser la notification sonore pendant {seconds}.'
+  Parrot: Vous ne pouvez pas répéter '{0}' car c'est {1}% similaire à ce que vous avez dit lors des {2}.
+  No_Text: Vous ne pouvez pas envoyer de message sans texte !
+  No_Text_After_Change: Votre message a été édité et ne peut être envoyé car son contenu est désormais vide.
+
+# -------------------------------------------------------------------------------------------------
+# Words for both singular and plural form. Separate these two forms with ", "
+# -------------------------------------------------------------------------------------------------
+Cases:
+  Second: seconde, secondes
+  Message: message, messages
+  Command: commande, commandes
+
+# -------------------------------------------------------------------------------------------------
+# Different prefixes you can use by calling {prefix_<type>} such as {prefix_info}
+# -------------------------------------------------------------------------------------------------
+Prefix:
+  Info: "&8&l[&9&li&8&l]&7 "
+  Success: "&8&l[&2&l!&8&l]&7 "
+  Warn: "&8&l[&6&l!&8&l]&6 "
+  Error: "&8&l[&4&lX&8&l]&c "
+  Question: "&8&l[&a&l?&l&8]&7 "
+  Announce: "&8&l[&5&l!&l&8]&d "
+
+# -------------------------------------------------------------------------------------------------
+# Miscellaneous
+# -------------------------------------------------------------------------------------------------
+You: Vous
+Your: Votre
+His: Son
+And: et
+None: Aucun
+Server: serveur
+Channel: salon
+False_Value: désactivé
+Server_Prefix: '[Serveur]'
+Console_Name: Console
+
+# -------------------------------------------------------------------------------------------------
+# Database related messages
+# -------------------------------------------------------------------------------------------------
+Data_Missing: '&c{name} manque d''informations dans la base de données ! Veuillez créer {type} uniquement en jeu !'
+Data_Loading: La base de données charge actuellement des données, veuillez patienter...
+
+# -------------------------------------------------------------------------------------------------
+# Messages shown when player runs a command he lacks permission for
+# -------------------------------------------------------------------------------------------------
+No_Permission: '&eVous n''avez pas accès à cette commande.'
+
+# -------------------------------------------------------------------------------------------------
+# Shown when console tries to enter a server conversation
+# -------------------------------------------------------------------------------------------------
+Conversation_Requires_Player: Seuls les joueurs peuvent participer à cette conversation.
+
+# -------------------------------------------------------------------------------------------------
+# Internal versioning number
+# -------------------------------------------------------------------------------------------------
+Version: 2
