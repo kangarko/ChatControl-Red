@@ -219,7 +219,7 @@ Commands:
     - '&8{chat_line}'
     - '<center>&c&l! &6&l{type} &c&l!'
     - '&8{chat_line}'
-    - '{&flines}'
+    - '&f{lines}'
     - '{remaining_space}'
     - '&8{chat_line}'
     Chat_Body_Line_Color: GRAY
