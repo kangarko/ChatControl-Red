@@ -219,7 +219,7 @@ Commands:
     - '&8{chat_line}'
     - '<center>&c&l! &6&l{type} &c&l!'
     - '&8{chat_line}'
-    - '{lines}'
+    - '{&flines}'
     - '{remaining_space}'
     - '&8{chat_line}'
     Chat_Body_Line_Color: GRAY
@@ -285,6 +285,7 @@ Commands:
     Usages_Hex_1:
     - '/{label} {sublabel} #<hexcode> &7- Définir votre couleur de chat avec un code couleur HEX.'
     Usages_2:
+    - "/{label} {sublabel} default bold [joueur] &7- Ne changer que la décoration de chat."
     - '/{label} {sublabel} red bold [joueur] &7- Pour le joueur spécifié, définir sa couleur de chat sur rouge, et sa décoration en gras.'
     - '/{label} {sublabel} reset &7- Réinitialiser votre couleur et votre décoration de chat.'
     - '/{label} {sublabel} reset reset [joueur] &7- Réinitialiser la couleur et la décoration de chat du joueur spécifié.'
@@ -929,6 +930,7 @@ Menu:
   - 'Revenir en arrière.'
   
   Color:
+    Header: "Séléctionnez votre couleur"
     Button_Empty_Title: Aucune couleur disponnible
     Button_Empty_Lore:
     - ''
