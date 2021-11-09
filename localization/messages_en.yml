@@ -218,7 +218,7 @@ Commands:
     - "&8{chat_line}"
     - "<center>&c&l! &6&l{type} &c&l!"
     - "&8{chat_line}"
-    - "{lines}"
+    - "&f{lines}"
     - "{remaining_space}"
     - "&8{chat_line}"
     Chat_Body_Line_Color: GRAY
@@ -284,6 +284,7 @@ Commands:
     Usages_Hex_1:
     - "/{label} {sublabel} #<hexcode> &7- Set chat color to HEX."
     Usages_2:
+    - "/{label} {sublabel} default bold [player] &7- Only set decoration."
     - "/{label} {sublabel} red bold [player] &7- Set color and decoration."
     - "/{label} {sublabel} reset &7- Reset color."
     - "/{label} {sublabel} reset reset [player] &7- Reset color and decoration."
@@ -919,6 +920,7 @@ Menu:
   - "Return back."
   
   Color:
+    Header: "Select Chat Color"
     Button_Empty_Title: "No available colors"
     Button_Empty_Lore: 
     - ""
