@@ -679,10 +679,10 @@ Commands:
     Tool_Lore:
     - ""
     - "Use this tool to create and"
-    - "edit ChatControl regions."
+    - "edit ChatControl Red regions."
     - ""
-    - "&b<< &7Left click &7– &7Primary"
-    - "&7Right click &7– &7Secondary &b>>"
+    - "&b<< &7Left click - Primary"
+    - "&7Right click - Secondary &b>>"
     Point_Name: "[&aRegion point&f]"
     Point_Set: "'Set the ' + (primary ? 'primary' : 'secondary') + ' region point.'"
     No_Name: "Please specify the region name."
@@ -803,7 +803,7 @@ Commands:
     No_Tag: "'{0} presently do' + (self ? '' : 'es') + ' not have a {1}.'"
     No_Impersonation: "The nick cannot impersonate a real player name."
     Already_Used: "This nick is already used."
-    Success_V2: " (self ? 'Your' : '{target}’s') + ' {0} has been ' + (remove ? 'removed' : 'set to \"{1}&7\"') + '.'"
+    Success_V2: "(remove ? 'Removed {0} for ' + (self ? 'you' : '{target}') + '.' : 'Set {0} to \"{1}&7\" for ' + (self ? 'you' : '{target}') + '.')"
 
   Toggle:
     Usage: "<type> [group]"
@@ -1030,7 +1030,7 @@ Cases:
   Second: second, seconds
   Message: message, messages
   Command: command, commands
-
+ 
 # -------------------------------------------------------------------------------------------------
 # Different prefixes you can use by calling {prefix_<type>} such as {prefix_info}
 # -------------------------------------------------------------------------------------------------
