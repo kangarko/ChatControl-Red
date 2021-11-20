@@ -691,10 +691,10 @@ Commands:
     Tool_Lore:
     - ''
     - 'Utilisez cet outils afin de créer et'
-    - 'd''éditer les régions ChatControl.'
+    - 'd''éditer les régions de ChatControl Red.'
     - ''
-    - '&b<< &7Clique Gauche &7– &7Principal'
-    - '&7Clique Droit &7– &7Secondaire &b>>'
+    - '&b<< &7Clique Gauche – Principal'
+    - '&7Clique Droit – Secondaire &b>>'
     Point_Name: '[&aPoint de Région&f]'
     Point_Set: '''Définissez le point de région '' + (primary ? ''principal'' : ''secondaire'') + ''.'''
     No_Name: Veuillez spécifier le nom d'une région.
@@ -813,7 +813,7 @@ Commands:
     No_Tag: '"{0} " + (self ? "n''avez" : "n''a") + " pas de {1}."'
     No_Impersonation: Vous ne pouvez pas utiliser le pseudonyme d'un joueur comme surnom.
     Already_Used: Ce surnom est déjà utilisé.
-    Success_V2: ' (self ? ''Votre tag'' : ''Le tag {0} de {target}'') + '' a été '' + (remove ? ''retiré'' : ''défini sur {1}&7'') + ''.'''
+    Success_V2: "(self ? 'Votre {0}' : 'Le {0} de {target}') + ' a été ' + (remove ? 'retiré' : 'défini sur \"{1}&7\" ') + '.'"
 
   Toggle:
     Usage: <type> [groupe]
