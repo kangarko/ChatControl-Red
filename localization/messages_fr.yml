@@ -537,11 +537,6 @@ Commands:
     - '&4&lATTENTION: &cDe lourds fichiers data.db ou MySQL peuvent bloquer'
     - 'le serveur pendant ~3-10 minutes. Ignorez les rapports de crash,'
     - 'la migration ne sera pas interrompue.'
-    Import_Start: Début de l'importation des entrées de la base de donnée dans les fichiers data.db et usermap.scv. Cela peut prendre un certain temps, veuillez donc garder un oeil sur la console. De ce fait, nous continueront de les ignorer jusqu'à ce que vous désactiviez MySQL.
-    Import_Finish: Succès de l'importation des entrées des fichiers data.db et usermap.csv.
-    Export_Start: Début de l'exportation des entrées du fichier data.db dans la base de données. Cela peut prendre un certain temps, veuillez donc garder un oeil sur la console.
-    Export_Finish: Succès de l'exportation de {0} entrées.
-    Essentials: Succès de l'importation du fichier usermap.csv depuis Essentials (si le fichier existe).
   
   Motd:
     Usage: '[joueur]'
@@ -686,6 +681,7 @@ Commands:
     Tooltip_Remove: '&7Cliquez pour la supprimer définitivement.'
     Tooltip_Visualize: '&7Cliquez pour visualiser.'
     Tooltip_Teleport: '&7Cliquez pour vous téléporter au centre.'
+    Tool_Disabled: "Les outils de Région sont désactivés. Définissez 'Register_Tools' sur 'true' dans le fichier settings.yml pour les réactiver."
     Tool: Thor vous a donné 1 Outils de Gestion de Région ChatControl. Cliquez Droit/Gauche pour séléctionner deux points, et utilisez ensuite '/{label} {sublabel} add' pour créer une région.
     Tool_Name: Outils de Gestion de Région
     Tool_Lore:
@@ -758,6 +754,7 @@ Commands:
     Conversation_Cancelled: '&cVous n''avez rien entré à temps, la conversation à donc été annulée.'
     Conversation_Abandoned: '&cVotre conversation a été abandonnée. Vos données ont été perdues.'
     Rule_Import: '&8[&6Importation de Règle&8] &7'
+    Rule_Import_Start: "Les règles sont en cours d'importation, veuillez patienter..."
     Rule_Import_Welcome:
     - 'Bienvenue dans l''Assistant d''Importation Règles. Veuillez répondre à ces questions afin d''importer chaque ligne de votre fichier pour créer de nouvelles règles.'
     - 'Entrez vos réponses directement dans le chat, ou entrez ''exit'' n''importe quand pour annuler la manipulation. Pour continuer, veuillez entrer le nom de votre fichier (fichier se trouvant dans le dossier du plugin).'
@@ -766,6 +763,7 @@ Commands:
     - 'Bravo ! Importation des règles depuis {0}. Veuillez spécifier à quels types ces règles appartiennent-elles.'
     - 'Types disponnibles: {1}'
     Rule_Import_Success: '{prefix_success}Félicitations, vous venez d''importer {0} règle(s) ! Vos règles sont toutes fonctionnelles.'
+    Rule_Import_Fail: '{prefix_error}Une erreur est survenue lors de l''importation des règles. Merci de vérifier la console !'
   
   Script:
     Usage: <expression>
