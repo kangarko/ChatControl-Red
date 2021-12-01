@@ -81,6 +81,15 @@ Channels:
     Switch_To_Reading_V2: "(self ? 'You' : '{target}') + ' switched the &o{0} &7channel to reading. Type the command again to leave.'"
     Success_V2: " (self ? 'You' : '{target}') + ' left the &o{0} &7channel.'"
     Notification: "&8[&4-&8] &7Player {player} has left '{channel}' channel."
+  
+  Set: 
+    Usage: "<channel> <mode/none> <player>"
+    Description: "Set or unset a channel for player, bypassing max read limits."
+    Success: "Set {0} channel for {1} to {2} mode."
+    Success_Remove: "Remove {0} channel from {1}."
+    Usages: 
+    - "/{label} {sublabel} admin write kangarko &7- Set channel for player."
+    - "/{label} {sublabel} admin none kangarko &7- Remove a channel from player."
     
   List: 
     Description: "List players in chat channels."
