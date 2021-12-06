@@ -82,6 +82,15 @@ Channels:
     Success_V2: '(self ? ''Vous avez'' : ''{target} a'') + '' quitté le salon &o{0}&7.'''
     Notification: '&8[&4-&8] {player} &7a quitté le salon ''{channel}''.'
     
+  Set:
+    Usage: <salon> <mode/none> <joueur>
+    Description: "Définir ou retirer le salon d'un joueur, outrepassant la limite de salons en mode lecture."
+    Success: Salon {0} définit sur le mode {2} pour {1}.
+    Success_Remove: "{1} a été retiré du salon {0}."
+    Usages:
+    - '/{label} {sublabel} <salon> <write/read> <joueur> &7- Définit le salon sur le mode spécifié pour le joueur désigné.'
+    - '/{label} {sublabel} <salon> none <joueur> &7- Retirer le joueur spécifié du salon désigné.'
+    
   List:
     Description: Lister les joueurs dans un salon.
     Usages:
