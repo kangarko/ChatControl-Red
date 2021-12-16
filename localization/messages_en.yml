@@ -1020,6 +1020,7 @@ Tool:
 # Messages related to checking messages/chat/signs etc. against spam, rules and so on
 # -------------------------------------------------------------------------------------------------
 Checker:
+  Chat_Exploit_Disallowed: "Your message contained code execution and was disallowed."
   Sign_Duplication: "Do not place multiple signs with the same text."
   Move: "'Please move before typing ' + (chat ? 'into chat' : 'commands') + '.'"
   Delay_After_Join: "'Please wait {seconds} before typing ' + (chat ? 'messages' : 'commands') + '.'"
