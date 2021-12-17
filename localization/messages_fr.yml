@@ -1030,6 +1030,7 @@ Tool:
 # Messages related to checking messages/chat/signs etc. against spam, rules and so on
 # -------------------------------------------------------------------------------------------------
 Checker:
+  Chat_Exploit_Disallowed: "Votre message comporte du contenu préjudiciable, et a donc été bloqué !"
   Sign_Duplication: Veuillez ne pas placer plusieurs panneaux avec le même texte.
   Move: '"Veuillez vous déplacer avant " + (chat ? "d''écrire dans le chat" : "d''utiliser des commandes") + "."'
   Delay_After_Join: '"Veuillez patienter {seconds} avant " + (chat ? "d''écrire dans le chat" : "d''utiliser des commandes") + "."'
