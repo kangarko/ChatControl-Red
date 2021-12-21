@@ -1,23 +1,23 @@
 # !-----------------------------------------------------------------------------------------------!
-#                                     歡迎來到 ChatControl 翻譯文件.
+#                                     歡迎來到 ChatControl 翻譯文件
 # !-----------------------------------------------------------------------------------------------!
 #
-#   在這裏你可以自定義並且客製化 99% 有關於本插件的所有訊息.
+#   在這裏你可以自定義並且客製化 99% 有關於本插件的所有訊息
 #
-#   1) 本插件支援使用 '&' 加上顏色代碼的使用方式.
+#   1) 本插件支援使用 '&' 加上顏色代碼的使用方式
 #      - 如要查看所有顏色代碼,您可以到 http://minecraftwiki.net/wiki/Formatting_codes 進行觀看
-#      - 當您使用顏色代碼來更動插件訊息時請使用雙引號來包住該語句,範例: "Hello &cworld."
-#      - 如您要使用16進制顏色代碼時請參閱以下範例,當使用 #123456 16進制色碼時使用範例: "Hello #123456world."
+#      - 當您使用顏色代碼來更動插件訊息時請使用雙引號來包住該語句,範例: "Hello &cworld"
+#      - 如您要使用16進制顏色代碼時請參閱以下範例,當使用 #123456 16進制色碼時使用範例: "Hello #123456world"
 #
-#   2) 如果您想要屏蔽本插件的任何訊息,您可以將聊天訊息更改為 'none' 來進行屏蔽.
+#   2) 如果您想要屏蔽本插件的任何訊息,您可以將聊天訊息更改為 'none' 來進行屏蔽
 #
 #   3) 如果您要使用任何 UNICODE 字元 (例如: 笑臉、表情符號等等...),請將本文件以 UTF-8 編碼方式進行保存. 
 #      - 教學請看: https://github.com/kangarko/ChatControl-Red/wiki/Use-Right-Encoding
 #
-#   4) 本插件支援使用 JSON 格式. 如要使用,請您在您要使用的訊息前面加上 [JSON].
+#   4) 本插件支援使用 JSON 格式. 如要使用,請您在您要使用的訊息前面加上 [JSON]
 #
 #   5) JAVASCRIPT 注意: 本插件有一部分訊息內容是使用 JavaScript 變數來進行即時編譯.
-#      JavaScript 變數通常出現在翻譯文本的雙引號內,例如: "self". 如果您不知道如何使用 JavaScript
+#      JavaScript 變數通常出現在翻譯文本的雙引號內,例如: "self" 如果您不知道如何使用 JavaScript
 #      編碼,請您不要更動任何括號 () 內的所有變數內容!
 #
 #      繁體中文翻譯By 可可半糖去冰OwO
@@ -99,7 +99,7 @@ Channels:
     - '/{label} {sublabel} &7- 列出所有聊天頻道內的所有玩家'
     - '/{label} {sublabel} <頻道> &7- 列出某個聊天頻道內的所有玩家'
     Mute: ''' &8[&7'' + (muted ? ''&c解除靜音'' : ''靜音'') + ''&8]'''
-    Mute_Tooltip: '''&6點擊此處來'' + (muted ? ''解除'' : '''') + ''靜音此聊天頻道'' + (muted ? '''' : ''15分鐘'') + ''.'''
+    Mute_Tooltip: '''&6點擊此處來'' + (muted ? ''解除'' : '''') + ''靜音此聊天頻道'' + (muted ? '''' : ''15分鐘'') + '''''
     Join: ''' &8[&7'' + (joined ? ''&a離開'' : ''加入'') + ''&8]'''
     Join_Tooltip: '''&6點擊此處'' + (joined ? ''離開'' : ''加入'') + ''此聊天頻道'''
     No_Players: ' &7- &o沒有任何玩家在此聊天頻道內'
@@ -229,10 +229,10 @@ Commands:
     Invalid_Raw_Type: 無效的 type! 目前僅支援 raw 格式
     Invalid_Time_Ticks: 請輸入一個有效的整數(單位為ticks)
     Invalid_Time_Seconds: 請輸入一個有效的整數(單位為秒)
-    Invalid_Key: 'Invalid key ''{0}'' value: {1}. Available: {2}'
-    Invalid_File: 'No such file: {0}'
-    Image_Error: 'Failed to broadcast image from ''{0}'': {1}. Please see console for more information.'
-    Invalid_Image_Height: Image height must be between {0} and {1}.
+    Invalid_Key: '無效的鍵值''{0}'' 值: {1}. 可用: {2}'
+    Invalid_File: '沒有搜尋要該文件: {0}'
+    Image_Error: '無法公告並且發送名為 ''{0}''的圖片: {1}. 請查看 CONSOLE 來獲取更多訊息!'
+    Invalid_Image_Height: 圖片大小必須要介於 {0} 和 {1} 之間
     Chat_Body:
     - '&8{chat_line}'
     - '<center>&c&l! &6&l{type} &c&l!'
@@ -241,45 +241,45 @@ Commands:
     - '{remaining_space}'
     - '&8{chat_line}'
     Chat_Body_Line_Color: GRAY
-    Type: '(bungee ? ''NETWORK '' : '''') + ''ANNOUNCEMENT'''
-    Success: Your announcement has been sent.
-    Success_Network: Your announcement was sent to the {0} server.
+    Type: '(bungee ? ''全分流'' : ''伺服器'') + ''公告'''
+    Success: 您的公告訊息已成功發送!
+    Success_Network: 您的公告訊息已成功發送到 {0} 伺服器內
   
   Book:
-    Usage: <new/save/delete/open/list> [name] [玩家名]
-    Description: Manipulate in-game books.
+    Usage: <new/save/delete/open/list> [名稱] [玩家名]
+    Description: 控制遊戲內書本
     Usages:
-    - '/{label} {sublabel} new &7- Create new book via ''/mail new'' command.'
-    - '/{label} {sublabel} save <name> &7- Save a signed book.'
-    - '/{label} {sublabel} delete <name> &7- Delete a stored book.'
-    - '/{label} {sublabel} open <name> [玩家名] &7- Open book for player.'
-    - '/{label} {sublabel} give <name> [玩家名] &7- Give a book to player.'
-    - '/{label} {sublabel} list &7- List all created books.'
-    Invalid: 'No such book: ''{0}''. Available: {1}'
-    No_Book: 'Specify a book name first. Available: {0}.'
-    Mail_Disabled: Cannot create books when mails are disabled. Set Mail.Enabled to true in settings.yml to enable.
-    New: 'Use the mail function to create a book. When you are ready, type ''/{label} {sublabel} save'' to save it. '
+    - '/{label} {sublabel} new &7- 您可以使用 /mail new 來創建書本郵件'
+    - '/{label} {sublabel} save <名稱> &7- 儲存當前已署名的書籍'
+    - '/{label} {sublabel} delete <名稱> &7- 刪除某個已儲存的書籍'
+    - '/{label} {sublabel} open <名稱> [玩家名] &7- 為某位玩家開啟某個已儲存的書籍'
+    - '/{label} {sublabel} give <名稱> [玩家名] &7- 給予某位玩家某個已儲存的書籍'
+    - '/{label} {sublabel} list &7- 列出目前所有已儲存的書籍'
+    Invalid: '沒有在已儲存的資料中找到該名稱的書籍: ''{0}''. 可用: {1}'
+    No_Book: '請您指定已儲存書本名稱. 可用: {0}'
+    Mail_Disabled: 禁用郵件功能時無法創建書籍. 您可以在 settings.yml 中的 Mail.Enabled 切換至 true 來啟用
+    New: '您可以使用郵件功能創建一本書,當您署名完畢儲存時請使用 /{label} {sublabel} save 來儲存該書籍'
     Save_No_Book: Create a book first with '/{label} {sublabel} new'.
     Save_Not_Signed: Sign your book first before saving it.
     Save_No_Name: Specify the book name. It will be placed into books/ in your plugin's directory.
-    Save: '''Saved mail as book to books/{0}.yml.'' + (override ? '' Your old file was overriden.'' : '''')'
-    Save_Error: 'Failed to save {0}: {1}'
-    Delete: Book '{0}' has successfully been deleted.
-    Delete_Fail: Could not delete '{0}'.
+    Save: '''已成功將此書籍儲存至 books/{0}.yml'' + (override ? '' 舊有書籍資料已更新!'' : '''')'
+    Save_Error: '書籍保存失敗 {0}: {1}'
+    Delete: 已儲存的書籍 '{0}' 已被成功刪除
+    Delete_Fail: 刪除已儲存的書籍 '{0}' 失敗
     List_Open: '&8[&6O&8]'
-    List_Open_Tooltip: '&6Open this book.'
+    List_Open_Tooltip: '&6點擊此處開啟此書籍'
     List_Delete: '&8[&cX&8]'
-    List_Delete_Tooltip: '&6Click to delete.'
-    List_None: There are no books in books/ folder.
-    List_Header: Books
-    List: ' &7''&f{title}&7'' &7by {author} from {date}'
-    List_Tooltip: '&7File name: &f{0}'
-    Page: '&6Page {0}:'
-    Page_Header: Book '{0}' by {1}
+    List_Delete_Tooltip: '&6點擊此處刪除'
+    List_None: 當前沒有任何已儲存的書籍
+    List_Header: 已儲存的所有書籍
+    List: ' &7''&f{title}&7'' &7作者 {author} 儲存時間 {date}'
+    List_Tooltip: '&7文件名稱: &f{0}'
+    Page: '&6當前頁數 {0}:'
+    Page_Header: 書籍名稱 '{0}' 作者 {1}
     Unnamed: Unnamed
     Unsigned: Unsigned
-    Open: The book has been opened for {0}.
-    Give: Player {0} has received the book as item.
+    Open: 已爲玩家 {0} 開啟該已儲存書籍介面
+    Give: 玩家 {0} 已成功收到已儲存書籍物品
 
   Clear:
     Usage: '[-a/-c/-s] [reason]'
@@ -1078,7 +1078,7 @@ Console_Name: CONSOLE
 # -------------------------------------------------------------------------------------------------
 # 以下訊息為資料庫相關內容
 # -------------------------------------------------------------------------------------------------
-Data_Missing: '&c{name} lacks database information! Please only create {type} in-game! Skipping..'
+Data_Missing: '&c{name} 資料庫訊息缺失! 請您於客戶端中創建一個 {type} ! 跳過此步驟...'
 Data_Loading: 正在載入資料庫資料中,請稍候...
 
 # -------------------------------------------------------------------------------------------------
@@ -1087,9 +1087,9 @@ Data_Loading: 正在載入資料庫資料中,請稍候...
 No_Permission: '&c沒有權限! 缺少權限節點: {permission}'
 
 # -------------------------------------------------------------------------------------------------
-# 以下訊息為當使用CONSOLE執行指令時的相關內容
+# 以下訊息為當使用CONSOLE嘗試進行伺服器會話的相關內容
 # -------------------------------------------------------------------------------------------------
-Conversation_Requires_Player: Only players may enter this conversation.
+Conversation_Requires_Player: 僅有客戶端才可進入此會話
 
 # -------------------------------------------------------------------------------------------------
 # 內部版本號
