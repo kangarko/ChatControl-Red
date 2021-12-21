@@ -1,0 +1,1097 @@
+# !-----------------------------------------------------------------------------------------------!
+#                                     歡迎來到 ChatControl 翻譯文件.
+# !-----------------------------------------------------------------------------------------------!
+#
+#   在這裏你可以自定義並且客製化 99% 有關於本插件的所有訊息.
+#
+#   1) 本插件支援使用 '&' 加上顏色代碼的使用方式.
+#      - 如要查看所有顏色代碼,您可以到 http://minecraftwiki.net/wiki/Formatting_codes 進行觀看
+#      - 當您使用顏色代碼來更動插件訊息時請使用雙引號來包住該語句,範例: "Hello &cworld."
+#      - 如您要使用16進制顏色代碼時請參閱以下範例,當使用 #123456 16進制色碼時使用範例: "Hello #123456world."
+#
+#   2) 如果您想要屏蔽本插件的任何訊息,您可以將聊天訊息更改為 'none' 來進行屏蔽.
+#
+#   3) 如果您要使用任何 UNICODE 字元 (例如: 笑臉、表情符號等等...),請將本文件以 UTF-8 編碼方式進行保存. 
+#      - 教學請看: https://github.com/kangarko/ChatControl-Red/wiki/Use-Right-Encoding
+#
+#   4) 本插件支援使用 JSON 格式. 如要使用,請您在您要使用的訊息前面加上 [JSON].
+#
+#   5) JAVASCRIPT 注意: 本插件有一部分訊息內容是使用 JavaScript 變數來進行即時編譯.
+#      JavaScript 變數通常出現在翻譯文本的雙引號內,例如: "self". 如果您不知道如何使用 JavaScript
+#      編碼,請您不要更動任何括號 () 內的所有變數內容!
+#
+#      繁體中文翻譯By 可可半糖去冰OwO
+#
+# !-----------------------------------------------------------------------------------------------!
+ 
+# -------------------------------------------------------------------------------------------------
+# 以下訊息為聊天頻道相關內容
+# -------------------------------------------------------------------------------------------------
+Channels:
+  Disabled: '&c聊天頻道功能已被停用. 您可以在 settings.yml 中的 Channels.Enabled 切換至 true 來啟用'
+  Disabled_World: '&c聊天頻道功能已在世界 ''{0}'' 中被停用'
+  No_Channels: '&c當前沒有任何聊天頻道. 您可以在 settings.yml 中的 Channels.List 來添加一些頻道'
+  No_Channel: '沒有這個頻道: ''{0}''. 可用頻道: {1}'
+  Available: ' &f可用頻道: &7'
+  Header: 聊天頻道
+  Header_Alternative:
+  - '&c聊天頻道: &7您已加入的聊天頻道: {0}'
+  Header_Alternative_Channel: '{channel} ({mode})'
+  Use_Alternative_Header: false
+  Tooltip_Joined: '&f您已加入此頻道'
+  Tooltip_Join_Write: '&2點擊此處以寫入模式加入此頻道'
+  Tooltip_Join_Read: '&2點擊此處以只讀模式加入此頻道'
+  Tooltip_Leave_Write:
+  - ''
+  - '&6提醒: &f切換至此頻道後會自動將先前的頻道切換為只讀模式'
+  - '&f您當前的寫入頻道 ''{0}'''
+  Tooltip_Channels: ' &f您當前已加入的頻道:'
+  Tooltip_Leave: '&c點擊此處離開該頻道'
+  
+  Join:
+    Usage: <頻道> [模式] [玩家名]
+    Description: 加入聊天頻道
+    Usages_Self:
+    - '/{label} {sublabel} <頻道> &7- 以寫入模式加入某個聊天頻道'
+    - '/{label} {sublabel} <頻道> <模式> &7- 以指定模式加入某個聊天頻道'
+    Usages_Others:
+    - '/{label} {sublabel} <頻道> <模式> [玩家名] &7- 以指定模式將指定玩家加入某個聊天頻道'
+    Usages_2:
+    - ''
+    - '&c提醒: 當玩家所加入的頻道超過系統限制時,嘗試加入的玩家將會離開之前加入的頻道'
+    - ''
+    - '&c警告: 您必須給予玩家 chatcontrol.channel.join.{channel}.{mode}'
+    - '&c相關的頻道和模式(只讀或寫入)權限,否則系統將會在玩家嘗'
+    - '&c試加入聊天頻道時將他們給踢出聊天頻道'
+    Already_Connected: '(self ? ''您'' : ''該玩家'') + ''已經以 {0} 模式下加入了該聊天頻道'''
+    Read_Disabled: 您想加入的聊天頻道只讀模式已被停用
+    Leave_Reading_You: ' &7您可以同時以只讀模式下加入的聊天頻道已達上限,已自動退出 &o{0}'
+    Leave_Reading_Other: ' &7{target} 可以同時以只讀模式下加入的聊天頻道已達上限,已自動退出 &o{0}'
+    Switch_Success: 聊天頻道 &o{0} &7寫入只讀模式已從 {1} 切換至 {2}
+    Success: '&7您現在以 {1} 模式下加入了 &o{0}'
+    Notification: '&8[&2+&8] &7玩家 {player} 加入了 ''{channel}'''
+    
+  Leave:
+    Usage: <頻道> [玩家名]
+    Description: 離開聊天頻道
+    Usages_Self:
+    - '/{label} {sublabel} <頻道> &7- 離開指定的聊天頻道'
+    Usages_Others:
+    - '/{label} {sublabel} <頻道> <玩家名> &7- 指定某位玩家離開某個聊天頻道'
+    Not_Joined: '(self ? ''您'' : ''玩家 {0}'') + ''當前沒有加入該聊天頻道 '' + (channelsPlayerCanLeave.isEmpty() ? ''目前'' + (self ? ''您'' : ''該玩家'') + ''還沒有加入任何聊天頻道'' : (self ? ''您'' : ''該玩家'') + ''當前已加入的頻道: {1}'')'
+    No_Channels: '(self ? ''您當前'' : ''該玩家當前'') + ''沒有加入任何聊天頻道'''
+    Switch_To_Reading_V2: '(self ? ''您'' : ''{target}'') + ''已將 &o{0} &7切換為只讀模式,您可以再次重複輸入一次指令來確認離開該頻道'''
+    Success_V2: ' (self ? ''您'' : ''{target}'') + ''&7離開了聊天頻道 &o{0}'''
+    Notification: '&8[&4-&8] &7玩家 {player} 離開了 ''{channel}'''
+  
+  Set:
+    Usage: <頻道> <模式/none> <玩家名>
+    Description: 設定或取消玩家的聊天頻道,此指令將會繞過最大設定只讀數量上限
+    Success: 已將玩家 {1} 聊天頻道 {0} 的只讀與寫入模式更改為 {2}
+    Success_Remove: 已將玩家 {1} 聊天頻道 {0} 的只讀與寫入模式移除
+    Usages:
+    - '/{label} {sublabel} <頻道> <模式> <玩家名> &7- 更改某位玩家指定頻道的只讀與寫入模式'
+    - '/{label} {sublabel} <頻道> <none> <玩家名> &7- 移除某位玩家指定頻道的只讀與寫入模式'
+    
+  List:
+    Description: 列出聊天頻道內所有玩家列表
+    Usages:
+    - '/{label} {sublabel} &7- 列出所有聊天頻道內的所有玩家'
+    - '/{label} {sublabel} <頻道> &7- 列出某個聊天頻道內的所有玩家'
+    Mute: ''' &8[&7'' + (muted ? ''&c解除靜音'' : ''靜音'') + ''&8]'''
+    Mute_Tooltip: '''&6點擊此處來'' + (muted ? ''解除'' : '''') + ''靜音此聊天頻道'' + (muted ? '''' : ''15分鐘'') + ''.'''
+    Join: ''' &8[&7'' + (joined ? ''&a離開'' : ''加入'') + ''&8]'''
+    Join_Tooltip: '''&6點擊此處'' + (joined ? ''離開'' : ''加入'') + ''此聊天頻道'''
+    No_Players: ' &7- &o沒有任何玩家在此聊天頻道內'
+    Remove: '&8[&4X&8] '
+    Remove_Tooltip: '&6點擊此處來將玩家 {0} 踢出聊天室'
+    Header: 'bungee ? ''Bungee'' : ''在線'' + ''玩家列表'''
+    Line: '&8[{mode_color}{mode}&8] &f{player}'
+    
+  Send:
+    Usage: <頻道> <訊息>
+    Description: 傳送訊息至指定的某個聊天頻道
+  
+  Send_As:
+    Usage: <玩家名> <頻道> <訊息>
+    Description: 以玩家身份在某個聊天頻道內發送一個聊天訊息
+    Error: '以玩家 ''{0}'' 的身份發送訊息失敗: {1}'
+    
+# -------------------------------------------------------------------------------------------------
+# 以下訊息為指令相關內容
+# -------------------------------------------------------------------------------------------------
+Commands:
+  No_Console: '&c此指令僅能於客戶端執行'
+  No_BungeeCord: '&c此功能需要 Bungeecord 才能夠使用'
+  No_MySQL: '&c此功能需要您至 settings.yml 內開啟 MySQL 相關選項才能夠使用'
+  No_MySQL_BungeeCord: '&c此功能需要您至 settings.yml 內同時啟用 BungeeCord 和 MySQL 相關選項才能夠使用'
+  No_Group_Name: 請指定組名稱. 可用 {0}
+  No_Rule_Name: '請指定規則名稱. 可用: {0}'
+  No_Message_Name: '請指定訊息組名稱. 可用: {0}'
+  No_Cached_Player: 請指定玩家名稱 (也可以使用離線玩家名稱)
+  No_Reason_While_Silent: 使用預設選項時無法設定其原因
+  No_Silent_And_Anonymous: 無法同時設定預設和匿名選項
+  Console_Missing_Player_Name: 從 CONSOLE 中執行該命令時,您必須指定玩家名稱
+  Compiling_Data: 編譯資料庫訊息中,請稍候...
+  Cooldown_Wait: '&c請您稍候 {duration} 後再次嘗試此指令'
+  Invalid_Server: '沒有名為: ''{0}'' 的伺服器 可用: {1}.'
+  Invalid_Argument: '&c無效的參數,請使用 &6/{label} ? &c來獲取幫助'
+  Invalid_Sub_Argument: '&c無效的參數,請使用 ''/{label} {0}'' 來獲取幫助'
+  Invalid_Argument_Multiline: '&c無效的參數. 用法:'
+  Invalid_Time: '預計時間為 ''3 小時'' 或 ''15 分'', got: ''{input}'''
+  Invalid_Number: '必須使用整數或使用十進位數. Got: ''{input}'''
+  Invalid_Material: '無效的物品ID: ''{0}''. 您可以參閱此處來查看可用物品ID: https://mineacademy.org/materials'
+  Invalid_Type: '無效的 type: ''{0}''. 可用: {1}'
+  Invalid_Mode: '無效的模式: ''{0}''. 可用: {1}'
+  Invalid_Tag: '無效的 tag: ''{0}''. 可用: {1}'
+  Invalid_Channel: '無效的頻道: ''{0}''. 可用: {1}'
+  Invalid_Group: '無效的組: ''{0}''. 可用: {1}'
+  Invalid_Warning_Set: '無效的警告設定: ''{0}''. 可用: {1}'
+  Invalid_Param: '無效的參數: ''{0}'' 可用: {1}'
+  Invalid_Param_Short: '無效的參數: {0}'
+  Invalid_Rule: '無效的規則: ''{0}''. 可用: {1}'
+  Invalid_Message: '無效的訊息: ''{0}''. 可用: {1}'
+  Invalid_Region: 區域檔案 '{0}' 不存在
+  Label_Authors: Made by
+  Label_Description: '&c&l描述:'
+  Label_Optional_Args: optional arguments
+  Label_Required_Args: required arguments
+  Label_Usages: '&c&l用法:'
+  Label_Usage: '&c&l用法:'
+  Label_Help_For: Help for /{label}
+  Label_Subcommand_Description: ' &f/{label} {sublabel} {usage+}{dash+}{description}'
+  Help_Tooltip_Description: '&7描述: &f{description}'
+  Help_Tooltip_Permission: '&7權限: &f{permission}'
+  Help_Tooltip_Usage: '&7用法: &f'
+  Reload_Description: 重新載入插件設定文件
+  Reload_Started: 重新載入插件設定文件中,請稍候...
+  Reload_Success: '&6ChatControl {plugin_version} 已重新載入完畢!'
+  Reload_Fail: '&4錯誤,&cChatControl 重新載入失敗! 請查看 CONSOLE 來取得更多資訊! 錯誤代碼: {error}'
+  Reload_File_Load_Error: '&4錯誤,&c從硬碟中嘗試載入插件設定文件失敗! 請查看 CONSOLE 來取得更多資訊! ChatControl 並沒有被重新載入成功!'
+  Debug_Description: 壓縮歸檔您的設定文件與系統環境來回報錯誤報告
+  Debug_Preparing: '&6正在生成 debug 紀錄文件...'
+  Debug_Success: '&2已成功將 {amount} 個文件內容壓縮歸檔至 debug.zip 內! 關於 MySQL 的敏感登入訊息已自動從 yml 文件內刪除. 你可以放心的將該錯誤報告上傳至 ufile.io 傳送給我們! (或是您也可以使用 GitHub issues)'
+  Debug_Copy_Fail: '&c複製語文文件 messages_en 出現嚴重錯誤! 請查看 CONSOLE 來取得更多資訊!'
+  Debug_Zip_Fail: '&c壓縮失敗，請查看 CONSOLE 來取得更多資訊! 請調整 ZIP debug或是資料夾並且手動通過 ufile.io 傳送給我們! (或是您也可以使用 GitHub issues)'
+  Perms_Description: 列出所有 ChatControl 所擁有的權限節點
+  Perms_Header: 所有 ChatControl 的權限節點
+  Perms_Main: 主要權限
+  Perms_Permissions: '權限節點:'
+  Perms_True_By_Default: '&7[預設權限]'
+  Perms_Info: '&7功能說明: &f'
+  Perms_Default: '&7是否為預設權限: '
+  Perms_Applied: '&7您是否有該權限: '
+  Perms_Yes: '&2是'
+  Perms_No: '&c否'
+  Error: '&4&l錯誤,&c此指令出現問題,請查看 CONSOLE 中的內容並且將此插件資料夾內的 error.yml 回報作者以便修復'
+  Header_No_Subcommands: '&c此指令沒有參數'
+  Header_No_Subcommands_Permission: '&c您沒有查看該子指令的權限'
+  Header_Color: GOLD
+  Header_Secondary_Color: RED
+  Reloading: reloading
+  Disabled: disabled
+  Use_While_Null: '&c當插件處於 {state} 狀態時無法使用該功能或是指令'
+  Incompatible: '&c此功能至少需要在 Minecraft {0} 以上的版本中才能夠使用!'
+  Toggled_Plugin_Part: '''&7您現在'' + (ignoring ? ''&2不在'' : ''&c正在'') + ''&7忽略 {0}.'''
+  Use_Alternative_Header: false
+  Alternative_Header: '&cChatControl Red: &7輸入 ''/{0} ?'' 來查看所有指令'
+  
+  Announce:
+    Usage: <類型> <訊息>
+    Description: 發送公告訊息
+    Usage_Chat: /{label} {sublabel} chat <訊息> [server:<伺服器>] [type:raw] &7- 向全伺服器發送公告訊息
+    Usage_Title:
+    - '/{label} {sublabel} title <title|subtitle> fadein:<ticks> stay:<ticks> fadeout:<ticks>'
+    - '&7- 向全伺服器發送標題與副標題公告，如果您只想要發送副標題請使用 /{label} {sublabel} title | 您的訊息'
+    Usage_Actionbar: /{label} {sublabel} actionbar <訊息> [server:<伺服器>] &7- 向某個伺服器傳送工具欄訊息
+    Usage_Bossbar: 
+    - '/{label} {sublabel} bossbar <訊息> time:<秒> color:<顏色> style:<血條風格>'
+    - '&7- 向此伺服器Bossbar訊息至此伺服器'
+    Usage_Toast: /{label} {sublabel} toast <訊息> icon:<物品ID> &7- 向此伺服器傳送成就公告訊息
+    Usage_Image: /{label} {sublabel} image <圖片> <圖片大小> [訊息|子訊息] &7- 向此伺服器發送圖片公告
+    Usage_No_Perms:
+    - '您沒有任何子權限來發送任何類型的公告'
+    - '範例: chatcontrol.command.announce.chat'
+    Usage_Footer:
+    - ''
+    - '&c&l小貼士:'
+    - '&c1.您可以使用 server:<name> &c參數來將公告訊息傳送至另一伺服器上,'
+    - '&c或是使用 server:bungee 參數來將公告訊息發送到所有 Bungee 伺服器上'
+    - ''
+    - '&c2.您可以使用 type:raw 參數來發送無格式訊息(BungeeCord 除外)'
+    - ''
+    - '&c3.您可以在訊息前加上 [JSON] 參數來發送原始 JSON 訊息'
+    No_Type: 請輸入您要廣播的訊息
+    Empty: 您要廣播的訊息不能為空!
+    Image_Lines: 請輸入一個有效的整數來設定發送圖片的大小
+    Invalid_Image: 找不到名為 '{0}' 的圖片檔案
+    Invalid_Type: '不支援的的圖片格式: ''{0}'''
+    Invalid_Raw_Type: 無效的 type! 目前僅支援 raw 格式
+    Invalid_Time_Ticks: 請輸入一個有效的整數(單位為ticks)
+    Invalid_Time_Seconds: 請輸入一個有效的整數(單位為秒)
+    Invalid_Key: 'Invalid key ''{0}'' value: {1}. Available: {2}'
+    Invalid_File: 'No such file: {0}'
+    Image_Error: 'Failed to broadcast image from ''{0}'': {1}. Please see console for more information.'
+    Invalid_Image_Height: Image height must be between {0} and {1}.
+    Chat_Body:
+    - '&8{chat_line}'
+    - '<center>&c&l! &6&l{type} &c&l!'
+    - '&8{chat_line}'
+    - '&f{lines}'
+    - '{remaining_space}'
+    - '&8{chat_line}'
+    Chat_Body_Line_Color: GRAY
+    Type: '(bungee ? ''NETWORK '' : '''') + ''ANNOUNCEMENT'''
+    Success: Your announcement has been sent.
+    Success_Network: Your announcement was sent to the {0} server.
+  
+  Book:
+    Usage: <new/save/delete/open/list> [name] [玩家名]
+    Description: Manipulate in-game books.
+    Usages:
+    - '/{label} {sublabel} new &7- Create new book via ''/mail new'' command.'
+    - '/{label} {sublabel} save <name> &7- Save a signed book.'
+    - '/{label} {sublabel} delete <name> &7- Delete a stored book.'
+    - '/{label} {sublabel} open <name> [玩家名] &7- Open book for player.'
+    - '/{label} {sublabel} give <name> [玩家名] &7- Give a book to player.'
+    - '/{label} {sublabel} list &7- List all created books.'
+    Invalid: 'No such book: ''{0}''. Available: {1}'
+    No_Book: 'Specify a book name first. Available: {0}.'
+    Mail_Disabled: Cannot create books when mails are disabled. Set Mail.Enabled to true in settings.yml to enable.
+    New: 'Use the mail function to create a book. When you are ready, type ''/{label} {sublabel} save'' to save it. '
+    Save_No_Book: Create a book first with '/{label} {sublabel} new'.
+    Save_Not_Signed: Sign your book first before saving it.
+    Save_No_Name: Specify the book name. It will be placed into books/ in your plugin's directory.
+    Save: '''Saved mail as book to books/{0}.yml.'' + (override ? '' Your old file was overriden.'' : '''')'
+    Save_Error: 'Failed to save {0}: {1}'
+    Delete: Book '{0}' has successfully been deleted.
+    Delete_Fail: Could not delete '{0}'.
+    List_Open: '&8[&6O&8]'
+    List_Open_Tooltip: '&6Open this book.'
+    List_Delete: '&8[&cX&8]'
+    List_Delete_Tooltip: '&6Click to delete.'
+    List_None: There are no books in books/ folder.
+    List_Header: Books
+    List: ' &7''&f{title}&7'' &7by {author} from {date}'
+    List_Tooltip: '&7File name: &f{0}'
+    Page: '&6Page {0}:'
+    Page_Header: Book '{0}' by {1}
+    Unnamed: Unnamed
+    Unsigned: Unsigned
+    Open: The book has been opened for {0}.
+    Give: Player {0} has received the book as item.
+
+  Clear:
+    Usage: '[-a/-c/-s] [reason]'
+    Description: Clear the game chat.
+    Usages:
+    - '/{label} {sublabel} [reason] &7- Clear the game chat.'
+    - '/{label} {sublabel} -a(nonymous) &7- Do not broadcast who cleared it.'
+    - '/{label} {sublabel} -c(console) &7- Clear the server console.'
+    - '/{label} {sublabel} -s(ilent) &7- Do not broadcast any message.'
+    Success: '(bungee ? ''Network'' : ''Game'') + '' chat has been cleared'' + (anonymous ? '''' : '' by {0}'') + ''.'' + (!reason.isEmpty() ? '' Reason: {1}'' : '''')'
+    Success_Console: Console has been cleared by {0}.
+    Success_Staff: '{prefix_info}Chat has been successfully cleared by {0}.'
+
+  Color:
+    Usage: <color/status/menu> [decoration] [玩家名]
+    Description: Set chat color and decoration.
+    Usages_1:
+    - '/{label} {sublabel} status [玩家名] &7- Print your color and decoration.'
+    - '/{label} {sublabel} menu &7- Open color and decoration menu.'
+    - '/{label} {sublabel} yellow &7- Set chat color to yellow.'
+    Usages_Hex_1:
+    - '/{label} {sublabel} #<hexcode> &7- Set chat color to HEX.'
+    Usages_2:
+    - '/{label} {sublabel} default bold [玩家名] &7- Only set decoration.'
+    - '/{label} {sublabel} red bold [玩家名] &7- Set color and decoration.'
+    - '/{label} {sublabel} reset &7- Reset color.'
+    - '/{label} {sublabel} reset reset [玩家名] &7- Reset color and decoration.'
+    Usages_Hex_2:
+    - ''
+    - '&c&lTIP:&c Visit htmlcolorcodes.com to generate HEX colors.'
+    Not_Saved: '{0} doesn''t have any color nor decoration.'
+    Chat_Color: '&7chat color'
+    Decoration: decoration
+    Invalid_Color: '''Invalid chat color. Valid syntax: & color, name'' + (hasHex ? ''or #<hex>'' : '''') + ''. Available: {0}'''
+    Invalid_Decoration: 'Invalid chat decoration. Use & or name syntax. Available: {0}'
+    Decoration_Not_Allowed: Please only enter colors not decorations.
+    Color_Not_Allowed: Please only enter decorations not colors.
+    Success_Color: Set {0} chat color to {1}&7
+    Success_Decoration: Set {0} chat decoration to {1}&r&7
+    Reset: Set {0} chat color to default
+    Reset_Decoration: Set {0} chat decoration to default
+
+  Forward:
+    Usage: <server> <command...>
+    Description: Forward commands to BungeeCord.
+    Usages:
+    - '/{label} {sublabel} <server> <command...> &7- Run a command on BungeeCord or other servers in your network.'
+    - '/{label} {sublabel} bungee send all creative &7- Run ''send all creative'' command on BungeeCord.'
+    - '/{label} {sublabel} creative say Hi there! &7- Run the command on ''creative'' server.'
+    - ''
+    - '&c&lNOTE: &cYou cannot send commands to empty servers.'
+    Unknown_Server: 'Unknown server. Available: bungee, {0}'
+    Success: Your command has been sent successfuly.
+
+  Info:
+    Usage: <param> <玩家名> [args...]
+    Description: Display debug information.
+    Usages:
+    - '/{label} {sublabel} nick <player/nick> &7- Print player''s nick and name.'
+    - '/{label} {sublabel} newcomer <玩家名> &7- Print if player is newcomer.'
+    - '/{label} {sublabel} cache <玩家名> &7- Print saved information for player.'
+    - '/{label} {sublabel} variables <玩家名> <訊息> &7- Parse msg variables.'
+    - ''
+    - '&c&lExample:'
+    - '&c/{label} {sublabel} variables Notch &c{player} is in channel {channel}'
+    - ''
+    - '&c&lTIP:&c You can use this to measure the performance of variables and find which cause lag.'
+    Cache_Player: '&cCache information for {0}'
+    Cache_Location: '&cLocation: '
+    Cache_Nick: 'Player {0} has nick: {1}.'
+    Newcomer: '''{0} '' + (newcomer ? ''&ais'' : ''&cis not'') + '' &7a newcomer.'''
+    Variables_No_Message: Please enter a message in which we replace variables.
+    Variables: '''&7Result (took {0}ms): &r'' + (replaced.isEmpty() ? ''&7&oEmpty output.'' : replaced)'
+    
+  Ignore:
+    Usage: <player/list> [玩家名]
+    Description: Toggle seeing messages/PMs from players.
+    Usages:
+    - '/{label} <玩家名> &7- Toggle ignoring a player.'
+    Usages_Others:
+    - '/{label} <forWhom> <玩家名> &7- Toggle ignoring a player for other player.'
+    Usages_List:
+    - '/{label} list &7- Print players you are ignoring.'
+    Usages_List_Others:
+    - '/{label} list <玩家名> &7- Print players another player is ignoring.'
+    Not_Ignoring: '(!otherPlayer ? ''You are'' : ''{0} is'') + '' not ignoring anyone.'''
+    List_Header: Ignored Players For {0}
+    List_Tooltip_Stop: '&6Click to stop ignoring {0}.'
+    Cannot_Ignore_Admin: You cannot ignore that player.
+    Cannot_Ignore_Self: You cannot ignore the same player fool :)
+    Success: '(!otherPlayer ? ''You are '' : ''{0} is '') + (ignored ? ''&ano longer'' : ''&cnow'') + '' &7ignoring {1}.'''
+    Cannot_PM: '{0} is ignoring you. No message sent.'
+    Cannot_PM_Ignored: You are ignoring {0}. No message sent.
+    Cannot_Sound_Notify_Sender: Cannot tag {0} because you ignore them.
+    Cannot_Sound_Notify_Receiver: Cannot tag {0} because they ignore you.
+
+  Inspect:
+    Usage: <file/plugin/class> <value>
+    Description: Inspect classes, fields and methods in Java.
+    Usages:
+    - '/{label} {sublabel} file <path> &7- View file or folders.'
+    - '/{label} {sublabel} plugin <plugin> &7- View plugin classes.'
+    - '/{label} {sublabel} class <class> &7- Inspect fields/methods in class.'
+    Invalid_File: File '{0}' does not exist in your root server folder.
+    Illegal_File: File '{0}' has unsupported format.
+    Listing_Content: Listing content of {0}
+    Listing_File: Listing file {0}
+    Plugin_Not_Loaded: Plugin '{0}' is not loaded!
+    Listing_Classes: Listing {0} classes
+    Plugin_Tooltip:
+    - 'Click to inspect this class.'
+    No_Class: 'No such class: {0}'
+    Inspecting_Class: Inspecting {0} Class
+    Inspect_Tooltip:
+    - '&6Inspect {0}'
+    Parent: '&3[parent]'
+    Open:
+    - '&6Open {0}'
+    Cut: '&c> &7{0} lines were cut due to being over limit.'
+
+  Log:
+    Usage: <type> [key:value...]
+    Description: View last player communication.
+    Usages_1:
+    - '/{label} {sublabel} <type> player:kangarko &7- View logs from player.'
+    - '/{label} {sublabel} <type> before:10m &7- View logs before timestamp.'
+    - '/{label} {sublabel} <type> in:1h &7- View recent logs in timestamp.'
+    Usages_Channel:
+    - '/{label} {sublabel} <type> channel:admin &7- View logs in channel.'
+    Usages_To:
+    - '/{label} {sublabel} <type> to:receiver &7- View PMs/mails to receiver.'
+    Usages_2:
+    - '/{label} {sublabel} <type> label:me &7- View command logs.'
+    Usages_Rule:
+    - '/{label} {sublabel} <type> rule:ip &7- View logs matching rule.'
+    - '/{label} {sublabel} <type> group:ads &7- View logs matching rule group.'
+    Usages_3:
+    - ''
+    - '&c&lTIP: &cYou can use multiple key:value parameters. To list all logs, type ''all'' for the type.'
+    - '&c&lTIP: &cThe ''player'' and ''to'' parameters don''t support nicknames.'
+    No_Logs: '''No logs'' + (hasType ? '' for {0}'' : '''') + '' were found.'''
+    Type_Chat: chat
+    Type_Command: command
+    Type_Private_Message: private message
+    Type_Mail: mail
+    Type_Sign: sign
+    Type_Book: book
+    Type_Anvil: anvil
+    Tooltip_Channel: '&7Channel: &f{0}'
+    Tooltip_Rule: '''&7Rule: &f'' + (isUnnamed ? ''&oUnnamed.'' : ''{0}'')'
+    Tooltip_Group: '&7Group: &f{0}'
+    Tooltip_Recipients: '&7Recipients:'
+    Tooltip_Click_To_Read:
+    - ''
+    - '&6Click to read.'
+    Sent_Mail: ' &7sent mail &f''{0}'''
+    Placed_Sign: ' &7placed sign:'
+    Wrote_Book: ''' &7wrote book &f'' + (isSigned ? ''{title}'' : ''&oUnsigned&r'')'
+    Wrote_Book_Tooltip: '&6Click to open'
+    Renamed_Item: ' &7renamed item: &f'
+    No_Logs_Matched: No logs match the given parameters.
+    Listing_Header: '''Listing '' + (noType ? ''All'' : ''{0}'') + '' Logs'''
+    Invalid_Syntax: 'Invalid syntax! Usage: <value>:<key>. Got: {0}'
+    Invalid_Value: Please specify a valid value for '{0}'.
+    Invalid_Key: 'Invalid key ''{0}'' value: {1}.'
+    Cannot_Use_Channel: Can only use 'channel' parameter on chat.
+    Cannot_Use_Label: Can only use 'label' parameter on commands.
+    Cannot_Use_To: Can only use 'to' parameter on private messages.
+    
+  List:
+    Usage_Server: '[server]'
+    Description: List online players.
+    Usage_1: '''/{label} &7- List online players'' + (bungee ? '' on all servers'' : '''') + ''.'''
+    Usage_2: /{label} survival &7- List players on 'survival' server.
+    Header: '''Listing '' + (bungee ? ''Network'' : ''Online'') + '' Player(s)'''
+    
+  Mail:
+    Usage: <new/send/inbox/sent>
+    Description: Manage your game mail.
+    Usages:
+    - '/{label} new &7- Draft a new mail.'
+    - '/{label} send <player/anotherPlayer> &7- Send a mail.'
+    - '/{label} autor <time/view/off> &7- Set auto-responder for mails.'
+    - '/{label} inbox &7- Read incoming mails.'
+    - '/{label} archive &7- Read mails you''ve sent out.'
+    - ''
+    - '&c&lTIP: &cTime is in human readable format such as ''1 hour'' etc.'
+    No_Pending: Draft an email first with '/{label} new'.
+    No_Subject: Your mail does not have a subject. Sign your draft item first.
+    No_Recipients: Please specify the recipients separated by '|', or 'online' to send to all online players, or 'all' to send to all players stored in our database.
+    Autoresponder_Usage: Enter 'view' to view your auto-responder, 'off' to disable it or write time such as '3 days' to renew an existing one or use your draft as a new one.
+    Autoresponder_Disabled: You have no active auto-responder.
+    Autoresponder_Removed: Your mail auto-responder has been removed.
+    Autoresponder: Your auto-responder '{title}' expires {date}. Type '/{label} {0} <time>' to renew it.
+    Autoresponder_Missing: You attempted to set a time but you're not creating a draft nor you have an old auto-responder. Create a new mail draft first.
+    Autoresponder_Updated: Updated your old auto-responder to expire {0}.
+    Autoresponder_Set: Set a new auto-responder that expires {0}.
+    Autoresponder_Invalid_Time: Malformed syntax, expected human readable time like '1 minute' or '3 days', got '{0}' instead.
+    Delete_Invalid: No such email, perhaps it was deleted already.
+    Delete_Sender: The selected email has been deleted. Keep in mind recipient will still be able to read it.
+    Delete_No_Recipient: Recipient unique ID not provided.
+    Delete_Invalid_Recipient: 'No such recipient by ID: {0}'
+    Delete_Recipient: The selected email has been deleted.
+    Hand_Full: Clear your main hand before writing an email.
+    Already_Drafting: You already have the mail draft item in your inventory.
+    Item_Title: Right click draft your mail
+    Item_Tooltip:
+    - '&r&7click with mouse to discard.'
+    New_Usage: '(noPendingMail ? ''Right click to draft a new mail.'' : ''Right click to continue writing mail.'') + '' Drop the item to discard.'''
+    Reply_Usage: Right click to prepare a reply to {0}. Click on 'Done' to send it. Drop the item to discard.
+    Open_Tooltip: '&6Click to open.'
+    Open_Tooltip_Script: 'read ? ''&7You have read this mail {0}.'' : ''&6You have not read this mail.'''
+    Reply_Tooltip: '&6Click to reply.'
+    Forward_Tooltip: '&6Click to forward.'
+    Delete_Tooltip: '&6Click to delete.'
+    Inbox_Line: ' &r{subject} &7by {sender} &7at {date}'
+    No_Incoming_Mail: You have no incoming mail.
+    Inbox_Header: Email Sent To You
+    Archive_Recipients_Tooltip: '&7Recipients:'
+    Archive_Read_Tooltip: '''{0}&7: '' + (hasOpened ? ''&2read'' : ''&7unread'')'
+    Archive_Line: ' &r{subject} &7to {recipients} &7at {date}'
+    Archive_Recipient: recipient(s)
+    Archive_No_Mail: You have no archive of sent mail.
+    Archive_Header: Email Sent By You
+    Send_Fail_Ignore: Cannot send mail to {0} because the player is ignoring you.
+    Send_Fail_Toggle: Cannot send mail to {0} because the player has toggled mails off.
+    Send_Success: Email successfully sent!
+    Draft_Discarded: Your pending mail has been discarded.
+    Forward_Recipients: '{prefix_question}Enter player names separated by | that will receive the email to the chat, or type ''exit'' to abort.'
+    Forward_Recipients_Invalid: '{prefix_error}Invalid syntax! Specify recipient names such as kangarko|anotherPlayer|thirdPlayer. Got: {0}'
+    Forward_Success: '{prefix_success}Your mail has successfully been forwarded.'
+    Ready: Your mail ready to send. Use '/mail send' to send it.
+    Draft_Saved: Saved your mail as a draft. Sign the book with title as the subject line when you want to send it. Use /mail new to re-open.
+    Join_Notification: You have new mail ({0}). Use '/mail inbox' to read.
+    New_Notification: '{prefix_warn}{0} sent you a new mail. Use ''/mail inbox'' to read.'
+
+  Message:
+    Usage: <list/toggle/info/reload> <type> [group]
+    Description: Manage player messages.
+    Usages:
+    - '/{label} {sublabel} list <type> &7- Print all messages.'
+    - '/{label} {sublabel} toggle <type> <group> &7- Switch message on/off.'
+    - '/{label} {sublabel} info <type> <group> &7- Print message information.'
+    - '/{label} {sublabel} reload &7- Reload all messages.'
+    Reloaded: Reloaded all messages from the messages/ folder.
+    No_Type: 'Please specify message type. Available: {0}'
+    No_Messages: No {0} messages are created yet.
+    Group: ' &8- &7Group: &f{0}'
+    List_Header: Showing {0} {1} Message(s)
+    No_Group: Please specify the message group.
+    Info:
+    - '&8{chat_line}'
+    - '<center>&6&l{0} message ''{1}'''
+    Info_Footer:
+    - '&8{chat_line}'
+    Toggled: '''{0} message {1} has been '' + (toggle ? ''&cdisabled'' : ''&aenabled'') + ''&7.'''
+
+  Me:
+    Usage: <訊息>
+    Description: Send a formatted message.
+    Usages:
+    - '/{label} Hello everyone! &7- Send a formatted message.'
+
+  Migrate:
+    Usage: <chc8>
+    Description: Migrate data from ChatControl, or MySQL and data.db.
+    Usages:
+    - '/{label} {sublabel} chc8 &7- Migrate data from ChatControl 8.'
+  
+  Motd:
+    Usage: '[玩家名]'
+    Description: Read the message of the day.
+    Usages_Self:
+    - '/{label} &7- Read your message of the day.'
+    Usages_Others:
+    - '/{label} <玩家名> &7- Send the motd to other player.'
+    Success: Message of the day has been sent.
+  
+  Mute:
+    Usage: <server/channel/player> <params...>
+    Description: Mute/unmute server, channel or players.
+    Usages:
+    - '/{label} <type> &7- Print if type is muted.'
+    - '/{label} <type> off &7- Unmute type if muted.'
+    - '/{label} <type> <duration e.g. 1h2m15s> &7- Mute the type.'
+    - '/{label} <type> <duration> [reason] &7- Mute the type with reason.'
+    - '&cTip: The type can be ''server'', ''channel'' or ''player''. For channels and players, also specify channel or player name.'
+    Server: ''' &7This server is '' + (muted ? ''&cmuted'' : ''&2not muted'') + ''&7.'''
+    Player_Or_Channel: ''' &7- &f{0} &7is '' + (muted ? ''&cmuted'' : ''&2not muted'') + ''&7.'''
+    Change_Status_Tooltip: '''&6Click to '' + (muted ? ''un'' : '''') + ''mute'' + (muted ? '''' : '' for 3 minutes'')'
+    Channel_Status: Channel Mute Status
+    Server_Status: Server Mute Status
+    Player_Status: Players' Mute Status
+    No_Duration: Please specify the duration and an optional reason.
+    Invalid_Duration: 'Invalid duration format: ''{0}''! Valid syntax: 6y5mo4w3d2h1m0s such as 30m or 1m30s'
+    Mute_Success: '''The {type} has been muted by {player} for {duration}.'' + (!reason.isEmpty() ? '' Reason: '' + reason : '''')'
+    Unmute_Success: The {type} has been unmuted by {player}.
+    Already_Muted: '{type} ''{0}'' is already muted! Use ''off'' as an argument to unmute.'
+    Not_Muted: '{type} ''{0}'' is not muted!'
+    Already_Muted_Server: '{type} is already muted! Use ''off'' as an argument to unmute.'
+    Not_Muted_Server: '{type} is not muted!'
+    Cannot_Mute_Yourself: You cannot mute yourself fool!
+    Cannot_Create_Books: Cannot create books while the chat or you are muted!
+    Cannot_Command: You cannot perform this command while you are muted.
+    Cannot_Chat: You cannot type to chat while you are muted.
+    Cannot_Place_Signs: Cannot place signs while the chat or you are muted!
+    Cannot_Chat_Player_Muted: You cannot type to channel while you, the channel or server is muted.
+    Cannot_Chat_Channel_Muted: You cannot talk in channel {0} as it is muted.
+
+  Points:
+    Usage: <get/set/list> <玩家名> [set] [amount]
+    Description: Manage player warning points.
+    Usages:
+    - '/{label} {sublabel} get <玩家名> [set] &7- List player warning points.'
+    - '/{label} {sublabel} set <玩家名> <set> <amount> &7- Set warning points.'
+    - '/{label} {sublabel} list [set] &7- List all players warning points.'
+    Disabled: Warning points are disabled in settings.yml
+    List_Item_1: ' &6Set {0}:'
+    Remove_Tooltip: '&6Click to remove.'
+    List_Item_2: ' &f{0}&8: &7{1} points'
+    No_Points: There are no warn points stored. Come, get some!
+    List_Header: Saved Warning Points
+    Player_List_Item: ' &f{0} &7= &f{1} points'
+    No_Player_Points: There are no such warning points for {0}.
+    Player_List_Header: Listing {0}'s Warning Points
+    No_Set: 'Please specify a set name. Available: {0}'
+    No_Amount: Please specify valid amount of points to set.
+    No_Stored: '{0} does not have warning points in set ''{1}''.'
+    Set: '(removed ? ''Removed points from'' : ''Set {0} points to'') + '' player {1} warning set {1}.'''
+
+  Purge:
+    Usage: <玩家名> [anotherPlayer...]
+    Description: Remove messages sent by the player, even if he disconnected.
+    Success: All messages from {0} were removed.
+
+  Reply:
+    Dosage: <訊息>
+    Prescription: Reply to last player who messaged you.
+    Alone: You have nobody to reply to :(
+  
+  Spy:
+    Usage: <status/menu/off/toggle/list> [玩家名] [type] [channel]
+    Description: Toggle spying player commands and messages.
+    Usages_1:
+    - '/{label} status [玩家名] &7- Print if player is spying.'
+    - '/{label} menu [玩家名] &7- Open main spying selection menu.'
+    - '/{label} on/off [玩家名] &7- Toggle all spying on/off for player.'
+    - '/{label} toggle <type> [玩家名] &7- Toggle spying for section on/off.'
+    Usages_2:
+    - '/{label} toggle chat <頻道> [玩家名] &7- Toggle spying for channel.'
+    Usages_3:
+    - '/{label} list &7- List all spying players.'
+    No_Stored: There are no spying players stored.
+    List_Tooltip:
+    - '&6Disable all spying for {0}.'
+    List_Header: All Spying Players
+    Toggle_No_Type: 'Specify a valid spying type. Available: {0}'
+    Toggle_No_Channel: 'Specify a chat channel to toggle spy on. Available: {0}'
+    Toggle: '''{0} is '' + (isSpying ? ''&cno longer'' : ''&anow'') + '' &7spying {1}.'''
+    Type_Channel: channel
+    Type_Chat: chat
+    Type_Command: commands
+    Type_Private_Message: private messages
+    Type_Mail: mails
+    Type_Sign: signs
+    Type_Book: books
+    Type_Anvil: anvil
+    Type_Announcement: announcements
+    Type_Me: /me messages
+    Book_Untitled: Untitled
+    No_Spying: '{0} is not spying anything.'
+    Status_1:
+    - '&8{chat_line_smooth}'
+    - '<center>&6Printing what {0} is currently spying'
+    - '&8{chat_line_smooth}'
+    Status_2:
+    - ''
+    - '&7Type ''/{label} off {0}'' to turn it off.'
+    Toggle_Off: Disabled all spying for {0}.
+    Toggle_On: Enabled all spying for {0}.
+    Status_Sectors: '&6Spying sectors:'
+    Status_Channels: '&6Spying channels:'
+    Auto_Enable_1: '{prefix_warn}Your spy mode has been activated automatically. Type ''/spy off'' to disable. '
+    Auto_Enable_2: '&8[&6?&8]'
+    Auto_Enable_Tooltip:
+    - '&6TIP: &7To stop spying automatically on join, ask the'
+    - '&7admin to take away &o{0}&7'
+    - '&7permission from you explicitly.'
+  
+  Region:
+    Usage: <add/remove/view/tp/list> [name]
+    Description: Manage map regions used in rules.
+    Usages:
+    - '/{label} {sublabel} add <name> &7- Create a new region.'
+    - '/{label} {sublabel} remove <name> &7- Delete a region.'
+    - '/{label} {sublabel} view <name> &7- Visualize a region.'
+    - '/{label} {sublabel} tp <name> &7- Teleport to a region.'
+    - '/{label} {sublabel} tool &7- Obtain region tool.'
+    - '/{label} {sublabel} list &7- Browse available regions.'
+    List:
+    - '&8{chat_line_smooth}'
+    - ' '
+    - '<center>&6&lChatControl Regions'
+    - '<center>&7{0} loaded'
+    - '&8{chat_line_smooth}'
+    Region_Info: '&fRegion Information'
+    Primary: '&7Primary: &2{0}'
+    Secondary: '&7Secondary: &2{0}'
+    Size: '&7Size: &2{0} blocks'
+    Tooltip_Remove: '&7Click to remove permanently.'
+    Tooltip_Visualize: '&7Click to visualize.'
+    Tooltip_Teleport: '&7Click to teleport to the center.'
+    Tool_Disabled: Region tools are disabled. Set 'Register_Tools' to true in settings.yml to use tools.
+    Tool: Thor given you 1x ChatControl Region Tool. Right/left click to select two points and then use '/{label} {sublabel} add' to create a region.
+    Tool_Name: Region Tool
+    Tool_Lore:
+    - ''
+    - 'Use this tool to create and'
+    - 'edit ChatControl Red regions.'
+    - ''
+    - '&b<< &7Left click - Primary'
+    - '&7Right click - Secondary &b>>'
+    Point_Name: '[&aRegion point&f]'
+    Point_Set: '''Set the '' + (primary ? ''primary'' : ''secondary'') + '' region point.'''
+    No_Name: Please specify the region name.
+    No_Selection: Before adding a region, select primary and secondary points with '/{label} {sublabel} tool' first.
+    Already_Exists: Region by the same name already exists.
+    Saved: Saved new region '{0}'.
+    Removed: Removed region '{0}'.
+    Visualized: Region '{0}' is being visualized for 5 seconds.
+    Teleported: Teleported to the center of region '{0}'.
+
+  Real_Name:
+    Usage: '[name/nick]'
+    Description: Look up a player's real name and nick by his real name or nick.
+    Success: '''Player {0} has '' + (hasNick ? ''nick {1}'' : ''no nick'') + ''.'''
+  
+  Rule:
+    Usage: <info/toggle/create/import/list/reload> [rule]
+    Description: Manage the rules system.
+    Usages:
+    - '/{label} {sublabel} info <rule> &7- Print rule information.'
+    - '/{label} {sublabel} toggle <rule> &7- Switch rule on/off.'
+    - '/{label} {sublabel} create &7- Create rule by name.'
+    - '/{label} {sublabel} import &7- Mass rule import.'
+    - '/{label} {sublabel} list <type> &7- List all loaded rules.'
+    - '/{label} {sublabel} reload &7- Reload all rules.'
+    Info_1:
+    - '&8{chat_line}'
+    - '<center>&6&lRule ''{0}'''
+    Info_2:
+    - '&8{chat_line}'
+    Toggle: '''Rule {0} has been '' + (toggle ? ''&cdisabled'' : ''&aenabled'') + ''&7.'''
+    List_No_Type: Please specify what type of rules to show.
+    List_No_Rules: No {0} rules are created yet. Create some with '/{label} {sublabel}' create command!
+    Type_Global: global
+    Type_Chat: chat
+    Type_Command: command
+    Type_Packet: packet
+    Type_Sign: sign
+    Type_Book: book
+    Type_Anvil: anvil
+    Type_Tag: tag
+    Tooltip_Name: '&7Name: &f{0} '
+    Tooltip_Match: '&7Match: &f'
+    List_Header: Showing {0} {1} Rule(s)
+    Reloaded: All rules have been reloaded from their respective files.
+    Rule_Creator: '&8[&6Rule Creator&8] &7'
+    Rule_Creator_Welcome:
+    - 'Welcome to the Rule Creator Wizard. We''ll ask you a few questions and your new rule will be set.'
+    - 'Type answers directly to the chat or type ''exit'' at any time to abort. To continue, please type your new rule''s name.'
+    Rule_Creator_Already_Exists: '{prefix_error}Rule {0} already exists!'
+    Rule_Creator_Type:
+    - 'Awesome, preparing rule ''{0}'' for you. Please enter the rule''s type. This also determines to which file we''ll place the rule. '
+    - 'Available: {1}'
+    Invalid_Type: '{prefix_error}Rule type ''{0}'' is invalid!'
+    Encode: Should we automatically encode the matching word you enter in the next question to be harder to bypass? Type yes/no.
+    Invalid_Encode: '{error_prefix}Wrong answer! Type ''yes'' or ''no'', or ''exit'' to give up.'
+    Rule_Creator_Match: Enter the word that should be matched.
+    Group_Name: 'Almost ready! Now, enter what group this rule should belong to, or ''none'' if no group. Installed groups: {0}'
+    Invalid_Group: '{prefix_error}Group {0} does not exists!'
+    Rule_Creator_Success: '{prefix_success}Congratulations, you''ve successfuly created a new rule! It was loaded and is ready to operate. Here''s how it looks like:'
+    Conversation_Cancelled: '&cYou haven''t entered anything in time so that your conversation has been cancelled.'
+    Conversation_Abandoned: '&cYour conversation has been abandoned. Your entered data have been lost.'
+    Rule_Import: '&8[&6Rule Import&8] &7'
+    Rule_Import_Start: Rules are now being imported, please wait...
+    Rule_Import_Welcome:
+    - 'Welcome to the Rule Import Wizard. We''ll ask you a few questions and import every line from your file as a new rule.'
+    - 'Type answers directly to the chat or type ''exit'' at any time to abort. To continue, please write your file name (in your plugin''s folder).'
+    Rule_Import_Invalid_File: '{prefix_error}File {0} does not exist!'
+    Rule_Import_Type:
+    - 'Awesome, importing rules from {0} for you. Please enter what type of rules these are.'
+    - 'Available: {1}'
+    Rule_Import_Success: '{prefix_success}Congratulations, you''ve successfuly imported {0} rule(s)! They were loaded and is ready to operate.'
+    Rule_Import_Fail: '{prefix_error}There was an error importing rules, please see the console!'
+  
+  Script:
+    Usage: <expression>
+    Description: Evaluate JavaScript.
+    Usages:
+    - '/{label} {sublabel} 5 * (2/3) &7- Simple math.'
+    - '/{label} {sublabel} player.getHandle().ping &7- NMS, if player is Player.'
+    - '/{label} {sublabel} {variable} / 2 &7- PAPI, native or variables/.'
+    - '/{label} {sublabel} Java.type("org.bukkit.Bukkit").getOnlinePlayers()'
+    Error: 'Error in your expression: {0}'
+    Result: 'Result: &f{0}'
+  
+  Tag:
+    Disabled: Please fill your Tag.Apply_On key in settings.yml first before using this command.
+    Usage: <type> [tag/off]
+    Description: Set your tag.
+    Usages:
+    - '/{label} list &7- Print all tags.'
+    - '/{label} off &7- Disable all tags.'
+    - '/{label} <type> &7- Print your tag.'
+    - '/{label} <type> <tag> &7- Set yourself a tag.'
+    - '/{label} <type> off &7- Stop having a tag.'
+    - ''
+    - '&c&lTIP: &cUse {prefix_tag}, {suffix_tag} and {nick} placeholders to show tags.'
+    Admin_Usage: <type> <player/list> [nick/off]
+    Admin_Description: Control tags for players.
+    Admin_Usages:
+    - '/{label} {sublabel} <type> <玩家名> &7- Print player''s tags.'
+    - '/{label} {sublabel} <type> <玩家名> <nick> &7- Set player a tag.'
+    - '/{label} {sublabel} <type> <玩家名> off &7- Remove tag from player.'
+    - '/{label} {sublabel} list [type] &7- List all players with tags.'
+    No_Tags: There are no tags stored.
+    Admin_Tooltip_Remove: '&6Remove {0} from {1}.'
+    Admin_List: Listing All Tags
+    Admin_Invalid_Params: Please specify a tag type and a player name.
+    Admin_Status: '{possessive_form} {type}: {tag}.'
+    Your_Tags: 'Your tags:'
+    Off_No_Tags: You do not have any active tags.
+    Off_All: All active tags were disabled.
+    Status_Self: 'Your {0} is: {1}'
+    No_Spaces: Nicks cannot contain spaces.
+    No_Colors_Only: Your tag cannot consist only of colors.
+    Exceeded_Length: Your tag's length ({0}) is over maximum limit of {1} letters.
+    Not_Allowed: Unable to set your tag, try another one!
+    No_Tag: '''{0} presently do'' + (self ? '''' : ''es'') + '' not have a {1}.'''
+    No_Impersonation: The nick cannot impersonate a real player name.
+    Already_Used: This nick is already used.
+    Success_V2: '(remove ? ''Removed {0} for '' + (self ? ''you'' : ''{target}'') + ''.'' : ''Set {0} to "{1}&7" for '' + (self ? ''you'' : ''{target}'') + ''.'')'
+
+  Toggle:
+    Usage: <type> [group]
+    Description: Toggle seeing parts of the plugin.
+    Usages_1:
+    - '/{label} <type> &7- Toggle a plugin part. Parts: {0}'
+    - '/{label} <type> [group] &7- Toggle a message type. Types: {1}'
+    Usages_Chat:
+    - '/{label} chat &7- Toggle seeing chat messages. If you are spying, you''ll still see them.'
+    Usages_Join:
+    - '/{label} join default &7- Toggle join message group ''default''.'
+    Usages_Timed:
+    - '/{label} timed special &7- Toggle timed messages group ''special''.'
+    Usages_Private_Message:
+    - '/{label} pm &7- Toggle all private messages.'
+    Usages_2:
+    - '/{label} list &7- List all toggled plugin parts.'
+    Toggled_Group: '''&7You are '' + (ignoring ? ''&2no longer'' : ''&cnow'') + '' &7ignoring {0} message {1}.'''
+    Toggled_Group_All: '''&7You are '' + (ignoring ? ''&2no longer'' : ''&cnow'') + '' &7ignoring all {0} messages.'''
+    Type_Join: join
+    Type_Quit: quit
+    Type_Kick: kick
+    Type_Death: death
+    Type_Timed: timed
+    List_Line: '&6Hidden {0} Messages&7:'
+    List_Tooltip:
+    - '&6Click to stop ignoring.'
+    List_Plugin_Parts_Title: '&6Plugin parts&7:'
+    List_Plugin_Parts: '(isIgnoring ? ''&cignoring'' : ''&2receiving'')'
+    List_Plugin_Parts_Toggle:
+    - '&6Click to toggle.'
+    List_Plugin_Parts_Header: Toggled Parts Of The Plugin For {0}
+    No_Group: 'Please specify a group to toggle for {0}. Available: {1}'
+    Invalid_Type: 'Invalid type. Available toggles: {0} and types: {1}.'
+    Cannot_PM: '{0} has toggled off private messages.'
+
+  Tell:
+    Usage: <玩家名> [message]
+    Description: Send private messages to players.
+    Usages:
+    - '/{label} <玩家名> <訊息> &7- Send player a message.'
+    - '/{label} <玩家名> &7- Toggle conversation mode, in which your chat messages are automatically sent as private messages.'
+    - '/{label} off &7- Disable conversation mode if active.'
+    Conversation_Mode_Not_Conversing: You are not conversing with anyone.
+    Conversation_Mode_Off: Conversation mode with {0} has been &cdisabled&7.
+    Conversation_Mode_Toggle: '(isConversing ? ''&cNo longer'' : ''&aNow'') + '' &7conversing with {0}.'''
+    Conversation_Offline: The player you were conversing with, {0}, is no longer online. Conversation mode disabled.
+    Afk_Warning: '{prefix_warn}{0} is currently AFK and may not see your message.'
+    
+
+  # 本插件不允許您更動 /chc tour 指令內的相關訊息內容,因爲當插件更新時如果想要對這些訊息進行更動就不得不重置整份翻譯文件
+  Tour:
+    Not_Completed: Before using ChatControl, you need to complete our startup guide with &7/{0} tour &cfirst.
+    Requires_Op: Only operators may complete the plugin startup guide.
+    
+  Update:
+    Usage: <玩家名>
+    Description: Reload yours, or a player's tab list name.
+    Disabled: Tab list feature is not enabled in Tab_List in settings.yml.
+    Success: Reloaded tab list information for {0}.
+
+
+# -------------------------------------------------------------------------------------------------
+# 以下訊息為使用 Pages 指令的相關內容
+# -------------------------------------------------------------------------------------------------
+Pages:
+  No_Page_Number: '&cPlease specify the page number for this command.'
+  No_Pages: '&cYou do not have any pages saved to show.'
+  No_Page: Pages do not contain the given page number.
+  Invalid_Page: '&cYour input ''{input}'' is not a valid number.'
+  Go_To_Page: '&7前往第 {page} 頁'
+  Go_To_First_Page: '&7快速跳轉至第 1 頁'
+  Tooltip:
+  - '&7您也可以使用指令來快速跳轉頁面'
+  - '&7用法: /#flp <頁數>'
+  
+# -------------------------------------------------------------------------------------------------
+# 以下訊息為玩家相關內容
+# -------------------------------------------------------------------------------------------------
+Player:
+  Not_Online: '&cPlayer {player} &cis not online on this server.'
+  Not_Connected: '&cPlayer ''{0}&c'' is not connected through BungeeCord.'
+  Not_Stored: '&cPlayer ''{0}&c'' is not stored in our database.'
+  Possessive_Form: '{player}''s'
+  Has: has
+  Newcomer_Cannot_Command: You are a newcomer and cannot run this command yet!
+  Newcomer_Cannot_Write: You are a newcomer and cannot yet write to chat.
+  No_Write_Chat_Permission: You lack {0} permission to write chat messages.
+  No_Channel: You have no channel to write into. Use '/{label_channel} join' to join one.
+  No_Possible_Channel: You lack permissions to join any channels.
+  Cannot_Chat_Vanished: You can't write chat messages directly when you're vanished. Use '/{label_channel} send' instead.
+  Kick_Disallowed_Nickname: '&cYour player name contains disallowed characters!'
+  Kick_Relogin: '&cPlease wait {0} second(s) before joining again!'
+  Channel_Range_Notification: '''{prefix_warn}There is no one in '' + (hasRange ? ''range'' : ''channel'') + '' you can chat to.'''
+  Already_Conversing: '{0} is already having an ongoing server conversation!'
+  
+# -------------------------------------------------------------------------------------------------
+# 以下訊息為插件選單相關內容
+# -------------------------------------------------------------------------------------------------
+Menu:
+  Cannot_Open_During_Conversation: '&cType ''exit'' to quit your conversation before opening menu.'
+  Item_Deleted: '&2The {item} has been deleted.'
+  Error: '&cOups! There was a problem with this menu! Please contact the administrator to review the console for details.'
+  Page_Previous: '&8<< &fPage {page}'
+  Page_Next: Page {page} &8>>
+  Page_First: '&7First Page'
+  Page_Last: '&7Last Page'
+  Title_Tools: Tools Menu
+  Tooltip_Info: '&fMenu Information'
+  Button_Return_Title: '&4&lReturn'
+  Button_Return_Lore:
+  - ''
+  - 'Return back.'
+  
+  Color:
+    Header: Select Chat Color
+    Button_Empty_Title: No available colors
+    Button_Empty_Lore:
+    - ''
+    - 'There are no colors that you'
+    - 'can toggle available right now.'
+    Button_Reset_Color_Title: Reset chat color
+    Color_Reset: '&1Chat color reset!'
+    Button_Reset_Decoration: Reset chat decoration
+    Decoration_Reset: '&1Chat decoration reset!'
+    Button_Decoration_Title: ' Decoration'
+    Button_Decoration_Lore:
+    - ''
+    - 'Click to toggle using this'
+    - 'decoration in the chat.'
+    - ''
+    - 'Example: {0}A random text.'
+    Decoration_Set: Set decoration to {0}
+    Button_Color_Title: ' Color'
+    Button_Color_Lore:
+    - ''
+    - 'Click to toggle using this'
+    - 'color while you''re chatting.'
+    - ''
+    - 'Sample: {0}Lorem ipsum dolor'
+    - '{0}sit amen, color ist kamen.'
+    Color_Set: Set color to {0}
+    Help:
+    - 'The color menu enables you to select'
+    - 'a chat or a decoration to be applied'
+    - 'automatically when you chat.'
+    - ''
+    - 'Simply click the icons to select what'
+    - 'color or decoration you want to use.'
+    - ''
+    - 'Current color: {color}'
+    - 'Current decoration: {decoration}'
+  
+  Spy:
+    Toggle_Title: '(spying ? ''&4Disable'' : ''&2Enable'') + '' All'''
+    Toggle_Lore:
+    - ''
+    - 'Click to toggle spying on'
+    - 'everything in this menu.'
+    Button_Lore_1:
+    - ''
+    - 'Click to select which chat'
+    - 'channels you want to spy on.'
+    Button_Lore_Channels:
+    - ''
+    - 'Spying channels:'
+    Button_Title: Channels
+    Type_Chat: all chat messages
+    Type_Commands: commands configured in settings.yml
+    Type_Private_Messages: all private messages
+    Type_Mail: mails when they are sent
+    Type_Sign: signs when they are placed
+    Type_Book: books when they are signed
+    Type_Anvil: items when they are renamed
+    Button_Toggle_Lore:
+    - ''
+    - 'Click to toggle spying on'
+    - '{label}.'
+    - ''
+    - 'Status: {status}'
+    Status: '(spying ? ''&bspying'' : ''&cdisabled'')'
+    Status_Toggle: '(isSpying ? ''&4'' : ''&2'') + ''Spying {type} '' + (isSpying ? ''disabled'' : ''enabled'') + ''!'''
+    Channels_Toggle_Lore:
+    - ''
+    - 'Click to toggle spying'
+    - 'for this channel.'
+    - ''
+    - 'Status: {status}'
+    Channels_Toggle: '(isSpying ? ''&4No longer spying channel'' : ''&2Now spying channel'') + ''!'''
+    Help:
+    - 'Select what aspects of your server'
+    - 'you want to spy on. You can also use'
+    - 'the ''/{label} log'' command to view'
+    - 'historical data from when you were gone.'
+    
+  
+# -------------------------------------------------------------------------------------------------
+# 以下訊息為工具相關內容
+# -------------------------------------------------------------------------------------------------
+Tool:
+  Error: '&c錯誤,此工具可能出現致命錯誤或問題! 請聯繫管理員並且查看 CONSOLE 來取得更多資訊!'
+
+# -------------------------------------------------------------------------------------------------
+# 以下訊息為垃圾郵件、規則等檢查/聊天室/告示牌等相關內容
+# -------------------------------------------------------------------------------------------------
+Checker:
+  Chat_Exploit_Disallowed: Your message contained code execution and was disallowed.
+  Sign_Duplication: Do not place multiple signs with the same text.
+  Move: '''Please move before typing '' + (chat ? ''into chat'' : ''commands'') + ''.'''
+  Delay_After_Join: '''Please wait {seconds} before typing '' + (chat ? ''messages'' : ''commands'') + ''.'''
+  Delay: '''Please wait {seconds} before your next '' + (chat ? ''message'' : ''command'') + ''.'''
+  Similarity: '''Please do not '' + (chat ? ''type messages'' : ''run commands'') + '' that are {similarity}% similar.'''
+  Period: You can only send {type_amount} {type} in {period_amount} {period}.
+  Caps: Please avoid excessive capitalization in your {type}.
+  Sound_Notify: '&cYou cannot use sound notify for another {seconds}.'
+  Parrot: You cannot repeat '{0}' since it's {1}% similar to what was said in the last {2}.
+  No_Text: You cannot send chat messages without text!
+  No_Text_After_Change: Your message has been edited and cannot be sent because it is now empty.
+
+# -------------------------------------------------------------------------------------------------
+# 以下訊息為時間單數與複數相關內容. 請使用 ", " 來分隔兩種形式
+# -------------------------------------------------------------------------------------------------
+Cases:
+  Second: 秒, 秒
+  Message: 訊息, 訊息
+  Command: 指令, 指令
+ 
+# -------------------------------------------------------------------------------------------------
+# 以下訊息為訊息前綴相關內容. 您可以使用 {prefix_<type>} 變數來使用不同的前綴內容,範例: {prefix_info}
+# -------------------------------------------------------------------------------------------------
+Prefix:
+  Info: '&8&l[&9&li&8&l]&7 '
+  Success: '&8&l[&2&l!&8&l]&7 '
+  Warn: '&8&l[&6&l!&8&l]&6 '
+  Error: '&8&l[&4&lX&8&l]&c '
+  Question: '&8&l[&a&l?&l&8]&7 '
+  Announce: '&8&l[&5&l!&l&8]&d '
+
+# -------------------------------------------------------------------------------------------------
+# 以下訊息為各式不同名詞的相關內容
+# -------------------------------------------------------------------------------------------------
+You: You
+Your: Your
+His: His
+And: and
+None: 無
+Server: 伺服器
+Channel: 聊天頻道
+False_Value: 'false'
+Server_Prefix: '[伺服器]'
+Console_Name: CONSOLE
+
+# -------------------------------------------------------------------------------------------------
+# 以下訊息為資料庫相關內容
+# -------------------------------------------------------------------------------------------------
+Data_Missing: '&c{name} lacks database information! Please only create {type} in-game! Skipping..'
+Data_Loading: 正在載入資料庫資料中,請稍候...
+
+# -------------------------------------------------------------------------------------------------
+# 以下訊息為玩家沒有相關權限時的相關內容
+# -------------------------------------------------------------------------------------------------
+No_Permission: '&c沒有權限! 缺少權限節點: {permission}'
+
+# -------------------------------------------------------------------------------------------------
+# 以下訊息為當使用CONSOLE執行指令時的相關內容
+# -------------------------------------------------------------------------------------------------
+Conversation_Requires_Player: Only players may enter this conversation.
+
+# -------------------------------------------------------------------------------------------------
+# 內部版本號
+# -------------------------------------------------------------------------------------------------
+Version: 1
