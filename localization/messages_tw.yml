@@ -380,76 +380,76 @@ Commands:
 
   Inspect:
     Usage: <file/plugin/class> <value>
-    Description: Inspect classes, fields and methods in Java.
+    Description: 查看 Java 中的 class、methods和fields
     Usages:
-    - '/{label} {sublabel} file <path> &7- View file or folders.'
-    - '/{label} {sublabel} plugin <plugin> &7- View plugin classes.'
-    - '/{label} {sublabel} class <class> &7- Inspect fields/methods in class.'
-    Invalid_File: File '{0}' does not exist in your root server folder.
-    Illegal_File: File '{0}' has unsupported format.
-    Listing_Content: Listing content of {0}
-    Listing_File: Listing file {0}
-    Plugin_Not_Loaded: Plugin '{0}' is not loaded!
-    Listing_Classes: Listing {0} classes
+    - '/{label} {sublabel} file <path> &7- 查看目標文件或是資料夾'
+    - '/{label} {sublabel} plugin <plugin> &7- 查看Java插件的 class'
+    - '/{label} {sublabel} class <class> &7- 查看 Java 中的 class、methods和fields'
+    Invalid_File: 文件 '{0}' 並不存在於您電腦中的 root 目錄內
+    Illegal_File: 文件 '{0}' 的格式不受支援
+    Listing_Content: 文件列表 {0}
+    Listing_File: 文件列表 {0}
+    Plugin_Not_Loaded: 插件 '{0}' 並沒有被伺服器載入!
+    Listing_Classes: 列出 {0} Java Class 文件
     Plugin_Tooltip:
-    - 'Click to inspect this class.'
-    No_Class: 'No such class: {0}'
-    Inspecting_Class: Inspecting {0} Class
+    - '點擊此處來檢查該 Java class 文件'
+    No_Class: '沒有尋找到名為 {0} 的 Java class 文件'
+    Inspecting_Class: 檢查 {0} Java Class
     Inspect_Tooltip:
-    - '&6Inspect {0}'
+    - '&6檢查 {0}'
     Parent: '&3[parent]'
     Open:
-    - '&6Open {0}'
-    Cut: '&c> &7{0} lines were cut due to being over limit.'
+    - '&6開啟 {0}'
+    Cut: '&c> &7{0} 此行因超出限額而被裁切'
 
   Log:
     Usage: <type> [key:value...]
     Description: View last player communication.
     Usages_1:
-    - '/{label} {sublabel} <type> player:kangarko &7- View logs from player.'
-    - '/{label} {sublabel} <type> before:10m &7- View logs before timestamp.'
-    - '/{label} {sublabel} <type> in:1h &7- View recent logs in timestamp.'
+    - '/{label} {sublabel} <type> player:[玩家名] &7- 查看某位玩家的紀錄'
+    - '/{label} {sublabel} <type> before:10m &7- 查看某個時間之前的紀錄'
+    - '/{label} {sublabel} <type> in:1h &7- 查看某個時間中時間距離最近的紀錄'
     Usages_Channel:
-    - '/{label} {sublabel} <type> channel:admin &7- View logs in channel.'
+    - '/{label} {sublabel} <type> channel:admin &7- 查看某個聊天頻道的紀錄'
     Usages_To:
-    - '/{label} {sublabel} <type> to:receiver &7- View PMs/mails to receiver.'
+    - '/{label} {sublabel} <type> to:receiver &7- 查看所有郵件與私人訊息的紀錄'
     Usages_2:
-    - '/{label} {sublabel} <type> label:me &7- View command logs.'
+    - '/{label} {sublabel} <type> label:me &7- 查看指令紀錄'
     Usages_Rule:
-    - '/{label} {sublabel} <type> rule:ip &7- View logs matching rule.'
-    - '/{label} {sublabel} <type> group:ads &7- View logs matching rule group.'
+    - '/{label} {sublabel} <type> rule:ip &7- 搜尋紀錄內含有輸入關鍵字的所有紀錄'
+    - '/{label} {sublabel} <type> group:ads &7- 查看紀錄內含有輸入關鍵字組的所有紀錄'
     Usages_3:
     - ''
-    - '&c&lTIP: &cYou can use multiple key:value parameters. To list all logs, type ''all'' for the type.'
-    - '&c&lTIP: &cThe ''player'' and ''to'' parameters don''t support nicknames.'
-    No_Logs: '''No logs'' + (hasType ? '' for {0}'' : '''') + '' were found.'''
-    Type_Chat: chat
-    Type_Command: command
-    Type_Private_Message: private message
-    Type_Mail: mail
-    Type_Sign: sign
-    Type_Book: book
-    Type_Anvil: anvil
-    Tooltip_Channel: '&7Channel: &f{0}'
+    - '&c&l小貼士: &cYou can use multiple key:value parameters. To list all logs, type ''all'' for the type.'
+    - '&c&l小貼士: &cThe ''player'' and ''to'' parameters don''t support nicknames.'
+    No_Logs: '''沒有尋找到'' + (hasType ? ''有關於{0}'' : '''') + ''任何相關紀錄'''
+    Type_Chat: 聊天
+    Type_Command: 指令
+    Type_Private_Message: 私人訊息
+    Type_Mail: 郵件
+    Type_Sign: 告示牌
+    Type_Book: 書籍
+    Type_Anvil: 鐵砧
+    Tooltip_Channel: '&7聊天頻道: &f{0}'
     Tooltip_Rule: '''&7Rule: &f'' + (isUnnamed ? ''&oUnnamed.'' : ''{0}'')'
-    Tooltip_Group: '&7Group: &f{0}'
-    Tooltip_Recipients: '&7Recipients:'
+    Tooltip_Group: '&7組: &f{0}'
+    Tooltip_Recipients: '&7收件者:'
     Tooltip_Click_To_Read:
     - ''
-    - '&6Click to read.'
-    Sent_Mail: ' &7sent mail &f''{0}'''
-    Placed_Sign: ' &7placed sign:'
-    Wrote_Book: ''' &7wrote book &f'' + (isSigned ? ''{title}'' : ''&oUnsigned&r'')'
-    Wrote_Book_Tooltip: '&6Click to open'
-    Renamed_Item: ' &7renamed item: &f'
-    No_Logs_Matched: No logs match the given parameters.
-    Listing_Header: '''Listing '' + (noType ? ''All'' : ''{0}'') + '' Logs'''
-    Invalid_Syntax: 'Invalid syntax! Usage: <value>:<key>. Got: {0}'
-    Invalid_Value: Please specify a valid value for '{0}'.
-    Invalid_Key: 'Invalid key ''{0}'' value: {1}.'
-    Cannot_Use_Channel: Can only use 'channel' parameter on chat.
-    Cannot_Use_Label: Can only use 'label' parameter on commands.
-    Cannot_Use_To: Can only use 'to' parameter on private messages.
+    - '&6點擊此處來查看'
+    Sent_Mail: ' &7發送出去的郵件 &f''{0}'''
+    Placed_Sign: ' &7放置的告示牌:'
+    Wrote_Book: ''' &7署名的書 &f'' + (isSigned ? ''{title}'' : ''&o尚未署名&r'')'
+    Wrote_Book_Tooltip: '&6點擊此處開啟'
+    Renamed_Item: ' &7被重新命名的物品: &f'
+    No_Logs_Matched: 沒有搜尋到任何在當前給定參數內的紀錄
+    Listing_Header: '''已列出'' + (noType ? ''所有'' : ''{0}'') + ''相關紀錄'''
+    Invalid_Syntax: '錯誤的使用方式! 用法: <value>:<key>. 獲取: {0}'
+    Invalid_Value: 請輸入一個有效的值 '{0}'
+    Invalid_Key: '無效的值''{0}'' 值: {1}.'
+    Cannot_Use_Channel: 您僅能在聊天指令紀錄時使用 channel 參數
+    Cannot_Use_Label: 您僅能在搜尋指令紀錄時使用 label 參數
+    Cannot_Use_To: 您僅能在搜尋私人訊息紀錄時使用 to 參數
     
   List:
     Usage_Server: '[伺服器]'
