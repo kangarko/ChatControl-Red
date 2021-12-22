@@ -132,7 +132,7 @@ Commands:
   No_Reason_While_Silent: 使用預設選項時無法設定其原因
   No_Silent_And_Anonymous: 無法同時設定預設和匿名選項
   Console_Missing_Player_Name: 從 CONSOLE 中執行該命令時,您必須指定玩家名稱
-  Compiling_Data: 編譯資料庫訊息中,請稍候...
+  Compiling_Data: 資料庫訊息讀取中,請稍候...
   Cooldown_Wait: '&c請您稍候 {duration} 後再次嘗試此指令'
   Invalid_Server: '沒有名為: ''{0}'' 的伺服器 可用: {1}.'
   Invalid_Argument: '&c無效的參數,請使用 &6/{label} ? &c來獲取幫助'
@@ -154,8 +154,8 @@ Commands:
   Invalid_Region: 區域檔案 '{0}' 不存在
   Label_Authors: Made by
   Label_Description: '&c&l描述:'
-  Label_Optional_Args: optional arguments
-  Label_Required_Args: required arguments
+  Label_Optional_Args: 可選參數
+  Label_Required_Args: 必要參數
   Label_Usages: '&c&l用法:'
   Label_Usage: '&c&l用法:'
   Label_Help_For: 指令 /{label} 幫助
@@ -294,7 +294,7 @@ Commands:
     Success_Staff: '{prefix_info}聊天內容已被成功清除 操作者: {0}'
 
   Color:
-    Usage: <color/status/menu> [格式化代碼] [玩家名]
+    Usage: <顏色/status/menu> [格式化代碼] [玩家名]
     Description: 設定玩家聊天室內所使用顏色文字
     Usages_1:
     - '/{label} {sublabel} status [玩家名] &7- 查看某位玩家當前所使用顏色文字'
@@ -304,77 +304,79 @@ Commands:
     - '/{label} {sublabel} #<16進制顏色代碼> &7- 將預設聊天文字顏色設定為指定16進制顏色代碼顏色'
     Usages_2:
     - '/{label} {sublabel} default <格式化代碼> [玩家名] &7- 設定您的格式化代碼'
-    - '/{label} {sublabel} <顏色> <格式化代碼> [玩家名] &7- 設定您的聊天顏色與裝飾'
+    - '/{label} {sublabel} <顏色> <格式化代碼> [玩家名] &7- 設定您的聊天顏色與格式化代碼'
     - '/{label} {sublabel} reset &7- 重置您的聊天顏色'
     - '/{label} {sublabel} reset reset [玩家名] &7- 重置您的聊天顏色與格式化代碼'
     Usages_Hex_2:
     - ''
-    - '&c&lTIP:&c Visit htmlcolorcodes.com to generate HEX colors.'
-    Not_Saved: '{0} doesn''t have any color nor decoration.'
-    Chat_Color: '&7chat color'
-    Decoration: decoration
-    Invalid_Color: '''Invalid chat color. Valid syntax: & color, name'' + (hasHex ? ''or #<hex>'' : '''') + ''. Available: {0}'''
-    Invalid_Decoration: 'Invalid chat decoration. Use & or name syntax. Available: {0}'
-    Decoration_Not_Allowed: Please only enter colors not decorations.
-    Color_Not_Allowed: Please only enter decorations not colors.
-    Success_Color: Set {0} chat color to {1}&7
-    Success_Decoration: Set {0} chat decoration to {1}&r&7
-    Reset: Set {0} chat color to default
-    Reset_Decoration: Set {0} chat decoration to default
+    - '&c&l小貼士:&c 您可以透過權限節點 htmlcolorcodes.com 來使用16進制顏色代碼'
+    Not_Saved: '{0} 當前沒有使用任何聊天顏色文字與格式化代碼'
+    Chat_Color: '&7聊天顏色'
+    Decoration: 格式化代碼
+    Invalid_Color: '''無效的顏色代碼,請您輸入一個正確的顏色代碼'' + (hasHex ? ''或#<16進制顏色代碼>'' : '''') + '' 您可使用的顏色: {0}'''
+    Invalid_Decoration: 
+    - '&c無效的格式化代碼,請您輸入一個正確的格式化代碼'
+    - '&c您可使用的格式化代碼: {0}'
+    Decoration_Not_Allowed: 您的第一選項僅能使用顏色代碼
+    Color_Not_Allowed: 您的第二選項僅能使用格式化代碼
+    Success_Color: 您已將玩家 {0} 的聊天顏色設定為 {1}&7
+    Success_Decoration: 您已將玩家 {0} 的格式化代碼設定為 {1}&r&7
+    Reset: 您已將玩家 {0} 的聊天顏色設定恢復為預設值
+    Reset_Decoration: 您已將玩家 {0} 的格式化代碼設定恢復為預設值
 
   Forward:
-    Usage: <server> <command...>
-    Description: Forward commands to BungeeCord.
+    Usage: <伺服器> <指令...>
+    Description: 向全部或是某個 BungeeCord 伺服器發送指令
     Usages:
-    - '/{label} {sublabel} <server> <command...> &7- Run a command on BungeeCord or other servers in your network.'
-    - '/{label} {sublabel} bungee send all creative &7- Run ''send all creative'' command on BungeeCord.'
-    - '/{label} {sublabel} creative say Hi there! &7- Run the command on ''creative'' server.'
+    - '/{label} {sublabel} <伺服器> <指令...> &7- 在 BungeeCord 或是向某個伺服器發送並且於上面執行某個指令'
+    - '/{label} {sublabel} bungee send all creative &7- 向 BungeeCord 發送並執行 send all creative 指令'
+    - '/{label} {sublabel} creative say Hi there! &7- 向名為 creative 的伺服器上發送並執行 say Hi there! 指令'
     - ''
-    - '&c&lNOTE: &cYou cannot send commands to empty servers.'
-    Unknown_Server: 'Unknown server. Available: bungee, {0}'
-    Success: Your command has been sent successfuly.
+    - '&c&l提醒: &c您無法對未設定或是未開啟的伺服器發送指令'
+    Unknown_Server: '未知的伺服器. 可用: Bungee, {0}'
+    Success: 指令已被成功送出並執行!
 
   Info:
-    Usage: <param> <玩家名> [args...]
-    Description: Display debug information.
+    Usage: <param> <玩家名> [參數...]
+    Description: 顯示各項調整與玩家相關資料
     Usages:
-    - '/{label} {sublabel} nick <player/nick> &7- Print player''s nick and name.'
-    - '/{label} {sublabel} newcomer <玩家名> &7- Print if player is newcomer.'
-    - '/{label} {sublabel} cache <玩家名> &7- Print saved information for player.'
-    - '/{label} {sublabel} variables <玩家名> <訊息> &7- Parse msg variables.'
+    - '/{label} {sublabel} nick <玩家名/暱稱> &7- 顯示該玩家的玩家名與當前使用暱稱'
+    - '/{label} {sublabel} newcomer <玩家名> &7- 顯示該玩家是否為新進玩家'
+    - '/{label} {sublabel} cache <玩家名> &7- 顯示該玩家的詳細資料'
+    - '/{label} {sublabel} variables <玩家名> <訊息> &7- 解析訊息變數'
     - ''
-    - '&c&lExample:'
+    - '&c&l範例:'
     - '&c/{label} {sublabel} variables Notch &c{player} is in channel {channel}'
     - ''
-    - '&c&lTIP:&c You can use this to measure the performance of variables and find which cause lag.'
-    Cache_Player: '&cCache information for {0}'
-    Cache_Location: '&cLocation: '
-    Cache_Nick: 'Player {0} has nick: {1}.'
-    Newcomer: '''{0} '' + (newcomer ? ''&ais'' : ''&cis not'') + '' &7a newcomer.'''
-    Variables_No_Message: Please enter a message in which we replace variables.
-    Variables: '''&7Result (took {0}ms): &r'' + (replaced.isEmpty() ? ''&7&oEmpty output.'' : replaced)'
+    - '&c&l小貼士:&c 您可以透過解析訊息變數功能來判定該變數性能並且查找伺服器卡頓原因'
+    Cache_Player: '&c玩家 {0} 的詳細資料'
+    Cache_Location: '&c該玩家資料儲存位置: '
+    Cache_Nick: '玩家 {0} 當前所使用的暱稱為: {1}.'
+    Newcomer: '''玩家 {0} '' + (newcomer ? ''&a是'' : ''&c並不是'') + '' &7新進玩家'''
+    Variables_No_Message: 您必須輸入一個訊息變數
+    Variables: '''&7解析完畢 (執行耗時 {0}ms): &r'' + (replaced.isEmpty() ? ''&7&o輸出為空'' : replaced)'
     
   Ignore:
-    Usage: <player/list> [玩家名]
-    Description: Toggle seeing messages/PMs from players.
+    Usage: <玩家名/list> [玩家名]
+    Description: 切換是否要靜音或是查看其他玩家發送的聊天訊息
     Usages:
-    - '/{label} <玩家名> &7- Toggle ignoring a player.'
+    - '/{label} <玩家名> &7- 切換是否要靜音某位玩家發送的聊天訊息'
     Usages_Others:
-    - '/{label} <forWhom> <玩家名> &7- Toggle ignoring a player for other player.'
+    - '/{label} <被操作玩家> <被靜音玩家> &7- 切換被操作玩家是否要靜音某位玩家發送的聊天訊息'
     Usages_List:
-    - '/{label} list &7- Print players you are ignoring.'
+    - '/{label} list &7- 顯示您當前已靜音的玩家列表'
     Usages_List_Others:
-    - '/{label} list <玩家名> &7- Print players another player is ignoring.'
-    Not_Ignoring: '(!otherPlayer ? ''You are'' : ''{0} is'') + '' not ignoring anyone.'''
-    List_Header: Ignored Players For {0}
-    List_Tooltip_Stop: '&6Click to stop ignoring {0}.'
-    Cannot_Ignore_Admin: You cannot ignore that player.
-    Cannot_Ignore_Self: You cannot ignore the same player fool :)
-    Success: '(!otherPlayer ? ''You are '' : ''{0} is '') + (ignored ? ''&ano longer'' : ''&cnow'') + '' &7ignoring {1}.'''
-    Cannot_PM: '{0} is ignoring you. No message sent.'
-    Cannot_PM_Ignored: You are ignoring {0}. No message sent.
-    Cannot_Sound_Notify_Sender: Cannot tag {0} because you ignore them.
-    Cannot_Sound_Notify_Receiver: Cannot tag {0} because they ignore you.
+    - '/{label} list <玩家名> &7- 顯示某位玩家當前已靜音的玩家列表'
+    Not_Ignoring: '(!otherPlayer ? ''您'' : ''玩家 {0} '') + ''當前沒有靜音任何人'''
+    List_Header: '您當前靜音的玩家: {0}'
+    List_Tooltip_Stop: '&6點擊此處來停止靜音玩家 {0}'
+    Cannot_Ignore_Admin: 您無法靜音該玩家
+    Cannot_Ignore_Self: 您無法靜音自己或是已被您靜音的玩家
+    Success: '(!otherPlayer ? ''您'' : ''玩家 {0}'') + (ignored ? ''&a不再'' : ''&c以'') + ''&7靜音玩家 {1}'''
+    Cannot_PM: '您已被玩家 {0} 靜音,無法向他發送私人聊天訊息'
+    Cannot_PM_Ignored: 您已靜音玩家 {0} ,無法向他發送私人聊天訊息
+    Cannot_Sound_Notify_Sender: 您已靜音玩家 {0},無法標記該玩家
+    Cannot_Sound_Notify_Receiver: 您已被玩家 {0} 靜音,無法標記該玩家
 
   Inspect:
     Usage: <file/plugin/class> <value>
@@ -450,11 +452,11 @@ Commands:
     Cannot_Use_To: Can only use 'to' parameter on private messages.
     
   List:
-    Usage_Server: '[server]'
-    Description: List online players.
-    Usage_1: '''/{label} &7- List online players'' + (bungee ? '' on all servers'' : '''') + ''.'''
-    Usage_2: /{label} survival &7- List players on 'survival' server.
-    Header: '''Listing '' + (bungee ? ''Network'' : ''Online'') + '' Player(s)'''
+    Usage_Server: '[伺服器]'
+    Description: 查看某個指定伺服器或全部分流內上線的所有玩家
+    Usage_1: '''/{label} &7- 查看所有'' + (bungee ? ''分流'' : '''') + ''伺服器內的玩家'''
+    Usage_2: /{label} survival &7- 差看 'survival' 伺服器內的所有在線玩家
+    Header: '''當前'' + (bungee ? ''所有分流'' : ''伺服器'') + ''內所有在線玩家'''
     
   Mail:
     Usage: <new/send/inbox/sent>
