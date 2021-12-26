@@ -404,7 +404,7 @@ Commands:
 
   Log:
     Usage: <type> [key:value...]
-    Description: View last player communication.
+    Description: 查看玩家訊息紀錄
     Usages_1:
     - '/{label} {sublabel} <type> player:[玩家名] &7- 查看某位玩家的紀錄'
     - '/{label} {sublabel} <type> before:10m &7- 查看某個時間之前的紀錄'
@@ -420,8 +420,8 @@ Commands:
     - '/{label} {sublabel} <type> group:ads &7- 查看紀錄內含有輸入關鍵字組的所有紀錄'
     Usages_3:
     - ''
-    - '&c&l小貼士: &cYou can use multiple key:value parameters. To list all logs, type ''all'' for the type.'
-    - '&c&l小貼士: &cThe ''player'' and ''to'' parameters don''t support nicknames.'
+    - '&c&l小貼士: &c您可以使用多個不同的參數來縮小搜尋範圍來快速找到您所要的資料. 如果您要查詢全部資料請您使用 all 參數來查詢'
+    - '&c&l小貼士: &cplayer 和 to 參數並不支援暱稱'
     No_Logs: '''沒有尋找到'' + (hasType ? ''有關於{0}'' : '''') + ''任何相關紀錄'''
     Type_Chat: 聊天
     Type_Command: 指令
@@ -446,7 +446,7 @@ Commands:
     Listing_Header: '''已列出'' + (noType ? ''所有'' : ''{0}'') + ''相關紀錄'''
     Invalid_Syntax: '錯誤的使用方式! 用法: <value>:<key>. 獲取: {0}'
     Invalid_Value: 請輸入一個有效的值 '{0}'
-    Invalid_Key: '無效的值''{0}'' 值: {1}.'
+    Invalid_Key: '無效的值''{0}'' 值: {1}'
     Cannot_Use_Channel: 您僅能在聊天指令紀錄時使用 channel 參數
     Cannot_Use_Label: 您僅能在搜尋指令紀錄時使用 label 參數
     Cannot_Use_To: 您僅能在搜尋私人訊息紀錄時使用 to 參數
@@ -460,105 +460,107 @@ Commands:
     
   Mail:
     Usage: <new/send/inbox/sent>
-    Description: Manage your game mail.
+    Description: 發送或管理所收到的所有郵件
     Usages:
-    - '/{label} new &7- Draft a new mail.'
-    - '/{label} send <player/anotherPlayer> &7- Send a mail.'
-    - '/{label} autor <time/view/off> &7- Set auto-responder for mails.'
-    - '/{label} inbox &7- Read incoming mails.'
-    - '/{label} archive &7- Read mails you''ve sent out.'
+    - '/{label} new &7- 創建一個全新的郵件'
+    - '/{label} send <玩家名/另位玩家> &7- 向某位玩家傳送郵件'
+    - '/{label} autor <time/view/off> &7- 設定自動回覆郵件'
+    - '/{label} inbox &7- 查看並閱讀您的收件匣'
+    - '/{label} archive &7- 查看您所發送的郵件副本'
     - ''
-    - '&c&lTIP: &cTime is in human readable format such as ''1 hour'' etc.'
-    No_Pending: Draft an email first with '/{label} new'.
-    No_Subject: Your mail does not have a subject. Sign your draft item first.
-    No_Recipients: Please specify the recipients separated by '|', or 'online' to send to all online players, or 'all' to send to all players stored in our database.
-    Autoresponder_Usage: Enter 'view' to view your auto-responder, 'off' to disable it or write time such as '3 days' to renew an existing one or use your draft as a new one.
-    Autoresponder_Disabled: You have no active auto-responder.
-    Autoresponder_Removed: Your mail auto-responder has been removed.
-    Autoresponder: Your auto-responder '{title}' expires {date}. Type '/{label} {0} <time>' to renew it.
-    Autoresponder_Missing: You attempted to set a time but you're not creating a draft nor you have an old auto-responder. Create a new mail draft first.
-    Autoresponder_Updated: Updated your old auto-responder to expire {0}.
-    Autoresponder_Set: Set a new auto-responder that expires {0}.
-    Autoresponder_Invalid_Time: Malformed syntax, expected human readable time like '1 minute' or '3 days', got '{0}' instead.
-    Delete_Invalid: No such email, perhaps it was deleted already.
-    Delete_Sender: The selected email has been deleted. Keep in mind recipient will still be able to read it.
-    Delete_No_Recipient: Recipient unique ID not provided.
-    Delete_Invalid_Recipient: 'No such recipient by ID: {0}'
-    Delete_Recipient: The selected email has been deleted.
-    Hand_Full: Clear your main hand before writing an email.
-    Already_Drafting: You already have the mail draft item in your inventory.
-    Item_Title: Right click draft your mail
+    - '&c&l小貼士: &c時間參數必須使用例如 1 hour 這樣的格式'
+    No_Pending: 您必須要先使用 /{label} new 來創建一個全新的郵件才可發送
+    No_Subject: 您的郵件尚未署名,請您署名後再嘗試發送
+    No_Recipients: 您可以使用 | 來分隔不同的收件人姓名,或是使用 online 向當前在線的所有玩家發送郵件,又或是使用 all 向當前資料庫內所有有紀錄玩家發送郵件
+    Autoresponder_Usage: 使用 view 參數來查看您已開啟的自動回覆排程,使用 off 參數來停用或是更改排程時間,例如使用 3 days 來更新現有的自動回覆排程
+    Autoresponder_Disabled: 您當前沒有啟用任何自動回覆郵件排程
+    Autoresponder_Removed: 您的自動回覆排程已被停用
+    Autoresponder: 您 {title} 的自動回覆排程將在 {date} 過期. 請您使用 /{label} {0} <時間> 來更新該排程器
+    Autoresponder_Missing: 請您先創建一個新的草稿文件才有辦法使用自動回覆排程
+    Autoresponder_Updated: 您的自動回覆排程時間已被更新至 {0}
+    Autoresponder_Set: 設定一個將會於 {0} 後過期的自動回覆排程器
+    Autoresponder_Invalid_Time: 語法錯誤,可使用時間單位如 1 minute 或 3 days,取得 '{0}' 並更改為
+    Delete_Invalid: 沒有尋找到該郵件,他可能已被刪除
+    Delete_Sender: 您選定的郵件已被成功刪除,但收件人依然可以查看該郵件
+    Delete_No_Recipient: 您未提供收件人的唯一用戶名稱
+    Delete_Invalid_Recipient: '沒有尋找到該收件人名稱: {0}'
+    Delete_Recipient: 您選定的郵件已被成功刪除
+    Hand_Full: 在您創建一個新郵件前請您先清空您手中的物品
+    Already_Drafting: 您的背包內已有一個尚未創建完畢的郵件
+    Item_Title: 尚未創建完畢的新郵件
     Item_Tooltip:
-    - '&r&7click with mouse to discard.'
-    New_Usage: '(noPendingMail ? ''Right click to draft a new mail.'' : ''Right click to continue writing mail.'') + '' Drop the item to discard.'''
-    Reply_Usage: Right click to prepare a reply to {0}. Click on 'Done' to send it. Drop the item to discard.
-    Open_Tooltip: '&6Click to open.'
-    Open_Tooltip_Script: 'read ? ''&7You have read this mail {0}.'' : ''&6You have not read this mail.'''
-    Reply_Tooltip: '&6Click to reply.'
-    Forward_Tooltip: '&6Click to forward.'
-    Delete_Tooltip: '&6Click to delete.'
-    Inbox_Line: ' &r{subject} &7by {sender} &7at {date}'
-    No_Incoming_Mail: You have no incoming mail.
-    Inbox_Header: Email Sent To You
-    Archive_Recipients_Tooltip: '&7Recipients:'
-    Archive_Read_Tooltip: '''{0}&7: '' + (hasOpened ? ''&2read'' : ''&7unread'')'
-    Archive_Line: ' &r{subject} &7to {recipients} &7at {date}'
-    Archive_Recipient: recipient(s)
-    Archive_No_Mail: You have no archive of sent mail.
-    Archive_Header: Email Sent By You
-    Send_Fail_Ignore: Cannot send mail to {0} because the player is ignoring you.
-    Send_Fail_Toggle: Cannot send mail to {0} because the player has toggled mails off.
-    Send_Success: Email successfully sent!
-    Draft_Discarded: Your pending mail has been discarded.
-    Forward_Recipients: '{prefix_question}Enter player names separated by | that will receive the email to the chat, or type ''exit'' to abort.'
-    Forward_Recipients_Invalid: '{prefix_error}Invalid syntax! Specify recipient names such as kangarko|anotherPlayer|thirdPlayer. Got: {0}'
-    Forward_Success: '{prefix_success}Your mail has successfully been forwarded.'
-    Ready: Your mail ready to send. Use '/mail send' to send it.
-    Draft_Saved: Saved your mail as a draft. Sign the book with title as the subject line when you want to send it. Use /mail new to re-open.
-    Join_Notification: You have new mail ({0}). Use '/mail inbox' to read.
-    New_Notification: '{prefix_warn}{0} sent you a new mail. Use ''/mail inbox'' to read.'
+    - '&r&7點擊此處來取消郵件創建'
+    New_Usage: '(noPendingMail ? ''右鍵點擊來撰寫新的郵件'' : ''右鍵點擊來繼續撰寫尚未完成的郵件'') + '' 丟棄該物品來取消撰寫'''
+    Reply_Usage: 對物品使用右鍵來開始撰寫回覆給 {0} 的郵件內容,點擊署名來發送回覆郵件,丟棄該物品來取消撰寫
+    Open_Tooltip: '&6點擊此處開啟'
+    Open_Tooltip_Script: 'read ? ''&7已看過 {0}'' : ''&4新郵件!'''
+    Reply_Tooltip: '&6點擊此處回信'
+    Forward_Tooltip: '&6點擊此處轉發'
+    Delete_Tooltip: '&6點擊此處刪除'
+    Inbox_Line: ' &r{subject} &7寄件者: {sender} &7寄件時間: {date}'
+    No_Incoming_Mail: 您的收件匣是空的
+    Inbox_Header: 收件匣
+    Archive_Recipients_Tooltip: '&7收件人:'
+    Archive_Read_Tooltip: '''{0}&7: '' + (hasOpened ? ''&2已讀'' : ''&7未讀'')'
+    Archive_Line: ' &r{subject} &7收件人列表: 共有 {recipients} &7寄件時間: {date}'
+    Archive_Recipient: 個收件人
+    Archive_No_Mail: 您沒有已發送的郵件暫存
+    Archive_Header: 寄件備份
+    Send_Fail_Ignore: 玩家 {0} 靜音了您,因此您無法向他發送郵件
+    Send_Fail_Toggle: 玩家 {0} 關閉了郵件接收功能,因此您無法向他發送郵件
+    Send_Success: 郵件發送成功!
+    Draft_Discarded: 郵件創建已被取消
+    Forward_Recipients: 
+    - '輸入轉發玩家名稱或是使用 | 來分隔多位玩家名稱來發送轉發郵件'
+    - '{prefix_question}如想取消請您輸入 exit 來取消'
+    Forward_Recipients_Invalid: '{prefix_error}語法錯誤! 指定多收件人格式 kangarko|anotherPlayer|thirdPlayer 獲取: {0}'
+    Forward_Success: '{prefix_success}您的郵件已被成功轉發'
+    Ready: 您的郵件已準備好進行發送. 您可以使用 /mail send 指令來傳送給其他玩家
+    Draft_Saved: 已將您的郵件暫存為草稿,如您想要完成最終編輯,請您在書中署名來完成. 您可以使用 /mail new 來再次開啟
+    Join_Notification: 您的信箱內有 {0} 個新郵件. 您可以使用 /mail inbox 來進行查看
+    New_Notification: '{prefix_warn}{0} 向您傳送了一個新的郵件. 您可以使用 /mail inbox 來進行查看'
 
   Message:
     Usage: <list/toggle/info/reload> <type> [group]
-    Description: Manage player messages.
+    Description: 管理玩家加入/退出/死亡等訊息
     Usages:
-    - '/{label} {sublabel} list <type> &7- Print all messages.'
-    - '/{label} {sublabel} toggle <type> <group> &7- Switch message on/off.'
-    - '/{label} {sublabel} info <type> <group> &7- Print message information.'
-    - '/{label} {sublabel} reload &7- Reload all messages.'
-    Reloaded: Reloaded all messages from the messages/ folder.
-    No_Type: 'Please specify message type. Available: {0}'
-    No_Messages: No {0} messages are created yet.
-    Group: ' &8- &7Group: &f{0}'
-    List_Header: Showing {0} {1} Message(s)
-    No_Group: Please specify the message group.
+    - '/{label} {sublabel} list <type> &7- 顯示玩家所有指定類型訊息'
+    - '/{label} {sublabel} toggle <type> <group> &7- 開關某個指定類型的訊息'
+    - '/{label} {sublabel} info <type> <group> &7- 顯示指令類型訊息內容'
+    - '/{label} {sublabel} reload &7- 重新載入訊息內容'
+    Reloaded: 已從 messages 資料夾內重新載入訊息
+    No_Type: '請指定訊息類型. 可用: {0}'
+    No_Messages: 並未創建名為 {0} 的訊息內容
+    Group: ' &8- &7組: &f{0}'
+    List_Header: 顯示 {0} {1} 條訊息
+    No_Group: 指定訊息組
     Info:
     - '&8{chat_line}'
-    - '<center>&6&l{0} message ''{1}'''
+    - '<center>&6&l{0} 訊息 ''{1}'''
     Info_Footer:
     - '&8{chat_line}'
-    Toggled: '''{0} message {1} has been '' + (toggle ? ''&cdisabled'' : ''&aenabled'') + ''&7.'''
+    Toggled: '''{0} 訊息 {1} 已被'' + (toggle ? ''&c停用'' : ''&a啟用'') + '' '''
 
   Me:
     Usage: <訊息>
-    Description: Send a formatted message.
+    Description: 向全伺服器傳送一個旁白訊息
     Usages:
-    - '/{label} Hello everyone! &7- Send a formatted message.'
+    - '/{label} <訊息> &7- 向全伺服器傳送旁白訊息'
 
   Migrate:
     Usage: <chc8>
-    Description: Migrate data from ChatControl, or MySQL and data.db.
+    Description: 轉移舊版 ChatControl 的資料或是將 data.db 內資料轉移至 MySQL
     Usages:
-    - '/{label} {sublabel} chc8 &7- Migrate data from ChatControl 8.'
+    - '/{label} {sublabel} chc8 &7- 轉移 ChatControl 8 內的資料'
   
   Motd:
     Usage: '[玩家名]'
-    Description: Read the message of the day.
+    Description: 查看或是向某位玩家傳送今日 MOTD 訊息
     Usages_Self:
-    - '/{label} &7- Read your message of the day.'
+    - '/{label} &7- 查看今日 MOTD 訊息'
     Usages_Others:
-    - '/{label} <玩家名> &7- Send the motd to other player.'
-    Success: Message of the day has been sent.
+    - '/{label} <玩家名> &7- 向某位玩家傳送今日 MOTD 訊息'
+    Success: 今日 MOTD 訊息已成功傳送
   
   Mute:
     Usage: <server/channel/player> <params...>
@@ -613,14 +615,14 @@ Commands:
     Set: '(removed ? ''Removed points from'' : ''Set {0} points to'') + '' player {1} warning set {1}.'''
 
   Purge:
-    Usage: <玩家名> [anotherPlayer...]
-    Description: Remove messages sent by the player, even if he disconnected.
-    Success: All messages from {0} were removed.
+    Usage: <玩家名> [其他玩家...]
+    Description: 移除指定玩家聊天室內的所有訊息內容
+    Success: 玩家 {0} 所發送的訊息已從所有玩家聊天室內被成功刪除
 
   Reply:
     Dosage: <訊息>
-    Prescription: Reply to last player who messaged you.
-    Alone: You have nobody to reply to :(
+    Prescription: 回覆最後一位向您發送私人訊息的玩家
+    Alone: 您當前沒有人可以進行回覆
   
   Spy:
     Usage: <status/menu/off/toggle/list> [玩家名] [type] [channel]
@@ -877,8 +879,8 @@ Commands:
 
   # 本插件不允許您更動 /chc tour 指令內的相關訊息內容,因爲當插件更新時如果想要對這些訊息進行更動就不得不重置整份翻譯文件
   Tour:
-    Not_Completed: Before using ChatControl, you need to complete our startup guide with &7/{0} tour &cfirst.
-    Requires_Op: Only operators may complete the plugin startup guide.
+    Not_Completed: 在您使用 ChatControl 前,您需要先使用 &7/{0} tour &c來查看並且同意插件使用條款才能繼續使用
+    Requires_Op: 僅有管理員才能夠閱覽並且查看插件使用條款與內容介紹
     
   Update:
     Usage: <玩家名>
@@ -905,19 +907,19 @@ Pages:
 # 以下訊息為玩家相關內容
 # -------------------------------------------------------------------------------------------------
 Player:
-  Not_Online: '&cPlayer {player} &cis not online on this server.'
-  Not_Connected: '&cPlayer ''{0}&c'' is not connected through BungeeCord.'
-  Not_Stored: '&cPlayer ''{0}&c'' is not stored in our database.'
-  Possessive_Form: '{player}''s'
-  Has: has
-  Newcomer_Cannot_Command: You are a newcomer and cannot run this command yet!
-  Newcomer_Cannot_Write: You are a newcomer and cannot yet write to chat.
-  No_Write_Chat_Permission: You lack {0} permission to write chat messages.
+  Not_Online: '&c玩家 {player} &c不在線'
+  Not_Connected: '&c玩家r ''{0}&c'' 並沒有透過 BungeeCord 連線'
+  Not_Stored: '&c玩家 ''{0}&c'' 的資料並沒有被儲存於系統的資料庫中'
+  Possessive_Form: '{player}'''
+  Has: 擁有
+  Newcomer_Cannot_Command: 您目前還是新進玩家,暫時無法使用此指令!
+  Newcomer_Cannot_Write: 您目前還是新進玩家,暫時無法於聊天頻道內發話!
+  No_Write_Chat_Permission: 您沒有於聊天頻道 {0} 內寫入訊息的權限
   No_Channel: You have no channel to write into. Use '/{label_channel} join' to join one.
-  No_Possible_Channel: You lack permissions to join any channels.
+  No_Possible_Channel: 您沒有權限可以加入任何一個聊天頻道內
   Cannot_Chat_Vanished: You can't write chat messages directly when you're vanished. Use '/{label_channel} send' instead.
-  Kick_Disallowed_Nickname: '&cYour player name contains disallowed characters!'
-  Kick_Relogin: '&cPlease wait {0} second(s) before joining again!'
+  Kick_Disallowed_Nickname: '&c您的玩家名稱內包含了系統不允許使用的字符或字串'
+  Kick_Relogin: '&c請稍候 {0} 秒後再嘗試加入!'
   Channel_Range_Notification: '''{prefix_warn}There is no one in '' + (hasRange ? ''range'' : ''channel'') + '' you can chat to.'''
   Already_Conversing: '{0} is already having an ongoing server conversation!'
   
@@ -1066,10 +1068,10 @@ Prefix:
 # -------------------------------------------------------------------------------------------------
 # 以下訊息為各式不同名詞的相關內容
 # -------------------------------------------------------------------------------------------------
-You: You
-Your: Your
-His: His
-And: and
+You: 您
+Your: 您的
+His: 他
+And: 和
 None: 無
 Server: 伺服器
 Channel: 聊天頻道
