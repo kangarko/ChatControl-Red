@@ -563,56 +563,57 @@ Commands:
     Success: 今日 MOTD 訊息已成功傳送
   
   Mute:
-    Usage: <server/channel/player> <params...>
-    Description: Mute/unmute server, channel or players.
+    Usage: <伺服器/頻道/玩家> <params...>
+    Description: 靜音/取消靜音整個伺服器、聊天頻道或玩家
     Usages:
-    - '/{label} <type> &7- Print if type is muted.'
-    - '/{label} <type> off &7- Unmute type if muted.'
-    - '/{label} <type> <duration e.g. 1h2m15s> &7- Mute the type.'
-    - '/{label} <type> <duration> [reason] &7- Mute the type with reason.'
-    - '&cTip: The type can be ''server'', ''channel'' or ''player''. For channels and players, also specify channel or player name.'
-    Server: ''' &7This server is '' + (muted ? ''&cmuted'' : ''&2not muted'') + ''&7.'''
-    Player_Or_Channel: ''' &7- &f{0} &7is '' + (muted ? ''&cmuted'' : ''&2not muted'') + ''&7.'''
-    Change_Status_Tooltip: '''&6Click to '' + (muted ? ''un'' : '''') + ''mute'' + (muted ? '''' : '' for 3 minutes'')'
-    Channel_Status: Channel Mute Status
-    Server_Status: Server Mute Status
-    Player_Status: Players' Mute Status
-    No_Duration: Please specify the duration and an optional reason.
-    Invalid_Duration: 'Invalid duration format: ''{0}''! Valid syntax: 6y5mo4w3d2h1m0s such as 30m or 1m30s'
-    Mute_Success: '''The {type} has been muted by {player} for {duration}.'' + (!reason.isEmpty() ? '' Reason: '' + reason : '''')'
-    Unmute_Success: The {type} has been unmuted by {player}.
-    Already_Muted: '{type} ''{0}'' is already muted! Use ''off'' as an argument to unmute.'
-    Not_Muted: '{type} ''{0}'' is not muted!'
-    Already_Muted_Server: '{type} is already muted! Use ''off'' as an argument to unmute.'
-    Not_Muted_Server: '{type} is not muted!'
-    Cannot_Mute_Yourself: You cannot mute yourself fool!
-    Cannot_Create_Books: Cannot create books while the chat or you are muted!
-    Cannot_Command: You cannot perform this command while you are muted.
-    Cannot_Chat: You cannot type to chat while you are muted.
-    Cannot_Place_Signs: Cannot place signs while the chat or you are muted!
-    Cannot_Chat_Player_Muted: You cannot type to channel while you, the channel or server is muted.
-    Cannot_Chat_Channel_Muted: You cannot talk in channel {0} as it is muted.
+    - '/{label} <伺服器/頻道/玩家> &7- 靜音某個伺服器、頻道或玩家'
+    - '/{label} <伺服器/頻道/玩家> off &7- 解除靜音某個伺服器、頻道或玩家'
+    - '/{label} <伺服器/頻道/玩家> <時間> &7- 靜音某個伺服器、頻道或玩家一段指定的時間'
+    - '/{label} <伺服器/頻道/玩家> <時間> [原因] &7- 靜音某個伺服器、頻道或玩家一段指定的時間並公告原因'
+    - '&c小貼士: 可靜音類型包含 server、channel 或 player. 對於 channel 和 player 您需要指定頻道名稱和玩家名'
+    - '&c小貼士: 可使用時間語法 範例: 6y5mo4w3d2h1m0s、30m 或 1m30s'
+    Server: ''' &7此伺服器目前'' + (muted ? ''&c已被禁音'' : ''&2未被禁音'') + '''''
+    Player_Or_Channel: ''' &7- &f{0} &7當前 '' + (muted ? ''&c已被禁音'' : ''&2未被禁音'') + '''''
+    Change_Status_Tooltip: '''&6點擊此處來'' + (muted ? ''解除'' : '''') + ''靜音此頻道'' + (muted ? '''' : '' 3 分鐘'')'
+    Channel_Status: 頻道靜音狀態
+    Server_Status: 伺服器靜音狀態
+    Player_Status: 玩家靜音狀態
+    No_Duration: 請您設定靜音時間與靜音原因(原因可選填)
+    Invalid_Duration: '無效的時間格式: ''{0}''! 正確語法: 6y5mo4w3d2h1m0s、30m 或 1m30s'
+    Mute_Success: '''該 {type} 已被 {player} 靜音 {duration}'' + (!reason.isEmpty() ? '' 原因: '' + reason : '''')'
+    Unmute_Success: 該 {type} 已被 {player} 解除靜音
+    Already_Muted: '該 {type} ''{0}''  現在已是靜音狀態! 您可使用 off 參數來解除禁音'
+    Not_Muted: '{type} ''{0}'' 現在未被禁音!'
+    Already_Muted_Server: '該 {type} 現在已是靜音狀態! 您可使用 off 參數來解除禁音'
+    Not_Muted_Server: '{type} 現在未被禁音!'
+    Cannot_Mute_Yourself: 您不能靜音自己!
+    Cannot_Create_Books: 您在禁音狀態下無法創建書籍!
+    Cannot_Command: 您在禁音狀態下無法使用此指令!
+    Cannot_Chat: 您在禁音狀態下無法打字聊天!
+    Cannot_Place_Signs: 您在禁音狀態下無法使用告示牌!
+    Cannot_Chat_Player_Muted: 當您所在的伺服器、聊天頻道或是您個人被禁音時,您無法使用任何聊天頻道功能
+    Cannot_Chat_Channel_Muted: 您無法在聊天頻道 {0} 中發言,因為該頻道已被禁音
 
   Points:
     Usage: <get/set/list> <玩家名> [set] [amount]
-    Description: Manage player warning points.
+    Description: 管理玩家的警告計點
     Usages:
-    - '/{label} {sublabel} get <玩家名> [set] &7- List player warning points.'
-    - '/{label} {sublabel} set <玩家名> <set> <amount> &7- Set warning points.'
-    - '/{label} {sublabel} list [set] &7- List all players warning points.'
-    Disabled: Warning points are disabled in settings.yml
-    List_Item_1: ' &6Set {0}:'
-    Remove_Tooltip: '&6Click to remove.'
-    List_Item_2: ' &f{0}&8: &7{1} points'
-    No_Points: There are no warn points stored. Come, get some!
-    List_Header: Saved Warning Points
-    Player_List_Item: ' &f{0} &7= &f{1} points'
-    No_Player_Points: There are no such warning points for {0}.
-    Player_List_Header: Listing {0}'s Warning Points
-    No_Set: 'Please specify a set name. Available: {0}'
-    No_Amount: Please specify valid amount of points to set.
-    No_Stored: '{0} does not have warning points in set ''{1}''.'
-    Set: '(removed ? ''Removed points from'' : ''Set {0} points to'') + '' player {1} warning set {1}.'''
+    - '/{label} {sublabel} get <玩家名> [set] &7- 查看某位玩家的當前所累計的警告點數'
+    - '/{label} {sublabel} set <玩家名> <set> <amount> &7- 設定某位玩家的警告計點數量'
+    - '/{label} {sublabel} list [set] &7- 查看伺服器所有玩家身上所累計的警告計點'
+    Disabled: 警告計點功能已在 settings.yml 中被停用
+    List_Item_1: ' &6設定 {0}:'
+    Remove_Tooltip: '&6點擊此處刪除'
+    List_Item_2: ' &f{0}&8: &7{1} 點'
+    No_Points: 當前沒有任何警告計點!
+    List_Header: 已儲存的警告計點
+    Player_List_Item: ' &f{0} &7= &f{1} 點'
+    No_Player_Points: 玩家 {0} 當前沒有任何警告計點紀錄
+    Player_List_Header: 玩家 {0} 警告計點列表
+    No_Set: '請您指定設定警告計點組名稱. 可用: {0}'
+    No_Amount: 請您輸入您要的警告計點點數數量
+    No_Stored: '玩家 {0} 當前身上沒有任何警告計點在 ''{1}'' 警告紀錄組內'
+    Set: '(removed ? ''移除警告計點'' : ''新增 {0} 警告計點給予'') + ''玩家 {1} 警告設定玩家 {1}'''
 
   Purge:
     Usage: <玩家名> [其他玩家...]
@@ -626,33 +627,33 @@ Commands:
   
   Spy:
     Usage: <status/menu/off/toggle/list> [玩家名] [type] [channel]
-    Description: Toggle spying player commands and messages.
+    Description: 監聽模式
     Usages_1:
-    - '/{label} status [玩家名] &7- Print if player is spying.'
-    - '/{label} menu [玩家名] &7- Open main spying selection menu.'
-    - '/{label} on/off [玩家名] &7- Toggle all spying on/off for player.'
-    - '/{label} toggle <type> [玩家名] &7- Toggle spying for section on/off.'
+    - '/{label} status [玩家名] &7- 列出當前您在監聽某個玩家的某個監聽選項列表'
+    - '/{label} menu [玩家名] &7- 開啟監聽功能選單'
+    - '/{label} on/off [玩家名] &7- 切換監聽玩家模式'
+    - '/{label} toggle <type> [玩家名] &7- 切換指定某個選項的監聽模式'
     Usages_2:
-    - '/{label} toggle chat <頻道> [玩家名] &7- Toggle spying for channel.'
+    - '/{label} toggle chat <頻道> [玩家名] &7- 切換某個頻道的監聽模式'
     Usages_3:
-    - '/{label} list &7- List all spying players.'
+    - '/{label} list &7- 列出當前您在監聽的所有玩家列表'
     No_Stored: There are no spying players stored.
     List_Tooltip:
     - '&6Disable all spying for {0}.'
-    List_Header: All Spying Players
+    List_Header: 當前您在監聽的所有玩家
     Toggle_No_Type: 'Specify a valid spying type. Available: {0}'
     Toggle_No_Channel: 'Specify a chat channel to toggle spy on. Available: {0}'
     Toggle: '''{0} is '' + (isSpying ? ''&cno longer'' : ''&anow'') + '' &7spying {1}.'''
-    Type_Channel: channel
-    Type_Chat: chat
-    Type_Command: commands
-    Type_Private_Message: private messages
-    Type_Mail: mails
-    Type_Sign: signs
-    Type_Book: books
-    Type_Anvil: anvil
-    Type_Announcement: announcements
-    Type_Me: /me messages
+    Type_Channel: 聊天頻道
+    Type_Chat: 聊天室
+    Type_Command: 指令
+    Type_Private_Message: 私人訊息
+    Type_Mail: 郵件
+    Type_Sign: 告示牌
+    Type_Book: 書
+    Type_Anvil: 鐵砧
+    Type_Announcement: 公告
+    Type_Me: 旁白訊息
     Book_Untitled: Untitled
     No_Spying: '{0} is not spying anything.'
     Status_1:
@@ -718,8 +719,8 @@ Commands:
 
   Real_Name:
     Usage: '[name/nick]'
-    Description: Look up a player's real name and nick by his real name or nick.
-    Success: '''Player {0} has '' + (hasNick ? ''nick {1}'' : ''no nick'') + ''.'''
+    Description: 查看某位玩家的真實玩家名以及當前所使用的暱稱
+    Success: '''玩家 {0} 當前'' + (hasNick ? ''的暱稱為 {1}'' : ''沒有暱稱'') + '''''
   
   Rule:
     Usage: <info/toggle/create/import/list/reload> [rule]
@@ -884,9 +885,9 @@ Commands:
     
   Update:
     Usage: <玩家名>
-    Description: Reload yours, or a player's tab list name.
-    Disabled: Tab list feature is not enabled in Tab_List in settings.yml.
-    Success: Reloaded tab list information for {0}.
+    Description: 重新載入玩家名指令自動補全列表
+    Disabled: 玩家名指令自動補全功能已停用,請您至 settings.yml 內的 Tab_List 選項中開啟
+    Success: 成功重新載入 {0} 個玩家名稱自動補全列表
 
 
 # -------------------------------------------------------------------------------------------------
@@ -927,100 +928,96 @@ Player:
 # 以下訊息為插件選單相關內容
 # -------------------------------------------------------------------------------------------------
 Menu:
-  Cannot_Open_During_Conversation: '&cType ''exit'' to quit your conversation before opening menu.'
-  Item_Deleted: '&2The {item} has been deleted.'
-  Error: '&cOups! There was a problem with this menu! Please contact the administrator to review the console for details.'
-  Page_Previous: '&8<< &fPage {page}'
-  Page_Next: Page {page} &8>>
-  Page_First: '&7First Page'
-  Page_Last: '&7Last Page'
-  Title_Tools: Tools Menu
-  Tooltip_Info: '&fMenu Information'
-  Button_Return_Title: '&4&lReturn'
+  Cannot_Open_During_Conversation: '&c開啟選單前輸入 exit 來退出會話'
+  Item_Deleted: '&2物品 {item} 已被刪除'
+  Error: '&c錯誤! 此選單遇到致命性問題或錯誤! 請聯繫管理員並且查看 CONSOLE 來取得更多資訊!'
+  Page_Previous: '&8<< &f第 {page} 頁'
+  Page_Next: 第 {page} 頁 &8>>
+  Page_First: '&7第一頁'
+  Page_Last: '&7最後一頁'
+  Title_Tools: 工具選單
+  Tooltip_Info: '&f選單說明'
+  Button_Return_Title: '&4&l返回'
   Button_Return_Lore:
   - ''
-  - 'Return back.'
+  - '回到上一頁'
   
   Color:
-    Header: Select Chat Color
-    Button_Empty_Title: No available colors
+    Header: 選擇聊天顏色
+    Button_Empty_Title: 您當前沒有可用的聊天顏色
     Button_Empty_Lore:
     - ''
-    - 'There are no colors that you'
-    - 'can toggle available right now.'
-    Button_Reset_Color_Title: Reset chat color
-    Color_Reset: '&1Chat color reset!'
-    Button_Reset_Decoration: Reset chat decoration
-    Decoration_Reset: '&1Chat decoration reset!'
-    Button_Decoration_Title: ' Decoration'
+    - '當前沒有可供您使用的的顏色與'
+    - '格式化代碼!'
+    Button_Reset_Color_Title: 重置聊天顏色
+    Color_Reset: '&1聊天顏色已重置!'
+    Button_Reset_Decoration: 重置格式化代碼
+    Decoration_Reset: '&1格式化代碼已重置!'
+    Button_Decoration_Title: ' '
     Button_Decoration_Lore:
     - ''
-    - 'Click to toggle using this'
-    - 'decoration in the chat.'
+    - '點擊此處來選擇或切換您在聊天'
+    - '時所使用的格式化代碼'
     - ''
-    - 'Example: {0}A random text.'
-    Decoration_Set: Set decoration to {0}
-    Button_Color_Title: ' Color'
+    - '範例: {0}範例文本!'
+    Decoration_Set: 已將您的格式化代碼切換為 {0}
+    Button_Color_Title: ' '
     Button_Color_Lore:
     - ''
-    - 'Click to toggle using this'
-    - 'color while you''re chatting.'
+    - '點擊此處來選擇或切換您在聊天'
+    - '時所使用的顏色'
     - ''
-    - 'Sample: {0}Lorem ipsum dolor'
-    - '{0}sit amen, color ist kamen.'
-    Color_Set: Set color to {0}
+    - '範例: {0}這是一個範例文本'
+    Color_Set: 已將您的顏色切換為 {0}
     Help:
-    - 'The color menu enables you to select'
-    - 'a chat or a decoration to be applied'
-    - 'automatically when you chat.'
+    - '此選單讓您可以方便的切換並且使用顏色'
+    - '文字與格式化代碼於聊天室內,為您的聊'
+    - '天室增添許多新色彩!'
     - ''
-    - 'Simply click the icons to select what'
-    - 'color or decoration you want to use.'
+    - '您僅需點擊上方圖標即可方便的切換顏色與'
+    - '格式化代碼!'
     - ''
-    - 'Current color: {color}'
-    - 'Current decoration: {decoration}'
+    - '您當前使用的顏色: {color}'
+    - '您當前使用的格式化代碼: {decoration}'
   
   Spy:
-    Toggle_Title: '(spying ? ''&4Disable'' : ''&2Enable'') + '' All'''
+    Toggle_Title: '(spying ? ''&4停止監聽'' : ''&2開始監聽'') + ''所有選項'''
     Toggle_Lore:
     - ''
-    - 'Click to toggle spying on'
-    - 'everything in this menu.'
+    - '點擊此處來切換是否要監聽'
+    - '所有選項'
     Button_Lore_1:
     - ''
-    - 'Click to select which chat'
-    - 'channels you want to spy on.'
+    - '點擊以上選項來選擇您要監聽的'
+    - '聊天內容'
     Button_Lore_Channels:
     - ''
-    - 'Spying channels:'
-    Button_Title: Channels
-    Type_Chat: all chat messages
-    Type_Commands: commands configured in settings.yml
-    Type_Private_Messages: all private messages
-    Type_Mail: mails when they are sent
-    Type_Sign: signs when they are placed
-    Type_Book: books when they are signed
-    Type_Anvil: items when they are renamed
+    - '正在監聽的聊天頻道:'
+    Button_Title: 聊天頻道
+    Type_Chat: 所有聊天訊息
+    Type_Commands: settings.yml 中設定要監聽的指令
+    Type_Private_Messages: 所有私人訊息
+    Type_Mail: 發送郵件訊息
+    Type_Sign: 使用告示牌
+    Type_Book: 撰寫書籍
+    Type_Anvil: 使用鐵砧
     Button_Toggle_Lore:
     - ''
-    - 'Click to toggle spying on'
-    - '{label}.'
+    - '點擊切換監聽 {label}'
     - ''
-    - 'Status: {status}'
-    Status: '(spying ? ''&bspying'' : ''&cdisabled'')'
-    Status_Toggle: '(isSpying ? ''&4'' : ''&2'') + ''Spying {type} '' + (isSpying ? ''disabled'' : ''enabled'') + ''!'''
+    - '狀態: {status}'
+    Status: '(spying ? ''&b監聽中'' : ''&c已停用'')'
+    Status_Toggle: '(isSpying ? ''&4'' : ''&2'') + ''監聽 {type} 模式'' + (isSpying ? ''已停用'' : ''已啟用'') + ''!'''
     Channels_Toggle_Lore:
     - ''
-    - 'Click to toggle spying'
-    - 'for this channel.'
+    - '點擊此處切換監聽聊天頻道模式'
     - ''
-    - 'Status: {status}'
-    Channels_Toggle: '(isSpying ? ''&4No longer spying channel'' : ''&2Now spying channel'') + ''!'''
+    - '狀態: {status}'
+    Channels_Toggle: '(isSpying ? ''&4已關閉監聽模式'' : ''&2已開啟監聽模式'') + ''!'''
     Help:
-    - 'Select what aspects of your server'
-    - 'you want to spy on. You can also use'
-    - 'the ''/{label} log'' command to view'
-    - 'historical data from when you were gone.'
+    - '您可以選擇您要監聽的所有內容'
+    - '並且還可以使用 /{label} log 指令來'
+    - '查看歷史其他資料'
     
   
 # -------------------------------------------------------------------------------------------------
