@@ -152,7 +152,7 @@ Commands:
   Invalid_Rule: '無效的規則: ''{0}''. 可用: {1}'
   Invalid_Message: '無效的訊息: ''{0}''. 可用: {1}'
   Invalid_Region: 區域檔案 '{0}' 不存在
-  Label_Authors: Made by
+  Label_Authors: Translate By CoCo4INOwO Made by
   Label_Description: '&c&l描述:'
   Label_Optional_Args: 可選參數
   Label_Required_Args: 必要參數
@@ -637,13 +637,13 @@ Commands:
     - '/{label} toggle chat <頻道> [玩家名] &7- 切換某個頻道的監聽模式'
     Usages_3:
     - '/{label} list &7- 列出當前您在監聽的所有玩家列表'
-    No_Stored: There are no spying players stored.
+    No_Stored: 當前沒有已儲存的監聽對象
     List_Tooltip:
-    - '&6Disable all spying for {0}.'
+    - '&6停用玩家 {0} 所有的監聽事件'
     List_Header: 當前您在監聽的所有玩家
-    Toggle_No_Type: 'Specify a valid spying type. Available: {0}'
-    Toggle_No_Channel: 'Specify a chat channel to toggle spy on. Available: {0}'
-    Toggle: '''{0} is '' + (isSpying ? ''&cno longer'' : ''&anow'') + '' &7spying {1}.'''
+    Toggle_No_Type: '請指定有效的監聽類型. 可用: {0}'
+    Toggle_No_Channel: '請指定一個聊天頻道. 可用: {0}'
+    Toggle: '''玩家 {0} 現在已 '' + (isSpying ? ''&c不再'' : ''&a開始'') + '' &7監聽{1}'''
     Type_Channel: 聊天頻道
     Type_Chat: 聊天室
     Type_Command: 指令
@@ -654,68 +654,68 @@ Commands:
     Type_Anvil: 鐵砧
     Type_Announcement: 公告
     Type_Me: 旁白訊息
-    Book_Untitled: Untitled
-    No_Spying: '{0} is not spying anything.'
+    Book_Untitled: 尚未署名
+    No_Spying: '玩家 {0} 當前沒有監聽任何內容'
     Status_1:
     - '&8{chat_line_smooth}'
-    - '<center>&6Printing what {0} is currently spying'
+    - '<center>&6查看玩家 {0} 當前正在監聽的所有內容'
     - '&8{chat_line_smooth}'
     Status_2:
     - ''
-    - '&7Type ''/{label} off {0}'' to turn it off.'
-    Toggle_Off: Disabled all spying for {0}.
-    Toggle_On: Enabled all spying for {0}.
-    Status_Sectors: '&6Spying sectors:'
-    Status_Channels: '&6Spying channels:'
-    Auto_Enable_1: '{prefix_warn}Your spy mode has been activated automatically. Type ''/spy off'' to disable. '
+    - '&7輸入 /{label} off {0} 來關閉事件監聽'
+    Toggle_Off: 已停用玩家 {0} 的所有監聽事件
+    Toggle_On: 已啟用玩家 {0} 的所有監聽事件
+    Status_Sectors: '&6正在監聽的類型:'
+    Status_Channels: '&6正在監聽的聊天頻道:'
+    Auto_Enable_1: '{prefix_warn}自動監聽模式已自動開啟. 您可以使用 /spy off 來手動關閉'
     Auto_Enable_2: '&8[&6?&8]'
     Auto_Enable_Tooltip:
-    - '&6TIP: &7To stop spying automatically on join, ask the'
-    - '&7admin to take away &o{0}&7'
-    - '&7permission from you explicitly.'
+    - '&6小貼士: &7如您要在登入伺服器時關閉自動監聽模式'
+    - '&7請您將該玩家的 &o{0}&7'
+    - '&7權限節點更改為 false'
   
   Region:
-    Usage: <add/remove/view/tp/list> [name]
-    Description: Manage map regions used in rules.
+    Usage: <add/remove/view/tp/list> [名稱]
+    Description: 管理地圖中的區域
     Usages:
-    - '/{label} {sublabel} add <name> &7- Create a new region.'
-    - '/{label} {sublabel} remove <name> &7- Delete a region.'
-    - '/{label} {sublabel} view <name> &7- Visualize a region.'
-    - '/{label} {sublabel} tp <name> &7- Teleport to a region.'
-    - '/{label} {sublabel} tool &7- Obtain region tool.'
-    - '/{label} {sublabel} list &7- Browse available regions.'
+    - '/{label} {sublabel} add <名稱> &7- 創建某個區域'
+    - '/{label} {sublabel} remove <名稱> &7- 刪除某個區域'
+    - '/{label} {sublabel} view <名稱> &7- 可視化附近的區域'
+    - '/{label} {sublabel} tp <名稱e> &7- 傳送至某個指定的區域'
+    - '/{label} {sublabel} tool &7- 獲取區域選取工具'
+    - '/{label} {sublabel} list &7- 查看已創建的區域'
     List:
     - '&8{chat_line_smooth}'
     - ' '
-    - '<center>&6&lChatControl Regions'
-    - '<center>&7{0} loaded'
+    - '<center>&6&lChatControl 區域'
+    - '<center>&7{0} 已載入'
     - '&8{chat_line_smooth}'
-    Region_Info: '&fRegion Information'
-    Primary: '&7Primary: &2{0}'
+    Region_Info: '&f區域詳細訊息'
+    Primary: '&7基本: &2{0}'
     Secondary: '&7Secondary: &2{0}'
-    Size: '&7Size: &2{0} blocks'
-    Tooltip_Remove: '&7Click to remove permanently.'
-    Tooltip_Visualize: '&7Click to visualize.'
-    Tooltip_Teleport: '&7Click to teleport to the center.'
-    Tool_Disabled: Region tools are disabled. Set 'Register_Tools' to true in settings.yml to use tools.
-    Tool: Thor given you 1x ChatControl Region Tool. Right/left click to select two points and then use '/{label} {sublabel} add' to create a region.
-    Tool_Name: Region Tool
+    Size: '&7S大小: &2{0} 格'
+    Tooltip_Remove: '&7點擊此處刪除該區域'
+    Tooltip_Visualize: '&7點擊此處可視化該區域'
+    Tooltip_Teleport: '&7點擊此處傳送至該區域'
+    Tool_Disabled: 區域選取工具已被停用. 您可以在 settings.yml 中的 Register_Tools 切換至 true 來啟用
+    Tool: 成功給予您 1x ChatControl 區域選取工具. 使用左右鍵點擊兩點來選取區域後您可以使用 /{label} {sublabel} add 來完成區域創建
+    Tool_Name: '&6區域選取工具'
     Tool_Lore:
     - ''
-    - 'Use this tool to create and'
-    - 'edit ChatControl Red regions.'
+    - '您可以使用此工具來創建一個'
+    - 'ChatControl Red 區域'
     - ''
-    - '&b<< &7Left click - Primary'
-    - '&7Right click - Secondary &b>>'
-    Point_Name: '[&aRegion point&f]'
-    Point_Set: '''Set the '' + (primary ? ''primary'' : ''secondary'') + '' region point.'''
-    No_Name: Please specify the region name.
-    No_Selection: Before adding a region, select primary and secondary points with '/{label} {sublabel} tool' first.
-    Already_Exists: Region by the same name already exists.
-    Saved: Saved new region '{0}'.
-    Removed: Removed region '{0}'.
-    Visualized: Region '{0}' is being visualized for 5 seconds.
-    Teleported: Teleported to the center of region '{0}'.
+    - '&b<< &7左鍵點擊選取第一個點'
+    - '&7右鍵點擊選取第二個點 &b>>'
+    Point_Name: '[&a區域選取區域&f]'
+    Point_Set: '''您已選擇了區域的'' + (primary ? ''第一點'' : ''第二點'') + '''''
+    No_Name: 您必須要命名一個區域名稱
+    No_Selection: 在您新增新區域前,您必須使用 /{label} {sublabel} tool 來取得區域選取工具進行選取
+    Already_Exists: 已有同樣名稱的區域存在
+    Saved: 成功儲存了區域 '{0}'
+    Removed: 成功刪除了區域 '{0}'
+    Visualized: 區域 '{0}' 現在正在可視化狀態持續 5 秒鐘
+    Teleported: 您已傳送至 '{0}' 區域中心點
 
   Real_Name:
     Usage: '[name/nick]'
@@ -724,73 +724,73 @@ Commands:
   
   Rule:
     Usage: <info/toggle/create/import/list/reload> [rule]
-    Description: Manage the rules system.
+    Description: 管理聊天規則
     Usages:
-    - '/{label} {sublabel} info <rule> &7- Print rule information.'
-    - '/{label} {sublabel} toggle <rule> &7- Switch rule on/off.'
-    - '/{label} {sublabel} create &7- Create rule by name.'
-    - '/{label} {sublabel} import &7- Mass rule import.'
-    - '/{label} {sublabel} list <type> &7- List all loaded rules.'
-    - '/{label} {sublabel} reload &7- Reload all rules.'
+    - '/{label} {sublabel} info <rule> &7- 查看聊天規則內容'
+    - '/{label} {sublabel} toggle <rule> &7- 啟用或停用某個指定的聊天規則'
+    - '/{label} {sublabel} create &7- 創建一個新的聊天規則'
+    - '/{label} {sublabel} import &7- 批量導入聊天規則'
+    - '/{label} {sublabel} list <type> &7- 列出當前已載入的聊天規則'
+    - '/{label} {sublabel} reload &7- 重新載入全部的聊天規則'
     Info_1:
     - '&8{chat_line}'
-    - '<center>&6&lRule ''{0}'''
+    - '<center>&6&l聊天規則 ''{0}'''
     Info_2:
     - '&8{chat_line}'
-    Toggle: '''Rule {0} has been '' + (toggle ? ''&cdisabled'' : ''&aenabled'') + ''&7.'''
-    List_No_Type: Please specify what type of rules to show.
+    Toggle: '''聊天規則 {0} 現在已被'' + (toggle ? ''&c停用'' : ''&a啟用'') + '''''
+    List_No_Type: 請您指定要顯示的聊天規則類型
     List_No_Rules: No {0} rules are created yet. Create some with '/{label} {sublabel}' create command!
-    Type_Global: global
-    Type_Chat: chat
-    Type_Command: command
+    Type_Global: 全頻
+    Type_Chat: 聊天
+    Type_Command: 指令
     Type_Packet: packet
-    Type_Sign: sign
-    Type_Book: book
-    Type_Anvil: anvil
-    Type_Tag: tag
-    Tooltip_Name: '&7Name: &f{0} '
-    Tooltip_Match: '&7Match: &f'
-    List_Header: Showing {0} {1} Rule(s)
-    Reloaded: All rules have been reloaded from their respective files.
-    Rule_Creator: '&8[&6Rule Creator&8] &7'
+    Type_Sign: 告示牌
+    Type_Book: 書
+    Type_Anvil: 鐵砧
+    Type_Tag: 命名牌
+    Tooltip_Name: '&7名稱: &f{0} '
+    Tooltip_Match: '&7匹配內容: &f'
+    List_Header: 正在顯示{0}個{1}聊天規則
+    Reloaded: 所有聊天規則文件已成功被重新載入完畢
+    Rule_Creator: '&8[&6聊天規則創建嚮導&8] &7'
     Rule_Creator_Welcome:
-    - 'Welcome to the Rule Creator Wizard. We''ll ask you a few questions and your new rule will be set.'
-    - 'Type answers directly to the chat or type ''exit'' at any time to abort. To continue, please type your new rule''s name.'
-    Rule_Creator_Already_Exists: '{prefix_error}Rule {0} already exists!'
+    - '歡迎使用聊天規則創建嚮導. 我們將會詢問您幾個問題來方便您創建屬於您自己的聊天規則'
+    - '如果您要退出聊天規則創建嚮導起您輸入 exit 來退出. 如要繼續創建請輸入新的聊天規則名稱'
+    Rule_Creator_Already_Exists: '{prefix_error}已有同名為 {0} 的聊天規則!'
     Rule_Creator_Type:
-    - 'Awesome, preparing rule ''{0}'' for you. Please enter the rule''s type. This also determines to which file we''ll place the rule. '
-    - 'Available: {1}'
-    Invalid_Type: '{prefix_error}Rule type ''{0}'' is invalid!'
-    Encode: Should we automatically encode the matching word you enter in the next question to be harder to bypass? Type yes/no.
-    Invalid_Encode: '{error_prefix}Wrong answer! Type ''yes'' or ''no'', or ''exit'' to give up.'
-    Rule_Creator_Match: Enter the word that should be matched.
-    Group_Name: 'Almost ready! Now, enter what group this rule should belong to, or ''none'' if no group. Installed groups: {0}'
-    Invalid_Group: '{prefix_error}Group {0} does not exists!'
-    Rule_Creator_Success: '{prefix_success}Congratulations, you''ve successfuly created a new rule! It was loaded and is ready to operate. Here''s how it looks like:'
-    Conversation_Cancelled: '&cYou haven''t entered anything in time so that your conversation has been cancelled.'
-    Conversation_Abandoned: '&cYour conversation has been abandoned. Your entered data have been lost.'
-    Rule_Import: '&8[&6Rule Import&8] &7'
-    Rule_Import_Start: Rules are now being imported, please wait...
+    - '做得好! 我們已為您創建了名為 ''{0}'' 的聊天規則. 現在請您輸入聊天規則類型,這將決定我們要將此聊天規則放置於哪個資料夾內'
+    - '可用: {1}'
+    Invalid_Type: '{prefix_error}聊天規則類型 {0} 無效!'
+    Encode: 您是否要在自動編碼前確定相關的匹配詞句使其更難被 bypass? 請輸入 yes/no
+    Invalid_Encode: '{error_prefix}錯誤的類型! 請您輸入 ''yes'' 或 ''no'' 或是 ''exit'' 來退出聊天規則創建嚮導'
+    Rule_Creator_Match: 請您輸入您要匹配的單詞或是字句
+    Group_Name: '就快要完成了! 現在我們將要決定此聊天規則應該屬於哪個組,如果您沒有打算要分組請您輸入 none 即可. 可用的組: {0}'
+    Invalid_Group: '{prefix_error}組 {0} 並不存在!'
+    Rule_Creator_Success: '{prefix_success}完成! 新的聊天規則已被創建完畢並且準備運行. 創建完畢的聊天規則:'
+    Conversation_Cancelled: '&c您由於太久沒有動作,因此已自動為您退出聊天規則創建嚮導'
+    Conversation_Abandoned: '&c聊天規則創建嚮導已成功退出,尚未創建完畢的資料已自動移除'
+    Rule_Import: '&8[&6聊天規則導入嚮導&8] &7'
+    Rule_Import_Start: 聊天規則導入中,請稍候...
     Rule_Import_Welcome:
-    - 'Welcome to the Rule Import Wizard. We''ll ask you a few questions and import every line from your file as a new rule.'
-    - 'Type answers directly to the chat or type ''exit'' at any time to abort. To continue, please write your file name (in your plugin''s folder).'
-    Rule_Import_Invalid_File: '{prefix_error}File {0} does not exist!'
+    - '歡迎使用聊天規則導入嚮導. 我們將會詢問您幾個問題來方便您將資料導入'
+    - '如果您要退出聊天規則導入嚮導起您輸入 exit 來退出. 如要繼續導入請您輸入您的文件名(在您插件的文件夾中)'
+    Rule_Import_Invalid_File: '{prefix_error}文件 {0} 不存在!'
     Rule_Import_Type:
-    - 'Awesome, importing rules from {0} for you. Please enter what type of rules these are.'
-    - 'Available: {1}'
-    Rule_Import_Success: '{prefix_success}Congratulations, you''ve successfuly imported {0} rule(s)! They were loaded and is ready to operate.'
-    Rule_Import_Fail: '{prefix_error}There was an error importing rules, please see the console!'
+    - '太棒了! 我們將會從 {0} 導入聊天規則. 請您輸入聊天規則類型'
+    - '可用: {1}'
+    Rule_Import_Success: '{prefix_success}完成! 已為您成功導入 {0} 個聊天規則! 新的聊天規則現在已被載入並且準備運行!'
+    Rule_Import_Fail: '{prefix_error}導入聊天規則時出現致命錯誤,請您查看 CONSOLE 來取得更多資訊!'
   
   Script:
     Usage: <expression>
     Description: Evaluate JavaScript.
     Usages:
-    - '/{label} {sublabel} 5 * (2/3) &7- Simple math.'
-    - '/{label} {sublabel} player.getHandle().ping &7- NMS, if player is Player.'
-    - '/{label} {sublabel} {variable} / 2 &7- PAPI, native or variables/.'
+    - '/{label} {sublabel} 5 * (2/3) &7- Simple math'
+    - '/{label} {sublabel} player.getHandle().ping &7- NMS, if player is Player'
+    - '/{label} {sublabel} {variable} / 2 &7- PAPI, native or variables/'
     - '/{label} {sublabel} Java.type("org.bukkit.Bukkit").getOnlinePlayers()'
-    Error: 'Error in your expression: {0}'
-    Result: 'Result: &f{0}'
+    Error: '錯誤的表達式: {0}'
+    Result: '結果: &f{0}'
   
   Tag:
     Disabled: Please fill your Tag.Apply_On key in settings.yml first before using this command.
@@ -895,9 +895,9 @@ Commands:
 # -------------------------------------------------------------------------------------------------
 Pages:
   No_Page_Number: '&cPlease specify the page number for this command.'
-  No_Pages: '&cYou do not have any pages saved to show.'
-  No_Page: Pages do not contain the given page number.
-  Invalid_Page: '&cYour input ''{input}'' is not a valid number.'
+  No_Pages: '&c您當前沒有'
+  No_Page: 您當前沒有可顯示的頁面
+  Invalid_Page: '&c您輸入的 ''{input}'' 並不是一個有效的頁數數字'
   Go_To_Page: '&7前往第 {page} 頁'
   Go_To_First_Page: '&7快速跳轉至第 1 頁'
   Tooltip:
