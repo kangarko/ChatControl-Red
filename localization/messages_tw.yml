@@ -192,7 +192,7 @@ Commands:
   Disabled: disabled
   Use_While_Null: '&c當插件處於 {state} 狀態時無法使用該功能或是指令'
   Incompatible: '&c此功能至少需要在 Minecraft {0} 以上的版本中才能夠使用!'
-  Toggled_Plugin_Part: '''&7您現在'' + (ignoring ? ''&2不在'' : ''&c正在'') + ''&7忽略 {0}.'''
+  Toggled_Plugin_Part: '''&7您現在'' + (ignoring ? ''&2不在'' : ''&c正在'') + ''&7忽略{0}'''
   Use_Alternative_Header: false
   Alternative_Header: '&cChatControl Red: &7輸入 ''/{0} ?'' 來查看所有指令'
   
@@ -793,89 +793,89 @@ Commands:
     Result: '結果: &f{0}'
   
   Tag:
-    Disabled: Please fill your Tag.Apply_On key in settings.yml first before using this command.
+    Disabled: '&c暱稱功能已被停用. 您可以在 settings.yml 中的 Tag.Apply_On 設定您要使用的 prefix、nick 或 suffix 來啟用'
     Usage: <type> [tag/off]
-    Description: Set your tag.
+    Description: 設定您的玩家暱稱
     Usages:
-    - '/{label} list &7- Print all tags.'
-    - '/{label} off &7- Disable all tags.'
-    - '/{label} <type> &7- Print your tag.'
-    - '/{label} <type> <tag> &7- Set yourself a tag.'
-    - '/{label} <type> off &7- Stop having a tag.'
+    - '/{label} list &7- 列出您當前所有已設定的暱稱'
+    - '/{label} off &7- 停用您當前所設定的所有暱稱'
+    - '/{label} <type> &7- 列出您指定類型的暱稱'
+    - '/{label} <type> <tag> &7- 設定您指定類型的暱稱'
+    - '/{label} <type> off &7- 停用您指定類型的暱稱'
     - ''
-    - '&c&lTIP: &cUse {prefix_tag}, {suffix_tag} and {nick} placeholders to show tags.'
-    Admin_Usage: <type> <player/list> [nick/off]
-    Admin_Description: Control tags for players.
+    - '&c&l小貼士: &c您可以使用 {prefix_tag}、{suffix_tag} 或 {nick} 等變數來顯示玩家設定的暱稱'
+    Admin_Usage: <type> <玩家名/list> [nick/off]
+    Admin_Description: 設定您的或是其他玩家暱稱
     Admin_Usages:
-    - '/{label} {sublabel} <type> <玩家名> &7- Print player''s tags.'
-    - '/{label} {sublabel} <type> <玩家名> <nick> &7- Set player a tag.'
-    - '/{label} {sublabel} <type> <玩家名> off &7- Remove tag from player.'
-    - '/{label} {sublabel} list [type] &7- List all players with tags.'
-    No_Tags: There are no tags stored.
-    Admin_Tooltip_Remove: '&6Remove {0} from {1}.'
-    Admin_List: Listing All Tags
-    Admin_Invalid_Params: Please specify a tag type and a player name.
-    Admin_Status: '{possessive_form} {type}: {tag}.'
-    Your_Tags: 'Your tags:'
-    Off_No_Tags: You do not have any active tags.
-    Off_All: All active tags were disabled.
-    Status_Self: 'Your {0} is: {1}'
-    No_Spaces: Nicks cannot contain spaces.
-    No_Colors_Only: Your tag cannot consist only of colors.
-    Exceeded_Length: Your tag's length ({0}) is over maximum limit of {1} letters.
-    Not_Allowed: Unable to set your tag, try another one!
-    No_Tag: '''{0} presently do'' + (self ? '''' : ''es'') + '' not have a {1}.'''
-    No_Impersonation: The nick cannot impersonate a real player name.
-    Already_Used: This nick is already used.
-    Success_V2: '(remove ? ''Removed {0} for '' + (self ? ''you'' : ''{target}'') + ''.'' : ''Set {0} to "{1}&7" for '' + (self ? ''you'' : ''{target}'') + ''.'')'
+    - '/{label} {sublabel} <type> <玩家名> &7- 列出指定某位玩家某個類型的暱稱'
+    - '/{label} {sublabel} <type> <玩家名> <nick> &7- 設定指定某位玩家的某個類型的暱稱'
+    - '/{label} {sublabel} <type> <玩家名> off &7- 移除指定某位玩家的某個類型的暱稱'
+    - '/{label} {sublabel} list [type] &7- 列出某個指定類型全伺服器的暱稱'
+    No_Tags: 當前沒有已儲存的玩家暱稱
+    Admin_Tooltip_Remove: '&6移除玩家 {1} 身上的 {0}'
+    Admin_List: 列出所有暱稱
+    Admin_Invalid_Params: 請您指定某位玩家以及某個類型
+    Admin_Status: '{possessive_form} {type}: {tag}'
+    Your_Tags: '您的玩家暱稱:'
+    Off_No_Tags: 您當前沒有已啟用的玩家暱稱
+    Off_All: 所有的玩家暱稱已被全部停用
+    Status_Self: '您的 {0} 暱稱為: {1}'
+    No_Spaces: 暱稱中不能包含空格
+    No_Colors_Only: 暱稱中不能僅包含顏色顏色代碼
+    Exceeded_Length: 您的暱稱長度過長了 ({0}) 個字元,您必須在 {1} 個字元以內
+    Not_Allowed: 您無法設定此暱稱,請您嘗試使用另一個
+    No_Tag: '''{0}當前沒有'' + (self ? '''' : '''') + ''任何 {1} 類型暱稱'''
+    No_Impersonation: 您不能使用他人的遊戲名稱作為您的暱稱
+    Already_Used: 此暱稱已被其玩家使用,請您嘗試使用另一個
+    Success_V2: '(remove ? ''已移除'' + (self ? ''您'' : ''玩家 {target}'') + ''身上的 {0} 類型暱稱'' : ''已設定 {0} 類型暱稱內容 "{1}&7" 給'' + (self ? ''您'' : ''玩家 {target}'') + '''')'
 
   Toggle:
-    Usage: <type> [group]
-    Description: Toggle seeing parts of the plugin.
+    Usage: <類型> [group]
+    Description: 切換來自 ChatControl 插件的訊息
     Usages_1:
-    - '/{label} <type> &7- Toggle a plugin part. Parts: {0}'
-    - '/{label} <type> [group] &7- Toggle a message type. Types: {1}'
+    - '/{label} <類型> &7- 切換某個類型的訊息是否收聽或是忽略,可用: {0}'
+    - '/{label} <類型> [group] &7- 切換訊息類型組,可用類型組: {1}'
     Usages_Chat:
-    - '/{label} chat &7- Toggle seeing chat messages. If you are spying, you''ll still see them.'
+    - '/{label} chat &7- 切換是否查看聊天訊息,如您在使用監聽模式您依舊可以看到您監聽的聊天訊息內容'
     Usages_Join:
-    - '/{label} join default &7- Toggle join message group ''default''.'
+    - '/{label} join default &7- 切換玩家加入訊息組的訊息 ''default'''
     Usages_Timed:
-    - '/{label} timed special &7- Toggle timed messages group ''special''.'
+    - '/{label} timed special &7- 切換 timed 訊息組的訊息 ''special'''
     Usages_Private_Message:
-    - '/{label} pm &7- Toggle all private messages.'
+    - '/{label} pm &7- 切換是否要查看私人聊天訊息'
     Usages_2:
-    - '/{label} list &7- List all toggled plugin parts.'
-    Toggled_Group: '''&7You are '' + (ignoring ? ''&2no longer'' : ''&cnow'') + '' &7ignoring {0} message {1}.'''
-    Toggled_Group_All: '''&7You are '' + (ignoring ? ''&2no longer'' : ''&cnow'') + '' &7ignoring all {0} messages.'''
-    Type_Join: join
-    Type_Quit: quit
-    Type_Kick: kick
-    Type_Death: death
+    - '/{label} list &7- 列出當前所有已忽略的內容列表'
+    Toggled_Group: '''&7您'' + (ignoring ? ''&2已不再'' : ''&c正在'') + '' &7忽略 {0} 的訊息 {1}.'''
+    Toggled_Group_All: '''&7您'' + (ignoring ? ''&2已不再'' : ''&c正在'') + '' &7忽略所有 {0} 的訊息'''
+    Type_Join: 玩家加入訊息
+    Type_Quit: 玩家退出訊息
+    Type_Kick: 玩家踢出訊息
+    Type_Death: 玩家死亡訊息
     Type_Timed: timed
-    List_Line: '&6Hidden {0} Messages&7:'
+    List_Line: '&6隱藏 {0} 的訊息&7:'
     List_Tooltip:
-    - '&6Click to stop ignoring.'
-    List_Plugin_Parts_Title: '&6Plugin parts&7:'
-    List_Plugin_Parts: '(isIgnoring ? ''&cignoring'' : ''&2receiving'')'
+    - '&6點擊此處來停止隱藏該訊息'
+    List_Plugin_Parts_Title: '&6插件訊息&7:'
+    List_Plugin_Parts: '(isIgnoring ? ''&c忽略中'' : ''&2收聽中'')'
     List_Plugin_Parts_Toggle:
-    - '&6Click to toggle.'
-    List_Plugin_Parts_Header: Toggled Parts Of The Plugin For {0}
-    No_Group: 'Please specify a group to toggle for {0}. Available: {1}'
-    Invalid_Type: 'Invalid type. Available toggles: {0} and types: {1}.'
-    Cannot_PM: '{0} has toggled off private messages.'
+    - '&6點擊此處來進行切換'
+    List_Plugin_Parts_Header: 為玩家 {0} 切換插件訊息
+    No_Group: '請您指定您要切換的組 {0}. 可用: {1}'
+    Invalid_Type: '無效的類型,可用的內容: {0} 以及類型: {1}.'
+    Cannot_PM: '玩家 {0} 已關閉快速私訊模式'
 
   Tell:
-    Usage: <玩家名> [message]
-    Description: Send private messages to players.
+    Usage: <玩家名> [訊息]
+    Description: 向某為玩家傳送私人聊天訊息
     Usages:
-    - '/{label} <玩家名> <訊息> &7- Send player a message.'
-    - '/{label} <玩家名> &7- Toggle conversation mode, in which your chat messages are automatically sent as private messages.'
-    - '/{label} off &7- Disable conversation mode if active.'
-    Conversation_Mode_Not_Conversing: You are not conversing with anyone.
-    Conversation_Mode_Off: Conversation mode with {0} has been &cdisabled&7.
-    Conversation_Mode_Toggle: '(isConversing ? ''&cNo longer'' : ''&aNow'') + '' &7conversing with {0}.'''
-    Conversation_Offline: The player you were conversing with, {0}, is no longer online. Conversation mode disabled.
-    Afk_Warning: '{prefix_warn}{0} is currently AFK and may not see your message.'
+    - '/{label} <玩家名> <訊息> &7- 向某位玩家傳送某些訊息'
+    - '/{label} <玩家名> &7- 切換至快速私訊模式,切換此模式後將會切換至快速私訊模式'
+    - '/{label} off &7- 關閉快速私訊天模式'
+    Conversation_Mode_Not_Conversing: 您當前沒有和任何人傳送過私訊
+    Conversation_Mode_Off: 您和玩家 {0} 快速私訊模式&c已關閉&7
+    Conversation_Mode_Toggle: '(isConversing ? ''&c已關閉'' : ''&a已開啟'') + ''&7您和玩家 {0} 的快速私訊模式'''
+    Conversation_Offline: 您的快速私訊對象 {0} 當前不再線,已自動為您關閉快速私訊聊天模式
+    Afk_Warning: '{prefix_warn}玩家 {0} 當前處於掛機狀態,可能無法看到您的訊息'
     
 
   # 本插件不允許您更動 /chc tour 指令內的相關訊息內容,因爲當插件更新時如果想要對這些訊息進行更動就不得不重置整份翻譯文件
@@ -894,7 +894,7 @@ Commands:
 # 以下訊息為使用 Pages 指令的相關內容
 # -------------------------------------------------------------------------------------------------
 Pages:
-  No_Page_Number: '&cPlease specify the page number for this command.'
+  No_Page_Number: '&c請指定一個有效的頁碼'
   No_Pages: '&c您當前沒有'
   No_Page: 您當前沒有可顯示的頁面
   Invalid_Page: '&c您輸入的 ''{input}'' 並不是一個有效的頁數數字'
@@ -1030,18 +1030,18 @@ Tool:
 # 以下訊息為垃圾郵件、規則等檢查/聊天室/告示牌等相關內容
 # -------------------------------------------------------------------------------------------------
 Checker:
-  Chat_Exploit_Disallowed: Your message contained code execution and was disallowed.
-  Sign_Duplication: Do not place multiple signs with the same text.
-  Move: '''Please move before typing '' + (chat ? ''into chat'' : ''commands'') + ''.'''
-  Delay_After_Join: '''Please wait {seconds} before typing '' + (chat ? ''messages'' : ''commands'') + ''.'''
-  Delay: '''Please wait {seconds} before your next '' + (chat ? ''message'' : ''command'') + ''.'''
-  Similarity: '''Please do not '' + (chat ? ''type messages'' : ''run commands'') + '' that are {similarity}% similar.'''
-  Period: You can only send {type_amount} {type} in {period_amount} {period}.
-  Caps: Please avoid excessive capitalization in your {type}.
-  Sound_Notify: '&cYou cannot use sound notify for another {seconds}.'
-  Parrot: You cannot repeat '{0}' since it's {1}% similar to what was said in the last {2}.
-  No_Text: You cannot send chat messages without text!
-  No_Text_After_Change: Your message has been edited and cannot be sent because it is now empty.
+  Chat_Exploit_Disallowed: 您所輸入的訊息包含了禁止使用的語句或是訊息
+  Sign_Duplication: 請您不要重複放置內容完全一致的告示牌
+  Move: '''請您先移動後在'' + (chat ? ''發送您想發送的訊息'' : ''執行您想執行的指令'') + '''''
+  Delay_After_Join: '''剛登入伺服器時請您稍後 {seconds} 秒後再次發送您要'' + (chat ? ''發送的訊息'' : ''執行的指令'') + ''內容'''
+  Delay: '''請您稍後 {seconds} 秒後再次發送您要'' + (chat ? ''發送的訊息'' : ''執行的指令'') + ''內容'''
+  Similarity: '''請您不要發送與您上次發送相似 {similarity}% 相同的'' + (chat ? ''訊息'' : ''指令'') + '''''
+  Period: 您僅能在 {type_amount} {type} 期間發送 {period_amount} {period}
+  Caps: 請您避免 {type} 中使用過多的大寫字母
+  Sound_Notify: '&c您不能在 {seconds} 秒內重複使用該聲音通知'
+  Parrot: 您無法重複 '{0}' 訊息,因為他與您上一個所發送的訊息 {2} 共有{1}%相似
+  No_Text: 您無法在沒有輸入任何文字的情況下發送聊天訊息!
+  No_Text_After_Change: 您的訊息已被編輯並且無法發送,因為該訊息內容為空
 
 # -------------------------------------------------------------------------------------------------
 # 以下訊息為時間單數與複數相關內容. 請使用 ", " 來分隔兩種形式
