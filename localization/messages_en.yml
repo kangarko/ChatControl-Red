@@ -83,8 +83,8 @@ Channels:
     Notification: "&8[&4-&8] &7Player {player} has left '{channel}' channel."
   
   Set: 
-    Usage: "<channel> <mode/none> <player>"
-    Description: "Set or unset a channel for player, bypassing max read limits."
+    Usage: "<player> <channel> <mode/none>|<anotherChannel> <anotherMode>|etc."
+    Description: "Bulk set channel & modes, bypassing limits."
     Success: "Set {0} channel for {1} to {2} mode."
     Success_Remove: "Remove {0} channel from {1}."
     Usages: 
@@ -576,6 +576,7 @@ Commands:
     Cannot_Command: "You cannot perform this command while you are muted."
     Cannot_Chat: "You cannot type to chat while you are muted."
     Cannot_Place_Signs: "Cannot place signs while the chat or you are muted!"
+    Cannot_Rename_Items: "Cannot rename items while the chat or you are muted!"
     Cannot_Chat_Player_Muted: "You cannot type to channel while you, the channel or server is muted."
     Cannot_Chat_Channel_Muted: "You cannot talk in channel {0} as it is muted."
 
