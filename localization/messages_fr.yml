@@ -83,8 +83,8 @@ Channels:
     Notification: '&8[&4-&8] {player} &7a quitté le salon ''{channel}''.'
     
   Set:
-    Usage: <salon> <mode/none> <joueur>
-    Description: "Définir ou retirer le salon d'un joueur, outrepassant la limite de salons en mode lecture."
+    Usage: "<joueur> <salon> <mode/none>|<secondSalon> <secondMode>|etc"
+    Description: "Définir ou retirer un ou plusieurs salons pour un joueur, outrepassant les limites prédéfinies."
     Success: Salon {0} définit sur le mode {2} pour {1}.
     Success_Remove: "{1} a été retiré du salon {0}."
     Usages:
@@ -584,6 +584,7 @@ Commands:
     Cannot_Command: Vous ne pouvez pas éxécuter cette commande lorsque vous êtes muté(e).
     Cannot_Chat: Vous ne pouvez pas écrire dans le chat lorsque vous êtes muté(e).
     Cannot_Place_Signs: Vous ne pouvez pas placer de pancarte lorsque le chat est muté !
+    Cannot_Rename_Items: "Vous ne pouvez pas renommer d'item lorsque le chat ou vous-même êtes muté(e)."
     Cannot_Chat_Player_Muted: Vous ne pouvez pas écrire dans le salon lorsque vous, le salon ou le serveur, êtes muté(e).
     Cannot_Chat_Channel_Muted: Vous ne pouvez pas écrire dans le salon {0} car il est muté.
 
