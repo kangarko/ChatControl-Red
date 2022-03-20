@@ -240,7 +240,7 @@ Commands:
     - '&f{lines}'
     - '{remaining_space}'
     - '&8{chat_line}'
-    Chat_Body_Line_Color: GRAY
+    Chat_Body_Line_Color: YELLOW
     Type: '(bungee ? ''全分流'' : ''伺服器'') + ''公告'''
     Success: 您的公告訊息已成功發送!
     Success_Network: 您的公告訊息已成功發送到 {0} 伺服器內
