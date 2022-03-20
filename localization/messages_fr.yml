@@ -231,7 +231,7 @@ Commands:
     - '&f{lines}'
     - '{remaining_space}'
     - '&8{chat_line}'
-    Chat_Body_Line_Color: GRAY
+    Chat_Body_Line_Color: YELLOW
     Type: '(bungee ? ''NETWORK '' : '''') + ''ANNONCE'''
     Success: Votre annonce a été envoyée.
     Success_Network: Vous annonce a été envoyée au serveur {0}.
@@ -512,6 +512,7 @@ Commands:
     Description: Gérer les messages des joueurs.
     Usages:
     - '/{label} {sublabel} list <type> &7- Afficher tous les messages.'
+    - "/{label} {sublabel} list <type> <groupe> &7- Afficher les messages d'un groupe spécifique."
     - '/{label} {sublabel} toggle <type> <groupe> &7- Activer/Désactiver les messages.'
     - '/{label} {sublabel} info <type> <groupe> &7- Afficher les informations du message.'
     - '/{label} {sublabel} reload &7- Recharger les messages.'
@@ -535,17 +536,10 @@ Commands:
     - '/{label} Salut tout le monde ! &7- Envoyer un message formatté.'
 
   Migrate:
-    Usage: <chc8/import/export/essentials>
-    Description: Copier les données de ChatControl 8, MySQL ou du fichier data.db.
+    Usage: <chc8>
+    Description: Copier les données de ChatControl Pro.
     Usages:
-    - '/{label} {sublabel} chc8 &7- Migrer les données depuis ChatControl 8.'
-    - '/{label} {sublabel} import &7- Importer les données MySQL dans les données locales du fichier data.db.'
-    - '/{label} {sublabel} export &7- Exporter les données du fichier data.db dans MySQL.'
-    - '/{label} {sublabel} essentials &7- Importer les données du fichier usermap.csv d''Essentials.'
-    - ''
-    - '&4&lATTENTION: &cDe lourds fichiers data.db ou MySQL peuvent bloquer'
-    - 'le serveur pendant ~3-10 minutes. Ignorez les rapports de crash,'
-    - 'la migration ne sera pas interrompue.'
+    - '/{label} {sublabel} chc8 &7- Copier les données de ChatControl Pro.'
   
   Motd:
     Usage: '[joueur]'
