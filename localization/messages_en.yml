@@ -230,7 +230,7 @@ Commands:
     - "&f{lines}"
     - "{remaining_space}"
     - "&8{chat_line}"
-    Chat_Body_Line_Color: GRAY
+    Chat_Body_Line_Color: YELLOW
     Type: "(bungee ? 'NETWORK ' : '') + 'ANNOUNCEMENT'"
     Success: "Your announcement has been sent."
     Success_Network: "Your announcement was sent to the {0} server."
@@ -511,6 +511,7 @@ Commands:
     Description: "Manage player messages."
     Usages: 
     - "/{label} {sublabel} list <type> &7- Print all messages."
+    - "/{label} {sublabel} list <type> <group> &7- Print messages from a group."
     - "/{label} {sublabel} toggle <type> <group> &7- Switch message on/off."
     - "/{label} {sublabel} info <type> <group> &7- Print message information."
     - "/{label} {sublabel} reload &7- Reload all messages."
@@ -535,9 +536,9 @@ Commands:
 
   Migrate:
     Usage: "<chc8>"
-    Description: "Migrate data from ChatControl, or MySQL and data.db."
+    Description: "Migrate data from ChatControl Pro."
     Usages:
-    - "/{label} {sublabel} chc8 &7- Migrate data from ChatControl 8."
+    - "/{label} {sublabel} chc8 &7- Migrate data from ChatControl Pro."
   
   Motd:
     Usage: "[player]"
