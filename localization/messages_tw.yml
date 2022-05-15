@@ -11,12 +11,14 @@
 #
 #   2) 如果您想要屏蔽本插件的任何訊息,您可以將聊天訊息更改為 'none' 來進行屏蔽
 #
-#   3) 如果您要使用任何 UNICODE 字元 (例如: 笑臉、表情符號等等...),請將本文件以 UTF-8 編碼方式進行保存. 
+#   3) Add @noprefix, at the start of any message to remove the hardcoded prefix.
+#
+#   4) 如果您要使用任何 UNICODE 字元 (例如: 笑臉、表情符號等等...),請將本文件以 UTF-8 編碼方式進行保存. 
 #      - 教學請看: https://github.com/kangarko/ChatControl-Red/wiki/Use-Right-Encoding
 #
-#   4) 本插件支援使用 JSON 格式. 如要使用,請您在您要使用的訊息前面加上 [JSON]
+#   5) 本插件支援使用 JSON 格式. 如要使用,請您在您要使用的訊息前面加上 [JSON]
 #
-#   5) JAVASCRIPT 注意: 本插件有一部分訊息內容是使用 JavaScript 變數來進行即時編譯.
+#   6) JAVASCRIPT 注意: 本插件有一部分訊息內容是使用 JavaScript 變數來進行即時編譯.
 #      JavaScript 變數通常出現在翻譯文本的雙引號內,例如: "self" 如果您不知道如何使用 JavaScript
 #      編碼,請您不要更動任何括號 () 內的所有變數內容!
 #
