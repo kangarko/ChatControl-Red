@@ -11,12 +11,14 @@
 #
 #   2) TO HIDE any message, set it to 'none'.
 #
-#   3) For UNICODE CHARACTERS (smileys, symbols, ..), save the file in UTF-8 encoding. See
+#   3) Add @noprefix, at the start of any message to remove the hardcoded prefix.
+#
+#   4) For UNICODE CHARACTERS (smileys, symbols, ..), save the file in UTF-8 encoding. See
 #      - https://github.com/kangarko/ChatControl-Red/wiki/Use-Right-Encoding
 #
-#   4) JSON is supported. Prepend the message with [JSON].
+#   5) JSON is supported. Prepend the message with [JSON].
 #
-#   5) JAVASCRIPT NOTICE: Some of our messages are just-in-time compiled with JavaScript.
+#   6) JAVASCRIPT NOTICE: Some of our messages are just-in-time compiled with JavaScript.
 #      Those typically have variables such as "self" inside of them. IF YOU CANNOT CODE
 #      in JavaScript, be extra careful and do not remove () brackets or the variables!
 #
