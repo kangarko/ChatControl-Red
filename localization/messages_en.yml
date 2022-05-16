@@ -272,6 +272,7 @@ Commands:
     Unsigned: "Unsigned"
     Open: "The book has been opened for {0}."
     Give: "Player {0} has received the book as item."
+    Loaded: "Loaded book '{0}' as mail. Send using '/{1} send'."
 
   Clear:
     Usage: "[-a/-c/-s] [reason]"
@@ -637,6 +638,7 @@ Commands:
     Type_Chat: "chat"
     Type_Command: "commands"
     Type_Private_Message: "private messages"
+    Type_Sound_Notify: "sound notifications"
     Type_Mail: "mails"
     Type_Sign: "signs"
     Type_Book: "books"
@@ -756,6 +758,7 @@ Commands:
     Group_Name: "Almost ready! Now, enter what group this rule should belong to, or 'none' if no group. Installed groups: {0}"  
     Invalid_Group: "{prefix_error}Group {0} does not exists!"
     Rule_Creator_Success: "{prefix_success}Congratulations, you've successfuly created a new rule! It was loaded and is ready to operate. Here's how it looks like:"
+    Conversation_Disabled: "&cThe conversation mode is disabled! Set Private_Messages.Auto_Mode to true in settings.yml to enable."
     Conversation_Cancelled: "&cYou haven't entered anything in time so that your conversation has been cancelled."
     Conversation_Abandoned: "&cYour conversation has been abandoned. Your entered data have been lost."
     Rule_Import: "&8[&6Rule Import&8] &7"
@@ -832,6 +835,8 @@ Commands:
     - "/{label} timed special &7- Toggle timed messages group 'special'."
     Usages_Private_Message:
     - "/{label} pm &7- Toggle all private messages."
+    Usages_Sound_Notify:
+      - "/{label} soundnotify &7- Toggle sound notifications."
     Usages_2:
     - "/{label} list &7- List all toggled plugin parts."
     Toggled_Group: "'&7You are ' + (ignoring ? '&2no longer' : '&cnow') + ' &7ignoring {0} message {1}.'"
