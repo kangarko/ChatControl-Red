@@ -273,6 +273,7 @@ Commands:
     Unsigned: Non signé
     Open: Le livre a été ouvert pour {0}.
     Give: '{0} à reçu un livre.'
+    Loaded: "Chargement du livre '{0}' comme mail. Envoyer un email en utilisant '/{1} send'."
 
   Clear:
     Usage: '[-a/-c/-s] [raison]'
@@ -638,6 +639,7 @@ Commands:
     Type_Chat: chat
     Type_Command: commandes
     Type_Private_Message: messages privés
+    Type_Sound_Notify: "notifications sonores"
     Type_Mail: emails
     Type_Sign: pancartes
     Type_Book: livres
@@ -757,6 +759,7 @@ Commands:
     Group_Name: 'C''est presque fini ! Maintenant, spécifiez le groupe auquel appartient cette règle, ou ''none'' si elle n''appartient à aucun groupe. Groupes installés: {0}'
     Invalid_Group: '{prefix_error}Le groupe {0} n''existe pas !'
     Rule_Creator_Success: '{prefix_success}Félicitations, vous avez créer une nouvelle règle ! La règle a été chargée et est désormais fonctionnelle. Voici ce à quoi elle ressemble:'
+    Conversation_Disabled: "&cLe mode de conversation est désactivé ! Définissez 'Private_Messages.Auto_Mode' sur 'true' dans le fichier settings.yml pour activer."
     Conversation_Cancelled: '&cVous n''avez rien entré à temps, la conversation à donc été annulée.'
     Conversation_Abandoned: '&cVotre conversation a été abandonnée. Vos données ont été perdues.'
     Rule_Import: '&8[&6Importation de Règle&8] &7'
@@ -833,6 +836,8 @@ Commands:
     - '/{label} timed special &7- Activer/Désactiver les annonces automatiques appartenant au groupe ''special''.'
     Usages_Private_Message:
     - '/{label} pm &7- Activer/Désactiver les messages privés.'
+    Usages_Sound_Notify:
+      - "/{label} soundnotify &7- Activer/Désactiver les notifications sonores."
     Usages_2:
     - '/{label} list &7- Lister toutes les fonctionnalités activées/désactivées.'
     Toggled_Group: '"&7Vous " + (ignoring ? "&2n''ignorez plus" : "&cignorez désormais") + " &7{0} message {1}."'
