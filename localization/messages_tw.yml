@@ -651,7 +651,7 @@ Commands:
     Type_Chat: 聊天室
     Type_Command: 指令
     Type_Private_Message: 私人訊息
-    Type_Sound_Notify: "sound notifications"
+    Type_Sound_Notify: "聲音通知訊息"
     Type_Mail: 郵件
     Type_Sign: 告示牌
     Type_Book: 書
@@ -771,7 +771,7 @@ Commands:
     Group_Name: '就快要完成了! 現在我們將要決定此聊天規則應該屬於哪個組,如果您沒有打算要分組請您輸入 none 即可. 可用的組: {0}'
     Invalid_Group: '{prefix_error}組 {0} 並不存在!'
     Rule_Creator_Success: '{prefix_success}完成! 新的聊天規則已被創建完畢並且準備運行. 創建完畢的聊天規則:'
-    Conversation_Disabled: "&c規則創建嚮導已被停用! 您可以在 settings.yml 中江 Private_Messages.Auto_Mode 設定為 true in  to enable."
+    Conversation_Disabled: "&c規則創建嚮導已被停用! 您可以在 settings.yml 中將 Private_Messages.Auto_Mode 設定為 true 來啟用"
     Conversation_Cancelled: '&c您由於太久沒有動作,因此已自動為您退出聊天規則創建嚮導'
     Conversation_Abandoned: '&c聊天規則創建嚮導已成功退出,尚未創建完畢的資料已自動移除'
     Rule_Import: '&8[&6聊天規則導入嚮導&8] &7'
@@ -849,7 +849,7 @@ Commands:
     Usages_Private_Message:
     - '/{label} pm &7- 切換是否要查看私人聊天訊息'
     Usages_Sound_Notify:
-      - "/{label} soundnotify &7- Toggle sound notifications."
+      - "/{label} soundnotify &7- 切換是否要聆聽聲音通知"
     Usages_2:
     - '/{label} list &7- 列出當前所有已忽略的內容列表'
     Toggled_Group: '''&7您'' + (ignoring ? ''&2已不再'' : ''&c正在'') + '' &7忽略 {0} 的訊息 {1}.'''
