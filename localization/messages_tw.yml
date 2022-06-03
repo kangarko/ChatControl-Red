@@ -552,7 +552,7 @@ Commands:
 
   Migrate:
     Usage: <chc8>
-    Description: 轉移舊版 ChatControl Pro
+    Description: 轉移舊版 ChatControl Pro 內的資料
     Usages:
     - '/{label} {sublabel} chc8 &7- 轉移 ChatControl Pro 內的資料'
   
