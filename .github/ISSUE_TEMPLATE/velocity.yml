@@ -2,6 +2,7 @@ name: Bug or question for VelocityControl
 description: Report a problem, or ask a question.
 title: "Minecraft Version: Issue Title"
 labels: [velocity]
+assignees: [james090500]
 body:
 
 
