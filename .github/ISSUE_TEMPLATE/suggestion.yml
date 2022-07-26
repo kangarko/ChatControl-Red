@@ -15,6 +15,10 @@ body:
       
       ---
 
+      Before making a new suggestion//feature request, please check that is hasn't already been added [here](https://github.com/kangarko/ChatControl-Red/issues/1)
+      
+      --
+
 
 - type: textarea
   attributes:
