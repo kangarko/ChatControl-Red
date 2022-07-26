@@ -1,0 +1,52 @@
+name: Improvement
+description: Suggest a new idea or a feature.
+title: "Your Suggestion Title"
+labels: []
+body:
+
+
+- type: markdown
+  attributes:
+    value: |
+      Hey there someone on the Internet!
+
+      We're happy to help, because it's our mission. And we'd love to help you, too, so we ask you for a quick favor.
+      Please read each section careful and answer each section accordingly
+      
+      ---
+
+
+- type: textarea
+  attributes:
+    label: "Suggestion Summary"
+    description: |
+      Please enter a brief but clear and concise description of your suggestion/feature request here.
+  validations:
+    required: false
+
+
+- type: textarea
+  attributes:
+    label: "How will it would benefit others? (Not just you, but 1,000s of others people using the same plugin.)"
+    description: |
+      Please be as a clear and concise as possible.
+  validations:
+    required: true
+
+
+- type: textarea
+  attributes:
+    label: "What would happen if we didn't implement this feature? How's your server being affected?"
+    description: |
+      Please be as a clear and concise as possible.
+  validations:
+    required: true
+
+
+- type: textarea
+  attributes:
+    label: "Any other comments?"
+    description: |
+      Do you have any other comments to help us better understand your suggestion?
+  validations:
+    required: false
