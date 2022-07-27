@@ -49,9 +49,9 @@ body:
 
 - type: input
   attributes:
-    label: Version of ProtocolLib
+    label: ProtocolLib Version
     description: |
-      Run `/version ProtocolLib` in the console to find the version of ProtocolLib you are using.
+      Run `/version ProtocolLib` in the console, to get the version of ProtocolLib.
       Ignore this if you are not using ProtocolLib on your server.
     placeholder: "Enter ProtocolLib version here"
   validations:
