@@ -50,7 +50,10 @@ body:
 - type: dropdown
   attributes:
     label: Are you using BungeeCord?
-    description: "This includes bungeecord forks like 'Waterfall' etc."
+    description: |
+      This includes bungeecord forks like 'Waterfall' etc.
+      
+      **If you are using Velocity, use [this](https://github.com/kangarko/ChatControl-Red/issues/new?assignees=james090500&labels=velocity&template=bug_report_velocity.yml&title=Minecraft+Version%3A+Issue+Title) issue template instead.**
     options:
       - 'No'
       - 'Yes'
