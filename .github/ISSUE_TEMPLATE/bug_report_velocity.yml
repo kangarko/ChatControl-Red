@@ -1,5 +1,5 @@
-name: Bug or question for VelocityControl
-description: Report a problem, or ask a question.
+name: Velocity: Bug Report
+description: Report a problem, issue or a bug.
 title: "Minecraft Version: Issue Title"
 labels: [velocity]
 assignees: [james090500]
@@ -47,12 +47,23 @@ body:
   validations:
     required: true
 
+- type: input
+  attributes:
+    label: Version of ProtocolLib
+    description: |
+      Run `/version ProtocolLib` in the console to find the version of ProtocolLib you are using.
+      Ignore this if you are not using ProtocolLib on your server.
+    placeholder: "Enter ProtocolLib version here"
+  validations:
+    required: false
 
 - type: input
   attributes:
     label: Error log (if applicable)
     description: If you are reporting a console error, upload any relevant log excerpts to either https://paste.gg or https://gist.github.com, save and the paste the link in this box.
     placeholder: "Paste link here"
+  validations:
+    required: false
 
 - type: textarea
   attributes:
