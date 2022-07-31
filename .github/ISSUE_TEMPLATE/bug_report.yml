@@ -30,9 +30,7 @@ body:
   attributes:
     label: Are you using BungeeCord?
     description: |
-      This includes bungeecord forks like 'Waterfall' etc.
-      
-      **If you are using Velocity, use [this](https://github.com/kangarko/ChatControl-Red/issues/new?assignees=james090500&labels=velocity&template=bug_report_velocity.yml&title=Minecraft+Version%3A+Issue+Title) issue template instead.**
+      If you are using Velocity, use [this](https://github.com/kangarko/ChatControl-Red/issues/new?assignees=james090500&labels=velocity&template=bug_report_velocity.yml&title=Minecraft+Version%3A+Issue+Title) issue template instead.
     options:
       - 'No'
       - 'Yes'
@@ -54,7 +52,7 @@ body:
       Run `/chc debug` in the console, then a debug ZIP file will be generated.
       
       **If you want to keep your settings private** Upload this ZIP file to [ufile.io](https://ufile.io) then email the link to support@mineacademy.org
-      If you don't mind sending it publicly, simply upload the ZIP file in the space below. **Your database information from mysql.yml will be excluded.**
+      **Your database information from mysql.yml will be excluded.**
     placeholder: |
       Click here then drag the ZIP file here to upload it.
   validations:
@@ -64,6 +62,6 @@ body:
 - type: textarea
   attributes:
     label: Information about the issue/bug
-    description: Please be as a clear and concise as possible.
+    description: How can we reproduce your issue?
   validations:
     required: true
