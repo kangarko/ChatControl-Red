@@ -9,35 +9,14 @@ body:
 - type: markdown
   attributes:
     value: |
-      Hey there someone on the Internet!
-
-      We're happy to help, because it's our mission. And we'd love to help you, too, so we ask you for a quick favor.
-      Please read each section careful and answer each section accordingly
-      
-      ---
-
-      ### Regarding Issue titles, edit them as shown below
+      ### Edit the issue title above as follows:
       
       Example:
       **Wrong title:** Chat event loses its format
-      **Correct title:** 1.17.1: Chat event loses its format
+      **Correct title:** 1.19.1: Chat event loses its format
 
       _Don't put "Paper" or "Spigot" etc. in your title._
-      
-      ---
-
-- type: input
-  id: contact
-  attributes:
-    label: Minecraft Version
-    description: |
-      What version of minecraft is the server running on?
-      If you are unsure, run the command ``/version`` to find out.
-    placeholder: "1.18.2"
-  validations:
-    required: true
-
-
+     
 - type: dropdown
   attributes:
     label: Are you using MySQL?
@@ -49,16 +28,6 @@ body:
 
 - type: input
   attributes:
-    label: ProtocolLib Version
-    description: |
-      Run `/version ProtocolLib` in the console, to get the version of ProtocolLib.
-      Ignore this if you are not using ProtocolLib on your server.
-    placeholder: "Enter ProtocolLib version here"
-  validations:
-    required: false
-
-- type: input
-  attributes:
     label: Error log (if applicable)
     description: If you are reporting a console error, upload any relevant log excerpts to either https://paste.gg or https://gist.github.com, save and the paste the link in this box.
     placeholder: "Paste link here"
@@ -67,7 +36,7 @@ body:
 
 - type: textarea
   attributes:
-    label: '"/chc debug" output'
+    label: '"/chc debug" output (strongly recommended)'
     description: |
       Run `/chc debug` in the console, then a debug ZIP file will be generated.
       
@@ -78,21 +47,9 @@ body:
   validations:
     required: false
 
-
 - type: textarea
   attributes:
     label: Information about the issue/bug
-    description: Please be as a clear and concise as possible.
+    description: How can we reproduce your issue?
   validations:
     required: true
-
-
-- type: checkboxes
-  attributes:
-    label: Are you using the latest version of the plugin?
-    description: |
-      Including dependencies like ProtocolLib, Vault.
-      (Unless told to use an older version of a dependency, due to breaking changes)
-    options:
-      - label: Yes, I am using the latest version
-        required: true
