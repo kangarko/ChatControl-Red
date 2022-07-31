@@ -15,7 +15,7 @@ body:
     description: |
       Please enter a brief but clear and concise description of your suggestion/feature request or comments here.
   validations:
-    required: false
+    required: true
 
 - type: textarea
   attributes:
