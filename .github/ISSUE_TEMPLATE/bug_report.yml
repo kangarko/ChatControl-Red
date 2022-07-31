@@ -1,0 +1,111 @@
+name: Bug Report
+description: Report a problem, issue or a bug.
+title: "Minecraft Version: Issue Title"
+labels: []
+body:
+
+
+- type: markdown
+  attributes:
+    value: |
+      Hey there someone on the Internet!
+
+      We're happy to help, because it's our mission. And we'd love to help you, too, so we ask you for a quick favor.
+      Please read each section careful and answer each section accordingly
+      
+      ---
+
+      ### Regarding Issue titles, edit them as shown below
+      
+      Example:
+      **Wrong title:** Chat event loses its format
+      **Correct title:** 1.17.1: Chat event loses its format
+
+      _Don't put "Paper" or "Spigot" etc. in your title._
+      
+      ---
+
+- type: input
+  id: contact
+  attributes:
+    label: Minecraft Version
+    description: |
+      What version of minecraft is the server running on?
+      If you are unsure, run the command ``/version`` to find out.
+    placeholder: "1.18.2"
+  validations:
+    required: true
+
+
+- type: dropdown
+  attributes:
+    label: Are you using MySQL?
+    options:
+      - 'No'
+      - 'Yes'
+  validations:
+    required: true
+
+
+- type: dropdown
+  attributes:
+    label: Are you using BungeeCord?
+    description: |
+      This includes bungeecord forks like 'Waterfall' etc.
+      
+      **If you are using Velocity, use [this](https://github.com/kangarko/ChatControl-Red/issues/new?assignees=james090500&labels=velocity&template=bug_report_velocity.yml&title=Minecraft+Version%3A+Issue+Title) issue template instead.**
+    options:
+      - 'No'
+      - 'Yes'
+  validations:
+    required: true
+
+- type: input
+  attributes:
+    label: ProtocolLib Version
+    description: |
+      Run `/version ProtocolLib` in the console, to get the version of ProtocolLib.
+      Ignore this if you are not using ProtocolLib on your server.
+    placeholder: "Enter ProtocolLib version here"
+  validations:
+    required: false
+
+- type: input
+  attributes:
+    label: Error log (if applicable)
+    description: If you are reporting a console error, upload any relevant log excerpts to either https://paste.gg or https://gist.github.com, save and the paste the link in this box.
+    placeholder: "Paste link here"
+  validations:
+    required: false
+
+- type: textarea
+  attributes:
+    label: '"/chc debug" output'
+    description: |
+      Run `/chc debug` in the console, then a debug ZIP file will be generated.
+      
+      **If you want to keep your settings private** Upload this ZIP file to [ufile.io](https://ufile.io) then email the link to support@mineacademy.org
+      If you don't mind sending it publicly, simply upload the ZIP file in the space below.
+    placeholder: |
+      Click here then drag the ZIP file here to upload it.
+  validations:
+    required: false
+
+
+- type: textarea
+  attributes:
+    label: Information about the issue/bug
+    description: Please be as a clear and concise as possible.
+  validations:
+    required: true
+
+
+- type: checkboxes
+  attributes:
+    label: Are you using the latest version of the plugin?
+    description: |
+      Including dependencies like ProtocolLib, Vault.
+      (Unless told to use an older version of a dependency, due to breaking changes)
+    options:
+      - label: Yes, I am using the latest version
+        required: true
