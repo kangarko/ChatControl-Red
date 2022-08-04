@@ -9,12 +9,14 @@ body:
 - type: checkboxes
   id: updated-version
   attributes:
-    label: I am using the latest version of the plugin available.
+    label: Are you using the latest version of the plugin available?
     description: Please make sure you use the latest version of the plugin before submitting an issue, otherwise your issue will be ignored.
     options:
       - label: The plugin is up-to-date!
         required: true
-
+        
+        
+        
 - type: markdown
   attributes:
     value: |
