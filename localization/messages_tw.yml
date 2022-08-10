@@ -11,7 +11,7 @@
 #
 #   2) 如果您想要屏蔽本插件的任何訊息,您可以將聊天訊息更改為 'none' 來進行屏蔽
 #
-#   3) Add @noprefix, at the start of any message to remove the hardcoded prefix.
+#   3) 於訊息前加入 @noprefix 來移除 hardcoded 前綴
 #
 #   4) 如果您要使用任何 UNICODE 字元 (例如: 笑臉、表情符號等等...),請將本文件以 UTF-8 編碼方式進行保存. 
 #      - 教學請看: https://github.com/kangarko/ChatControl-Red/wiki/Use-Right-Encoding
@@ -278,11 +278,11 @@ Commands:
     List_Tooltip: '&7文件名稱: &f{0}'
     Page: '&6當前頁數 {0}:'
     Page_Header: 書籍名稱 '{0}' 作者 {1}
-    Unnamed: Unnamed
-    Unsigned: Unsigned
+    Unnamed: 尚未命名
+    Unsigned: 尚未署名
     Open: 已爲玩家 {0} 開啟該已儲存書籍介面
     Give: 玩家 {0} 已成功收到已儲存書籍物品
-    Loaded: "Loaded book '{0}' as mail. Send using '/{1} send'."
+    Loaded: "已將書 '{0}' 作為郵件發送樣板. 您現在可以使用 '/{1} send' 來將該郵件傳送給其他玩家."
 
   Clear:
     Usage: '[-a/-c/-s] [原因]'
@@ -552,7 +552,7 @@ Commands:
 
   Migrate:
     Usage: <chc8>
-    Description: 轉移舊版 ChatControl Pro
+    Description: 轉移舊版 ChatControl Pro 內的資料
     Usages:
     - '/{label} {sublabel} chc8 &7- 轉移 ChatControl Pro 內的資料'
   
@@ -654,7 +654,7 @@ Commands:
     Type_Chat: 聊天室
     Type_Command: 指令
     Type_Private_Message: 私人訊息
-    Type_Sound_Notify: "sound notifications"
+    Type_Sound_Notify: "聲音通知訊息"
     Type_Mail: 郵件
     Type_Sign: 告示牌
     Type_Book: 書
@@ -774,7 +774,7 @@ Commands:
     Group_Name: '就快要完成了! 現在我們將要決定此聊天規則應該屬於哪個組,如果您沒有打算要分組請您輸入 none 即可. 可用的組: {0}'
     Invalid_Group: '{prefix_error}組 {0} 並不存在!'
     Rule_Creator_Success: '{prefix_success}完成! 新的聊天規則已被創建完畢並且準備運行. 創建完畢的聊天規則:'
-    Conversation_Disabled: "&cThe conversation mode is disabled! Set Private_Messages.Auto_Mode to true in settings.yml to enable."
+    Conversation_Disabled: "&c規則創建嚮導已被停用! 您可以在 settings.yml 中將 Private_Messages.Auto_Mode 設定為 true 來啟用"
     Conversation_Cancelled: '&c您由於太久沒有動作,因此已自動為您退出聊天規則創建嚮導'
     Conversation_Abandoned: '&c聊天規則創建嚮導已成功退出,尚未創建完畢的資料已自動移除'
     Rule_Import: '&8[&6聊天規則導入嚮導&8] &7'
@@ -852,7 +852,7 @@ Commands:
     Usages_Private_Message:
     - '/{label} pm &7- 切換是否要查看私人聊天訊息'
     Usages_Sound_Notify:
-      - "/{label} soundnotify &7- Toggle sound notifications."
+      - "/{label} soundnotify &7- 切換是否要聆聽聲音通知"
     Usages_2:
     - '/{label} list &7- 列出當前所有已忽略的內容列表'
     Toggled_Group: '''&7您'' + (ignoring ? ''&2已不再'' : ''&c正在'') + '' &7忽略 {0} 的訊息 {1}.'''
@@ -861,7 +861,7 @@ Commands:
     Type_Quit: 玩家退出訊息
     Type_Kick: 玩家踢出訊息
     Type_Death: 玩家死亡訊息
-    Type_Timed: timed
+    Type_Timed: 定時訊息
     List_Line: '&6隱藏 {0} 的訊息&7:'
     List_Tooltip:
     - '&6點擊此處來停止隱藏該訊息'
@@ -926,13 +926,13 @@ Player:
   Newcomer_Cannot_Command: 您目前還是新進玩家,暫時無法使用此指令!
   Newcomer_Cannot_Write: 您目前還是新進玩家,暫時無法於聊天頻道內發話!
   No_Write_Chat_Permission: 您沒有於聊天頻道 {0} 內寫入訊息的權限
-  No_Channel: You have no channel to write into. Use '/{label_channel} join' to join one.
+  No_Channel: 您還沒有加入任何聊天頻道. 您可以使用 '/{label_channel} join' 來加入一個聊天頻道!
   No_Possible_Channel: 您沒有權限可以加入任何一個聊天頻道內
-  Cannot_Chat_Vanished: You can't write chat messages directly when you're vanished. Use '/{label_channel} send' instead.
+  Cannot_Chat_Vanished: 當您進入隱形模式時您無法直接向聊天頻道發送訊息. 您可以使用 '/{label_channel} send' 來向聊天頻道內傳送訊息
   Kick_Disallowed_Nickname: '&c您的玩家名稱內包含了系統不允許使用的字符或字串'
   Kick_Relogin: '&c請稍候 {0} 秒後再嘗試加入!'
-  Channel_Range_Notification: '''{prefix_warn}There is no one in '' + (hasRange ? ''range'' : ''channel'') + '' you can chat to.'''
-  Already_Conversing: '{0} is already having an ongoing server conversation!'
+  Channel_Range_Notification: '''{prefix_warn}當前'' + (hasRange ? ''區域頻道'' : ''頻道'') + ''內沒有任何人聽得道你說話'''
+  Already_Conversing: '{0} 已經在此聊天頻道內!'
   
 # -------------------------------------------------------------------------------------------------
 # 以下訊息為插件選單相關內容
