@@ -9,7 +9,7 @@ body:
 - type: markdown
   attributes:
     value: |
-      ### Edit the issue title above as follows:
+      ### Please edit the issue title as follows:
       
       Example:
       **Wrong title:** Chat event loses its format
