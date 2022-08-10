@@ -562,6 +562,9 @@ Commands:
     - '/{label} <type> <durée e.g. 1h2m15s> &7- Muter le type spécifié.'
     - '/{label} <type> <durée> [raison] &7- Muter le type spécifié avec la raison donnée.'
     - '&cASTUCE: Le type peut être ''server'', ''channel'' ou ''player''. Pour les salons et les joueurs, veillez à spécifier également le nom du salon ou le pseudonyme du joueur concerné.'
+    Type_Server: "serveur"
+    Type_Player: "joueur"
+    Type_Channel: "salon"
     Server: '&7Ce serveur " + (muted ? "&cest muté" : "&2n''est pas muté") + "&7."'
     Player_Or_Channel: '"&7- &f{0} " + (muted ? "&cest muté(e)" : "&2n''est pas muté(e)") + "&7."'
     Change_Status_Tooltip: '''&6Cliquez pour '' + (muted ? ''dé'' : '''') + ''muter'' + (muted ? '''' : '' pendant 3 minutes'')'
