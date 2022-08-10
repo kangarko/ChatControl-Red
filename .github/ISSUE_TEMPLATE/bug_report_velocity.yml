@@ -16,7 +16,17 @@ body:
       **Correct title:** 1.19.1: Chat event loses its format
 
       _Don't put "Paper" or "Spigot" etc. in your title._
-     
+
+- type: dropdown
+  id: updated-version
+  attributes:
+    label: Are you using the latest version of the plugin available?
+    description: Please make sure you use the latest version of the plugin before submitting an issue, otherwise your issue will be ignored.
+    options:
+      - "Yes, the plugin is up-to-date!"
+  validations:
+    required: true
+
 - type: dropdown
   attributes:
     label: Are you using MySQL?
