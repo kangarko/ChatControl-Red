@@ -122,7 +122,10 @@ Channels:
 # -------------------------------------------------------------------------------------------------
 # 以下訊息為指令相關內容
 # -------------------------------------------------------------------------------------------------
-Commands:
+Commands: 
+  # true = https://i.imgur.com/us88BCT.png
+  # false = https://i.imgur.com/N7jLu7v.png
+  Simple_Help_Design: false
   No_Console: '&c此指令僅能於客戶端執行'
   No_BungeeCord: '&c此功能需要 Bungeecord 才能夠使用'
   No_MySQL: '&c此功能需要您至 settings.yml 內開啟 MySQL 相關選項才能夠使用'

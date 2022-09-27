@@ -120,7 +120,10 @@ Channels:
 # -------------------------------------------------------------------------------------------------
 # Messages related to commands
 # -------------------------------------------------------------------------------------------------
-Commands:
+Commands: 
+  # true = https://i.imgur.com/us88BCT.png
+  # false = https://i.imgur.com/N7jLu7v.png
+  Simple_Help_Design: false
   No_Console: '&cSeuls un joueur peut utiliser cette commande.'
   No_BungeeCord: Vous devez activer BungeeCord afin d'utiliser cette fonctionnalité.
   No_MySQL: Cette commande nécéssite l'activation de MySQL dans le fichier settings.yml.
