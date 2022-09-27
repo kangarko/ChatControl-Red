@@ -121,6 +121,9 @@ Channels:
 # Messages related to commands
 # -------------------------------------------------------------------------------------------------
 Commands: 
+  # true = https://i.imgur.com/us88BCT.png
+  # false = https://i.imgur.com/N7jLu7v.png
+  Simple_Help_Design: false 
   No_Console: "&cYou may only use this command as a player."
   No_BungeeCord: "You need BungeeCord enabled use this feature."
   No_MySQL: "This command requires MySQL enabled in settings.yml."
