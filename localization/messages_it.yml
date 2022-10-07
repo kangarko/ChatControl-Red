@@ -1,232 +1,243 @@
 # !-----------------------------------------------------------------------------------------------!
-#                              Welcome to ChatControl localization file.
+#                                     歡迎來到 ChatControl 翻譯文件
 # !-----------------------------------------------------------------------------------------------!
 #
-#   Here you can customize 99% of all plugin messages and tooltips.
+#   在這裏你可以自定義並且客製化 99% 有關於本插件的所有訊息
 #
-#   1) COLOR CODES are supported with the '&' character.
-#      - For usage, see http://minecraftwiki.net/wiki/Formatting_codes
-#      - When you use them, place quotes around the message like this: "Hello &cworld."
-#       - To use HEX colors, use #123456 syntax: "Hello #123456world."
+#   1) 本插件支援使用 '&' 加上顏色代碼的使用方式
+#      - 如要查看所有顏色代碼,您可以到 http://minecraftwiki.net/wiki/Formatting_codes 進行觀看
+#      - 當您使用顏色代碼來更動插件訊息時請使用雙引號來包住該語句,範例: "Hello &cworld"
+#      - 如您要使用16進制顏色代碼時請參閱以下範例,當使用 #123456 16進制色碼時使用範例: "Hello #123456world"
 #
-#   2) TO HIDE any message, set it to 'none'.
+#   2) 如果您想要屏蔽本插件的任何訊息,您可以將聊天訊息更改為 'none' 來進行屏蔽
 #
-#   3) Add @noprefix, at the start of any message to remove the hardcoded prefix.
+#   3) 於訊息前加入 @noprefix 來移除 hardcoded 前綴
 #
-#   4) For UNICODE CHARACTERS (smileys, symbols, ..), save the file in UTF-8 encoding. See
-#      - https://github.com/kangarko/ChatControl-Red/wiki/Use-Right-Encoding
+#   4) 如果您要使用任何 UNICODE 字元 (例如: 笑臉、表情符號等等...),請將本文件以 UTF-8 編碼方式進行保存. 
+#      - 教學請看: https://github.com/kangarko/ChatControl-Red/wiki/Use-Right-Encoding
 #
-#   5) JSON is supported. Prepend the message with [JSON].
+#   5) 本插件支援使用 JSON 格式. 如要使用,請您在您要使用的訊息前面加上 [JSON]
 #
-#   6) JAVASCRIPT NOTICE: Some of our messages are just-in-time compiled with JavaScript.
-#      Those typically have variables such as "self" inside of them. IF YOU CANNOT CODE
-#      in JavaScript, be extra careful and do not remove () brackets or the variables!
+#   6) JAVASCRIPT 注意: 本插件有一部分訊息內容是使用 JavaScript 變數來進行即時編譯.
+#      JavaScript 變數通常出現在翻譯文本的雙引號內,例如: "self" 如果您不知道如何使用 JavaScript
+#      編碼,請您不要更動任何括號 () 內的所有變數內容!
+#
+#      繁體中文翻譯By 可可半糖去冰OwO
 #
 # !-----------------------------------------------------------------------------------------------!
  
 # -------------------------------------------------------------------------------------------------
-# Messages related to channels
+# 以下訊息為聊天頻道相關內容
 # -------------------------------------------------------------------------------------------------
 Channels:
-  Disabled: '&cI Canali sono disabilitati. Imposta Channels.Enabled su true nel file settings.yml per abilitarli.'
-  Disabled_World: '&cI canali non sono abilitati nel mondo ''{0}''.'
-  No_Channels: '&cNon sono presenti canali. Aggiungine qualcuno su Channels.List nel file settings.yml.'
-  No_Channel: 'Canale ''{0}'' non trovato. Disponibili: {1}'
-  Available: ' &fDisponibili: &7'
-  Header: Canali
+  Disabled: '&c聊天頻道功能已被停用. 您可以在 settings.yml 中的 Channels.Enabled 切換至 true 來啟用'
+  Disabled_World: '&c聊天頻道功能已在世界 ''{0}'' 中被停用'
+  No_Channels: '&c當前沒有任何聊天頻道. 您可以在 settings.yml 中的 Channels.List 來添加一些頻道'
+  No_Channel: '沒有這個頻道: ''{0}''. 可用頻道: {1}'
+  Available: ' &f可用頻道: &7'
+  Header: 聊天頻道
   Header_Alternative:
-  - '&cCanali: &7Ti trovi nel canale: {0}'
+  - '&c聊天頻道: &7您已加入的聊天頻道: {0}'
   Header_Alternative_Channel: '{channel} ({mode})'
   Use_Alternative_Header: false
-  Tooltip_Joined: '&fSei entrato nel canale.'
-  Tooltip_Join_Write: '&2Clicca per accedere e scrivere su questo canale.'
-  Tooltip_Join_Read: '&2Clicca per accedere e leggere su questo canale.'
+  Tooltip_Joined: '&f您已加入此頻道'
+  Tooltip_Join_Write: '&2點擊此處以寫入模式加入此頻道'
+  Tooltip_Join_Read: '&2點擊此處以只讀模式加入此頻道'
   Tooltip_Leave_Write:
   - ''
-  - '&6Attenzione: &fUscirai automaticamente'
-  - '&fdal canale precedente, ''{0}''.'
-  Tooltip_Channels: ' &fI tuoi canali:'
-  Tooltip_Leave: '&cClicca per uscire'
+  - '&6提醒: &f切換至此頻道後會自動將先前的頻道切換為只讀模式'
+  - '&f您當前的寫入頻道 ''{0}'''
+  Tooltip_Channels: ' &f您當前已加入的頻道:'
+  Tooltip_Leave: '&c點擊此處離開該頻道'
   
   Join:
-    Usage: <channel> [mode] [player]
-    Description: Join a chat channel.
+    Usage: <頻道> [模式] [玩家名]
+    Description: 加入聊天頻道
     Usages_Self:
-    - '/{label} {sublabel} <canale> &7- Entra in un canale per scrivere.'
-    - '/{label} {sublabel} <canale> <modalità> &7- Entra in un canale per modalità.'
+    - '/{label} {sublabel} <頻道> &7- 以寫入模式加入某個聊天頻道'
+    - '/{label} {sublabel} <頻道> <模式> &7- 以指定模式加入某個聊天頻道'
     Usages_Others:
-    - '/{label} {sublabel} <canale> <modalità> [player] &7- Entra in un canale per modalità.'
+    - '/{label} {sublabel} <頻道> <模式> [玩家名] &7- 以指定模式將指定玩家加入某個聊天頻道'
     Usages_2:
     - ''
-    - '&cNota: I player entranti usciranno dai vecchi canali se sono pieno.'
+    - '&c提醒: 當玩家所加入的頻道超過系統限制時,嘗試加入的玩家將會離開之前加入的頻道'
     - ''
-    - '&cAttenzione: Dai ai player il permesso chatcontrol.channel.join.{channel}.{mode}'
-    - '&cper la modalità del canale necessaria (lettura o scrittura)'
-    - '&caltrimenti verranno kickati dal canale se provano ad entrare.'
-    Already_Connected: '(self ? ''Sei'' : ''Il player è'') + '' già connesso nel canale in modalità {0}.'''
-    Read_Disabled: 'L''entrata nei canali in lettura è disabilitata.'
-    Leave_Reading_You: ' Sei uscito dalla lettura di &o{0}&7 canali pieni.'
-    Leave_Reading_Other: ' {target} è uscito dalla lettura di &o{0}&7 canali pieni.'
-    Switch_Success: Modalità del canale &o{0} &7cambiata da {1} a {2}.
-    Success: Sei entrato nel canale &o{0} &7in modalità {1}.
-    Notification: '&8[&2+&8] &7{player} è entrato nel canale ''{channel}''.'
+    - '&c警告: 您必須給予玩家 chatcontrol.channel.join.{channel}.{mode}'
+    - '&c相關的頻道和模式(只讀或寫入)權限,否則系統將會在玩家嘗'
+    - '&c試加入聊天頻道時將他們給踢出聊天頻道'
+    Already_Connected: '(self ? ''您'' : ''該玩家'') + ''已經以 {0} 模式下加入了該聊天頻道'''
+    Read_Disabled: 您想加入的聊天頻道只讀模式已被停用
+    Leave_Reading_You: ' &7您可以同時以只讀模式下加入的聊天頻道已達上限,已自動退出 &o{0}'
+    Leave_Reading_Other: ' &7{target} 可以同時以只讀模式下加入的聊天頻道已達上限,已自動退出 &o{0}'
+    Switch_Success: 聊天頻道 &o{0} &7寫入只讀模式已從 {1} 切換至 {2}
+    Success: '&7您現在以 {1} 模式下加入了 &o{0}'
+    Notification: '&8[&2+&8] &7玩家 {player} 加入了 ''{channel}'''
     
   Leave:
-    Usage: <canale> [player]
-    Description: Esci da un canale di chat.
+    Usage: <頻道> [玩家名]
+    Description: 離開聊天頻道
     Usages_Self:
-    - '/{label} {sublabel} <canale> &7- Esci dal canale di chat.'
+    - '/{label} {sublabel} <頻道> &7- 離開指定的聊天頻道'
     Usages_Others:
-    - '/{label} {sublabel} <canale> <player> &7- Forza l''uscita di un player dal canale.'
-    Not_Joined: '(self ? ''Non sei'' : ''{0} non è'') + '' dentro il canale. '' + (channelsPlayerCanLeave.isEmpty() ? ''Non sono presenti canali da cui '' + (self ? ''puoi'' : ''il player può'') + '' uscire.'' : (self ? ''Puoi'' : ''Il player può'') + '' lasciare i canali: {1}'')'
-    No_Channels: '(self ? ''Non sei'' : ''Il player non è'') + '' dentro un canale.'''
-    Switch_To_Reading_V2: '(self ? ''Sei entrato'' : ''{target} è entrato'') + '' nel canale &o{0} &7in lettura. Digita nuovamente il comando per uscire.'''
-    Success_V2: ' (self ? ''Sei'' : ''{target} è'') + '' uscito dal canale &o{0}&7.'''
-    Notification: '&8[&4-&8] &7{player} è uscito dal canale ''{channel}''.'
+    - '/{label} {sublabel} <頻道> <玩家名> &7- 指定某位玩家離開某個聊天頻道'
+    Not_Joined: '(self ? ''您'' : ''玩家 {0}'') + ''當前沒有加入該聊天頻道 '' + (channelsPlayerCanLeave.isEmpty() ? ''目前'' + (self ? ''您'' : ''該玩家'') + ''還沒有加入任何聊天頻道'' : (self ? ''您'' : ''該玩家'') + ''當前已加入的頻道: {1}'')'
+    No_Channels: '(self ? ''您當前'' : ''該玩家當前'') + ''沒有加入任何聊天頻道'''
+    Switch_To_Reading_V2: '(self ? ''您'' : ''{target}'') + ''已將 &o{0} &7切換為只讀模式,您可以再次重複輸入一次指令來確認離開該頻道'''
+    Success_V2: ' (self ? ''您'' : ''{target}'') + ''&7離開了聊天頻道 &o{0}'''
+    Notification: '&8[&4-&8] &7玩家 {player} 離開了 ''{channel}'''
   
   Set:
-    Usage: <player> <canale> <modalità/none>|<altroCanale> <altraModalità>|ecc.
-    Description: Imposta canali e modalità in blocco, bypassando i limiti.
-    Success: Modalità del canale {0} cambiata da {1} a {2}.
-    Success_Remove: Rimuovi il canale {0} da {1}.
+    Usage: <頻道> <模式/none> <玩家名>
+    Description: 設定或取消玩家的聊天頻道,此指令將會繞過最大設定只讀數量上限
+    Success: 已將玩家 {1} 聊天頻道 {0} 的只讀與寫入模式更改為 {2}
+    Success_Remove: 已將玩家 {1} 聊天頻道 {0} 的只讀與寫入模式移除
     Usages:
-    - '/{label} {sublabel} admin write kangarko &7- Fai entrare il player in un canale.'
-    - '/{label} {sublabel} admin none kangarko &7- Rimuovi il player da un canale.'
+    - '/{label} {sublabel} <頻道> <模式> <玩家名> &7- 更改某位玩家指定頻道的只讀與寫入模式'
+    - '/{label} {sublabel} <頻道> <none> <玩家名> &7- 移除某位玩家指定頻道的只讀與寫入模式'
     
   List:
-    Description: List players in chat channels.
+    Description: 列出聊天頻道內所有玩家列表
     Usages:
-    - '/{label} {sublabel} &7- Elenca i canali con player.'
-    - '/{label} {sublabel} <channel> &7- Elenca i player nel canale specificato.'
-    Mute: ''' &8[&7'' + (muted ? ''&cSmuta'' : ''Silenzia'') + ''&8]'''
-    Mute_Tooltip: '''&6Clicca per '' + (muted ? ''smutare0'' : ''silenziare'') + '' questo canale'' + (muted ? '''' : '' per 15 minuti'') + ''.'''
-    Join: ''' &8[&7'' + (joined ? ''&aLeave'' : ''Join'') + ''&8]'''
-    Join_Tooltip: '''&6Clicca per '' + (joined ? ''uscire dal'' : ''entrare nel'') + '' canale.'''
-    No_Players: ' &7- &oNessun player trovato.'
+    - '/{label} {sublabel} &7- 列出所有聊天頻道內的所有玩家'
+    - '/{label} {sublabel} <頻道> &7- 列出某個聊天頻道內的所有玩家'
+    Mute: ''' &8[&7'' + (muted ? ''&c解除靜音'' : ''靜音'') + ''&8]'''
+    Mute_Tooltip: '''&6點擊此處來'' + (muted ? ''解除'' : '''') + ''靜音此聊天頻道'' + (muted ? '''' : ''15分鐘'') + '''''
+    Join: ''' &8[&7'' + (joined ? ''&a離開'' : ''加入'') + ''&8]'''
+    Join_Tooltip: '''&6點擊此處'' + (joined ? ''離開'' : ''加入'') + ''此聊天頻道'''
+    No_Players: ' &7- &o沒有任何玩家在此聊天頻道內'
     Remove: '&8[&4X&8] '
-    Remove_Tooltip: '&6Clicca per far uscire {0} dal canale.'
-    Header: 'bungee ? ''Player nel canale Bungee'' : ''Player nel canale Online'' + '' '''
+    Remove_Tooltip: '&6點擊此處來將玩家 {0} 踢出聊天室'
+    Header: 'bungee ? ''Bungee'' : ''在線'' + ''玩家列表'''
     Line: '&8[{mode_color}{mode}&8] &f{player}'
     
   Send:
-    Usage: <canale> <messaggio>
-    Description: Invia un messaggio in un canale.
+    Usage: <頻道> <訊息>
+    Description: 傳送訊息至指定的某個聊天頻道
   
   Send_As:
-    Usage: <player> <canale> <messaggio>
-    Description: Invia un messaggio in un canale come player.
-    Error: 'Invio come ''{0}'' fallito: {1}'
+    Usage: <玩家名> <頻道> <訊息>
+    Description: 以玩家身份在某個聊天頻道內發送一個聊天訊息
+    Error: '以玩家 ''{0}'' 的身份發送訊息失敗: {1}'
     
 # -------------------------------------------------------------------------------------------------
-# Messages related to commands
+# 以下訊息為指令相關內容
 # -------------------------------------------------------------------------------------------------
 Commands:
   # true = https://i.imgur.com/us88BCT.png
   # false = https://i.imgur.com/N7jLu7v.png
   Simple_Help_Design: false
-  No_Console: '&cComando eseguibile solo in game.'
-  No_BungeeCord: Devi abilitare il BungeeCord per utilizzare questa funzionalità.
-  No_MySQL: Devi abilitare MySQL nel file settings.yml.
-  No_MySQL_BungeeCord: Devi abilitare MySQL per usare questa funzionalità con il BungeeCord.
-  No_Group_Name: 'Specifica il nome del gruppo. Disponibili: {0}'
-  No_Rule_Name: 'Specifica il nome della regola. Disponibili: {0}'
-  No_Message_Name: 'Specifica il gruppo del messaggio. Disponibili: {0}'
-  No_Cached_Player: Specifica il nome di un player (può essere anche offline).
-  No_Reason_While_Silent: 'Non puoi specificare un motivo usando l''opzione silenziosa.'
-  No_Silent_And_Anonymous: 'Non puoi specificare sia l''opzione silenziona che l''anonima.'
-  Console_Missing_Player_Name: Se in utilizzo da console, specifica il nome del player.
-  Compiling_Data: Compilazione informazioni database...
-  Cooldown_Wait: '&cAttendi {duration} secondi per utilizzare nuovamente questo comando.'
-  Invalid_Server: 'Server ''{0}'' non trovato. Disponibili: {1}.'
-  Invalid_Argument: '&cArgomento non trovato. Usa &6/{label} ? &cper maggiori informazioni.'
-  Invalid_Sub_Argument: '&cArgomento non trovato. Usa ''/{label} {0}'' per maggiori informazioni.'
-  Invalid_Argument_Multiline: '&cArgomento non trovato. Usa:'
-  Invalid_Time: 'Tempi stimati come ''3 ore'' o ''15 minuti'': ''{input}'''
-  Invalid_Number: 'Il numero deve essere intero o decimale. Inserito: ''{input}'''
-  Invalid_Material: 'Materiale ''{0}'' non trovato. Visualizza la lista su: https://mineacademy.org/materials'
-  Invalid_Type: 'Tipologia ''{0}'' non trovata. Disponibili: {1}'
-  Invalid_Mode: 'Modalità ''{0}'' non trovata. Disponibili: {1}'
-  Invalid_Tag: 'Tag ''{0}'' non trovata. Disponibili: {1}'
-  Invalid_Channel: 'Canale ''{0}'' non trovato. Disponibili: {1}'
-  Invalid_Group: 'Gruppo ''{0}'' non trovato. Disponibili: {1}'
-  Invalid_Warning_Set: 'Set di avvertimenti ''{0}'' non trovato. Disponibili: {1}'
-  Invalid_Param: 'Parametro ''{0}'' non trovato. Disponibili: {1}'
-  Invalid_Param_Short: 'Parametro {0} non trovato.'
-  Invalid_Rule: 'Regola ''{0}'' non trovata. Disponibili: {1}'
-  Invalid_Message: 'Messaggio ''{0}'' non trovato. Disponibili: {1}'
-  Invalid_Region: Region '{0}' non trovata.
-  Label_Authors: Creato da
-  Label_Description: '&c&lDescrizione:'
-  Label_Optional_Args: argomenti opzionali
-  Label_Required_Args: argomenti obbligatori
-  Label_Usages: '&c&lUtilizzi:'
-  Label_Usage: '&c&lUsa:'
-  Label_Help_For: Guida al comando /{label}
+  No_Console: '&c此指令僅能於客戶端執行'
+  No_BungeeCord: '&c此功能需要 Bungeecord 才能夠使用'
+  No_MySQL: '&c此功能需要您至 settings.yml 內開啟 MySQL 相關選項才能夠使用'
+  No_MySQL_BungeeCord: '&c此功能需要您至 settings.yml 內同時啟用 BungeeCord 和 MySQL 相關選項才能夠使用'
+  No_Group_Name: 請指定組名稱. 可用 {0}
+  No_Rule_Name: '請指定規則名稱. 可用: {0}'
+  No_Message_Name: '請指定訊息組名稱. 可用: {0}'
+  No_Cached_Player: 請指定玩家名稱 (也可以使用離線玩家名稱)
+  No_Reason_While_Silent: 使用預設選項時無法設定其原因
+  No_Silent_And_Anonymous: 無法同時設定預設和匿名選項
+  Console_Missing_Player_Name: 從 CONSOLE 中執行該命令時,您必須指定玩家名稱
+  Compiling_Data: 資料庫訊息讀取中,請稍候...
+  Cooldown_Wait: '&c請您稍候 {duration} 後再次嘗試此指令'
+  Invalid_Server: '沒有名為: ''{0}'' 的伺服器 可用: {1}.'
+  Invalid_Argument: '&c無效的參數,請使用 &6/{label} ? &c來獲取幫助'
+  Invalid_Sub_Argument: '&c無效的參數,請使用 ''/{label} {0}'' 來獲取幫助'
+  Invalid_Argument_Multiline: '&c無效的參數. 用法:'
+  Invalid_Time: '預計時間為 ''3 小時'' 或 ''15 分'', got: ''{input}'''
+  Invalid_Number: '必須使用整數或使用十進位數. Got: ''{input}'''
+  Invalid_Material: '無效的物品ID: ''{0}''. 您可以參閱此處來查看可用物品ID: https://mineacademy.org/materials'
+  Invalid_Type: '無效的 type: ''{0}''. 可用: {1}'
+  Invalid_Mode: '無效的模式: ''{0}''. 可用: {1}'
+  Invalid_Tag: '無效的 tag: ''{0}''. 可用: {1}'
+  Invalid_Channel: '無效的頻道: ''{0}''. 可用: {1}'
+  Invalid_Group: '無效的組: ''{0}''. 可用: {1}'
+  Invalid_Warning_Set: '無效的警告設定: ''{0}''. 可用: {1}'
+  Invalid_Param: '無效的參數: ''{0}'' 可用: {1}'
+  Invalid_Param_Short: '無效的參數: {0}'
+  Invalid_Rule: '無效的規則: ''{0}''. 可用: {1}'
+  Invalid_Message: '無效的訊息: ''{0}''. 可用: {1}'
+  Invalid_Region: 區域檔案 '{0}' 不存在
+  Label_Authors: Translate By CoCo4INOwO Made by
+  Label_Description: '&c&l描述:'
+  Label_Optional_Args: 可選參數
+  Label_Required_Args: 必要參數
+  Label_Usages: '&c&l用法:'
+  Label_Usage: '&c&l用法:'
+  Label_Help_For: 指令 /{label} 幫助
   Label_Subcommand_Description: ' &f/{label} {sublabel} {usage+}{dash+}{description}'
-  Help_Tooltip_Description: '&7Descrizione: &f{description}'
-  Help_Tooltip_Permission: '&7Permesso: &f{permission}'
-  Help_Tooltip_Usage: '&7Usa: &f'
-  Reload_Description: Ricarica la configurazione.
-  Reload_Started: Ricaricando i dati del plugin...
-  Reload_Success: '&6ChatControl {plugin_version} è stato ricaricato.'
-  Reload_Fail: '&4Ops, &cricarica fallita! Guarda la console per maggiori informazioni. Errore: {error}'
-  Reload_File_Load_Error: '&4Ops, &cabbiamo riscontrato un problema nel caricamento dei file dal disco! Guarda la console per maggiori informazioni. ChatControl non è stato ricaricato.'
-  Debug_Description: Comprimi i tuoi settings in un file ZIP per segnalare un bug.
-  Debug_Preparing: '&6Preparazione log di debug...'
-  Debug_Success: '&2{amount} file copiati in debug.zip. I dati del server MySQL sono stati rimossi dal file yml compresso. Caricalo su ufile.io (o direttamente nelle GitHub issues) per farceli visualizzare.'
-  Debug_Copy_Fail: '&cErrore nella copia del file messages_it, processo interrotto. Guarda la console per maggiori informazioni.'
-  Debug_Zip_Fail: '&cCreazione di un file ZIP dei file fallita, guarda la console per maggiori informazioni. Crea un file ZIP della cartella debug/ e caricalo su ufile.io manualmente (o direttamente nelle GitHub issues).'
-  Perms_Description: Elenca i permessi del plugin.
-  Perms_Header: Elenca i permessi di ChatControl
-  Perms_Main: Principale
-  Perms_Permissions: 'Permessi:'
-  Perms_True_By_Default: '&7[true di default]'
-  Perms_Info: '&7Info: &f'
-  Perms_Default: '&7Default? '
-  Perms_Applied: '&7Lo possiedi? '
-  Perms_Yes: '&2si'
-  Perms_No: '&cno'
-  Error: '&4&lOps! &cErrore nell''esecuzione del comando :( Guarda la console per maggiori informazioni e segnala l''errore.'
-  Header_No_Subcommands: '&cNon sono presenti argomenti per questo comando.'
-  Header_No_Subcommands_Permission: '&cNon hai il permesso di visualizzare i subcommand.'
+  Help_Tooltip_Description: '&7描述: &f{description}'
+  Help_Tooltip_Permission: '&7權限: &f{permission}'
+  Help_Tooltip_Usage: '&7用法: &f'
+  Reload_Description: 重新載入插件設定文件
+  Reload_Started: 重新載入插件設定文件中,請稍候...
+  Reload_Success: '&6ChatControl {plugin_version} 已重新載入完畢!'
+  Reload_Fail: '&4錯誤,&cChatControl 重新載入失敗! 請查看 CONSOLE 來取得更多資訊! 錯誤代碼: {error}'
+  Reload_File_Load_Error: '&4錯誤,&c從硬碟中嘗試載入插件設定文件失敗! 請查看 CONSOLE 來取得更多資訊! ChatControl 並沒有被重新載入成功!'
+  Debug_Description: 壓縮歸檔您的設定文件與系統環境來回報錯誤報告
+  Debug_Preparing: '&6正在生成 debug 紀錄文件...'
+  Debug_Success: '&2已成功將 {amount} 個文件內容壓縮歸檔至 debug.zip 內! 關於 MySQL 的敏感登入訊息已自動從 yml 文件內刪除. 你可以放心的將該錯誤報告上傳至 ufile.io 傳送給我們! (或是您也可以使用 GitHub issues)'
+  Debug_Copy_Fail: '&c複製語文文件 messages_en 出現嚴重錯誤! 請查看 CONSOLE 來取得更多資訊!'
+  Debug_Zip_Fail: '&c壓縮失敗，請查看 CONSOLE 來取得更多資訊! 請調整 ZIP debug或是資料夾並且手動通過 ufile.io 傳送給我們! (或是您也可以使用 GitHub issues)'
+  Perms_Description: 列出所有 ChatControl 所擁有的權限節點
+  Perms_Header: 所有 ChatControl 的權限節點
+  Perms_Main: 主要權限
+  Perms_Permissions: '權限節點:'
+  Perms_True_By_Default: '&7[預設權限]'
+  Perms_Info: '&7功能說明: &f'
+  Perms_Default: '&7是否為預設權限: '
+  Perms_Applied: '&7您是否有該權限: '
+  Perms_Yes: '&2是'
+  Perms_No: '&c否'
+  Error: '&4&l錯誤,&c此指令出現問題,請查看 CONSOLE 中的內容並且將此插件資料夾內的 error.yml 回報作者以便修復'
+  Header_No_Subcommands: '&c此指令沒有參數'
+  Header_No_Subcommands_Permission: '&c您沒有查看該子指令的權限'
   Header_Color: GOLD
   Header_Secondary_Color: RED
-  Reloading: in ricarica
-  Disabled: disabilitato
-  Use_While_Null: '&cNon puoi usare questo comando mentre il plugin è {state}.'
-  Incompatible: Questo comando richiede Minecraft {0} o superiore.
-  Toggled_Plugin_Part: '''&7'' + (ignoring ? ''&2Non stai più ignorando'' : ''&cStai ignorando'') + '' &7 {0}.'''
+  Reloading: reloading
+  Disabled: disabled
+  Use_While_Null: '&c當插件處於 {state} 狀態時無法使用該功能或是指令'
+  Incompatible: '&c此功能至少需要在 Minecraft {0} 以上的版本中才能夠使用!'
+  Toggled_Plugin_Part: '''&7您現在'' + (ignoring ? ''&2不在'' : ''&c正在'') + ''&7忽略{0}'''
   Use_Alternative_Header: false
-  Alternative_Header: '&cChatControl Red: &7Usa ''/{0} ?'' per elencare i comandi.'
+  Alternative_Header: '&cChatControl Red: &7輸入 ''/{0} ?'' 來查看所有指令'
   
   Announce:
-    Usage: <tipologia> <messaggio>
-    Description: Invia un annuncio broadcast.
-    Usage_Chat: /{label} {sublabel} chat <messaggio> [server:<server>] [tipologia:raw] &7- Invia un annuncio in broadcast.
-    Usage_Title: /{label} {sublabel} title <titolo|sottotitolo> fadein:<tick> stay:<tick> fadeout:<tick> &7- Invia un messaggio title. Se vuoi inviare solo il sottotitolo, usa '/{label} {sublabel} title |messaggio'.
-    Usage_Actionbar: /{label} {sublabel} actionbar <messaggio> server:creative &7- Invia un messaggio actionbar al server 'creative'.
-    Usage_Bossbar: /{label} {sublabel} bossbar <messaggio> time:<secondi> color:<colore> style:<stile> &7- Invia un messaggio bossbar al server.
-    Usage_Toast: /{label} {sublabel} toast <messaggio> icon:<materiale> &7- Invia un messaggio toast.
-    Usage_Image: /{label} {sublabel} image <filePath> <lineHeight> [messaggio|altroMessaggio]
-    Usage_No_Perms: Non hai un sottopermesso per inviare annunci, come chatcontrol.command.announce.chat.
+    Usage: <類型> <訊息>
+    Description: 發送公告訊息
+    Usage_Chat: /{label} {sublabel} chat <訊息> [server:<伺服器>] [type:raw] &7- 向全伺服器發送公告訊息
+    Usage_Title:
+    - '/{label} {sublabel} title <title|subtitle> fadein:<ticks> stay:<ticks> fadeout:<ticks>'
+    - '&7- 向全伺服器發送標題與副標題公告，如果您只想要發送副標題請使用 /{label} {sublabel} title | 您的訊息'
+    Usage_Actionbar: /{label} {sublabel} actionbar <訊息> [server:<伺服器>] &7- 向某個伺服器傳送工具欄訊息
+    Usage_Bossbar: 
+    - '/{label} {sublabel} bossbar <訊息> time:<秒> color:<顏色> style:<血條風格>'
+    - '&7- 向此伺服器Bossbar訊息至此伺服器'
+    Usage_Toast: /{label} {sublabel} toast <訊息> icon:<物品ID> &7- 向此伺服器傳送成就公告訊息
+    Usage_Image: /{label} {sublabel} image <圖片> <圖片大小> [訊息|子訊息] &7- 向此伺服器發送圖片公告
+    Usage_No_Perms:
+    - '您沒有任何子權限來發送任何類型的公告'
+    - '範例: chatcontrol.command.announce.chat'
     Usage_Footer:
     - ''
-    - '&c&lCONSIGLIO: &cUsa il parametro server:<nomeServer> &cper inviare a un''altro server,'
-    - '&co server:bungee per inviare a tutti i server. Usa type:raw per i messaggi via chat'
-    - '&cper inviare messaggi non formattati (tranne che nel BungeeCord).'
-    - '&7Inviando un messaggio chat, usa il [JSON] &7per inviarlo come JSON raw.'
-    No_Type: Indica il messaggio da annunciare.
-    Empty: Il messaggio non può essere vuoto!
-    Image_Lines: 'Inserisci un valore che indicherà quante linee di chat occuperà l''immagine in larghezza.'
-    Invalid_Image: 'Non è stata trovata un''immagine a ''{0}'''
-    Invalid_Type: 'Non riesce a inviare: ''{0}''.'
-    Invalid_Raw_Type: Tipologia non trovata! Al momento, solo 'raw' è supportato.
-    Invalid_Time_Ticks: Inserisci un valore intero che rappresenti il tempo in tick.
-    Invalid_Time_Seconds: Inserisci un valore intero che rappresenti il tempo in secondi.
-    Invalid_Key: 'Valore ''{0}'' della chiave non valido: {1}. Disponibili: {2}'
-    Invalid_File: 'File {0} non trovato.'
-    Image_Error: 'Errore nell''invio del messaggio da ''{0}'': {1}. Guarda la console per maggiori informazioni.'
-    Invalid_Image_Height: 'L''altezza dell''immagine deve avere un valore tra {0} e {1}.'
+    - '&c&l小貼士:'
+    - '&c1.您可以使用 server:<name> &c參數來將公告訊息傳送至另一伺服器上,'
+    - '&c或是使用 server:bungee 參數來將公告訊息發送到所有 Bungee 伺服器上'
+    - ''
+    - '&c2.您可以使用 type:raw 參數來發送無格式訊息(BungeeCord 除外)'
+    - ''
+    - '&c3.您可以在訊息前加上 [JSON] 參數來發送原始 JSON 訊息'
+    No_Type: 請輸入您要廣播的訊息
+    Empty: 您要廣播的訊息不能為空!
+    Image_Lines: 請輸入一個有效的整數來設定發送圖片的大小
+    Invalid_Image: 找不到名為 '{0}' 的圖片檔案
+    Invalid_Type: '不支援的的圖片格式: ''{0}'''
+    Invalid_Raw_Type: 無效的 type! 目前僅支援 raw 格式
+    Invalid_Time_Ticks: 請輸入一個有效的整數(單位為ticks)
+    Invalid_Time_Seconds: 請輸入一個有效的整數(單位為秒)
+    Invalid_Key: '無效的鍵值''{0}'' 值: {1}. 可用: {2}'
+    Invalid_File: '沒有搜尋要該文件: {0}'
+    Image_Error: '無法公告並且發送名為 ''{0}''的圖片: {1}. 請查看 CONSOLE 來獲取更多訊息!'
+    Invalid_Image_Height: 圖片大小必須要介於 {0} 和 {1} 之間
     Chat_Body:
     - '&8{chat_line}'
     - '<center>&c&l! &6&l{type} &c&l!'
@@ -235,83 +246,85 @@ Commands:
     - '{remaining_space}'
     - '&8{chat_line}'
     Chat_Body_Line_Color: YELLOW
-    Type: '(bungee ? ''ANNUNCIO '' : '''') + ''DEL NETWORK'''
-    Success: Il tuo annuncio è stato inviato.
-    Success_Network: Il tuo annuncio è stato inviato al server {0}.
+    Type: '(bungee ? ''全分流'' : ''伺服器'') + ''公告'''
+    Success: 您的公告訊息已成功發送!
+    Success_Network: 您的公告訊息已成功發送到 {0} 伺服器內
   
   Book:
-    Usage: <new/save/delete/open/list> [nome] [player]
-    Description: Manipola i libri in-game.
+    Usage: <new/save/delete/open/list> [名稱] [玩家名]
+    Description: 控制遊戲內書本
     Usages:
-    - '/{label} {sublabel} new &7- Crea un libro con il comando ''/mail new''.'
-    - '/{label} {sublabel} save <nome> &7- Salva un libro firmato.'
-    - '/{label} {sublabel} delete <nome> &7- Rimuovi un libro salvato.'
-    - '/{label} {sublabel} open <nome> [player] &7- Apri un libro per il player.'
-    - '/{label} {sublabel} give <nome> [player] &7- Dai un libro al player.'
-    - '/{label} {sublabel} list &7- Elenca i libri creati.'
-    Invalid: 'Libro ''{0}'' non trovato. Disponibili: {1}'
-    No_Book: 'Devi specificare un libro. Disponibili: {0}.'
-    Mail_Disabled: Non puoi creare un libro se le mail sono disabilitate. Imposta Mail.Enabled a true nel file settings.yml per abilitarle.
-    New: 'Usa la funzionalità delle mail per creare un libro. Digita ''/{label} {sublabel} save'' per salvarlo quando hai finito. '
-    Save_No_Book: Prima crea un libro con il comando '/{label} {sublabel} new'.
-    Save_Not_Signed: Firma il libro prima di salvarlo.
-    Save_No_Name: Specifica il nome del libro. Verrà inserito nella cartella books/.
-    Save: '''Mail salvata come libro in books/{0}.yml.'' + (override ? '' File sovrascritto.'' : '''')'
-    Save_Error: 'Errore nel salvataggio di {0}: {1}'
-    Delete: Il libro '{0}' è stato rimosso.
-    Delete_Fail: Non è stato possibile eliminare il libro '{0}'.
-    List_Open: '&8[&6A&8]'
-    List_Open_Tooltip: '&6Apri il libro.'
+    - '/{label} {sublabel} new &7- 您可以使用 /mail new 來創建書本郵件'
+    - '/{label} {sublabel} save <名稱> &7- 儲存當前已署名的書籍'
+    - '/{label} {sublabel} delete <名稱> &7- 刪除某個已儲存的書籍'
+    - '/{label} {sublabel} open <名稱> [玩家名] &7- 為某位玩家開啟某個已儲存的書籍'
+    - '/{label} {sublabel} give <名稱> [玩家名] &7- 給予某位玩家某個已儲存的書籍'
+    - '/{label} {sublabel} list &7- 列出目前所有已儲存的書籍'
+    Invalid: '沒有在已儲存的資料中找到該名稱的書籍: ''{0}''. 可用: {1}'
+    No_Book: '請您指定已儲存書本名稱. 可用: {0}'
+    Mail_Disabled: 禁用郵件功能時無法創建書籍. 您可以在 settings.yml 中的 Mail.Enabled 切換至 true 來啟用
+    New: '您可以使用郵件功能創建一本書,當您署名完畢儲存時請使用 /{label} {sublabel} save 來儲存該書籍'
+    Save_No_Book: 請您使用 /{label} {sublabel} 指令來建立一個全新未儲存的書籍
+    Save_Not_Signed: 在儲存他之前您必須完成署名
+    Save_No_Name: 請您指定書籍名稱. 系統將為把該書籍儲存至 books/ 資料夾中
+    Save: '''已成功將此書籍儲存至 books/{0}.yml'' + (override ? '' 舊有書籍資料已更新!'' : '''')'
+    Save_Error: '書籍保存失敗 {0}: {1}'
+    Delete: 已儲存的書籍 '{0}' 已被成功刪除
+    Delete_Fail: 刪除已儲存的書籍 '{0}' 失敗
+    List_Open: '&8[&6O&8]'
+    List_Open_Tooltip: '&6點擊此處開啟此書籍'
     List_Delete: '&8[&cX&8]'
-    List_Delete_Tooltip: '&6Clicca per eliminare.'
-    List_None: Non sono presenti libri nella cartella books/.
-    List_Header: Libri
-    List: ' &7''&f{title}&7'' &7di {author} del {date}'
-    List_Tooltip: '&7Nome file: &f{0}'
-    Page: '&6Pagina {0}:'
-    Page_Header: Libro '{0}' di {1}
-    Unnamed: 'Senza Nome'
-    Unsigned: 'Non firmato'
-    Open: Il libro è stato aperto per il player {0}.
-    Give: '{0} ha ricevuto il libro come item.'
-    Loaded: Libro '{0}' caricato come mail. Inviala usando '/{1} send'.
+    List_Delete_Tooltip: '&6點擊此處刪除'
+    List_None: 當前沒有任何已儲存的書籍
+    List_Header: 已儲存的所有書籍
+    List: ' &7''&f{title}&7'' &7作者 {author} 儲存時間 {date}'
+    List_Tooltip: '&7文件名稱: &f{0}'
+    Page: '&6當前頁數 {0}:'
+    Page_Header: 書籍名稱 '{0}' 作者 {1}
+    Unnamed: 尚未命名
+    Unsigned: 尚未署名
+    Open: 已爲玩家 {0} 開啟該已儲存書籍介面
+    Give: 玩家 {0} 已成功收到已儲存書籍物品
+    Loaded: "已將書 '{0}' 作為郵件發送樣板. 您現在可以使用 '/{1} send' 來將該郵件傳送給其他玩家."
 
   Clear:
-    Usage: '[-a/-c/-s] [motivo]'
-    Description: Ripulisce la chat.
+    Usage: '[-a/-c/-s] [原因]'
+    Description: 清除聊天室
     Usages:
-    - '/{label} {sublabel} [motivo] &7- Ripulisce.'
-    - '/{label} {sublabel} -a(anonimo) &7- Non dice chi ha ripulito la chat.'
-    - '/{label} {sublabel} -c(console) &7- Ripulisce la console.'
-    - '/{label} {sublabel} -s(silenzioso) &7- Non annuncia la pulizia della chat.'
-    Success: '(bungee ? ''La chat del network'' : ''La chat della modalità'') + '' è stata ripulita'' + (anonymous ? '''' : '' da {0}'') + ''.'' + (!reason.isEmpty() ? '' Motivo: {1}'' : '''')'
-    Success_Console: La console è stata ripulita da {0}.
-    Success_Staff: '{prefix_info}La chat è stata ripulita da {0}.'
+    - '/{label} {sublabel} [原因] &7- 清除遊戲內聊天室訊息'
+    - '/{label} {sublabel} -a &7- 清除遊戲內聊天室訊息(將不會顯示操作者)'
+    - '/{label} {sublabel} -c &7- 清除 CONSOLE 內訊息'
+    - '/{label} {sublabel} -s &7- 清除遊戲內聊天室訊息(完全隱藏清除操作訊息)'
+    Success: '(bungee ? ''全分流'' : ''此伺服器'') + ''聊天室內容已被清除!'' + (anonymous ? '''' : '' 操作者: {0}'') + '''' + (!reason.isEmpty() ? '' 原因: {1}'' : '''')'
+    Success_Console: 'CONSOLE 內訊息已被清除! 操作者: {0}'
+    Success_Staff: '{prefix_info}聊天內容已被成功清除 操作者: {0}'
 
   Color:
-    Usage: <color/status/menu> [decorazione] [player]
-    Description: Imposta il colore della chat e la decorazione.
+    Usage: <顏色/status/menu> [格式化代碼] [玩家名]
+    Description: 設定玩家聊天室內所使用顏色文字
     Usages_1:
-    - '/{label} {sublabel} status [player] &7- Indica il tuo colore e decorazione.'
-    - '/{label} {sublabel} menu &7- Apre il menu dei colori e decorazioni.'
-    - '/{label} {sublabel} yellow &7- Imposta il colore della chat su giallo.'
+    - '/{label} {sublabel} status [玩家名] &7- 查看某位玩家當前所使用顏色文字'
+    - '/{label} {sublabel} menu &7- 開啟顏色文字和格式化代碼選單'
+    - '/{label} {sublabel} <顏色> &7- 將預設聊天文字顏色設定為指定顏色'
     Usages_Hex_1:
-    - '/{label} {sublabel} #<hexcode> &7- Imposta il colore della chat a quello HEX indicato.'
+    - '/{label} {sublabel} #<16進制顏色代碼> &7- 將預設聊天文字顏色設定為指定16進制顏色代碼顏色'
     Usages_2:
-    - '/{label} {sublabel} default bold [player] &7- Imposta solo la decorazione.'
-    - '/{label} {sublabel} red bold [player] &7- Imposta il colore e la decorazione.'
-    - '/{label} {sublabel} reset &7- Ripristina il colore.'
-    - '/{label} {sublabel} reset reset [player] &7- Ripristina il colore e la decorazione.'
+    - '/{label} {sublabel} default <格式化代碼> [玩家名] &7- 設定您的格式化代碼'
+    - '/{label} {sublabel} <顏色> <格式化代碼> [玩家名] &7- 設定您的聊天顏色與格式化代碼'
+    - '/{label} {sublabel} reset &7- 重置您的聊天顏色'
+    - '/{label} {sublabel} reset reset [玩家名] &7- 重置您的聊天顏色與格式化代碼'
     Usages_Hex_2:
     - ''
-    - '&c&lCONSIGLIO:&c Visita htmlcolorcodes.com per generare un colore HEX.'
-    Not_Saved: '{0} non ha un colore o una decorazione.'
-    Chat_Color: '&7colore chat'
-    Decoration: decorazione
-    Invalid_Color: '''Colore chat non valido. Sintassi corretta: & color, name'' + (hasHex ? ''o #<hex>'' : '''') + ''. Disponibili: {0}'''
-    Invalid_Decoration: 'Decorazione chat non valida. Usa & o sintassi del nome. Disponibili: {0}'
-    Decoration_Not_Allowed: Inserisci solo un colore.
-    Color_Not_Allowed: Inserisci solo una decorazione.
+    - '&c&l小貼士:&c 您可以透過權限節點 htmlcolorcodes.com 來使用16進制顏色代碼'
+    Not_Saved: '{0} 當前沒有使用任何聊天顏色文字與格式化代碼'
+    Chat_Color: '&7聊天顏色'
+    Decoration: 格式化代碼
+    Invalid_Color: '''無效的顏色代碼,請您輸入一個正確的顏色代碼'' + (hasHex ? ''或#<16進制顏色代碼>'' : '''') + '' 您可使用的顏色: {0}'''
+    Invalid_Decoration: 
+    - '&c無效的格式化代碼,請您輸入一個正確的格式化代碼'
+    - '&c您可使用的格式化代碼: {0}'
+    Decoration_Not_Allowed: 您的第一選項僅能使用顏色代碼
+    Color_Not_Allowed: 您的第二選項僅能使用格式化代碼
     Reset_Color: "Reset chat color for {0}."
     Set_Color: "Set chat color to {1} for {0}."
     Reset_Color_Set_Decoration: "Reset chat color and set decoration to {1} for {0}."
@@ -320,745 +333,741 @@ Commands:
     Set_Color_Reset_Decoration: "Set chat color to {1} and reset decoration for {0}."
 
   Forward:
-    Usage: <server> <comando...>
-    Description: Invia un comando al BungeeCord.
+    Usage: <伺服器> <指令...>
+    Description: 向全部或是某個 BungeeCord 伺服器發送指令
     Usages:
-    - '/{label} {sublabel} <server> <comando...> &7- Invia un comando al BungeeCord o a un altro server nel network.'
-    - '/{label} {sublabel} bungee send all creative &7- Usa il comando ''send all creative'' su BungeeCord.'
-    - '/{label} {sublabel} creative say Ciao! &7- Usa il comando sul server ''creative''.'
+    - '/{label} {sublabel} <伺服器> <指令...> &7- 在 BungeeCord 或是向某個伺服器發送並且於上面執行某個指令'
+    - '/{label} {sublabel} bungee send all creative &7- 向 BungeeCord 發送並執行 send all creative 指令'
+    - '/{label} {sublabel} creative say Hi there! &7- 向名為 creative 的伺服器上發送並執行 say Hi there! 指令'
     - ''
-    - '&c&lNOTA: &cNon puoi inviare comandi ai server vuoti.'
-    Unknown_Server: 'Server non trovato. Disponibili: bungee, {0}'
-    Success: Il comando è stato inviato.
+    - '&c&l提醒: &c您無法對未設定或是未開啟的伺服器發送指令'
+    Unknown_Server: '未知的伺服器. 可用: Bungee, {0}'
+    Success: 指令已被成功送出並執行!
 
   Info:
-    Usage: <param> <player> [argomenti...]
-    Description: Mostra informazioni di debug.
+    Usage: <param> <玩家名> [參數...]
+    Description: 顯示各項調整與玩家相關資料
     Usages:
-    - '/{label} {sublabel} nick <player/nick> &7- Mostra il nick e il ome del player.'
-    - '/{label} {sublabel} newcomer <player> &7- Mostra se il player è nuovo.'
-    - '/{label} {sublabel} cache <player> &7- Mostra le informazioni salvate del player.'
-    - '/{label} {sublabel} variables <player> <message> &7- Mostra le variabili msg.'
+    - '/{label} {sublabel} nick <玩家名/暱稱> &7- 顯示該玩家的玩家名與當前使用暱稱'
+    - '/{label} {sublabel} newcomer <玩家名> &7- 顯示該玩家是否為新進玩家'
+    - '/{label} {sublabel} cache <玩家名> &7- 顯示該玩家的詳細資料'
+    - '/{label} {sublabel} variables <玩家名> <訊息> &7- 解析訊息變數'
     - ''
-    - '&c&lExample:'
-    - '&c/{label} {sublabel} variables Notch &c{player} è nel canale {channel}'
+    - '&c&l範例:'
+    - '&c/{label} {sublabel} variables Notch &c{player} is in channel {channel}'
     - ''
-    - '&c&lCONSIGLIO:&c Puoi usarlo per misurare la performance delle variabili e cercare le cause del lag.'
-    Cache_Player: '&cInfo cache del player {0}'
-    Cache_Location: '&cPosizione: '
-    Cache_Nick: '{0} ha il nickname: {1}.'
-    Newcomer: '''{0} '' + (newcomer ? ''&aè'' : ''&cnon è'') + '' &7un player nuovo.'''
-    Variables_No_Message: Inserisci un messaggio in cui rimpiazziamo le variabili.
-    Variables: '''&7Risultato (in {0}ms): &r'' + (replaced.isEmpty() ? ''&7&oOutput assente.'' : replaced)'
+    - '&c&l小貼士:&c 您可以透過解析訊息變數功能來判定該變數性能並且查找伺服器卡頓原因'
+    Cache_Player: '&c玩家 {0} 的詳細資料'
+    Cache_Location: '&c該玩家資料儲存位置: '
+    Cache_Nick: '玩家 {0} 當前所使用的暱稱為: {1}.'
+    Newcomer: '''玩家 {0} '' + (newcomer ? ''&a是'' : ''&c並不是'') + '' &7新進玩家'''
+    Variables_No_Message: 您必須輸入一個訊息變數
+    Variables: '''&7解析完畢 (執行耗時 {0}ms): &r'' + (replaced.isEmpty() ? ''&7&o輸出為空'' : replaced)'
     
   Ignore:
-    Usage: <player/list> [player]
-    Description: Attiva/Disattiva la visualizzazione dei messaggi.
+    Usage: <玩家名/list> [玩家名]
+    Description: 切換是否要靜音或是查看其他玩家發送的聊天訊息
     Usages:
-    - '/{label} <player> &7- Ignora/Smetti di ignorare un player.'
+    - '/{label} <玩家名> &7- 切換是否要靜音某位玩家發送的聊天訊息'
     Usages_Others:
-    - '/{label} <perChi> <playerDaIgnorare> &7- Fai Ignorare/Smettere di ignorare un player a un altro player.'
+    - '/{label} <被操作玩家> <被靜音玩家> &7- 切換被操作玩家是否要靜音某位玩家發送的聊天訊息'
     Usages_List:
-    - '/{label} list &7- Elenca i player ignorati.'
+    - '/{label} list &7- 顯示您當前已靜音的玩家列表'
     Usages_List_Others:
-    - '/{label} list <player> &7- Elenca i player ignorati dal player indicato.'
-    Not_Ignoring: '(!otherPlayer ? ''Stai'' : ''{0} non sta'') + '' ignorando nessuno.'''
-    List_Header: Player ignorati da {0}
-    List_Tooltip_Stop: '&6Clicca per smettere di ignorare {0}.'
-    Cannot_Ignore_Admin: Non puoi ignorare questo player.
-    Cannot_Ignore_Self: Magari si potesse fare :)
-    Success: '(!otherPlayer ? ''Stai per'' : ''{0} sta per '') + (ignored ? ''&asmettere di'' : ''&cnow'') + '' &7ignorare {1}.'''
-    Cannot_PM: '{0} ti sta ignorando. Nessun messaggio inviato.'
-    Cannot_PM_Ignored: Stai ignorando {0}. Nessun messaggio inviato.
-    Cannot_Sound_Notify_Sender: Non puoi taggare {0} perché lo stai ignorando.
-    Cannot_Sound_Notify_Receiver: Non puoi taggare {0} perché ti sta ignorando.
+    - '/{label} list <玩家名> &7- 顯示某位玩家當前已靜音的玩家列表'
+    Not_Ignoring: '(!otherPlayer ? ''您'' : ''玩家 {0} '') + ''當前沒有靜音任何人'''
+    List_Header: '您當前靜音的玩家: {0}'
+    List_Tooltip_Stop: '&6點擊此處來停止靜音玩家 {0}'
+    Cannot_Ignore_Admin: 您無法靜音該玩家
+    Cannot_Ignore_Self: 您無法靜音自己或是已被您靜音的玩家
+    Success: '(!otherPlayer ? ''您'' : ''玩家 {0}'') + (ignored ? ''&a不再'' : ''&c以'') + ''&7靜音玩家 {1}'''
+    Cannot_PM: '您已被玩家 {0} 靜音,無法向他發送私人聊天訊息'
+    Cannot_PM_Ignored: 您已靜音玩家 {0} ,無法向他發送私人聊天訊息
+    Cannot_Sound_Notify_Sender: 您已靜音玩家 {0},無法標記該玩家
+    Cannot_Sound_Notify_Receiver: 您已被玩家 {0} 靜音,無法標記該玩家
 
   Inspect:
-    Usage: <file/plugin/class> <valore>
-    Description: Ispeziona le classi, i field e i metodi in Java.
+    Usage: <file/plugin/class> <value>
+    Description: 查看 Java 中的 class、methods和fields
     Usages:
-    - '/{label} {sublabel} file <filePath> &7- Mostra il file o le cartelle.'
-    - '/{label} {sublabel} plugin <plugin> &7- Mostra le classi del plugin.'
-    - '/{label} {sublabel} class <classe> &7- Ispeziona i field/metodi nella classe.'
-    Invalid_File: Il file '{0}' non si trova nella cartella root.
-    Illegal_File: Il file '{0}' ha un formato non supportato.
-    Listing_Content: Elencando i contenuti di {0}
-    Listing_File: Elencando il file {0}
-    Plugin_Not_Loaded: Il plugin '{0}' non è caricato!
-    Listing_Classes: Elencando {0} classi
+    - '/{label} {sublabel} file <path> &7- 查看目標文件或是資料夾'
+    - '/{label} {sublabel} plugin <plugin> &7- 查看Java插件的 class'
+    - '/{label} {sublabel} class <class> &7- 查看 Java 中的 class、methods和fields'
+    Invalid_File: 文件 '{0}' 並不存在於您電腦中的 root 目錄內
+    Illegal_File: 文件 '{0}' 的格式不受支援
+    Listing_Content: 文件列表 {0}
+    Listing_File: 文件列表 {0}
+    Plugin_Not_Loaded: 插件 '{0}' 並沒有被伺服器載入!
+    Listing_Classes: 列出 {0} Java Class 文件
     Plugin_Tooltip:
-    - 'Clicca per ispezionare questa classe.'
-    No_Class: 'Classe {0} non trovata'
-    Inspecting_Class: Ispezionando classe {0}
+    - '點擊此處來檢查該 Java class 文件'
+    No_Class: '沒有尋找到名為 {0} 的 Java class 文件'
+    Inspecting_Class: 檢查 {0} Java Class
     Inspect_Tooltip:
-    - '&6Ispeziona {0}'
+    - '&6檢查 {0}'
     Parent: '&3[parent]'
     Open:
-    - '&6Apri {0}'
-    Cut: '&c> &7{0} linee tagliate perché fuori dal limite.'
+    - '&6開啟 {0}'
+    Cut: '&c> &7{0} 此行因超出限額而被裁切'
 
   Log:
-    Usage: <tipologia> [key:valore...]
-    Description: Mostra le ultime comunicazioni di un player.
+    Usage: <type> [key:value...]
+    Description: 查看玩家訊息紀錄
     Usages_1:
-    - '/{label} {sublabel} <tipologia> player:kangarko &7- Mostra i log del player.'
-    - '/{label} {sublabel} <tipologia> before:10m &7- Mostra i log precedenti al tempo indicato.'
-    - '/{label} {sublabel} <tipologia> in:1h &7- Mostra i log nel tempo indicato.'
+    - '/{label} {sublabel} <type> player:[玩家名] &7- 查看某位玩家的紀錄'
+    - '/{label} {sublabel} <type> before:10m &7- 查看某個時間之前的紀錄'
+    - '/{label} {sublabel} <type> in:1h &7- 查看某個時間中時間距離最近的紀錄'
     Usages_Channel:
-    - '/{label} {sublabel} <tipologia> channel:admin &7- Mostra i log nel canale.'
+    - '/{label} {sublabel} <type> channel:admin &7- 查看某個聊天頻道的紀錄'
     Usages_To:
-    - '/{label} {sublabel} <tipologia> to:receiver &7- Mostra messaggi/mail del destinatario.'
+    - '/{label} {sublabel} <type> to:receiver &7- 查看所有郵件與私人訊息的紀錄'
     Usages_2:
-    - '/{label} {sublabel} <tipologia> label:me &7- Mostra i log dei comandi.'
+    - '/{label} {sublabel} <type> label:me &7- 查看指令紀錄'
     Usages_Rule:
-    - '/{label} {sublabel} <tipologia> rule:ip &7- Mostra i log delle corrispondenze delle regole.'
-    - '/{label} {sublabel} <tipologia> group:ads &7- Mostra i log delle corrispondenze del gruppo di regole.'
+    - '/{label} {sublabel} <type> rule:ip &7- 搜尋紀錄內含有輸入關鍵字的所有紀錄'
+    - '/{label} {sublabel} <type> group:ads &7- 查看紀錄內含有輸入關鍵字組的所有紀錄'
     Usages_3:
     - ''
-    - '&c&lCONSIGLIO: &cPuoi usare più parametri key:valore. Per elencare tutti i log, digita ''all'' come tipologia.'
-    - '&c&lCONSIGLIO: &cI parametri ''player'' e ''to'' non supportano i nickname modificati.'
-    No_Logs: '''Nessun log'' + (hasType ? '' per {0}'' : '''') + '' è stato trovato.'''
-    Type_Chat: chat
-    Type_Command: comando
-    Type_Private_Message: messaggio privato
-    Type_Mail: mail
-    Type_Sign: cartello
-    Type_Book: libro
-    Type_Anvil: anvil
-    Tooltip_Channel: '&7Canale: &f{0}'
-    Tooltip_Rule: '''&7Regola: &f'' + (isUnnamed ? ''&oSenza nome.'' : ''{0}'')'
-    Tooltip_Group: '&7Gruppo: &f{0}'
-    Tooltip_Recipients: '&7Recipiente:'
+    - '&c&l小貼士: &c您可以使用多個不同的參數來縮小搜尋範圍來快速找到您所要的資料. 如果您要查詢全部資料請您使用 all 參數來查詢'
+    - '&c&l小貼士: &cplayer 和 to 參數並不支援暱稱'
+    No_Logs: '''沒有尋找到'' + (hasType ? ''有關於{0}'' : '''') + ''任何相關紀錄'''
+    Type_Chat: 聊天
+    Type_Command: 指令
+    Type_Private_Message: 私人訊息
+    Type_Mail: 郵件
+    Type_Sign: 告示牌
+    Type_Book: 書籍
+    Type_Anvil: 鐵砧
+    Tooltip_Channel: '&7聊天頻道: &f{0}'
+    Tooltip_Rule: '''&7Rule: &f'' + (isUnnamed ? ''&oUnnamed.'' : ''{0}'')'
+    Tooltip_Group: '&7組: &f{0}'
+    Tooltip_Recipients: '&7收件者:'
     Tooltip_Click_To_Read:
     - ''
-    - '&6Clicca per leggere.'
-    Sent_Mail: ' &7ha inviato una mail &f''{0}'''
-    Placed_Sign: ' &7ha piazzato un cartello:'
-    Wrote_Book: ''' &7ha scritto un libro &f'' + (isSigned ? ''{title}'' : ''&oNon firmato&r'')'
-    Wrote_Book_Tooltip: '&6Clicca per aprire'
-    Renamed_Item: ' &7rinomina oggetto: &f'
-    No_Logs_Matched: Nessun log corrisponde ai parametri indicati.
-    Listing_Header: '''Elencando '' + (noType ? ''Tutti'' : ''{0}'') + '' i log'''
-    Invalid_Syntax: 'Sintassi errata! Usa: <valore>:<key>. Risultato: {0}'
-    Invalid_Value: Indica un valore valido per '{0}'.
-    Invalid_Key: 'Valore della chiave ''{0}'' non valido: {1}.'
-    Cannot_Use_Channel: Puoi usare solo il parametro 'channel' nella chat.
-    Cannot_Use_Label: Puoi usare solo il parametro 'label' nei comandi.
-    Cannot_Use_To: Puoi usare solo il parametro 'to' nei messaggi privati.
+    - '&6點擊此處來查看'
+    Sent_Mail: ' &7發送出去的郵件 &f''{0}'''
+    Placed_Sign: ' &7放置的告示牌:'
+    Wrote_Book: ''' &7署名的書 &f'' + (isSigned ? ''{title}'' : ''&o尚未署名&r'')'
+    Wrote_Book_Tooltip: '&6點擊此處開啟'
+    Renamed_Item: ' &7被重新命名的物品: &f'
+    No_Logs_Matched: 沒有搜尋到任何在當前給定參數內的紀錄
+    Listing_Header: '''已列出'' + (noType ? ''所有'' : ''{0}'') + ''相關紀錄'''
+    Invalid_Syntax: '錯誤的使用方式! 用法: <value>:<key>. 獲取: {0}'
+    Invalid_Value: 請輸入一個有效的值 '{0}'
+    Invalid_Key: '無效的值''{0}'' 值: {1}'
+    Cannot_Use_Channel: 您僅能在聊天指令紀錄時使用 channel 參數
+    Cannot_Use_Label: 您僅能在搜尋指令紀錄時使用 label 參數
+    Cannot_Use_To: 您僅能在搜尋私人訊息紀錄時使用 to 參數
     
   List:
-    Usage_Server: '[server]'
-    Description: Elenca i player online.
-    Usage_1: '''/{label} &7- Elenca i player online'' + (bungee ? '' su tutti i server'' : '''') + ''.'''
-    Usage_2: /{label} survival &7- Elenca i player nel server 'survival'.
-    Header: '''Elencando i player '' + (bungee ? ''del network'' : ''online'') + '' '''
+    Usage_Server: '[伺服器]'
+    Description: 查看某個指定伺服器或全部分流內上線的所有玩家
+    Usage_1: '''/{label} &7- 查看所有'' + (bungee ? ''分流'' : '''') + ''伺服器內的玩家'''
+    Usage_2: /{label} survival &7- 差看 'survival' 伺服器內的所有在線玩家
+    Header: '''當前'' + (bungee ? ''所有分流'' : ''伺服器'') + ''內所有在線玩家'''
     
   Mail:
     Usage: <new/send/inbox/sent>
-    Description: Gestisci le mail del game.
+    Description: 發送或管理所收到的所有郵件
     Usages:
-    - '/{label} new &7- Crea una nuova mail.'
-    - '/{label} send <player/altroPlayer> &7- Invia una mail.'
-    - '/{label} autor <time/view/off> &7- Imposta un auto-responder per le mail.'
-    - '/{label} inbox &7- Leggi le mail in arrivo.'
-    - '/{label} archive &7- Leggi le mail inviate da te.'
+    - '/{label} new &7- 創建一個全新的郵件'
+    - '/{label} send <玩家名/另位玩家> &7- 向某位玩家傳送郵件'
+    - '/{label} autor <time/view/off> &7- 設定自動回覆郵件'
+    - '/{label} inbox &7- 查看並閱讀您的收件匣'
+    - '/{label} archive &7- 查看您所發送的郵件副本'
     - ''
-    - '&c&lCONSIGLIO: &cIl tempo è in formato leggibile ad esempio ''1 ora'' ecc.'
-    No_Pending: Prima crea una mail con '/{label} new'.
-    No_Subject: La tua mail non indica un oggetto. Devi firmare il tuo item bozza prima.
-    No_Recipients: Specifica il destinatario separato da  '|', o 'online' per inviarla a tutti i player online, o 'all' per inviarla a tutti i player nel database.
-    Autoresponder_Usage: Inserisci 'view' per mostrare il tuo auto-responder, 'off' per disabilitarlo o scrivi qualcosa come '3 days' per rinnovarne una esistente o usa la tua bozza come nuova.
-    Autoresponder_Disabled: Non hai impostato un auto-responder.
-    Autoresponder_Removed: 'L''auto-responder della tua mail è stato rimosso.'
-    Autoresponder: Il tuo auto-responder '{title}' scade il {date}. Digita '/{label} {0} <tempo>' per rinnovarlo.
-    Autoresponder_Missing: Hai provato a impostare un tempo ma non stai creando una bozza né possiedi un auto-responder precedente. Crea una nuova bozza prima.
-    Autoresponder_Updated: Hai aggiornato la scadenza del tuo auto-responder a {0}.
-    Autoresponder_Set: Impostato un nuovo auto-responder che scade il {0}.
-    Autoresponder_Invalid_Time: Errore di sintassi, inserisci un tempo come '1 minute' o '3 days', '{0}' non è valido.
-    Delete_Invalid: Mail non trovata, potrebbe essere stata rimossa.
-    Delete_Sender: La mail selezionata è stata rimossa. Ricorda che i destinatari saranno comunque in grado di leggerla.
-    Delete_No_Recipient: L'ID univoco del destinatario non è stato inserito.
-    Delete_Invalid_Recipient: 'ID destinatario {0} non trovato.'
-    Delete_Recipient: La mail selezionata è stata eliminata.
-    Hand_Full: Rimuovi l'oggetto dalla mano principale prima di scrivere una mail.
-    Already_Drafting: Hai già un item bozza nel tuo inventario.
-    Item_Title: Click Destro per creare una bozza della mail
+    - '&c&l小貼士: &c時間參數必須使用例如 1 hour 這樣的格式'
+    No_Pending: 您必須要先使用 /{label} new 來創建一個全新的郵件才可發送
+    No_Subject: 您的郵件尚未署名,請您署名後再嘗試發送
+    No_Recipients: 您可以使用 | 來分隔不同的收件人姓名,或是使用 online 向當前在線的所有玩家發送郵件,又或是使用 all 向當前資料庫內所有有紀錄玩家發送郵件
+    Autoresponder_Usage: 使用 view 參數來查看您已開啟的自動回覆排程,使用 off 參數來停用或是更改排程時間,例如使用 3 days 來更新現有的自動回覆排程
+    Autoresponder_Disabled: 您當前沒有啟用任何自動回覆郵件排程
+    Autoresponder_Removed: 您的自動回覆排程已被停用
+    Autoresponder: 您 {title} 的自動回覆排程將在 {date} 過期. 請您使用 /{label} {0} <時間> 來更新該排程器
+    Autoresponder_Missing: 請您先創建一個新的草稿文件才有辦法使用自動回覆排程
+    Autoresponder_Updated: 您的自動回覆排程時間已被更新至 {0}
+    Autoresponder_Set: 設定一個將會於 {0} 後過期的自動回覆排程器
+    Autoresponder_Invalid_Time: 語法錯誤,可使用時間單位如 1 minute 或 3 days,取得 '{0}' 並更改為
+    Delete_Invalid: 沒有尋找到該郵件,他可能已被刪除
+    Delete_Sender: 您選定的郵件已被成功刪除,但收件人依然可以查看該郵件
+    Delete_No_Recipient: 您未提供收件人的唯一用戶名稱
+    Delete_Invalid_Recipient: '沒有尋找到該收件人名稱: {0}'
+    Delete_Recipient: 您選定的郵件已被成功刪除
+    Hand_Full: 在您創建一個新郵件前請您先清空您手中的物品
+    Already_Drafting: 您的背包內已有一個尚未創建完畢的郵件
+    Item_Title: 尚未創建完畢的新郵件
     Item_Tooltip:
-    - '&r&7Clicca col mouse per scartare.'
-    New_Usage: '(noPendingMail ? ''Click Destro per creare una bozza della mail.'' : ''Click Destro per continuare a scrivere la mail.'') + '' Droppa l''item per scartare.'''
-    Reply_Usage: Click destro per preparare una risposta a {0}. Clicca su 'Fatto' per inviare. Droppa l'item per scartare.
-    Open_Tooltip: '&6Clicca per aprire.'
-    Open_Tooltip_Script: 'read ? ''&7Hai letto questa mail {0}.'' : ''&6Non hai letto questa mail.'''
-    Reply_Tooltip: '&6Clicca per rispondere.'
-    Forward_Tooltip: '&6Clicca per inoltrare.'
-    Delete_Tooltip: '&6Clicca per eliminare.'
-    Inbox_Line: ' &r{subject} &7da {sender} &7il {date}'
-    No_Incoming_Mail: Non hai ricevuto mail.
-    Inbox_Header: Email inviate a te
-    Archive_Recipients_Tooltip: '&7Destinatari:'
-    Archive_Read_Tooltip: '''{0}&7: '' + (hasOpened ? ''&2ha letto'' : ''&7non ha letto'')'
-    Archive_Line: ' &r{subject} &7a {recipients} &7il {date}'
-    Archive_Recipient: destinatari
-    Archive_No_Mail: Non è presente un archivio delle mail inviate.
-    Archive_Header: Email inviate da te
-    Send_Fail_Ignore: Non è stato possibile inviare una mail a {0} perché il player ti sta ignorando.
-    Send_Fail_Toggle: Non è stato possibile inviare una mail a {0} perché il player ha disattivato la ricezione di mail.
-    Send_Success: La mail è stata inviata!
-    Draft_Discarded: Le tue mail in corso sono state scartate.
-    Forward_Recipients: '{prefix_question}Inserisci i nomi dei player separati da | che riceveranno la mail in chat, o digita ''exit'' per annullare.'
-    Forward_Recipients_Invalid: '{prefix_error}Sintassi errata! Specifica i nomi dei destinatari, ad esempio kangarko|altroPlayer|terzoPlayer. {0} non valido.'
-    Forward_Success: '{prefix_success}La tua mail è stata inoltrata.'
-    Ready: La tua mail è pronta per l'invio. Usa '/mail send' per inviarla.
-    Draft_Saved: Hai salvato la mail come bozza. Firma il libro con il titolo come linea dell'oggetto quando vuoi inviarla. Usa /mail new per ri-aprirla.
-    Join_Notification: Hai ricevuto nuove mail ({0}). Usa '/mail inbox' per leggerle.
-    New_Notification: '{prefix_warn}{0} ti ha inviato una nuova mail. Usa ''/mail inbox'' per leggerla.'
+    - '&r&7點擊此處來取消郵件創建'
+    New_Usage: '(noPendingMail ? ''右鍵點擊來撰寫新的郵件'' : ''右鍵點擊來繼續撰寫尚未完成的郵件'') + '' 丟棄該物品來取消撰寫'''
+    Reply_Usage: 對物品使用右鍵來開始撰寫回覆給 {0} 的郵件內容,點擊署名來發送回覆郵件,丟棄該物品來取消撰寫
+    Open_Tooltip: '&6點擊此處開啟'
+    Open_Tooltip_Script: 'read ? ''&7已看過 {0}'' : ''&4新郵件!'''
+    Reply_Tooltip: '&6點擊此處回信'
+    Forward_Tooltip: '&6點擊此處轉發'
+    Delete_Tooltip: '&6點擊此處刪除'
+    Inbox_Line: ' &r{subject} &7寄件者: {sender} &7寄件時間: {date}'
+    No_Incoming_Mail: 您的收件匣是空的
+    Inbox_Header: 收件匣
+    Archive_Recipients_Tooltip: '&7收件人:'
+    Archive_Read_Tooltip: '''{0}&7: '' + (hasOpened ? ''&2已讀'' : ''&7未讀'')'
+    Archive_Line: ' &r{subject} &7收件人列表: 共有 {recipients} &7寄件時間: {date}'
+    Archive_Recipient: 個收件人
+    Archive_No_Mail: 您沒有已發送的郵件暫存
+    Archive_Header: 寄件備份
+    Send_Fail_Ignore: 玩家 {0} 靜音了您,因此您無法向他發送郵件
+    Send_Fail_Toggle: 玩家 {0} 關閉了郵件接收功能,因此您無法向他發送郵件
+    Send_Success: 郵件發送成功!
+    Draft_Discarded: 郵件創建已被取消
+    Forward_Recipients: 
+    - '輸入轉發玩家名稱或是使用 | 來分隔多位玩家名稱來發送轉發郵件'
+    - '{prefix_question}如想取消請您輸入 exit 來取消'
+    Forward_Recipients_Invalid: '{prefix_error}語法錯誤! 指定多收件人格式 kangarko|anotherPlayer|thirdPlayer 獲取: {0}'
+    Forward_Success: '{prefix_success}您的郵件已被成功轉發'
+    Ready: 您的郵件已準備好進行發送. 您可以使用 /mail send 指令來傳送給其他玩家
+    Draft_Saved: 已將您的郵件暫存為草稿,如您想要完成最終編輯,請您在書中署名來完成. 您可以使用 /mail new 來再次開啟
+    Join_Notification: 您的信箱內有 {0} 個新郵件. 您可以使用 /mail inbox 來進行查看
+    New_Notification: '{prefix_warn}{0} 向您傳送了一個新的郵件. 您可以使用 /mail inbox 來進行查看'
 
   Message:
-    Usage: <list/toggle/info/reload> <tipologia> [gruppo]
-    Description: Gestisce i messaggi dei player.
+    Usage: <list/toggle/info/reload> <type> [group]
+    Description: 管理玩家加入/退出/死亡等訊息
     Usages:
-    - '/{label} {sublabel} list <tipologia> &7- Mostra tutti i messaggi.'
-    - '/{label} {sublabel} list <tipologia> <gruppo> &7- Mostra i messaggi di un gruppo.'
-    - '/{label} {sublabel} toggle <tipologia> <gruppo> &7- Attiva/Disattiva i messaggi.'
-    - '/{label} {sublabel} info <tipologia> <gruppo> &7- Mostra informazioni sul messaggio.'
-    - '/{label} {sublabel} reload &7- Ricarica i messaggi.'
-    Reloaded: Messaggi ricaricati dalla cartella messages/.
-    No_Type: 'Specifica la tipologia del messaggio. Disponibili: {0}'
-    No_Messages: Nessun messaggio {0} è stato creato per ora.
-    Group: ' &8- &7Gruppo: &f{0}'
-    List_Header: Mostrando {0} {1} Messaggi
-    No_Group: Specifica il gruppo del messaggio.
+    - '/{label} {sublabel} list <type> &7- 顯示玩家所有指定類型訊息'
+    - '/{label} {sublabel} toggle <type> <group> &7- 開關某個指定類型的訊息'
+    - '/{label} {sublabel} info <type> <group> &7- 顯示指令類型訊息內容'
+    - '/{label} {sublabel} reload &7- 重新載入訊息內容'
+    Reloaded: 已從 messages 資料夾內重新載入訊息
+    No_Type: '請指定訊息類型. 可用: {0}'
+    No_Messages: 並未創建名為 {0} 的訊息內容
+    Group: ' &8- &7組: &f{0}'
+    List_Header: 顯示 {0} {1} 條訊息
+    No_Group: 指定訊息組
     Info:
     - '&8{chat_line}'
-    - '<center>&6&lMessaggio {0} ''{1}'''
+    - '<center>&6&l{0} 訊息 ''{1}'''
     Info_Footer:
     - '&8{chat_line}'
-    Toggled: '''Il messaggio {0} {1} è stato '' + (toggle ? ''&cdisabilitato'' : ''&aabilitato'') + ''&7.'''
+    Toggled: '''{0} 訊息 {1} 已被'' + (toggle ? ''&c停用'' : ''&a啟用'') + '' '''
 
   Me:
-    Usage: <messaggio>
-    Description: Invia un messaggio con formattazione.
+    Usage: <訊息>
+    Description: 向全伺服器傳送一個旁白訊息
     Usages:
-    - '/{label} Ciao a tutti! &7- Invia un messaggio con formattazione.'
+    - '/{label} <訊息> &7- 向全伺服器傳送旁白訊息'
 
   Migrate:
     Usage: <chc8>
-    Description: Migrate i dati da ChatControl Pro.
+    Description: 轉移舊版 ChatControl Pro 內的資料
     Usages:
-    - '/{label} {sublabel} chc8 &7- Migra i dati da ChatControl Pro.'
+    - '/{label} {sublabel} chc8 &7- 轉移 ChatControl Pro 內的資料'
   
   Motd:
-    Usage: '[player]'
-    Description: Leggi il messaggio del giorno.
+    Usage: '[玩家名]'
+    Description: 查看或是向某位玩家傳送今日 MOTD 訊息
     Usages_Self:
-    - '/{label} &7- Leggi il messaggio del giorno.'
+    - '/{label} &7- 查看今日 MOTD 訊息'
     Usages_Others:
-    - '/{label} <player> &7- Invia il motd a un player.'
-    Success: Il MOTD è stato inviato.
+    - '/{label} <玩家名> &7- 向某位玩家傳送今日 MOTD 訊息'
+    Success: 今日 MOTD 訊息已成功傳送
   
   Mute:
-    Usage: <server/canale/player> <parametri...>
-    Description: Silenzia/Smuta un server, canale o un players.
+    Usage: <伺服器/頻道/玩家> <params...>
+    Description: 靜音/取消靜音整個伺服器、聊天頻道或玩家
     Usages:
-    - '/{label} <tipologia> &7- Mostra se la tipologia è silenziata.'
-    - '/{label} <tipologia> off &7- Smuta la tipologia se è silenziata.'
-    - '/{label} <tipologia> <durata es. 1h2m15s> &7- Silenzia la tipologia.'
-    - '/{label} <tipologia> <durata> [reason] &7- Silenzia la tipologia includendo un motivo.'
-    - '&cCONSIGLIO: La tipologia può essere ''server'', ''canale'' o ''player''. Per canali e player, specifica anche il nome del canale o del player.'
-    Type_Server: server
-    Type_Player: player
-    Type_Channel: canale
-    Server: ''' &7Questo server '' + (muted ? ''&cè silenziato'' : ''&2non è silenziato'') + ''&7.'''
-    Player_Or_Channel: ''' &7- &f{0} &7 '' + (muted ? ''&cè silenziato'' : ''&2non è silenziato'') + ''&7.'''
-    Change_Status_Tooltip: '''&6Clicca per '' + (muted ? ''s'' : '''') + ''mutare'' + (muted ? '''' : '' per 3 minuti'')'
-    Channel_Status: Stato Mute Canale
-    Server_Status: Stato Mute Server
-    Player_Status: Stato Mute Player
-    No_Duration: Specifica la durata e il motivo (opzionale).
-    Invalid_Duration: 'Formato durata ''{0}'' non valido! Sintassi corretta: 6y5mo4w3d2h1m0s o 30m o 1m30s'
-    Mute_Success: '''La tipologia {type} è stata mutata da {player} per {duration}.'' + (!reason.isEmpty() ? '' Motivo: '' + reason : '''')'
-    Unmute_Success: La tipologia {type} è stata smutata da {player}.
-    Already_Muted: '{type} ''{0}'' è già silenziato! Usa ''off'' come argomento per smutare.'
-    Not_Muted: '{type} ''{0}'' non è silenziato!'
-    Already_Muted_Server: '{type} è già silenziato! Usa ''off'' come argomento per smutare.'
-    Not_Muted_Server: '{type} non è silenziato!'
-    Cannot_Mute_Yourself: Non puoi silenziarti da solo!
-    Cannot_Create_Books: Non puoi creare libri, sei stato silenziato!
-    Cannot_Command: Non puoi eseguire questo comando, sei stato silenziato.
-    Cannot_Chat: Non puoi scrivere in chat, sei stato silenziato.
-    Cannot_Place_Signs: Non puoi piazzare cartelli, sei stato silenziato!
-    Cannot_Rename_Items: Non puoi rinominare gli oggetti, sei stato silenziato!
-    Cannot_Chat_Player_Muted: Non puoi scrivere nei canali, sei stato silenziato.
-    Cannot_Chat_Channel_Muted: Non puoi scrivere qui, il canale {0} è stato silenziato.
+    - '/{label} <伺服器/頻道/玩家> &7- 靜音某個伺服器、頻道或玩家'
+    - '/{label} <伺服器/頻道/玩家> off &7- 解除靜音某個伺服器、頻道或玩家'
+    - '/{label} <伺服器/頻道/玩家> <時間> &7- 靜音某個伺服器、頻道或玩家一段指定的時間'
+    - '/{label} <伺服器/頻道/玩家> <時間> [原因] &7- 靜音某個伺服器、頻道或玩家一段指定的時間並公告原因'
+    - '&c小貼士: 可靜音類型包含 server、channel 或 player. 對於 channel 和 player 您需要指定頻道名稱和玩家名'
+    - '&c小貼士: 可使用時間語法 範例: 6y5mo4w3d2h1m0s、30m 或 1m30s'
+    Type_Server: "server"
+    Type_Player: "player"
+    Type_Channel: "channel"
+    Server: ''' &7此伺服器目前'' + (muted ? ''&c已被禁音'' : ''&2未被禁音'') + '''''
+    Player_Or_Channel: ''' &7- &f{0} &7當前 '' + (muted ? ''&c已被禁音'' : ''&2未被禁音'') + '''''
+    Change_Status_Tooltip: '''&6點擊此處來'' + (muted ? ''解除'' : '''') + ''靜音此頻道'' + (muted ? '''' : '' 3 分鐘'')'
+    Channel_Status: 頻道靜音狀態
+    Server_Status: 伺服器靜音狀態
+    Player_Status: 玩家靜音狀態
+    No_Duration: 請您設定靜音時間與靜音原因(原因可選填)
+    Invalid_Duration: '無效的時間格式: ''{0}''! 正確語法: 6y5mo4w3d2h1m0s、30m 或 1m30s'
+    Mute_Success: '''該 {type} 已被 {player} 靜音 {duration}'' + (!reason.isEmpty() ? '' 原因: '' + reason : '''')'
+    Unmute_Success: 該 {type} 已被 {player} 解除靜音
+    Already_Muted: '該 {type} ''{0}''  現在已是靜音狀態! 您可使用 off 參數來解除禁音'
+    Not_Muted: '{type} ''{0}'' 現在未被禁音!'
+    Already_Muted_Server: '該 {type} 現在已是靜音狀態! 您可使用 off 參數來解除禁音'
+    Not_Muted_Server: '{type} 現在未被禁音!'
+    Cannot_Mute_Yourself: 您不能靜音自己!
+    Cannot_Create_Books: 您在禁音狀態下無法創建書籍!
+    Cannot_Command: 您在禁音狀態下無法使用此指令!
+    Cannot_Chat: 您在禁音狀態下無法打字聊天!
+    Cannot_Place_Signs: 您在禁音狀態下無法使用告示牌!
+    Cannot_Chat_Player_Muted: 當您所在的伺服器、聊天頻道或是您個人被禁音時,您無法使用任何聊天頻道功能
+    Cannot_Chat_Channel_Muted: 您無法在聊天頻道 {0} 中發言,因為該頻道已被禁音
 
   Points:
-    Usage: <get/set/list> <player> [set] [quantità]
-    Description: Gestisce i punti di avvertimento dei player.
+    Usage: <get/set/list> <玩家名> [set] [amount]
+    Description: 管理玩家的警告計點
     Usages:
-    - '/{label} {sublabel} get <player> [set] &7- Elenca i punti di avvertimento dei player.'
-    - '/{label} {sublabel} set <player> <set> <quantità> &7- Imposta i punti di avvertimento.'
-    - '/{label} {sublabel} list [set] &7- Elenca i punti di avvertimento di tutti i player.'
-    Disabled: I punti di avvertimento non sono abilitati nel file settings.yml
-    List_Item_1: ' &6{0} impostati a:'
-    Remove_Tooltip: '&6Clicca per rimuovere.'
-    List_Item_2: ' &f{0}&8: &7{1} punti'
-    No_Points: Non sono presenti punti di avvertimento. Vieni a prenderne qualcuno!
-    List_Header: Punti di Avvertimento Salvati
-    Player_List_Item: ' &f{0} &7= &f{1} punti'
-    No_Player_Points: '{0} non ha ricevuto questi punti di avvertimento.'
-    Player_List_Header: Elencando i punti di avvertimento di {0}
-    No_Set: 'Indica il nome di un set. Disponibili: {0}'
-    No_Amount: Indica un valore intero da assegnare.
-    No_Stored: '{0} non possiede punti di avvertimento del set ''{1}''.'
-    Set: '(removed ? ''Rimossi dei punti da'' : ''Assegnati {0} punti a'') + '' {1} dal set {1}.'''
+    - '/{label} {sublabel} get <玩家名> [set] &7- 查看某位玩家的當前所累計的警告點數'
+    - '/{label} {sublabel} set <玩家名> <set> <amount> &7- 設定某位玩家的警告計點數量'
+    - '/{label} {sublabel} list [set] &7- 查看伺服器所有玩家身上所累計的警告計點'
+    Disabled: 警告計點功能已在 settings.yml 中被停用
+    List_Item_1: ' &6設定 {0}:'
+    Remove_Tooltip: '&6點擊此處刪除'
+    List_Item_2: ' &f{0}&8: &7{1} 點'
+    No_Points: 當前沒有任何警告計點!
+    List_Header: 已儲存的警告計點
+    Player_List_Item: ' &f{0} &7= &f{1} 點'
+    No_Player_Points: 玩家 {0} 當前沒有任何警告計點紀錄
+    Player_List_Header: 玩家 {0} 警告計點列表
+    No_Set: '請您指定設定警告計點組名稱. 可用: {0}'
+    No_Amount: 請您輸入您要的警告計點點數數量
+    No_Stored: '玩家 {0} 當前身上沒有任何警告計點在 ''{1}'' 警告紀錄組內'
+    Set: '(removed ? ''移除警告計點'' : ''新增 {0} 警告計點給予'') + ''玩家 {1} 警告設定玩家 {1}'''
 
   Purge:
-    Usage: <player> [altroPlayer...]
-    Description: Rimuove i messaggi inviati da un player, anche se si è disconnesso.
-    Success: Tutti i messaggi di {0} sono stati rimossi.
+    Usage: <玩家名> [其他玩家...]
+    Description: 移除指定玩家聊天室內的所有訊息內容
+    Success: 玩家 {0} 所發送的訊息已從所有玩家聊天室內被成功刪除
 
   Reply:
-    Dosage: <messaggio>
-    Prescription: Rispondi all'ultimo player che ti ha scritto.
-    Alone: Non c'è nessuno a cui rispondere :(
+    Dosage: <訊息>
+    Prescription: 回覆最後一位向您發送私人訊息的玩家
+    Alone: 您當前沒有人可以進行回覆
   
   Spy:
-    Usage: <status/menu/off/toggle/list> [player] [tipologia] [canale]
-    Description: Attiva/Disattiva la visualizzazione dei comandi e messaggi dei player.
+    Usage: <status/menu/off/toggle/list> [玩家名] [type] [channel]
+    Description: 監聽模式
     Usages_1:
-    - '/{label} status [player] &7- Mostra se il player sta spiando.'
-    - '/{label} menu [player] &7- Apre il menu principale di selezione per spiare.'
-    - '/{label} on/off [player] &7- Attiva/Disattiva la modalità spia per un player.'
-    - '/{label} toggle <tipologia> [player] &7- Attiva/Disattiva la modalità spia per sezione.'
+    - '/{label} status [玩家名] &7- 列出當前您在監聽某個玩家的某個監聽選項列表'
+    - '/{label} menu [玩家名] &7- 開啟監聽功能選單'
+    - '/{label} on/off [玩家名] &7- 切換監聽玩家模式'
+    - '/{label} toggle <type> [玩家名] &7- 切換指定某個選項的監聽模式'
     Usages_2:
-    - '/{label} toggle chat <channel> [player] &7- Attiva/Disattiva la modalità spia per canale.'
+    - '/{label} toggle chat <頻道> [玩家名] &7- 切換某個頻道的監聽模式'
     Usages_3:
-    - '/{label} list &7- Elenca tutti i player che stanno spiando.'
-    No_Stored: Non sono presenti player che stanno spiando.
+    - '/{label} list &7- 列出當前您在監聽的所有玩家列表'
+    No_Stored: 當前沒有已儲存的監聽對象
     List_Tooltip:
-    - '&6Disabilita la modalità spia per {0}.'
-    List_Header: Player in modalità spia
-    Toggle_No_Type: 'Specifica una tipologia di spia valida. Disponibili: {0}'
-    Toggle_No_Channel: 'Specifica un canale di chat da spiare. Disponibili: {0}'
-    Toggle: '''{0} sta '' + (isSpying ? ''&cnon sta più'' : ''&a'') + '' &7spiando {1}.'''
-    Type_Channel: canale
-    Type_Chat: chat
-    Type_Command: comandi
-    Type_Private_Message: messaggi privati
-    Type_Sound_Notify: notifiche sonore
-    Type_Mail: mail
-    Type_Sign: cartelli
-    Type_Book: libri
-    Type_Anvil: anvil
-    Type_Announcement: annunci
-    Type_Me: messaggi /me
-    Book_Untitled: Senza titolo
-    No_Spying: '{0} non sta spiando niente.'
+    - '&6停用玩家 {0} 所有的監聽事件'
+    List_Header: 當前您在監聽的所有玩家
+    Toggle_No_Type: '請指定有效的監聽類型. 可用: {0}'
+    Toggle_No_Channel: '請指定一個聊天頻道. 可用: {0}'
+    Toggle: '''玩家 {0} 現在已 '' + (isSpying ? ''&c不再'' : ''&a開始'') + '' &7監聽{1}'''
+    Type_Channel: 聊天頻道
+    Type_Chat: 聊天室
+    Type_Command: 指令
+    Type_Private_Message: 私人訊息
+    Type_Sound_Notify: "聲音通知訊息"
+    Type_Mail: 郵件
+    Type_Sign: 告示牌
+    Type_Book: 書
+    Type_Anvil: 鐵砧
+    Type_Announcement: 公告
+    Type_Me: 旁白訊息
+    Book_Untitled: 尚未署名
+    No_Spying: '玩家 {0} 當前沒有監聽任何內容'
     Status_1:
     - '&8{chat_line_smooth}'
-    - '<center>&6Mostrando cosa sta spiando {0}'
+    - '<center>&6查看玩家 {0} 當前正在監聽的所有內容'
     - '&8{chat_line_smooth}'
     Status_2:
     - ''
-    - '&7Usa ''/{label} off {0}'' per disattivarlo.'
-    Toggle_Off: Modalità spia di {0} disabilitata.
-    Toggle_On: Modalità spia di {0} abilitata.
-    Status_Sectors: '&6Sezioni spia:'
-    Status_Channels: '&6Canali spia:'
-    Auto_Enable_1: '{prefix_warn}La modalità spia è stata attivata automaticamente. Usa ''/spy off'' per disattivarla. '
+    - '&7輸入 /{label} off {0} 來關閉事件監聽'
+    Toggle_Off: 已停用玩家 {0} 的所有監聽事件
+    Toggle_On: 已啟用玩家 {0} 的所有監聽事件
+    Status_Sectors: '&6正在監聽的類型:'
+    Status_Channels: '&6正在監聽的聊天頻道:'
+    Auto_Enable_1: '{prefix_warn}自動監聽模式已自動開啟. 您可以使用 /spy off 來手動關閉'
     Auto_Enable_2: '&8[&6?&8]'
     Auto_Enable_Tooltip:
-    - '&6CONSIGLIO: &7Per smettere di spiare al login,'
-    - '&7rimuovi il permesso &o{0}&7'
-    - '&7dal tuo account.'
+    - '&6小貼士: &7如您要在登入伺服器時關閉自動監聽模式'
+    - '&7請您將該玩家的 &o{0}&7'
+    - '&7權限節點更改為 false'
   
   Region:
-    Usage: <add/remove/view/tp/list> [nome]
-    Description: Gestisci le region usate nelle regole.
+    Usage: <add/remove/view/tp/list> [名稱]
+    Description: 管理地圖中的區域
     Usages:
-    - '/{label} {sublabel} add <nome> &7- Crea una nuova region.'
-    - '/{label} {sublabel} remove <nome> &7- Elimina una region.'
-    - '/{label} {sublabel} view <nome> &7- Visualizza una region.'
-    - '/{label} {sublabel} tp <nome> &7- Teletrasportati in una region.'
-    - '/{label} {sublabel} tool &7- Ottieni l''attrezzo per le region.'
-    - '/{label} {sublabel} list &7- Elenca le region disponibili.'
+    - '/{label} {sublabel} add <名稱> &7- 創建某個區域'
+    - '/{label} {sublabel} remove <名稱> &7- 刪除某個區域'
+    - '/{label} {sublabel} view <名稱> &7- 可視化附近的區域'
+    - '/{label} {sublabel} tp <名稱e> &7- 傳送至某個指定的區域'
+    - '/{label} {sublabel} tool &7- 獲取區域選取工具'
+    - '/{label} {sublabel} list &7- 查看已創建的區域'
     List:
     - '&8{chat_line_smooth}'
     - ' '
-    - '<center>&6&lRegioni ChatControl'
-    - '<center>&7{0} caricate'
+    - '<center>&6&lChatControl 區域'
+    - '<center>&7{0} 已載入'
     - '&8{chat_line_smooth}'
-    Region_Info: '&finformazioni Region'
-    Primary: '&7Primo punto: &2{0}'
-    Secondary: '&7Secondo punto: &2{0}'
-    Size: '&7Dimensioni: &2{0} blocchi'
-    Tooltip_Remove: '&7Clicca per rimuovere permanentemente.'
-    Tooltip_Visualize: '&7Clicca per visualizzare.'
-    Tooltip_Teleport: '&7Clicca per teletrasportarti al centro.'
-    Tool_Disabled: Gli attrezzi per le region sono disabilitati. Imposta 'Register_Tools' su true nel file settings.yml per poterli utilizzare.
-    Tool: Hai ricevuto un Attrezzo per le region di ChatControl. Click Destro/Sinistro per selezionare due punti e usa il comando '/{label} {sublabel} add' per creare una region.
-    Tool_Name: Attrezzo Region
+    Region_Info: '&f區域詳細訊息'
+    Primary: '&7基本: &2{0}'
+    Secondary: '&7Secondary: &2{0}'
+    Size: '&7S大小: &2{0} 格'
+    Tooltip_Remove: '&7點擊此處刪除該區域'
+    Tooltip_Visualize: '&7點擊此處可視化該區域'
+    Tooltip_Teleport: '&7點擊此處傳送至該區域'
+    Tool_Disabled: 區域選取工具已被停用. 您可以在 settings.yml 中的 Register_Tools 切換至 true 來啟用
+    Tool: 成功給予您 1x ChatControl 區域選取工具. 使用左右鍵點擊兩點來選取區域後您可以使用 /{label} {sublabel} add 來完成區域創建
+    Tool_Name: '&6區域選取工具'
     Tool_Lore:
     - ''
-    - 'Usa questo attrezzo per creare e'
-    - 'modificare le region di ChatControl.'
+    - '您可以使用此工具來創建一個'
+    - 'ChatControl Red 區域'
     - ''
-    - '&b<< &7Click Sinistro - Primo'
-    - '&7Click Destro - Secondo &b>>'
-    Point_Name: '[&aPunto Region&f]'
-    Point_Set: '''Impostato il '' + (primary ? ''primo'' : ''secondo'') + '' punto della region.'''
-    No_Name: Indica il nome della region.
-    No_Selection: Prima di aggiungere una region, seleziona il primo e il secondo punto con '/{label} {sublabel} tool'.
-    Already_Exists: Esiste già una region con questo nome.
-    Saved: Region '{0}' salvata.
-    Removed: Region '{0}' rimossa.
-    Visualized: La region '{0}' verrà visualizzata per 5 secondi.
-    Teleported: Teletrasporta al centro della region '{0}'.
+    - '&b<< &7左鍵點擊選取第一個點'
+    - '&7右鍵點擊選取第二個點 &b>>'
+    Point_Name: '[&a區域選取區域&f]'
+    Point_Set: '''您已選擇了區域的'' + (primary ? ''第一點'' : ''第二點'') + '''''
+    No_Name: 您必須要命名一個區域名稱
+    No_Selection: 在您新增新區域前,您必須使用 /{label} {sublabel} tool 來取得區域選取工具進行選取
+    Already_Exists: 已有同樣名稱的區域存在
+    Saved: 成功儲存了區域 '{0}'
+    Removed: 成功刪除了區域 '{0}'
+    Visualized: 區域 '{0}' 現在正在可視化狀態持續 5 秒鐘
+    Teleported: 您已傳送至 '{0}' 區域中心點
 
   Real_Name:
-    Usage: '[nome/nick]'
-    Description: Controlla il nome reale di un player e il nick di un player da.
-    Success: '''{0} '' + (hasNick ? ''sta usando il nickname {1}'' : ''non possiede un nickname'') + ''.'''
+    Usage: '[name/nick]'
+    Description: 查看某位玩家的真實玩家名以及當前所使用的暱稱
+    Success: '''玩家 {0} 當前'' + (hasNick ? ''的暱稱為 {1}'' : ''沒有暱稱'') + '''''
   
   Rule:
-    Usage: <info/toggle/create/import/list/reload> [regola]
-    Description: Gestisce il sistema di regole.
+    Usage: <info/toggle/create/import/list/reload> [rule]
+    Description: 管理聊天規則
     Usages:
-    - '/{label} {sublabel} info <regola> &7- Mostra informazioni sulle regole.'
-    - '/{label} {sublabel} toggle <regola> &7- Attiva/Disattiva le regole.'
-    - '/{label} {sublabel} create &7- Crea una regola con un nome.'
-    - '/{label} {sublabel} import &7- Importa le regole.'
-    - '/{label} {sublabel} list <type> &7- Elenca le regole caricate.'
-    - '/{label} {sublabel} reload &7- Ricarica le regole.'
+    - '/{label} {sublabel} info <rule> &7- 查看聊天規則內容'
+    - '/{label} {sublabel} toggle <rule> &7- 啟用或停用某個指定的聊天規則'
+    - '/{label} {sublabel} create &7- 創建一個新的聊天規則'
+    - '/{label} {sublabel} import &7- 批量導入聊天規則'
+    - '/{label} {sublabel} list <type> &7- 列出當前已載入的聊天規則'
+    - '/{label} {sublabel} reload &7- 重新載入全部的聊天規則'
     Info_1:
     - '&8{chat_line}'
-    - '<center>&6&lRegola ''{0}'''
+    - '<center>&6&l聊天規則 ''{0}'''
     Info_2:
     - '&8{chat_line}'
-    Toggle: '''La regola {0} è stata '' + (toggle ? ''&cdisattivata'' : ''&aattivata'') + ''&7.'''
-    List_No_Type: Indica quale tipologia di regole mostrare.
-    List_No_Rules: Non sono presenti regole {0}. Creane una con il comando'/{label} {sublabel}'.
-    Type_Global: globale
-    Type_Chat: chat
-    Type_Command: comando
-    Type_Packet: pacchetto
-    Type_Sign: cartello
-    Type_Book: libro
-    Type_Anvil: anvil
-    Type_Tag: tag
-    Tooltip_Name: '&7Nome: &f{0} '
-    Tooltip_Match: '&7Corrispondenza: &f'
-    List_Header: Mostrando {0} regole {1}.
-    Reloaded: Le regole sono state ricaricate dai file.
-    Rule_Creator: '&8[&6Creazione Regole&8] &7'
+    Toggle: '''聊天規則 {0} 現在已被'' + (toggle ? ''&c停用'' : ''&a啟用'') + '''''
+    List_No_Type: 請您指定要顯示的聊天規則類型
+    List_No_Rules: No {0} rules are created yet. Create some with '/{label} {sublabel}' create command!
+    Type_Global: 全頻
+    Type_Chat: 聊天
+    Type_Command: 指令
+    Type_Packet: packet
+    Type_Sign: 告示牌
+    Type_Book: 書
+    Type_Anvil: 鐵砧
+    Type_Tag: 命名牌
+    Tooltip_Name: '&7名稱: &f{0} '
+    Tooltip_Match: '&7匹配內容: &f'
+    List_Header: 正在顯示{0}個{1}聊天規則
+    Reloaded: 所有聊天規則文件已成功被重新載入完畢
+    Rule_Creator: '&8[&6聊天規則創建嚮導&8] &7'
     Rule_Creator_Welcome:
-    - 'Benvenuto nel Pannello di Creazione delle Regole. Ti chiederemo alcune cose per impostare al meglio le tue regole.'
-    - 'Digita le risposte direttamente in chat o digita ''exit'' per annullare. Per continuare, indica il nome della nuova regola.'
-    Rule_Creator_Already_Exists: '{prefix_error}La regola {0} è già presente!'
+    - '歡迎使用聊天規則創建嚮導. 我們將會詢問您幾個問題來方便您創建屬於您自己的聊天規則'
+    - '如果您要退出聊天規則創建嚮導起您輸入 exit 來退出. 如要繼續創建請輸入新的聊天規則名稱'
+    Rule_Creator_Already_Exists: '{prefix_error}已有同名為 {0} 的聊天規則!'
     Rule_Creator_Type:
-    - 'Fantastico, stiamo preparando la regola ''{0}''. Inserisci la tipologia della regola. Questo determinerà anche in quale file verrà inserita. '
-    - 'Disponibili: {1}'
-    Invalid_Type: '{prefix_error}La tipologia di regole ''{0}'' non è stata trovata!'
-    Encode: Dovremmo codificare la parola corrispondente che inserirai nella prossima risposta per renderla più difficile da bypassare? Digita yes/no.
-    Invalid_Encode: '{error_prefix}Risposta errata! Digita ''yes'' o ''no'', o ''exit'' per terminare.'
-    Rule_Creator_Match: Inserisci la parola che dovrebbe essere la corrispondente.
-    Group_Name: 'Abbiamo quasi finito! Ora, inserisci il gruppo a cui dovrebbe appartenere questa regola, o ''none'' se non ne possiede uno. Gruppi presenti: {0}'
-    Invalid_Group: '{prefix_error}Il gruppo {0} non è stato trovato!'
-    Rule_Creator_Success: '{prefix_success}Congratulazioni, hai creato una nuova regola! L''abbiamo caricata ed è già operativa. Si presenta così:'
-    Conversation_Disabled: '&cLa modalità conversazione è disabilitata! Imposta Private_Messages.Auto_Mode su true nel file settings.yml per abilitarla.'
-    Conversation_Cancelled: '&cNon hai inserito una risposta in tempo, la conversazione è stata terminata.'
-    Conversation_Abandoned: '&cLa tua conversazione è stata lasciata. I dati inseriti sono stati persi.'
-    Rule_Import: '&8[&6Importazione Regole&8] &7'
-    Rule_Import_Start: Stiamo importando le regole, attendi...
+    - '做得好! 我們已為您創建了名為 ''{0}'' 的聊天規則. 現在請您輸入聊天規則類型,這將決定我們要將此聊天規則放置於哪個資料夾內'
+    - '可用: {1}'
+    Invalid_Type: '{prefix_error}聊天規則類型 {0} 無效!'
+    Encode: 您是否要在自動編碼前確定相關的匹配詞句使其更難被 bypass? 請輸入 yes/no
+    Invalid_Encode: '{error_prefix}錯誤的類型! 請您輸入 ''yes'' 或 ''no'' 或是 ''exit'' 來退出聊天規則創建嚮導'
+    Rule_Creator_Match: 請您輸入您要匹配的單詞或是字句
+    Group_Name: '就快要完成了! 現在我們將要決定此聊天規則應該屬於哪個組,如果您沒有打算要分組請您輸入 none 即可. 可用的組: {0}'
+    Invalid_Group: '{prefix_error}組 {0} 並不存在!'
+    Rule_Creator_Success: '{prefix_success}完成! 新的聊天規則已被創建完畢並且準備運行. 創建完畢的聊天規則:'
+    Conversation_Disabled: "&c規則創建嚮導已被停用! 您可以在 settings.yml 中將 Private_Messages.Auto_Mode 設定為 true 來啟用"
+    Conversation_Cancelled: '&c您由於太久沒有動作,因此已自動為您退出聊天規則創建嚮導'
+    Conversation_Abandoned: '&c聊天規則創建嚮導已成功退出,尚未創建完畢的資料已自動移除'
+    Rule_Import: '&8[&6聊天規則導入嚮導&8] &7'
+    Rule_Import_Start: 聊天規則導入中,請稍候...
     Rule_Import_Welcome:
-    - 'Benvenuto nel Pannello di Importazione delle Regole. Ti chiederemo alcune cose e importeremo ogni linea dal tuo file per impostare le regole.'
-    - 'Digita le risposte direttamente in chat o digita ''exit'' per annullare. Per continuare, indica il nome del file (nella cartella del plugin).'
-    Rule_Import_Invalid_File: '{prefix_error}Il file {0} non è stato trovato!'
+    - '歡迎使用聊天規則導入嚮導. 我們將會詢問您幾個問題來方便您將資料導入'
+    - '如果您要退出聊天規則導入嚮導起您輸入 exit 來退出. 如要繼續導入請您輸入您的文件名(在您插件的文件夾中)'
+    Rule_Import_Invalid_File: '{prefix_error}文件 {0} 不存在!'
     Rule_Import_Type:
-    - 'Fantastico, stiamo importando le regole da {0}. Inserisci la tipologia delle regole.'
-    - 'Available: {1}'
-    Rule_Import_Success: '{prefix_success}Congratulazioni, hai importato {0} regole! Sono state già caricate e sono operative.'
-    Rule_Import_Fail: '{prefix_error}Abbiamo riscontrato un errore nell''importazione delle regole, guarda la console per maggiori informazioni!'
+    - '太棒了! 我們將會從 {0} 導入聊天規則. 請您輸入聊天規則類型'
+    - '可用: {1}'
+    Rule_Import_Success: '{prefix_success}完成! 已為您成功導入 {0} 個聊天規則! 新的聊天規則現在已被載入並且準備運行!'
+    Rule_Import_Fail: '{prefix_error}導入聊天規則時出現致命錯誤,請您查看 CONSOLE 來取得更多資訊!'
   
   Script:
-    Usage: <espressione>
-    Description: Esegue JavaScript.
+    Usage: <expression>
+    Description: Evaluate JavaScript.
     Usages:
-    - '/{label} {sublabel} 5 * (2/3) &7- Matematica di base.'
-    - '/{label} {sublabel} player.getHandle().ping &7- NMS, se il player è un player.'
-    - '/{label} {sublabel} {variable} / 2 &7- PAPI, native o variabili/.'
+    - '/{label} {sublabel} 5 * (2/3) &7- Simple math'
+    - '/{label} {sublabel} player.getHandle().ping &7- NMS, if player is Player'
+    - '/{label} {sublabel} {variable} / 2 &7- PAPI, native or variables/'
     - '/{label} {sublabel} Java.type("org.bukkit.Bukkit").getOnlinePlayers()'
-    Error: 'Errore nell''espressione: {0}'
-    Result: 'Risultato: &f{0}'
+    Error: '錯誤的表達式: {0}'
+    Result: '結果: &f{0}'
   
   Tag:
-    Disabled: Riempi il valore Tag.Apply_On nel file settings.yml prima di usare questo comando.
-    Usage: <tipologia> [tag/off]
-    Description: Imposta la tua tag.
+    Disabled: '&c暱稱功能已被停用. 您可以在 settings.yml 中的 Tag.Apply_On 設定您要使用的 prefix、nick 或 suffix 來啟用'
+    Usage: <type> [tag/off]
+    Description: 設定您的玩家暱稱
     Usages:
-    - '/{label} list &7- Elenca le tag.'
-    - '/{label} off &7- Disabilita le tag.'
-    - '/{label} <tipologia> &7- Mostra la tua tag.'
-    - '/{label} <tipologia> <tag> &7- Impostati una tag.'
-    - '/{label} <tipologia> off &7- Rimuovi la tua tag.'
+    - '/{label} list &7- 列出您當前所有已設定的暱稱'
+    - '/{label} off &7- 停用您當前所設定的所有暱稱'
+    - '/{label} <type> &7- 列出您指定類型的暱稱'
+    - '/{label} <type> <tag> &7- 設定您指定類型的暱稱'
+    - '/{label} <type> off &7- 停用您指定類型的暱稱'
     - ''
-    - '&c&lCONSIGLIO: &cUsa i placeholder {prefix_tag}, {suffix_tag} e {nick} per mostrare le tag.'
-    Admin_Usage: <tipologia> <player/list> [nick/off]
-    Admin_Description: Controlla le tag dei player.
+    - '&c&l小貼士: &c您可以使用 {prefix_tag}、{suffix_tag} 或 {nick} 等變數來顯示玩家設定的暱稱'
+    Admin_Usage: <type> <玩家名/list> [nick/off]
+    Admin_Description: 設定您的或是其他玩家暱稱
     Admin_Usages:
-    - '/{label} {sublabel} <tipologia> <player> &7- Mostra la tag di un player.'
-    - '/{label} {sublabel} <tipologia> <player> <nick> &7- Imposta la tag a un player.'
-    - '/{label} {sublabel} <tipologia> <player> off &7- Rimuovi la tag da un player.'
-    - '/{label} {sublabel} list [tipologia] &7- Elenca i player che possiedono una tag.'
-    No_Tags: Non sono presenti tag.
-    Admin_Tooltip_Remove: '&6Rimuovi {0} da {1}.'
-    Admin_List: Elencando tutte le tag
-    Admin_Invalid_Params: Indica la tipologia di una tag e il nome di un player.
-    Admin_Status: '{possessive_form} {type}: {tag}.'
-    Your_Tags: 'Le tue tag:'
-    Off_No_Tags: Non possiedi tag attive.
-    Off_All: Le tag attive sono state disabilitate.
-    Status_Self: 'La tua {0} è: {1}'
-    No_Spaces: I nick non possono contenere spazi.
-    No_Colors_Only: La tua tag non può contenere solo dei colori.
-    Exceeded_Length: La lunghezza della tua tag ({0}) va oltre il limite di {1} lettere.
-    Not_Allowed: Non è stato possibile impostare questa tag, provane un'altra!
-    No_Tag: '''{0} attualmente'' + (self ? '''' : '''') + '' non ha una {1}.'''
-    No_Impersonation: Il nick non può utilizzare il nome di un player.
-    Already_Used: Questo nick è già in uso.
-    Success_V2: '(remove ? ''Rimosse {0} da'' + (self ? ''te'' : ''{target}'') + ''.'' : ''Impostate {0} a "{1}&7" per'' + (self ? ''te'' : ''{target}'') + ''.'')'
+    - '/{label} {sublabel} <type> <玩家名> &7- 列出指定某位玩家某個類型的暱稱'
+    - '/{label} {sublabel} <type> <玩家名> <nick> &7- 設定指定某位玩家的某個類型的暱稱'
+    - '/{label} {sublabel} <type> <玩家名> off &7- 移除指定某位玩家的某個類型的暱稱'
+    - '/{label} {sublabel} list [type] &7- 列出某個指定類型全伺服器的暱稱'
+    No_Tags: 當前沒有已儲存的玩家暱稱
+    Admin_Tooltip_Remove: '&6移除玩家 {1} 身上的 {0}'
+    Admin_List: 列出所有暱稱
+    Admin_Invalid_Params: 請您指定某位玩家以及某個類型
+    Admin_Status: '{possessive_form} {type}: {tag}'
+    Your_Tags: '您的玩家暱稱:'
+    Off_No_Tags: 您當前沒有已啟用的玩家暱稱
+    Off_All: 所有的玩家暱稱已被全部停用
+    Status_Self: '您的 {0} 暱稱為: {1}'
+    No_Spaces: 暱稱中不能包含空格
+    No_Colors_Only: 暱稱中不能僅包含顏色顏色代碼
+    Exceeded_Length: 您的暱稱長度過長了 ({0}) 個字元,您必須在 {1} 個字元以內
+    Not_Allowed: 您無法設定此暱稱,請您嘗試使用另一個
+    No_Tag: '''{0}當前沒有'' + (self ? '''' : '''') + ''任何 {1} 類型暱稱'''
+    No_Impersonation: 您不能使用他人的遊戲名稱作為您的暱稱
+    Already_Used: 此暱稱已被其玩家使用,請您嘗試使用另一個
+    Success_V2: '(remove ? ''已移除'' + (self ? ''您'' : ''玩家 {target}'') + ''身上的 {0} 類型暱稱'' : ''已設定 {0} 類型暱稱內容 "{1}&7" 給'' + (self ? ''您'' : ''玩家 {target}'') + '''')'
 
   Toggle:
-    Usage: <tipologia> [gruppo]
-    Description: Attiva/Disattiva alcune parti visibili del plugin.
+    Usage: <類型> [group]
+    Description: 切換來自 ChatControl 插件的訊息
     Usages_1:
-    - '/{label} <tipologia> &7- Attiva/Disattiva una parte del plugin. Parti disponibili: {0}'
-    - '/{label} <tipologia> [gruppo] &7- Attiva/Disattiva una tipologia di messaggio. Disponibili: {1}'
+    - '/{label} <類型> &7- 切換某個類型的訊息是否收聽或是忽略,可用: {0}'
+    - '/{label} <類型> [group] &7- 切換訊息類型組,可用類型組: {1}'
     Usages_Chat:
-    - '/{label} chat &7- Attiva/Disattiva la visualizzazione di messaggi. Se sei in modalità spia, li vedrai comunque.'
+    - '/{label} chat &7- 切換是否查看聊天訊息,如您在使用監聽模式您依舊可以看到您監聽的聊天訊息內容'
     Usages_Join:
-    - '/{label} join default &7- Attiva/Disattiva il join message del gruppo ''default''.'
+    - '/{label} join default &7- 切換玩家加入訊息組的訊息 ''default'''
     Usages_Timed:
-    - '/{label} timed special &7- Attiva/Disattiva il gruppo di messaggi temporizzati ''special''.'
+    - '/{label} timed special &7- 切換 timed 訊息組的訊息 ''special'''
     Usages_Private_Message:
-    - '/{label} pm &7- Attiva/Disattiva i messaggi privati.'
+    - '/{label} pm &7- 切換是否要查看私人聊天訊息'
     Usages_Sound_Notify:
-    - '/{label} soundnotify &7- Attiva/Disattiva le notifiche sonore.'
+      - "/{label} soundnotify &7- 切換是否要聆聽聲音通知"
     Usages_2:
-    - '/{label} list &7- Elenca le parti del plugin attive e non.'
-    Toggled_Group: '''&7Adesso '' + (ignoring ? ''&2non ignori più'' : ''&cignori'') + '' &7{0} messaggi {1}.'''
-    Toggled_Group_All: '''&7Adesso '' + (ignoring ? ''&2non ignori più'' : ''&cignori'') + '' &7tutti i messaggi {0}.'''
-    Type_Join: join
-    Type_Quit: quit
-    Type_Kick: kick
-    Type_Death: death
-    Type_Timed: timed
-    List_Line: '&6{0} messaggi nascosti&7:'
+    - '/{label} list &7- 列出當前所有已忽略的內容列表'
+    Toggled_Group: '''&7您'' + (ignoring ? ''&2已不再'' : ''&c正在'') + '' &7忽略 {0} 的訊息 {1}.'''
+    Toggled_Group_All: '''&7您'' + (ignoring ? ''&2已不再'' : ''&c正在'') + '' &7忽略所有 {0} 的訊息'''
+    Type_Join: 玩家加入訊息
+    Type_Quit: 玩家退出訊息
+    Type_Kick: 玩家踢出訊息
+    Type_Death: 玩家死亡訊息
+    Type_Timed: 定時訊息
+    List_Line: '&6隱藏 {0} 的訊息&7:'
     List_Tooltip:
-    - '&6Clicca per smettere di ignorare.'
-    List_Plugin_Parts_Title: '&6Parti dei plugin&7:'
-    List_Plugin_Parts: '(isIgnoring ? ''&cignorando'' : ''&2ricevendo'')'
+    - '&6點擊此處來停止隱藏該訊息'
+    List_Plugin_Parts_Title: '&6插件訊息&7:'
+    List_Plugin_Parts: '(isIgnoring ? ''&c忽略中'' : ''&2收聽中'')'
     List_Plugin_Parts_Toggle:
-    - '&6Clicca per attivare/disattivare.'
-    List_Plugin_Parts_Header: Attivate/Disattivate parti del plugin per {0}
-    No_Group: 'Specifica un gruppo per attivare/disattivare {0}. Disponibili: {1}'
-    Invalid_Type: 'Tipologia non valida. Disponibili: toggle: {0} e tipologie: {1}.'
-    Cannot_PM: '{0} ha disattivato i messaggi privati.'
+    - '&6點擊此處來進行切換'
+    List_Plugin_Parts_Header: 為玩家 {0} 切換插件訊息
+    No_Group: '請您指定您要切換的組 {0}. 可用: {1}'
+    Invalid_Type: '無效的類型,可用的內容: {0} 以及類型: {1}.'
+    Cannot_PM: '玩家 {0} 已關閉快速私訊模式'
 
   Tell:
-    Usage: <player> [messaggio]
-    Description: Invia un messaggio a un player.
+    Usage: <玩家名> [訊息]
+    Description: 向某為玩家傳送私人聊天訊息
     Usages:
-    - '/{label} <player> <messaggio> &7- Invia un messaggio a un player.'
-    - '/{label} <player> &7- Attiva la modalità conversazione, in cui si inviano automaticamente i messaggi come privati.'
-    - '/{label} off &7- Disable conversation mode if active.'
-    Conversation_Mode_Not_Conversing: Non sei in una conversazione.
-    Conversation_Mode_Off: La conversazione con {0} è terminata&7.
-    Conversation_Mode_Toggle: '(isConversing ? ''&cNon stai più conversando'' : ''&aHai iniziato una conversazione'') + '' &7con {0}.'''
-    Conversation_Offline: '{0} non è più online.'
-    Afk_Warning: '{prefix_warn}{0} è afk e potrebbe non leggere il tuo messaggio.'
+    - '/{label} <玩家名> <訊息> &7- 向某位玩家傳送某些訊息'
+    - '/{label} <玩家名> &7- 切換至快速私訊模式,切換此模式後將會切換至快速私訊模式'
+    - '/{label} off &7- 關閉快速私訊天模式'
+    Conversation_Mode_Not_Conversing: 您當前沒有和任何人傳送過私訊
+    Conversation_Mode_Off: 您和玩家 {0} 快速私訊模式&c已關閉&7
+    Conversation_Mode_Toggle: '(isConversing ? ''&c已關閉'' : ''&a已開啟'') + ''&7您和玩家 {0} 的快速私訊模式'''
+    Conversation_Offline: 您的快速私訊對象 {0} 當前不再線,已自動為您關閉快速私訊聊天模式
+    Afk_Warning: '{prefix_warn}玩家 {0} 當前處於掛機狀態,可能無法看到您的訊息'
     
 
-  # We do not allow changing messages for the /chc tour command because it would be impossible
-  # to make changes to these messages when we update our systems without constantly resetting your localization
+  # 本插件不允許您更動 /chc tour 指令內的相關訊息內容,因爲當插件更新時如果想要對這些訊息進行更動就不得不重置整份翻譯文件
   Tour:
-    Not_Completed: Prima di usare ChatControl, devi completare la guida con &7/{0} tour.
-    Requires_Op: Solo gli admin possono completare la guida al plugin.
+    Not_Completed: 在您使用 ChatControl 前,您需要先使用 &7/{0} tour &c來查看並且同意插件使用條款才能繼續使用
+    Requires_Op: 僅有管理員才能夠閱覽並且查看插件使用條款與內容介紹
     
   Update:
-    Usage: <player>
-    Description: Ricarica il tuo nome in tab o quello di un altro player.
-    Disabled: Le funzionalità della tablist non sono abilitate in Tab_List nel file settings.yml.
-    Success: Informazioni tablist ricaricate per {0}.
+    Usage: <玩家名>
+    Description: 重新載入玩家名指令自動補全列表
+    Disabled: 玩家名指令自動補全功能已停用,請您至 settings.yml 內的 Tab_List 選項中開啟
+    Success: 成功重新載入 {0} 個玩家名稱自動補全列表
 
 
 # -------------------------------------------------------------------------------------------------
-# Messages related to paginator splitting command help into multiple pages
+# 以下訊息為使用 Pages 指令的相關內容
 # -------------------------------------------------------------------------------------------------
 Pages:
-  No_Page_Number: '&cSpecifica il numero della pagina.'
-  No_Pages: '&cNon hai pagine salvate da visualizzare.'
-  No_Page: Le pagine non corrispondono al numero inserito.
-  Invalid_Page: '&cL''input ''{input}'' non è un numero valido.'
-  Go_To_Page: '&7Vai alla pagina {page}'
-  Go_To_First_Page: '&7Vai alla prima pagina'
+  No_Page_Number: '&c請指定一個有效的頁碼'
+  No_Pages: '&c您當前沒有'
+  No_Page: 您當前沒有可顯示的頁面
+  Invalid_Page: '&c您輸入的 ''{input}'' 並不是一個有效的頁數數字'
+  Go_To_Page: '&7前往第 {page} 頁'
+  Go_To_First_Page: '&7快速跳轉至第 1 頁'
   Tooltip:
-  - '&7Puoi anche navigare usando il'
-  - '&7comando nascosto ''/#flp <pagina>.'''
+  - '&7您也可以使用指令來快速跳轉頁面'
+  - '&7用法: /#flp <頁數>'
   
 # -------------------------------------------------------------------------------------------------
-# Messages related to players
+# 以下訊息為玩家相關內容
 # -------------------------------------------------------------------------------------------------
 Player:
-  Not_Online: '&c{player} non è online nel server.'
-  Not_Connected: '&c''{0}'' non si è connesso da BungeeCord.'
-  Not_Stored: '&c''{0}'' non è stato trovato nel database.'
-  Possessive_Form: 'di {player}'
-  Has: ha
-  Newcomer_Cannot_Command: Sei un player nuovo, non puoi ancora utilizzare questo comando!
-  Newcomer_Cannot_Write: Sei un player nuovo, non puoi ancora scrivere in chat!
-  No_Write_Chat_Permission: Non hai il permesso {0} per scrivere in chat.
-  No_Channel: Non ti trovi in un canale di scrittura. Usa '/{label_channel} join' per unirti a un canale.
-  No_Possible_Channel: Non hai il permesso di entrare nei canali.
-  Cannot_Chat_Vanished: Non puoi scrivere messaggi quando sei in vanish. Usa '/{label_channel} send' per farlo.
-  Kick_Disallowed_Nickname: '&cIl tuo nome contiene dei caratteri non validi!'
-  Kick_Relogin: '&cAttendi {0} secondi prima di accedere nuovamente!'
-  Channel_Range_Notification: '''{prefix_warn}Non c''è nessuno '' + (hasRange ? ''qui vicino'' : ''nel canale'') + '' a cui scrivere.'''
-  Already_Conversing: '{0} si trova già in una conversazione!'
+  Not_Online: '&c玩家 {player} &c不在線'
+  Not_Connected: '&c玩家r ''{0}&c'' 並沒有透過 BungeeCord 連線'
+  Not_Stored: '&c玩家 ''{0}&c'' 的資料並沒有被儲存於系統的資料庫中'
+  Possessive_Form: '{player}'''
+  Has: 擁有
+  Newcomer_Cannot_Command: 您目前還是新進玩家,暫時無法使用此指令!
+  Newcomer_Cannot_Write: 您目前還是新進玩家,暫時無法於聊天頻道內發話!
+  No_Write_Chat_Permission: 您沒有於聊天頻道 {0} 內寫入訊息的權限
+  No_Channel: 您還沒有加入任何聊天頻道. 您可以使用 '/{label_channel} join' 來加入一個聊天頻道!
+  No_Possible_Channel: 您沒有權限可以加入任何一個聊天頻道內
+  Cannot_Chat_Vanished: 當您進入隱形模式時您無法直接向聊天頻道發送訊息. 您可以使用 '/{label_channel} send' 來向聊天頻道內傳送訊息
+  Kick_Disallowed_Nickname: '&c您的玩家名稱內包含了系統不允許使用的字符或字串'
+  Kick_Relogin: '&c請稍候 {0} 秒後再嘗試加入!'
+  Channel_Range_Notification: '''{prefix_warn}當前'' + (hasRange ? ''區域頻道'' : ''頻道'') + ''內沒有任何人聽得道你說話'''
+  Already_Conversing: '{0} 已經在此聊天頻道內!'
   
 # -------------------------------------------------------------------------------------------------
-# Messages related to menus
+# 以下訊息為插件選單相關內容
 # -------------------------------------------------------------------------------------------------
 Menu:
-  Cannot_Open_During_Conversation: '&cDigita ''exit'' per terminare la conversazione prima di aprire il menu.'
-  Item_Deleted: '&2L''oggetto {item} è stato rimosso.'
-  Error: '&cOps! Abbiamo riscontrato un errore con questo menu! Contatta l''admin del server.'
-  Page_Previous: '&8<< &fPagina {page}'
-  Page_Next: Pagina {page} &8>>
-  Page_First: '&7Prima Pagina'
-  Page_Last: '&7Ultima Pagina'
-  Title_Tools: Menu Attrezzi
-  Tooltip_Info: '&fInformazioni sul Menu'
-  Button_Return_Title: '&4&lIndietro'
+  Cannot_Open_During_Conversation: '&c開啟選單前輸入 exit 來退出會話'
+  Item_Deleted: '&2物品 {item} 已被刪除'
+  Error: '&c錯誤! 此選單遇到致命性問題或錯誤! 請聯繫管理員並且查看 CONSOLE 來取得更多資訊!'
+  Page_Previous: '&8<< &f第 {page} 頁'
+  Page_Next: 第 {page} 頁 &8>>
+  Page_First: '&7第一頁'
+  Page_Last: '&7最後一頁'
+  Title_Tools: 工具選單
+  Tooltip_Info: '&f選單說明'
+  Button_Return_Title: '&4&l返回'
   Button_Return_Lore:
   - ''
-  - 'Torna indietro.'
+  - '回到上一頁'
   
   Color:
-    Header: Colore Chat
-    Button_Empty_Title: Nessun colore disponibile
+    Header: 選擇聊天顏色
+    Button_Empty_Title: 您當前沒有可用的聊天顏色
     Button_Empty_Lore:
     - ''
-    - 'Non possiedi dei colori che'
-    - 'puoi attivare in questo momento.'
-    Button_Reset_Color_Title: Ripristina colore chat
-    Color_Reset: '&1Colore chat ripristinato!'
-    Button_Reset_Decoration: Ripristina decorazione chat
-    Decoration_Reset: '&1Decorazione chat ripristinata!'
-    Button_Decoration_Title: ' Decorazione'
+    - '當前沒有可供您使用的的顏色與'
+    - '格式化代碼!'
+    Button_Reset_Color_Title: 重置聊天顏色
+    Color_Reset: '&1聊天顏色已重置!'
+    Button_Reset_Decoration: 重置格式化代碼
+    Decoration_Reset: '&1格式化代碼已重置!'
+    Button_Decoration_Title: ' '
     Button_Decoration_Lore:
     - ''
-    - 'Clicca per attivare'
-    - 'questa decorazione in chat.'
+    - '點擊此處來選擇或切換您在聊天'
+    - '時所使用的格式化代碼'
     - ''
-    - 'Esempio: {0}Testo Random.'
-    Decoration_Set: 'Decorazione Impostata: {0}'
-    Button_Color_Title: ' Colore'
+    - '範例: {0}範例文本!'
+    Decoration_Set: 已將您的格式化代碼切換為 {0}
+    Button_Color_Title: ' '
     Button_Color_Lore:
     - ''
-    - 'Clicca per attivare questo'
-    - 'colore in chat quando scrivi.'
+    - '點擊此處來選擇或切換您在聊天'
+    - '時所使用的顏色'
     - ''
-    - 'Esempio: {0}Lorem ipsum dolor'
-    - '{0}sit amen, color ist kamen.'
-    Color_Set: 'Colore impostato: {0}'
+    - '範例: {0}這是一個範例文本'
+    Color_Set: 已將您的顏色切換為 {0}
     Help:
-    - 'Il menu dei colori ti aiuta a scegliere'
-    - 'il colore che vuoi avere in chat o la'
-    - 'decorazione da applicare.'
+    - '此選單讓您可以方便的切換並且使用顏色'
+    - '文字與格式化代碼於聊天室內,為您的聊'
+    - '天室增添許多新色彩!'
     - ''
-    - 'Clicca le icone per selezionare il colore'
-    - 'o la decorazione che vuoi utilizzare.'
+    - '您僅需點擊上方圖標即可方便的切換顏色與'
+    - '格式化代碼!'
     - ''
-    - 'Colore attuale: {color}'
-    - 'Decorazione attuale: {decoration}'
+    - '您當前使用的顏色: {color}'
+    - '您當前使用的格式化代碼: {decoration}'
   
   Spy:
-    Toggle_Title: '(spying ? ''&4Disattiva'' : ''&2Attiva'') + '' Tutto'''
+    Toggle_Title: '(spying ? ''&4停止監聽'' : ''&2開始監聽'') + ''所有選項'''
     Toggle_Lore:
     - ''
-    - 'Clicca per attivare tutte'
-    - 'le funzionalità nel menu.'
+    - '點擊此處來切換是否要監聽'
+    - '所有選項'
     Button_Lore_1:
     - ''
-    - 'Clicca per selezionare quali'
-    - 'canali vuoi spiare.'
+    - '點擊以上選項來選擇您要監聽的'
+    - '聊天內容'
     Button_Lore_Channels:
     - ''
-    - 'Canali spiati:'
-    Button_Title: Canali
-    Type_Chat: tutti i messaggi
-    Type_Commands: comandi 
-    Type_Private_Messages: messaggi privati
-    Type_Mail: mail inviate
-    Type_Sign: cartelli piazzati
-    Type_Book: libri firmati
-    Type_Anvil: oggetti rinominati
+    - '正在監聽的聊天頻道:'
+    Button_Title: 聊天頻道
+    Type_Chat: 所有聊天訊息
+    Type_Commands: settings.yml 中設定要監聽的指令
+    Type_Private_Messages: 所有私人訊息
+    Type_Mail: 發送郵件訊息
+    Type_Sign: 使用告示牌
+    Type_Book: 撰寫書籍
+    Type_Anvil: 使用鐵砧
     Button_Toggle_Lore:
     - ''
-    - 'Clicca per attivare la spia su'
-    - '{label}.'
+    - '點擊切換監聽 {label}'
     - ''
-    - 'Stato: {status}'
-    Status: '(spying ? ''&bspiando'' : ''&cinattiva'')'
-    Status_Toggle: '(isSpying ? ''&4'' : ''&2'') + ''Spia {type} '' + (isSpying ? ''disattivata'' : ''attivata'') + ''!'''
+    - '狀態: {status}'
+    Status: '(spying ? ''&b監聽中'' : ''&c已停用'')'
+    Status_Toggle: '(isSpying ? ''&4'' : ''&2'') + ''監聽 {type} 模式'' + (isSpying ? ''已停用'' : ''已啟用'') + ''!'''
     Channels_Toggle_Lore:
     - ''
-    - 'Clicca per attivare la'
-    - 'mod. spia su questo canale.'
+    - '點擊此處切換監聽聊天頻道模式'
     - ''
-    - 'Stato: {status}'
-    Channels_Toggle: '(isSpying ? ''&4Non stai più spiando il canale'' : ''&2Stai spiando il canale'') + ''!'''
+    - '狀態: {status}'
+    Channels_Toggle: '(isSpying ? ''&4已關閉監聽模式'' : ''&2已開啟監聽模式'') + ''!'''
     Help:
-    - 'Seleziona quali aspetti del server'
-    - 'vuoi spiare. Puoi anche usare il'
-    - 'comando ''/{label} log'' per mostrare'
-    - 'la cronologia di quando non c''eri.'
+    - '您可以選擇您要監聽的所有內容'
+    - '並且還可以使用 /{label} log 指令來'
+    - '查看歷史其他資料'
     
   
 # -------------------------------------------------------------------------------------------------
-# Messages related to tools
+# 以下訊息為工具相關內容
 # -------------------------------------------------------------------------------------------------
 Tool:
-  Error: '&cOps! Abbiamo riscontrato un errore con questo attrezzo! Contatta l''admin del server.'
+  Error: '&c錯誤,此工具可能出現致命錯誤或問題! 請聯繫管理員並且查看 CONSOLE 來取得更多資訊!'
 
 # -------------------------------------------------------------------------------------------------
-# Messages related to checking messages/chat/signs etc. against spam, rules and so on
+# 以下訊息為垃圾郵件、規則等檢查/聊天室/告示牌等相關內容
 # -------------------------------------------------------------------------------------------------
 Checker:
-  Chat_Exploit_Disallowed: Il tuo messaggio contiene un codice che non puoi inviare.
-  Sign_Duplication: Non puoi scrivere più cartelli con lo stesso testo.
-  Move: '''Devi muoverti per poter '' + (chat ? ''scrivere in chat'' : ''digitare comandi'') + ''.'''
-  Delay_After_Join: '''Attendi {seconds} per '' + (chat ? ''scrivere in chat'' : ''digitare comandi'') + '' dopo il login.'''
-  Delay: '''Attendi {seconds} per inviare un altro '' + (chat ? ''messaggio'' : ''comando'') + ''.'''
-  Similarity: '''Non inviare '' + (chat ? ''messaggi'' : ''comandi'') + '' simili a quelli di prima al {similarity}%.'''
-  Period: Puoi solo inviare {type_amount} {type} ogni {period_amount} {period}.
-  Caps: Non inserire troppi caratteri maiuscoli nel {type}.
-  Sound_Notify: '&cNon puoi usare la notifica sonora per altri {seconds}.'
-  Parrot: Non puoi scrivere '''{0}'', è simile al {1}% a ciò che è già stato detto {2}.'
-  No_Text: Non puoi inviare messaggi senza testo!
-  No_Text_After_Change: Il tuo messaggio è stato modificato e non può essere inviato perchè risulta essere vuoto.
+  Chat_Exploit_Disallowed: 您所輸入的訊息包含了禁止使用的語句或是訊息
+  Sign_Duplication: 請您不要重複放置內容完全一致的告示牌
+  Move: '''請您先移動後在'' + (chat ? ''發送您想發送的訊息'' : ''執行您想執行的指令'') + '''''
+  Delay_After_Join: '''剛登入伺服器時請您稍後 {seconds} 秒後再次發送您要'' + (chat ? ''發送的訊息'' : ''執行的指令'') + ''內容'''
+  Delay: '''請您稍後 {seconds} 秒後再次發送您要'' + (chat ? ''發送的訊息'' : ''執行的指令'') + ''內容'''
+  Similarity: '''請您不要發送與您上次發送相似 {similarity}% 相同的'' + (chat ? ''訊息'' : ''指令'') + '''''
+  Period: 您僅能在 {type_amount} {type} 期間發送 {period_amount} {period}
+  Caps: 請您避免 {type} 中使用過多的大寫字母
+  Sound_Notify: '&c您不能在 {seconds} 秒內重複使用該聲音通知'
+  Parrot: 您無法重複 '{0}' 訊息,因為他與您上一個所發送的訊息 {2} 共有{1}%相似
+  No_Text: 您無法在沒有輸入任何文字的情況下發送聊天訊息!
+  No_Text_After_Change: 您的訊息已被編輯並且無法發送,因為該訊息內容為空
 
 # -------------------------------------------------------------------------------------------------
-# Words for both singular and plural form. Separate these two forms with ", "
+# 以下訊息為時間單數與複數相關內容. 請使用 ", " 來分隔兩種形式
 # -------------------------------------------------------------------------------------------------
 Cases:
-  Second: secondo, secondi
-  Message: messaggio, messaggi
-  Command: comando, comandi
+  Second: 秒, 秒
+  Message: 訊息, 訊息
+  Command: 指令, 指令
  
 # -------------------------------------------------------------------------------------------------
-# Different prefixes you can use by calling {prefix_<type>} such as {prefix_info}
+# 以下訊息為訊息前綴相關內容. 您可以使用 {prefix_<type>} 變數來使用不同的前綴內容,範例: {prefix_info}
 # -------------------------------------------------------------------------------------------------
 Prefix:
   Info: '&8&l[&9&li&8&l]&7 '
@@ -1069,36 +1078,36 @@ Prefix:
   Announce: '&8&l[&5&l!&l&8]&d '
 
 # -------------------------------------------------------------------------------------------------
-# Miscellaneous
+# 以下訊息為各式不同名詞的相關內容
 # -------------------------------------------------------------------------------------------------
-You: Tu
-Your: tuo
-His: Suo
-And: e
-None: Nessuno
-Server: server
-Channel: canale
+You: 您
+Your: 您的
+His: 他
+And: 和
+None: 無
+Server: 伺服器
+Channel: 聊天頻道
 False_Value: 'false'
-Server_Prefix: '[Server]'
-Console_Name: Console
+Server_Prefix: '[伺服器]'
+Console_Name: CONSOLE
 
 # -------------------------------------------------------------------------------------------------
-# Database related messages
+# 以下訊息為資料庫相關內容
 # -------------------------------------------------------------------------------------------------
-Data_Missing: '&c{name} non presenta informazioni per database! Puoi solo creare {type} in-game! Annullando...'
-Data_Loading: Il database sta caricando i dati, attendi...
+Data_Missing: '&c{name} 資料庫訊息缺失! 請您於客戶端中創建一個 {type} ! 跳過此步驟...'
+Data_Loading: 正在載入資料庫資料中,請稍候...
 
 # -------------------------------------------------------------------------------------------------
-# Messages shown when player runs a command he lacks permission for
+# 以下訊息為玩家沒有相關權限時的相關內容
 # -------------------------------------------------------------------------------------------------
-No_Permission: '&cNon hai il permesso: {permission}'
+No_Permission: '&c沒有權限! 缺少權限節點: {permission}'
 
 # -------------------------------------------------------------------------------------------------
-# Shown when console tries to enter a server conversation
+# 以下訊息為當使用CONSOLE嘗試進行伺服器會話的相關內容
 # -------------------------------------------------------------------------------------------------
-Conversation_Requires_Player: Solo i player possono entrare in questa conversazione.
+Conversation_Requires_Player: 僅有客戶端才可進入此會話
 
 # -------------------------------------------------------------------------------------------------
-# Internal versioning number
+# 內部版本號
 # -------------------------------------------------------------------------------------------------
 Version: 2
