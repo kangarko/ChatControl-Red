@@ -120,7 +120,7 @@ Channels:
 # -------------------------------------------------------------------------------------------------
 # Messages related to commands
 # -------------------------------------------------------------------------------------------------
-Commands: 
+Commands:
   # true = https://i.imgur.com/us88BCT.png
   # false = https://i.imgur.com/N7jLu7v.png
   Simple_Help_Design: false
@@ -314,10 +314,12 @@ Commands:
     Invalid_Decoration: 'Décoration de chat invalide. Utilisez le caractère & ou un nom. Décorations disponnibles: {0}'
     Decoration_Not_Allowed: Veuillez spécifier uniquement des couleurs, non des décorations.
     Color_Not_Allowed: Veuillez spécifier uniquement des décorations, non des couleurs.
-    Success_Color: Couleur de chat définie sur {1}
-    Success_Decoration: Décoration de chat de {0} définie sur {1}&r&7
-    Reset: La couleur de chat a été réinitialisée pour {0}
-    Reset_Decoration: Couleur de chat réinitialisée
+    Reset_Color: "Réinitialisation de la couleur de chat de {0}."
+    Set_Color: "Couleur de chat {1} définie pour {0}."
+    Reset_Color_Set_Decoration: "Réinitialiser la couleur de chat ainsi que la décoration sur {1} pour {0}."
+    Set_Color_Set_Decoration: "Définition de la couleur de chat sur {1} et de la décoration sur {2} pour {0}."
+    Reset_Color_Reset_Decoration: "Réinitialisation de la couleur de chat et de la décoration {0}."
+    Set_Color_Reset_Decoration: "Définition de la couleur de chat sur {1} et réinitialisation de la décoration pour {0}."
 
   Forward:
     Usage: <serveur> <commande...>
