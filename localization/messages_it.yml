@@ -120,7 +120,7 @@ Channels:
 # -------------------------------------------------------------------------------------------------
 # Messages related to commands
 # -------------------------------------------------------------------------------------------------
-Commands: 
+Commands:
   # true = https://i.imgur.com/us88BCT.png
   # false = https://i.imgur.com/N7jLu7v.png
   Simple_Help_Design: false
@@ -312,10 +312,12 @@ Commands:
     Invalid_Decoration: 'Decorazione chat non valida. Usa & o sintassi del nome. Disponibili: {0}'
     Decoration_Not_Allowed: Inserisci solo un colore.
     Color_Not_Allowed: Inserisci solo una decorazione.
-    Success_Color: Colore {0} impostato a {1}&7
-    Success_Decoration: Decorazione chat {0} impostato a {1}&r&7
-    Reset: Colore della chat di {0} ripristinato al default
-    Reset_Decoration: Decorazione della chat di {0} ripristinata al default
+    Reset_Color: "Reset chat color for {0}."
+    Set_Color: "Set chat color to {1} for {0}."
+    Reset_Color_Set_Decoration: "Reset chat color and set decoration to {1} for {0}."
+    Set_Color_Set_Decoration: "Set chat color to {1} and set decoration to {2} for {0}."
+    Reset_Color_Reset_Decoration: "Reset both chat color and decoration for {0}."
+    Set_Color_Reset_Decoration: "Set chat color to {1} and reset decoration for {0}."
 
   Forward:
     Usage: <server> <comando...>
