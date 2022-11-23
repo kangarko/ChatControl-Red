@@ -17,15 +17,16 @@ body:
 
       _Don't put "Paper" or "Spigot" etc. in your title._
 
-- type: dropdown
-  id: updated-version
+
+- type: input
+  id: plugin-version
   attributes:
-    label: Are you using the latest version of the plugin available?
-    description: Please make sure you use the latest version of the plugin before submitting an issue, otherwise your issue will be ignored.
-    options:
-      - "Yes, the plugin is up-to-date!"
+    label: '"/version ChatControlRed" - plugin version'
+    description: Enter the version of the plugin here
+    placeholder: "10.x.x"
   validations:
     required: true
+
 
 - type: dropdown
   attributes:
@@ -36,6 +37,7 @@ body:
   validations:
     required: true
 
+
 - type: input
   attributes:
     label: Error log (if applicable)
@@ -43,6 +45,7 @@ body:
     placeholder: "Paste link here"
   validations:
     required: false
+
 
 - type: textarea
   attributes:
@@ -56,6 +59,7 @@ body:
       Click here then drag the ZIP file here to upload it.
   validations:
     required: false
+
 
 - type: textarea
   attributes:
