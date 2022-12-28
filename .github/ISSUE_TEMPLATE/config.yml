@@ -1,0 +1,12 @@
+
+blank_issues_enabled: false
+contact_links:
+  - name: View common issues
+    url: https://github.com/kangarko/ChatControl-Red/wiki/Common-Issues
+    about: Check the list of known common issues to see if it solves your problem.
+  - name: Get help from the community on Discord
+    url: https://mineacademy.org/discord
+    about: Join the MineAcademy Discord for community support!
+  - name: Get help for technical issues like billing issues etc.
+    url: mailto:support@mineacademy.org
+    about: Send an email to support@mineacademy.org
