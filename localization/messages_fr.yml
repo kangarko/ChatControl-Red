@@ -314,12 +314,12 @@ Commands:
     Invalid_Decoration: 'Décoration de chat invalide. Utilisez le caractère & ou un nom. Décorations disponnibles: {0}'
     Decoration_Not_Allowed: Veuillez spécifier uniquement des couleurs, non des décorations.
     Color_Not_Allowed: Veuillez spécifier uniquement des décorations, non des couleurs.
-    Reset_Color: "Réinitialisation de la couleur de chat de {0}."
-    Set_Color: "Couleur de chat {1} définie pour {0}."
-    Reset_Color_Set_Decoration: "Réinitialiser la couleur de chat ainsi que la décoration sur {1} pour {0}."
-    Set_Color_Set_Decoration: "Définition de la couleur de chat sur {1} et de la décoration sur {2} pour {0}."
-    Reset_Color_Reset_Decoration: "Réinitialisation de la couleur de chat et de la décoration {0}."
-    Set_Color_Reset_Decoration: "Définition de la couleur de chat sur {1} et réinitialisation de la décoration pour {0}."
+    Reset_Color: "&7Reset chat color for {0}."
+    Set_Color: "&7Set chat color to {1} &7for {0}."
+    Reset_Color_Set_Decoration: "&7Reset chat color and set decoration to {1}&r&7 for {0}."
+    Set_Color_Set_Decoration: "&7Set chat color to {1}&7 and set decoration to {2}&r&7 for {0}."
+    Reset_Color_Reset_Decoration: "&7Reset both chat color and decoration for {0}."
+    Set_Color_Reset_Decoration: "&7Set chat color to {1}&7 and reset decoration for {0}."
 
   Forward:
     Usage: <serveur> <commande...>
@@ -922,7 +922,6 @@ Player:
   No_Write_Chat_Permission: Il vous manque la permission {0} afin d''écrire dans le chat.
   No_Channel: Vous n'avez pas de salon dans lequel écrire. Utilisez '/{label_channel} join' pour en rejoindre un.
   No_Possible_Channel: Vous n'avez pas les permissions nécéssaires afin de rejoindre un quelconque salon.
-  Cannot_Chat_Vanished: Vous ne pouvez pas écrire dans le chat directement lorsque vous êtes en vanish. Utilisez '/{label_channel} send' à la place.
   Kick_Disallowed_Nickname: '&cVotre pseudonyme contient des caracètres interdits !'
   Kick_Relogin: '&cVeuillez patienter {0} seconde(s) avant de vous reconnecter !'
   Channel_Range_Notification: '''{prefix_warn}Il n''y a personne avec qui discuter dans '' + (hasRange ? ''votre rayon'' : ''votre salon'').'
