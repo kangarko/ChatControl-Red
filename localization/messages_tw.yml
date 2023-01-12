@@ -122,7 +122,7 @@ Channels:
 # -------------------------------------------------------------------------------------------------
 # 以下訊息為指令相關內容
 # -------------------------------------------------------------------------------------------------
-Commands: 
+Commands:
   # true = https://i.imgur.com/us88BCT.png
   # false = https://i.imgur.com/N7jLu7v.png
   Simple_Help_Design: false
@@ -325,10 +325,12 @@ Commands:
     - '&c您可使用的格式化代碼: {0}'
     Decoration_Not_Allowed: 您的第一選項僅能使用顏色代碼
     Color_Not_Allowed: 您的第二選項僅能使用格式化代碼
-    Success_Color: 您已將玩家 {0} 的聊天顏色設定為 {1}&7
-    Success_Decoration: 您已將玩家 {0} 的格式化代碼設定為 {1}&r&7
-    Reset: 您已將玩家 {0} 的聊天顏色設定恢復為預設值
-    Reset_Decoration: 您已將玩家 {0} 的格式化代碼設定恢復為預設值
+    Reset_Color: "&7Reset chat color for {0}."
+    Set_Color: "&7Set chat color to {1} &7for {0}."
+    Reset_Color_Set_Decoration: "&7Reset chat color and set decoration to {1}&r&7 for {0}."
+    Set_Color_Set_Decoration: "&7Set chat color to {1}&7 and set decoration to {2}&r&7 for {0}."
+    Reset_Color_Reset_Decoration: "&7Reset both chat color and decoration for {0}."
+    Set_Color_Reset_Decoration: "&7Set chat color to {1}&7 and reset decoration for {0}."
 
   Forward:
     Usage: <伺服器> <指令...>
@@ -931,7 +933,6 @@ Player:
   No_Write_Chat_Permission: 您沒有於聊天頻道 {0} 內寫入訊息的權限
   No_Channel: 您還沒有加入任何聊天頻道. 您可以使用 '/{label_channel} join' 來加入一個聊天頻道!
   No_Possible_Channel: 您沒有權限可以加入任何一個聊天頻道內
-  Cannot_Chat_Vanished: 當您進入隱形模式時您無法直接向聊天頻道發送訊息. 您可以使用 '/{label_channel} send' 來向聊天頻道內傳送訊息
   Kick_Disallowed_Nickname: '&c您的玩家名稱內包含了系統不允許使用的字符或字串'
   Kick_Relogin: '&c請稍候 {0} 秒後再嘗試加入!'
   Channel_Range_Notification: '''{prefix_warn}當前'' + (hasRange ? ''區域頻道'' : ''頻道'') + ''內沒有任何人聽得道你說話'''
