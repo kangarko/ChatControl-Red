@@ -21,7 +21,6 @@ Notice: All buyers of ChatControl Pro can get a free upgrade [here](http://minea
 * A full BungeeCord and Discord support
 * Overhauled channel system
 * Offline player support
-* Full UUID support
 * And much more!
 
 You are welcome to read the **[ChatControl Red Wiki](https://github.com/kangarko/ChatControl-Red/wiki)**, where you fill find tons of information about the installation, configuring and using this plugin.
