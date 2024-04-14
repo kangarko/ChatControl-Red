@@ -126,7 +126,7 @@ Channels:
     Usage: <player> <channel> <message>
     Description: Enviar un mensaje como jugador a un canal.
     Error: 'El envío como ''{0}'' falló: {1}'
-    
+
 # -------------------------------------------------------------------------------------------------
 # Messages related to commands
 # -------------------------------------------------------------------------------------------------
@@ -199,13 +199,13 @@ Commands:
   Error: '&4&l¡Oups! &cEl comando falló :( Revisa la consola y reporta el error.'
   Header_No_Subcommands: '&cNo hay subcomandos para este comando.'
   Header_No_Subcommands_Permission: '&cNo tienes permiso para ver subcomandos.'
-  Header_Color: ORO
-  Header_Secondary_Color: ROJO
+  Header_Color: GOLD
+  Header_Secondary_Color: RED
   Header_Format: |-
       &r
       {theme_color}&m<center>&r{theme_color} {title} &m
       &r
-  # Debe ser exactamente una letra
+  # Must be exactly one letter
   Header_Center_Letter: ' '
   Header_Center_Padding: 150
   Reloading: Recargando
@@ -258,7 +258,7 @@ Commands:
     Usage: <new/save/delete/open/list> [name] [player]
     Description: Manipular libros en el juego.
     Usages:
-    - "/{label} {sublabel} new &7- Crear un libro nuevo a través del comando '/mail new'."
+    - '/{label} {sublabel} new &7- Crear un libro nuevo a través del comando ''/mail new''.'
     - '/{label} {sublabel} save <name> &7- Guardar un libro firmado.'
     - '/{label} {sublabel} delete <name> &7- Eliminar un libro guardado.'
     - '/{label} {sublabel} open <name> [player] &7- Abrir libro para jugador.'
@@ -371,7 +371,7 @@ Commands:
     - '&c&lCONSEJO:&c De esta manera puedes medir el rendimiento de las variables y determinar las causas de los retrasos.'
     Cache_Player: '&cInformación de caché para {0}'
     Cache_Location: '&cUbicación: '
-    Cache_Nick: 'Jugador {0} tiene apodo:{1}.'
+    Cache_Nick: Jugador {0} tiene apodo:{1}.
     Is_Newcomer: '{0} &aes &7un recién llegado.'
     Is_Not_Newcomer: '{0} &cno es &7un recién llegado.'
     Variables_No_Message: Por favor, introduce un mensaje en el que podamos reemplazar variables.
@@ -573,8 +573,8 @@ Commands:
     - '<center>&6&l{0} Mensaje ''{1}'''
     Info_Footer:
     - '&8{chat_line}'
-    Toggle_On: 'Mensaje {0} {1} ha sido &aactivado&7.'
-    Toggle_Off: 'Mensaje {0} {1} ha sido &cdesactivado&7.'
+    Toggle_On: Mensaje {0} {1} ha sido &aactivado&7.
+    Toggle_Off: Mensaje {0} {1} ha sido &cdesactivado&7.
 
   Me:
     Usage: <message>
@@ -888,9 +888,9 @@ Commands:
     Usages_Chat:
     - '/{label} chat &7- Activar la visualización de mensajes de chat. Aunque espíes, los verás.'
     Usages_Join:
-    - '/{label} join default &7- Cambiar grupo de mensaje de unión 'default'.'
+    - '/{label} join default &7- Cambiar grupo de mensaje de unión ''default''.'
     Usages_Timed:
-    - '/{label} timed special &7- Cambiar grupo de mensajes temporizados 'special'.'
+    - '/{label} timed special &7- Cambiar grupo de mensajes temporizados ''special''.'
     Usages_Private_Message:
     - '/{label} pm &7- Ignorar todos los mensajes privados.'
     Usages_Sound_Notify:
@@ -938,7 +938,7 @@ Commands:
   Tour:
     Not_Completed: Antes de usar ChatControl, primero debes completar nuestra guía de inicio con &7/{0} tour &cfirst.
     Requires_Op: Solo los operadores pueden completar la guía de puesta en marcha del plugin.
-
+    
   Update:
     Usage: <player>
     Description: Recargar tu nombre o el de la pestaña de un jugador.
@@ -1044,8 +1044,8 @@ Menu:
     - 'de todo en este menú.'
     Button_Lore_1:
     - ''
-    - Haz clic para seleccionar los canales de chat.
-    - que quieres espiar.
+    - 'Haz clic para seleccionar los canales de chat.'
+    - 'que quieres espiar.'
     Button_Lore_Channels:
     - ''
     - 'Canales de espionaje:'
@@ -1138,7 +1138,7 @@ And: y
 None: Ninguno
 Server: Servidor
 Channel: Canal
-False_Value: 'falso'
+False_Value: falso
 Server_Prefix: '[Servidor]'
 Console_Name: Consola
 
