@@ -2,40 +2,15 @@ name: Velocity - Bug Report
 description: Report a problem, issue or a bug.
 title: "Minecraft Version: Issue Title"
 labels: [velocity]
-assignees: [james090500]
 body:
 
 
 - type: markdown
   attributes:
     value: |
-      ### Please edit the issue title as follows:
-      
-      Example:
-      **Wrong title:** Chat event loses its format
-      **Correct title:** 1.19.1: Chat event loses its format
-
-      _Don't put "Paper" or "Spigot" etc. in your title._
-
-
-- type: input
-  id: plugin-version
-  attributes:
-    label: '"/version ChatControlRed" - plugin version'
-    description: Enter the version of the plugin here
-    placeholder: "10.x.x"
-  validations:
-    required: true
-
-
-- type: dropdown
-  attributes:
-    label: Are you using MySQL?
-    options:
-      - 'No'
-      - 'Yes'
-  validations:
-    required: true
+      ### Please edit the title like this: 1.x.x: Issue      
+      Example: 1.20.5: Chat event loses its format
+      _Do NOT put "Paper" or "Spigot" etc. in your title._
 
 
 - type: input
