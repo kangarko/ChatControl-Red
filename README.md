@@ -26,7 +26,7 @@ Notice: All buyers of ChatControl Pro can get a free upgrade [here](http://minea
 ## Addons
 
 * [BungeeControl](https://builtbybit.com/resources/24248/)
-* [VelocityControl](https://github.com/kangarko/VelocityControl)
+* [VelocityControl](https://builtbybit.com/resources/43226/)
 
 You are welcome to read the **[ChatControl Red Wiki](https://github.com/kangarko/ChatControl-Red/wiki)**, where you fill find tons of information about the installation, configuring and using this plugin.
 
