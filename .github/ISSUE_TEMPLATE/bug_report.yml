@@ -39,7 +39,7 @@ body:
 
 - type: input
   attributes:
-    label: Optional: Error log
+    label: 'Optional: Error log'
     description: If you are reporting a console error, upload any relevant log excerpts to https://pastebin.com and the paste the link here.
     placeholder: "Enter pastebin.com link here"
   validations:
