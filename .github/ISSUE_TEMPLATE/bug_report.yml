@@ -32,7 +32,7 @@ body:
   id: plugin-version
   attributes:
     label: '"/version ChatControlRed" - plugin version'
-    description: Enter the version of the plugin here
+    description: Only the latest version of the plugin is supported.
     placeholder: "11.x.x"
   validations:
     required: true
