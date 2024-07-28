@@ -1,24 +1,13 @@
 name: Bug Report
 description: Report a problem, issue or a bug.
-title: "Minecraft Version: Issue Title"
+title: "Version: Title"
 labels: []
 body:
 
 - type: markdown
   attributes:
     value: |
-      ### Please edit the title like this: {SERVER VERSION}: {TITLE}      
-      Example: 1.21: Chat event loses its format
-      _Do NOT put "Paper" or "Spigot" etc. in your title._
-
-- type: input
-  id: plugin-version
-  attributes:
-    label: '"/version ChatControlRed" - plugin version'
-    description: Enter the version of the plugin here
-    placeholder: "10.x.x"
-  validations:
-    required: true
+      #### Please replace "Version" with your server version (i.e. Paper 1.21), and Title with question summary in your title. 
 
 - type: dropdown
   attributes:
@@ -33,15 +22,24 @@ body:
   attributes:
     label: Are you using a proxy?
     options:
-      - 'Yes, Velocity'
-      - 'Yes, BungeeCord'
-      - 'No'      
+      - 'No'
+      - 'Yes - Velocity'
+      - 'Yes - BungeeCord'
+  validations:
+    required: true
+
+- type: input
+  id: plugin-version
+  attributes:
+    label: '"/version ChatControlRed" - plugin version'
+    description: Enter the version of the plugin here
+    placeholder: "11.x.x"
   validations:
     required: true
 
 - type: input
   attributes:
-    label: Error log (if applicable)
+    label: Optional: Error log
     description: If you are reporting a console error, upload any relevant log excerpts to https://pastebin.com and the paste the link here.
     placeholder: "Enter pastebin.com link here"
   validations:
@@ -49,21 +47,21 @@ body:
 
 - type: textarea
   attributes:
-    label: '"/chc debug" output (strongly recommended)'
+    label: 'Optional: "/chc debug" file'
     description: |
-      Run `/chc debug` in the console, then a debug ZIP file will be generated.
+      Run `/chc debug` in the console and drop the ZIP file generated in ChatControl folder here.
       
       **If you want to keep your settings private** Upload this ZIP file to [ufile.io](https://ufile.io) then email the link to support@mineacademy.org
-      **Your database information from mysql.yml will be excluded.**
+      **The mysql.yml will automatically be excluded for privacy.**
     placeholder: |
-      Click here then drag the ZIP file here to upload it.
+      Click here then drag the "/chc debug" zip file here to upload it.
   validations:
     required: false
 
 
 - type: textarea
   attributes:
-    label: Information about the issue/bug
-    description: How can we reproduce your issue?
+    label: Steps to reproduce
+    description: What is your expected behavior and what happened instead? How can we reproduce the issue? 
   validations:
     required: true
