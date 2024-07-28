@@ -13,14 +13,6 @@ body:
   attributes:
     label: "Summary"
     description: |
-      Please enter a brief but clear and concise description of your suggestion/feature request or comments here.
-  validations:
-    required: true
-
-- type: textarea
-  attributes:
-    label: "What would happen if we didn't implement this feature? Why not having this feature is a problem?"
-    description: |
-      Please be as a clear and concise as possible.
+      What would happen if we didn't implement this feature? Why not having this feature is a problem? Enter a clear description of your suggestion.
   validations:
     required: true
