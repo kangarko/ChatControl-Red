@@ -4,14 +4,12 @@ title: "Minecraft Version: Issue Title"
 labels: []
 body:
 
-
 - type: markdown
   attributes:
     value: |
-      ### Please edit the title like this: 1.x.x: Issue      
-      Example: 1.20.5: Chat event loses its format
+      ### Please edit the title like this: {SERVER VERSION}: {TITLE}      
+      Example: 1.21: Chat event loses its format
       _Do NOT put "Paper" or "Spigot" etc. in your title._
-
 
 - type: input
   id: plugin-version
@@ -22,7 +20,6 @@ body:
   validations:
     required: true
 
-
 - type: dropdown
   attributes:
     label: Are you using MySQL?
@@ -32,23 +29,21 @@ body:
   validations:
     required: true
 
-
 - type: dropdown
   attributes:
-    label: Are you using BungeeCord?
-    description: |
-      If you are using Velocity, use [this](https://github.com/kangarko/ChatControl-Red/issues/new?assignees=james090500&labels=velocity&template=bug_report_velocity.yml&title=Minecraft+Version%3A+Issue+Title) issue template instead.
+    label: Are you using a proxy?
     options:
-      - 'No'
-      - 'Yes'
+      - 'Yes, Velocity'
+      - 'Yes, BungeeCord'
+      - 'No'      
   validations:
     required: true
 
 - type: input
   attributes:
     label: Error log (if applicable)
-    description: If you are reporting a console error, upload any relevant log excerpts to either https://paste.gg or https://gist.github.com, save and the paste the link in this box.
-    placeholder: "Paste link here"
+    description: If you are reporting a console error, upload any relevant log excerpts to https://pastebin.com and the paste the link here.
+    placeholder: "Enter pastebin.com link here"
   validations:
     required: false
 
