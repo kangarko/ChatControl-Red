@@ -31,25 +31,25 @@ Channels:
   Disabled: '&cKanäle sind deaktiviert. Setzen Sie Channels.Enabled in settings.yml auf true, um sie zu aktivieren.'
   Disabled_World: '&cIn der Welt ''{0}'' sind keine Kanäle aktiviert .'
   No_Channels: '&cEs gibt keine Kanäle. Fügen Sie einige in Channels.List in settings.yml hinzu.'
-  No_Channel: 'Kein solcher Kanal: ''{0}''. Verfügbar: {1}'
+  No_Channel: 'Kein Kanal namens ''{0}''. Verfügbar: {1}'
   Available: ' &fVerfügbar: &7'
   Header: Kanäle
   Header_Alternative:
-  - '&cKanäle: &7Sie befinden sich in Kanälen: {0}'
+  - '&cKanäle: &7Sie befinden sich in folgenden Kanälen: {0}'
   Header_Alternative_Channel: '{channel} ({mode})'
   Use_Alternative_Header: false
   Tooltip_Joined: '&fSie sind in diesem Kanal verbunden.'
-  Tooltip_Join_Write: '&2Klicken Sie hier, um diesem Kanal zum Schreiben beizutreten.'
+  Tooltip_Join_Write: '&2Klicken Sie hier, um diesem Kanal fürs Schreiben beizutreten.'
   Tooltip_Join_Read: '&2Klicken Sie, um diesem Kanal zum Lesen beizutreten.'
   Tooltip_Leave_Write:
   - ''
   - '&6Hinweis: &fSie werden automatisch die'
   - '&fIhr alter Schreibkanal ''{0}''.'
-  Tooltip_Channels: ' &fDeine Kanele'
+  Tooltip_Channels: ' &fDeine Kanäle'
   Tooltip_Join: '&aZum Beitritt klicken'
   Tooltip_Leave: '&cZum Verlassen klicken'
   Tooltip_Switch_To_Read: '&7Zum Lesen wechseln'
-  Tooltip_Switch_To_Write: '&7Schreiben Sie an den Kanal'
+  Tooltip_Switch_To_Write: '&7Schreiben Sie in diesem Kanal'
   
   Join:
     Usage: <channel> [mode] [player]
@@ -66,8 +66,8 @@ Channels:
     Already_Joined: Spieler ist bereits in diesem Kanal im Modus {0} verbunden.
     Already_Joined_Self: Sie sind bereits mit diesem Kanal im Modus {0} verbunden.
     Read_Disabled: Das Verbinden von Kanälen zum Lesen wurde deaktiviert.
-    Leave_Reading_You: ' Sie haben die Anzeige &o{0}&7 Kanal(e) über dem Limit gelassen.'
-    Leave_Reading_Other: ' {target} linker Messwert &o{0}&7 Kanal(e) über Grenzwert.'
+    Leave_Reading_You: ' Sie haben die Anzeige &o{0}&7 Kanal(e) über dem Limit gelassen!'
+    Leave_Reading_Other: ' {target} linker Messwert &o{0}&7 Kanal(e) über Grenzwert!'
     Switch_Success: Umschaltmodus für Kanal &o{0} &7von {1} auf {2}.
     Success: Verbunden &o{0} &7Kanal im Modus {1}.
     Notification: none
