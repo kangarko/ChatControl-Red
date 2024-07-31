@@ -28,14 +28,14 @@
 # Messages related to channels
 # -------------------------------------------------------------------------------------------------
 Channels:
-  Disabled: '&cKanäle sind deaktiviert. Setzen Sie Channels.Enabled in settings.yml auf true, um sie zu aktivieren.'
-  Disabled_World: '&cIn der Welt ''{0}'' sind keine Kanäle aktiviert .'
+  Disabled: '&cKanäle sind deaktiviert. Setzen Sie Kanäle. Aktiviere es in settings.yml auf true.'
+  Disabled_World: '&cIn der Welt ''{0}'' sind keine Kanäle aktiviert !'
   No_Channels: '&cEs gibt keine Kanäle. Fügen Sie einige in Channels.List in settings.yml hinzu.'
   No_Channel: 'Kein solcher Kanal: ''{0}''. Verfügbar: {1}'
   Available: ' &fVerfügbar: &7'
   Header: Kanäle
   Header_Alternative:
-  - '&cKanäle: &7Sie befinden sich in Kanälen: {0}'
+  - '&cKanäle: &7Sie befinden sich in Folgenden Kanälen: {0}'
   Header_Alternative_Channel: '{channel} ({mode})'
   Use_Alternative_Header: false
   Tooltip_Joined: '&fSie sind in diesem Kanal verbunden.'
@@ -44,12 +44,12 @@ Channels:
   Tooltip_Leave_Write:
   - ''
   - '&6Hinweis: &fSie werden automatisch die'
-  - '&fIhr alter Schreibkanal ''{0}''.'
+  - '&fIhr alter Schreibkanal war ''{0}''.'
   Tooltip_Channels: ' &fDeine Kanele'
   Tooltip_Join: '&aZum Beitritt klicken'
   Tooltip_Leave: '&cZum Verlassen klicken'
   Tooltip_Switch_To_Read: '&7Zum Lesen wechseln'
-  Tooltip_Switch_To_Write: '&7Schreiben Sie an den Kanal'
+  Tooltip_Switch_To_Write: '&7Schreiben Sie in den Kanal'
   
   Join:
     Usage: <channel> [mode] [player]
