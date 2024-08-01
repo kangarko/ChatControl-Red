@@ -81,13 +81,13 @@ Channels:
     - '/{label} {sublabel} <channel> <player> &7- Zwingt den Spieler, den Kanal zu verlassen.'
     Not_Joined_V2: Sie sind in diesem Kanal nicht angemeldet. Es gibt keine Kanäle, die Sie verlassen können.
     Not_Joined_V2_Other: '{0} ist diesem Kanal nicht beigetreten. Es gibt keine Kanäle, die der Spieler verlassen kann.'
-    Not_Joined_V2_Suggest_Alt: 'Sie sind nicht in diesem Channel angemeldet. Sie können Kanäle verlassen: {1}.'
-    Not_Joined_V2_Suggest_Alt_Other: '{0} ist nicht in diesem Kanal. Spieler können Kanäle verlassen: {1}'
+    Not_Joined_V2_Suggest_Alt: 'Sie sind nicht in diesem Kanal angemeldet. Sie können folgende Kanäle verlassen: {1}.'
+    Not_Joined_V2_Suggest_Alt_Other: '{0} ist nicht in diesem Kanal. Spieler können folgende Kanäle verlassen: {1}'
     No_Channels: Sie haben keine Möglichkeit zu gehen.
     No_Channels_Other: Der Spieler hat keine Möglichkeit zu gehen.
     Switch_To_Reading: Sie haben die &o{0} &7Kanal zum Lesen. Geben Sie den Befehl erneut ein, um den Kanal zu verlassen.
     Switch_To_Reading_Other: '{target} schaltet den &o{0} &7Kanal auf Lesen. Geben Sie den Befehl erneut ein, um zu gehen.'
-    Success: Sie haben die &o{0} &7Kanal verlassen.
+    Success: Sie haben den &o{0} &7Kanal verlassen.
     Success_Other: none
     Notification: none
   
@@ -111,11 +111,11 @@ Channels:
     Leave_V2: ' &8[&aVerlassen Sie&8]'
     Join_V2_Tooltip: '&6Klicken Sie, um diesem Kanal beizutreten.'
     Leave_V2_Tooltip: '&6Klicken Sie, um diesen Kanal zu verlassen.'
-    No_Players: ' &7- &oKeine Spieler.'
+    No_Players: ' &7- &oKeine Spieler!'
     Remove: '&8[&4X&8] '
-    Remove_Tooltip: '&6Klicken Sie auf , um {0} aus dem Kanal zu entfernen.'
+    Remove_Tooltip: '&6Klicken Sie, um {0} aus dem Kanal zu entfernen.'
     Header_V2: Online-Kanal Spieler
-    Header_V2_Network: Bungee Channel Spieler
+    Header_V2_Network: Bungee Kanal Spieler
     Line: '&8[{mode_color}{mode}&8] &f{player}'
     
   Send:
@@ -142,11 +142,11 @@ Commands:
   No_Rule_Name: 'Bitte geben Sie den Namen der Regel an. Verfügbar: {0}'
   No_Message_Name: 'Bitte geben Sie die Nachrichtengruppe an. Verfügbar: {0}'
   No_Cached_Player: Bitte geben Sie einen Spielernamen an (kann auch offline sein).
-  No_Reason_While_Silent: Bei Verwendung der Option silent kann der Grund nicht angegeben werden.
+  No_Reason_While_Silent: Bei Verwendung der Option silent kann der Grund nicht angegeben werden!
   No_Silent_And_Anonymous: Es können nicht gleichzeitig stille und anonyme Optionen angegeben werden.
-  Console_Missing_Player_Name: Bei Ausführung über die Konsole ist der Spielername anzugeben.
+  Console_Missing_Player_Name: Bei Ausführung über die Konsole muss der Spielername angegeben sein.
   Compiling_Data: Zusammenstellung von Datenbankinformationen..
-  Cooldown_Wait: '&cWarten {duration} Sekunde(n), bevor Sie diesen Befehl erneut verwenden.'
+  Cooldown_Wait: '&cWarten Sie {duration} Sekunde(n), bevor Sie diesen Befehl erneut verwenden.'
   Invalid_Server: 'Kein solcher Server: ''{0}'' Verfügbar: {1}.'
   Invalid_Argument: '&cUngültiges Argument. Führen Sie &6/{label} ? &cfür Hilfe aus.'
   Invalid_Sub_Argument: '&cUngültiges Argument. Führen Sie ''/{label} {0}'' für Hilfe aus.'
