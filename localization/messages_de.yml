@@ -55,7 +55,7 @@ Channels:
     Usage: <channel> [mode] [player]
     Description: Einem Chat-Kanal beitreten.
     Usages_Self:
-    - '/{label} {sublabel} <channel> &7- Treten Sie dem Kanal zum Schreiben bei'
+    - '/{label} {sublabel} <channel> &7- Treten Sie dem Kanal zum Schreiben bei.'
     - '/{label} {sublabel} <channel> <mode> &7- Kanal für Modus verbinden.'
     Usages_Others:
     - '/{label} {sublabel} <channel> <mode> [player] &7- Verbinden Sie den Spieler mit dem Kanal für den Modus.'
@@ -64,7 +64,7 @@ Channels:
     - '&cHinweis: Bei Überschreitung des Limits verlässt der neue Spieler den/die alten Kanal/Kanäle.'
     - ''
     Already_Joined: Spieler ist bereits in diesem Kanal im Modus {0} verbunden.
-    Already_Joined_Self: Sie sind bereits mit diesem Kanal im Modus {0} verbunden.
+    Already_Joined_Self: Sie sind bereits in diesem Kanal mit dem Modus {0} verbunden.
     Read_Disabled: Das Verbinden von Kanälen zum Lesen wurde deaktiviert.
     Leave_Reading_You: ' Sie haben die Anzeige &o{0}&7 Kanal(e) über dem Limit gelassen!'
     Leave_Reading_Other: ' {target} linker Messwert &o{0}&7 Kanal(e) über Grenzwert!'
@@ -79,13 +79,13 @@ Channels:
     - '/{label} {sublabel} <channel> &7- Chat-Kanal verlassen.'
     Usages_Others:
     - '/{label} {sublabel} <channel> <player> &7- Zwingt den Spieler, den Kanal zu verlassen.'
-    Not_Joined_V2: Sie sind in diesem Kanal nicht angemeldet. Es gibt keine Kanäle, die Sie verlassen können.
+    Not_Joined_V2: 'Sie sind in diesem Kanal nicht angemeldet. Es gibt keine Kanäle, die Sie verlassen können!'
     Not_Joined_V2_Other: '{0} ist diesem Kanal nicht beigetreten. Es gibt keine Kanäle, die der Spieler verlassen kann.'
-    Not_Joined_V2_Suggest_Alt: 'Sie sind nicht in diesem Channel angemeldet. Sie können Kanäle verlassen: {1}.'
-    Not_Joined_V2_Suggest_Alt_Other: '{0} ist nicht in diesem Kanal. Spieler können Kanäle verlassen: {1}'
+    Not_Joined_V2_Suggest_Alt: 'Sie sind nicht in diesem Channel angemeldet. Sie können folgende Kanäle verlassen: {1}.'
+    Not_Joined_V2_Suggest_Alt_Other: '{0} ist nicht in diesem Kanal. Spieler können folgende Kanäle verlassen: {1}'
     No_Channels: Sie haben keine Möglichkeit zu gehen.
     No_Channels_Other: Der Spieler hat keine Möglichkeit zu gehen.
-    Switch_To_Reading: Sie haben die &o{0} &7Kanal zum Lesen. Geben Sie den Befehl erneut ein, um den Kanal zu verlassen.
+    Switch_To_Reading: 'Sie haben die &o{0} &7Kanal zum Lesen. Geben Sie den Befehl erneut ein, um den Kanal zu verlassen.'
     Switch_To_Reading_Other: '{target} schaltet den &o{0} &7Kanal auf Lesen. Geben Sie den Befehl erneut ein, um zu gehen.'
     Success: Sie haben die &o{0} &7Kanal verlassen.
     Success_Other: none
@@ -106,14 +106,14 @@ Channels:
     Mute_V2: ' &8[&7Mute&8]'
     Unmute_V2: ' &8[&cUnmute&8]'
     Mute_V2_Tooltip: '&6Klicken Sie hier, um diesen Kanal für 15 Minuten stumm zu schalten.'
-    Unmute_V2_Tooltip: '&6Klicken Sie hier, um die Stummschaltung dieses Kanals aufzuheben.'
+    Unmute_V2_Tooltip: '&6Klicken Sie hier, um die Stummschaltung des Kanals aufzuheben.'
     Join_V2: ' &8[&7Beitreten&8]'
     Leave_V2: ' &8[&aVerlassen Sie&8]'
     Join_V2_Tooltip: '&6Klicken Sie, um diesem Kanal beizutreten.'
     Leave_V2_Tooltip: '&6Klicken Sie, um diesen Kanal zu verlassen.'
     No_Players: ' &7- &oKeine Spieler.'
     Remove: '&8[&4X&8] '
-    Remove_Tooltip: '&6Klicken Sie auf , um {0} aus dem Kanal zu entfernen.'
+    Remove_Tooltip: '&6Klicken Sie drauf , um {0} aus dem Kanal zu entfernen.'
     Header_V2: Online-Kanal Spieler
     Header_V2_Network: Bungee Channel Spieler
     Line: '&8[{mode_color}{mode}&8] &f{player}'
@@ -134,20 +134,20 @@ Commands:
   # true = https://i.imgur.com/us88BCT.png
   # false = https://i.imgur.com/N7jLu7v.png
   Simple_Help_Design: false
-  No_Console: '&cDu kannst diesen Befehl nur als Spieler verwenden.'
-  No_BungeeCord: Sie benötigen BungeeCord, um diese Funktion nutzen zu können.
-  No_MySQL: Für diesen Befehl muss MySQL in der Datei settings.yml aktiviert sein.
+  No_Console: '&cDu kannst diesen Befehl nur als Spieler verwenden!'
+  No_BungeeCord: Sie benötigen einen BungeeCord Proxy, um diese Funktion nutzen zu können.
+  No_MySQL: Für diesen Befehl muss MySQL in der Datei settings.yml aktiviert sein!
   No_MySQL_BungeeCord: Sie müssen MySQL aktivieren, um diese Funktion über BungeeCord zu nutzen.
-  No_Group_Name: Bitte geben Sie den Gruppennamen an. Verfügbar {0}
-  No_Rule_Name: 'Bitte geben Sie den Namen der Regel an. Verfügbar: {0}'
-  No_Message_Name: 'Bitte geben Sie die Nachrichtengruppe an. Verfügbar: {0}'
+  No_Group_Name: Bitte geben Sie den Gruppennamen an. Verfügbare Gruppennamen {0}
+  No_Rule_Name: 'Bitte geben Sie den Namen der Regel an. Verfügbare Regeln: {0}'
+  No_Message_Name: 'Bitte geben Sie die Nachrichtengruppe an. Verfügbare Nachrichtengruppen: {0}'
   No_Cached_Player: Bitte geben Sie einen Spielernamen an (kann auch offline sein).
   No_Reason_While_Silent: Bei Verwendung der Option silent kann der Grund nicht angegeben werden.
   No_Silent_And_Anonymous: Es können nicht gleichzeitig stille und anonyme Optionen angegeben werden.
-  Console_Missing_Player_Name: Bei Ausführung über die Konsole ist der Spielername anzugeben.
-  Compiling_Data: Zusammenstellung von Datenbankinformationen..
-  Cooldown_Wait: '&cWarten {duration} Sekunde(n), bevor Sie diesen Befehl erneut verwenden.'
-  Invalid_Server: 'Kein solcher Server: ''{0}'' Verfügbar: {1}.'
+  Console_Missing_Player_Name: Bei Ausführung über die Konsole muss der Spielername angegeben sein!
+  Compiling_Data: Zusammenstellung von Datenbankinformationen.
+  Cooldown_Wait: '&cWarten Sie {duration} Sekunde(n), bevor Sie diesen Befehl erneut verwenden können!'
+  Invalid_Server: 'Kein Server namens: ''{0}'' Verfügbar. Verfübar sind folgende Server: {1}.'
   Invalid_Argument: '&cUngültiges Argument. Führen Sie &6/{label} ? &cfür Hilfe aus.'
   Invalid_Sub_Argument: '&cUngültiges Argument. Führen Sie ''/{label} {0}'' für Hilfe aus.'
   Invalid_Argument_Multiline: '&cUngültiges Argument. Verwendung:'
@@ -210,7 +210,7 @@ Commands:
   Header_Center_Padding: 150
   Reloading: Umladen
   Disabled: deaktiviert
-  Use_While_Null: '&cDieser Befehl kann nicht verwendet werden, wenn das Plugin{state}.'
+  Use_While_Null: '&cDieser Befehl kann nicht verwendet werden, wenn das Plugin{state}.' # What did you mean?
   Incompatible: Dieser Befehl erfordert Minecraft {0} oder größer.
   Ignore_Part_On: '&7Sie sind &cnow &7ignoring {0}.'
   Ignore_Part_Off: '&7Sie sind &2nicht mehr &7ignorierend{0}.'
@@ -266,7 +266,7 @@ Commands:
     - '/{label} {sublabel} list &7- List all created books.'
     Invalid: 'Kein solches Buch: ''{0}''. Verfügbar: {1}'
     No_Book: 'Geben Sie zunächst einen Buchnamen an. Verfügbar: {0}.'
-    Mail_Disabled: Cannot create books when mails are disabled. Setzen Sie Mail.Enabled in settings.yml auf true, um zu aktivieren.
+    Mail_Disabled: Es können keine Bücher erstellt werden, wenn mails deaktiviert ist! Setzen Sie Mail.Enabled in settings.yml auf true, um es zu aktivieren.
     New: 'Verwenden Sie die Mailfunktion, um ein Buch zu erstellen. Wenn Sie fertig sind, geben Sie ''/{label} {sublabel} save'' ein, um es zu speichern. '
     Save_No_Book: Erstellen Sie zunächst ein Buch mit '/{label} {sublabel} new'.
     Save_Not_Signed: Unterschreiben Sie Ihr Buch erst, bevor Sie es speichern.
@@ -411,7 +411,7 @@ Commands:
     - '/{label} {sublabel} file <path> &7- Anzeigen von Dateien oder Ordnern.'
     - '/{label} {sublabel} plugin <plugin> &7- Plugin-Klassen anzeigen.'
     - '/{label} {sublabel} class <class> &7- Felder/Methoden in der Klasse inspizieren.'
-    Invalid_File: File '{0}' nicht in Ihrem Root-Server-Ordner vorhanden ist.
+    Invalid_File: File '{0}' nicht in Ihrem Root-Server Ordner vorhanden ist.
     Illegal_File: File '{0}' hat ein nicht unterstütztes Format.
     Listing_Content: Auflistung der Inhalte von {0}
     Listing_File: Auflistung der Datei{0}
@@ -809,9 +809,9 @@ Commands:
     - 'Super, ich bereite die Regel ''{0}'' für Sie vor. Bitte geben Sie den Typ der Regel ein. Damit wird auch festgelegt, in welcher Datei die Regel abgelegt werden soll. '
     - 'Verfügbar: {1}'
     Invalid_Type: '{prefix_error}Der Regeltyp ''{0}'' ist ungültig!'
-    Encode: Sollen wir das passende Wort, das Sie in der nächsten Frage eingeben, automatisch verschlüsseln, um eine Umgehung zu erschweren? Geben Sie ja/nein ein.
+    Encode: Sollen wir das passende Wort, das Sie in der nächsten Frage eingeben, automatisch verschlüsseln, um eine Umgehung zu erschweren? Geben Sie ja/nein ein!
     Invalid_Encode: '{error_prefix}Falsche Antwort! Tippen Sie ''ja'' oder ''nein'', oder ''exit'', um aufzugeben.'
-    Rule_Creator_Match: Geben Sie das Wort ein, das abgeglichen werden soll.
+    Rule_Creator_Match: Geben Sie das Wort ein, das abgeglichen werden soll!
     Group_Name: 'Fast fertig! Geben Sie nun ein, zu welcher Gruppe diese Regel gehören soll, oder ''keine'', wenn es keine Gruppe gibt. Installierte Gruppen: {0}'
     Invalid_Group: '{prefix_error}Die Gruppe {0} existiert nicht!'
     Rule_Creator_Success: '{prefix_success}Herzlichen Glückwunsch, Sie haben erfolgreich eine neue Regel erstellt! Sie wurde geladen und ist einsatzbereit. So sieht sie aus:'
@@ -1076,7 +1076,7 @@ Menu:
     Channels_Toggle_On: '&2Jetzt Spionagekanal!'
     Channels_Toggle_Off: '&4Kein Spionagekanal mehr!'
     Help:
-    - 'Wählen Sie aus, welche Aspekte Ihres Servers'
+    - 'Wählen Sie aus, welche Merkmale Ihres Servers'
     - 'die Sie ausspionieren wollen. Sie können auch verwenden'
     - 'die ''/{label} log'' Befehl zur Ansicht'
     - 'historische Daten aus der Zeit, als Sie weg waren.'
@@ -1092,19 +1092,19 @@ Tool:
 # Messages related to checking messages/chat/signs etc. against spam, rules and so on
 # -------------------------------------------------------------------------------------------------
 Checker:
-  Chat_Exploit_Disallowed: Ihre Nachricht enthielt Codeausführung und wurde nicht zugelassen.
-  Sign_Duplication: Stellen Sie nicht mehrere Schilder mit demselben Text auf.
-  Move_Chat: Bitte bewegen Sie sich, bevor Sie in den Chat tippen.
-  Move_Command: Bitte bewegen Sie sich, bevor Sie die Befehle ausführen.
-  Delay_After_Join_Chat: Bitte warten {seconds} bevor Sie Nachrichten eingeben.
-  Delay_After_Join_Command: Bitte warten {seconds} bevor Sie Befehle eingeben.
-  Delay_Chat: Bitte warten {seconds} vor Ihrer nächsten Nachricht.
-  Delay_Command: Bitte warten {seconds} vor Ihrem nächsten Befehl.
-  Similarity_Chat: Bitte geben Sie keine Nachrichten ein, die {similarity}% ähnlich.
-  Similarity_Command: Bitte führen Sie keine Befehle aus, die {similarity}% ähnlich.
-  Period: Sie können nur senden {type_amount} {type} in {period_amount} {period}.
-  Caps: Bitte vermeiden Sie übermäßige Großschreibung in Ihrem{type}.
-  Sound_Notify: '&cSie können Sound Notify nicht für andere {seconds}.'
+  Chat_Exploit_Disallowed: Ihre Nachricht enthielt Codeausführung und wurde nicht zugelassen!
+  Sign_Duplication: Stellen Sie nicht mehrere Schilder mit demselben Text auf!
+  Move_Chat: Bitte bewegen Sie sich, bevor Sie in den Chat tippen!
+  Move_Command: Bitte bewegen Sie sich, bevor Sie die Befehle ausführen!
+  Delay_After_Join_Chat: Bitte warten {seconds} bevor Sie Nachrichten eingeben!
+  Delay_After_Join_Command: Bitte warten {seconds} bevor Sie Befehle eingeben!
+  Delay_Chat: Bitte warten {seconds} vor Ihrer nächsten Nachricht!
+  Delay_Command: Bitte warten {seconds} vor Ihrem nächsten Befehl!
+  Similarity_Chat: Bitte geben Sie keine Nachrichten ein, die {similarity}% ähnlich!
+  Similarity_Command: Bitte führen Sie keine Befehle aus, die {similarity}% ähnlich!
+  Period: Sie können nur senden {type_amount} {type} in {period_amount} {period}!
+  Caps: Bitte vermeiden Sie übermäßige Großschreibung in Ihrem{type}!
+  Sound_Notify: '&cSie können Sound-Benachrichtigungen erst in {seconds} wieder verwenden!'
   Parrot: Sie können '{0}' nicht wiederholen, da es {1}% ähnlich ist wie das, was im letzten {2} gesagt wurde.
   No_Text: Sie können keine Chatnachrichten ohne Text senden!
   No_Text_After_Change: Ihre Nachricht wurde bearbeitet und kann nicht gesendet werden, da sie jetzt leer ist.
@@ -1138,7 +1138,7 @@ And: und
 None: Keine
 Server: Server
 Channel: Kanal
-False_Value: 'falsch'
+False_Value: 'falsch' # Optional "nein": Sounds better
 Server_Prefix: '[Server]'
 Console_Name: Konsole
 
@@ -1156,7 +1156,7 @@ No_Permission: '&cKeine Genehmigung:{permission}'
 # -------------------------------------------------------------------------------------------------
 # Shown when console tries to enter a server conversation
 # -------------------------------------------------------------------------------------------------
-Conversation_Requires_Player: Nur Spieler dürfen an diesem Gespräch teilnehmen.
+Conversation_Requires_Player: Nur Spieler dürfen an diesem Gespräch teilnehmen!
 
 # -------------------------------------------------------------------------------------------------
 # Internal versioning number
