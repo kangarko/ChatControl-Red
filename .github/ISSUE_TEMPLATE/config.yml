@@ -2,7 +2,7 @@
 blank_issues_enabled: false
 contact_links:
   - name: Billing & payment
-    url: "mailto:support@mineacademy.org"
+    url: https://mineacademy.org/contact
     about: Send us an email in case of a billing or a payment related issue.
   - name: View common issues
     url: https://github.com/kangarko/ChatControl-Red/wiki/Common-Issues
