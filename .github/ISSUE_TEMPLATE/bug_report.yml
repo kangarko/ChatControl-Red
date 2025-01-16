@@ -7,7 +7,8 @@ body:
 - type: markdown
   attributes:
     value: |
-      #### Please replace "Version" with your server version (i.e. Paper 1.21), and Title with question summary in your title. 
+      ### IMPORTANT: We will close and ignore tickets which are improperly filled, please read below and fill carefully.
+      #### In your Title, replace "Version" with your server version (i.e. Paper 1.21), and Title with question summary in your title. 
 
 - type: dropdown
   attributes:
@@ -52,7 +53,8 @@ body:
       Run `/chc debug` in the console and drop the ZIP file generated in ChatControl folder here.
       
       **If you want to keep your settings private** Upload this ZIP file to [ufile.io](https://ufile.io) then email the link to support@mineacademy.org
-      **The mysql.yml will automatically be excluded for privacy.**
+      **The proxy.yml password will automatically be excluded for privacy.**
+      **We reserve the right to close tickets when this file is not provided since we can't properly trace your issue and waste time.**
     placeholder: |
       Click here then drag the "/chc debug" zip file here to upload it.
   validations:
