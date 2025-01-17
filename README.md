@@ -8,8 +8,6 @@
 # ChatControl Red
 ChatControl Red is a chat filtering and management plugin. It builds on the successes of the ChatControl Pro plugin from 2015, bringing substantial improvements:
 
-Notice: All buyers of ChatControl Pro can get a free upgrade [here](http://mineacademy.org/chatcontrol-red).
-
 * Mail and nicks
 * Toast messages, sending books, titles, action bars and boosbar
 * Join, quit and death messages
